@@ -19,7 +19,7 @@ void callback(const char *buffer) {
 }
 
 int main() {
-  //RunUnits();
+  RunUnits();
 
   //Load schema (Port, name, etc)
   Schema_t schema;

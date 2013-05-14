@@ -16,6 +16,8 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
   params->NN = NN;
   params->ND = ND;
   params->globalTime = 0;
+  params->neuronNameToLocation = new std::map<std::string, int>();
+  params->neuronLocationToName = new std::map<int, std::string>();
 
   //Initalize neurons
   params->nInhibitoryTime = new int[NN];
@@ -33,6 +35,10 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
   params->dDelays = new int[NN*ND];
   params->dLastSpikeTimes = new int[NN*ND];
   params->dSpikeQues = new int[NN*ND];
+
+  for (int i = 0; i < NN*ND; ++i) {
+    params->dConnections[i] = -1;
+  }
 
   //Parse schema
   enum ParseState_t { 
@@ -125,11 +131,14 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
         fscanf(f, "%s %d", trash, &delay);
         fscanf(f, "%s %s", trash, trash);
 
-        static int fromNode = (*params->neuronNameToLocation)[from];
-        static int toNode = (*params->neuronNameToLocation)[to];
+        static int fromNode;
+        static int toNode;
+        fromNode = (*params->neuronNameToLocation)[from];
+        toNode = (*params->neuronNameToLocation)[to];
 
         //Get an open connection
-        static int pos = -1;
+        static int pos;
+        pos = -1;
         for (int i = 0; i < ND; ++i) {
           pos = toNode*ND + i;
           if (params->dConnections[pos] == -1) {
@@ -137,6 +146,7 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
             params->dWeights[pos] = weight;
             params->dDelays[pos] = delay;
             params->dSpikeQues[pos] = 0;
+            params->dLastSpikeTimes[pos] = -1000;
             break;
           }
         }
