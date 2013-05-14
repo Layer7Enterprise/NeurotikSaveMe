@@ -4,6 +4,7 @@
 #include <pthread.h>
 #include <map>
 #include <string>
+#include <time.h>
 #include "Net.h"
 #include "Schema.h"
 #include "Params.h"
@@ -14,8 +15,11 @@
 
 #include "test/Units.h"
 
+void callback(const char *buffer) {
+}
+
 int main() {
-  RunUnits();
+  //RunUnits();
 
   //Load schema (Port, name, etc)
   Schema_t schema;
@@ -23,14 +27,15 @@ int main() {
 
   //Load params (net list, large chunk of memory, etc)
   Params_t params;
-  params.neuronNameToLocation = new std::map<std::string, int>();
-  params.neuronLocationToName = new std::map<int, std::string>();
   GetNet(NET_FILE, schema, &params);
 
   /*NetSendBegin("224.4.5.6", 3000);*/
   //for (int i = 0; i < 100; ++i) 
     /*NetSend("test", 4);*/
+  
+  NetRcvBegin("224.4.5.6", 3001, callback);
 
+  while (true);
 
   return 0;
 }

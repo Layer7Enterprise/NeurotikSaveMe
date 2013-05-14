@@ -17,11 +17,11 @@ void it(const char *message) {
   ++numTests ;
 }
 
-void shouldEqual(int a, int b) {
+void shouldEqual(float a, float b) {
   printf("✔");
   if (a != b) {
     fprintf(stderr, "\n*****************************************************\n");
-    fprintf(stderr, "˟ %s %s Test Failed! %d != %d\n", currentDescribe, currentIt, a, b);
+    fprintf(stderr, "˟ %s %s Test Failed! %f != %f\n", currentDescribe, currentIt, a, b);
     fprintf(stderr, "*****************************************************\n\n");
     exit(EXIT_FAILURE);
   }
@@ -36,8 +36,6 @@ void TestGetNet() {
 
   //Load params (net list, large chunk of memory, etc)
   Params_t params;
-  params.neuronNameToLocation = new std::map<std::string, int>();
-  params.neuronLocationToName = new std::map<int, std::string>();
   GetNet("test/config/net.txt", schema, &params);
 
   it("has the right network in start position");
@@ -108,6 +106,39 @@ void TestGetNet() {
   shouldEqual(params.nType[1], GABA);
   shouldEqual(params.nType[2], GLU | NO_LRN);
   shouldEqual(params.nType[3], GLU);
+
+  it("has the right connections");
+  shouldEqual(params.dConnections[0*10+0], 0);
+  shouldEqual(params.dConnections[2*10+0], 1);
+  shouldEqual(params.dConnections[3*10+0], 3);
+  shouldEqual(params.dConnections[0*10+1], 2);
+  shouldEqual(params.dConnections[2*10+1], -1);
+  shouldEqual(params.dConnections[3*10+1], -1);
+
+  it("has the right initial weights");
+  shouldEqual(params.dWeights[0*10+0], 11.05);
+  shouldEqual(params.dWeights[2*10+0], 20.0);
+  shouldEqual(params.dWeights[3*10+0], 1.0);
+  shouldEqual(params.dWeights[0*10+1], 2.0);
+
+  it("has the right initial delays");
+  shouldEqual(params.dDelays[0*10+0], 1);
+  shouldEqual(params.dDelays[2*10+0], 5);
+  shouldEqual(params.dDelays[3*10+0], 20);
+  shouldEqual(params.dDelays[0*10+1], 20);
+
+  it("has the right initial last spike times");
+  shouldEqual(params.dLastSpikeTimes[0*10+0], -1000);
+  shouldEqual(params.dLastSpikeTimes[2*10+0], -1000);
+  shouldEqual(params.dLastSpikeTimes[3*10+0], -1000);
+  shouldEqual(params.dLastSpikeTimes[0*10+1], -1000);
+
+  it("has the right initial spike ques");
+  shouldEqual(params.dSpikeQues[0*10+0], 0);
+  shouldEqual(params.dSpikeQues[2*10+0], 0);
+  shouldEqual(params.dSpikeQues[3*10+0], 0);
+  shouldEqual(params.dSpikeQues[0*10+1], 0);
+
 }
 
 void RunUnits() {

@@ -20,6 +20,10 @@ Params.h
 Schema.h
 /Users/sotownsend/Dev/Neurotik2/Core/Schema.h
 
+/Users/sotownsend/Dev/Neurotik2/Core/Net.cpp
+Net.h
+/Users/sotownsend/Dev/Neurotik2/Core/Net.h
+
 /Users/sotownsend/Dev/Neurotik2/Core/Net.h
 stdio.h
 -
@@ -32,6 +36,8 @@ sys/socket.h
 netinet/in.h
 -
 arpa/inet.h
+-
+pthread.h
 -
 
 /Users/sotownsend/Dev/Neurotik2/Core/Params.h
@@ -56,6 +62,8 @@ pthread.h
 map
 -
 string
+-
+time.h
 -
 Net.h
 /Users/sotownsend/Dev/Neurotik2/Core/Net.h

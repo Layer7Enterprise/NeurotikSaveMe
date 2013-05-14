@@ -1,9 +1,36 @@
-echo ""
-echo "***********************************"
-cd build
-cmake ..
-make
-echo "-----------------------------------"
-echo ""
-cd ..
-./build//neurotik
+#!/Users/sotownsend/.rvm/rubies/ruby-2.0.0-p0/bin/ruby
+require 'colorize'
+
+def start name
+  @lastName = name
+end
+
+def error
+  puts "\n#################################".red
+  puts "!!!Error!!! -- #{@lastName} Failed".yellow
+  puts "#################################\n".red
+  exit
+end
+
+Dir.chdir 'build'
+
+`make clean`
+
+start 'cmake'
+  output = `cmake ..`
+  unless $?.success?
+    puts output
+    puts "CMake failed!"
+      exit
+  end
+
+start 'make'
+  output = `make`
+  unless $?.success?
+    puts output
+    error
+  end
+
+start 'Running'
+Dir.chdir '../'
+exec './build//neurotik'
