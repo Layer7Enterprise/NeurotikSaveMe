@@ -1,0 +1,18 @@
+NetworkIn
+NetworkOut
+
+Neuron input[0]
+Type 1
+InhTime 0
+IB 0
+End End
+
+EndNetworkIn
+EndNetworkOut
+
+Connection
+From input[0]
+To input[0]
+Weight 11.05
+Delay 1
+End End

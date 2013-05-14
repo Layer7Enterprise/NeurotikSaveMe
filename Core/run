@@ -1,0 +1,9 @@
+echo ""
+echo "***********************************"
+cd build
+cmake ..
+make
+echo "-----------------------------------"
+echo ""
+cd ..
+./build//neurotik
