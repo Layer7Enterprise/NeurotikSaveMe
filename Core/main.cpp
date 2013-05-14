@@ -16,10 +16,11 @@
 #include "test/Units.h"
 
 void callback(const char *buffer) {
+  printf("called");
 }
 
 int main() {
-  RunUnits();
+  //RunUnits();
 
   //Load schema (Port, name, etc)
   Schema_t schema;
