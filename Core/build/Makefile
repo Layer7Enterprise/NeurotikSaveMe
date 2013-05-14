@@ -186,6 +186,30 @@ Schema.cpp.s:
 	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/Schema.cpp.s
 .PHONY : Schema.cpp.s
 
+Timer.o: Timer.cpp.o
+.PHONY : Timer.o
+
+# target to build an object file
+Timer.cpp.o:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/Timer.cpp.o
+.PHONY : Timer.cpp.o
+
+Timer.i: Timer.cpp.i
+.PHONY : Timer.i
+
+# target to preprocess a source file
+Timer.cpp.i:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/Timer.cpp.i
+.PHONY : Timer.cpp.i
+
+Timer.s: Timer.cpp.s
+.PHONY : Timer.s
+
+# target to generate assembly for a file
+Timer.cpp.s:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/Timer.cpp.s
+.PHONY : Timer.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -228,6 +252,9 @@ help:
 	@echo "... Schema.o"
 	@echo "... Schema.i"
 	@echo "... Schema.s"
+	@echo "... Timer.o"
+	@echo "... Timer.i"
+	@echo "... Timer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

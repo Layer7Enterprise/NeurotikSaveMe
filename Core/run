@@ -25,11 +25,13 @@ start 'cmake'
   end
 
 start 'make'
-  output = `make`
+  puts `make`
   unless $?.success?
     puts output
     error
   end
+
+system 'clear'
 
 start 'Running'
 Dir.chdir '../'

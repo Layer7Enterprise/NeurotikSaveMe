@@ -12,10 +12,14 @@ CMakeFiles/neurotik.dir/Net.cpp.o: ../Net.h
 CMakeFiles/neurotik.dir/Schema.cpp.o: ../Schema.cpp
 CMakeFiles/neurotik.dir/Schema.cpp.o: ../Schema.h
 
+CMakeFiles/neurotik.dir/Timer.cpp.o: ../Timer.cpp
+CMakeFiles/neurotik.dir/Timer.cpp.o: ../Timer.h
+
 CMakeFiles/neurotik.dir/main.cpp.o: ../GetNet.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../Net.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../Params.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../Schema.h
+CMakeFiles/neurotik.dir/main.cpp.o: ../Timer.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../main.cpp
 CMakeFiles/neurotik.dir/main.cpp.o: ../test/Units.h
 

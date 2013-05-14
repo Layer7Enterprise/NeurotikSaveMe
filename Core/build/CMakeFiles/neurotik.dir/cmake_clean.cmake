@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/neurotik.dir/Net.cpp.o"
   "CMakeFiles/neurotik.dir/Schema.cpp.o"
   "CMakeFiles/neurotik.dir/GetNet.cpp.o"
+  "CMakeFiles/neurotik.dir/Timer.cpp.o"
   "neurotik.pdb"
   "neurotik"
 )

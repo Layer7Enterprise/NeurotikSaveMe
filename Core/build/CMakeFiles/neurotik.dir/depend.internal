@@ -12,10 +12,14 @@ CMakeFiles/neurotik.dir/Net.cpp.o
 CMakeFiles/neurotik.dir/Schema.cpp.o
  /Users/sotownsend/Dev/Neurotik2/Core/Schema.cpp
  /Users/sotownsend/Dev/Neurotik2/Core/Schema.h
+CMakeFiles/neurotik.dir/Timer.cpp.o
+ /Users/sotownsend/Dev/Neurotik2/Core/Timer.cpp
+ /Users/sotownsend/Dev/Neurotik2/Core/Timer.h
 CMakeFiles/neurotik.dir/main.cpp.o
  /Users/sotownsend/Dev/Neurotik2/Core/GetNet.h
  /Users/sotownsend/Dev/Neurotik2/Core/Net.h
  /Users/sotownsend/Dev/Neurotik2/Core/Params.h
  /Users/sotownsend/Dev/Neurotik2/Core/Schema.h
+ /Users/sotownsend/Dev/Neurotik2/Core/Timer.h
  /Users/sotownsend/Dev/Neurotik2/Core/main.cpp
  /Users/sotownsend/Dev/Neurotik2/Core/test/Units.h
