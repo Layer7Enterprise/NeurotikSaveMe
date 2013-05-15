@@ -52,6 +52,9 @@ void TestCoreManager() {
   shouldEqual(output_len, 2);
 
   it("Can receive a simple input");
+  UnitMessage_t message;
+
+  GetUnitMessage(&message);
 }
 
 void TestGetNet() {
@@ -172,7 +175,9 @@ void RunUnits() {
   printf("Running unit tests\n");
   printf("##################################################\n");
 
+  //Setup the pipe queue
   BeginUnitPipe();
+
   TestGetNet();
   TestCoreManager();
 
