@@ -60,8 +60,7 @@ void TestCoreManager() {
   shouldEqual(output_len, 2);
 
   it("Can receive a simple input");
-
-  UnitMessageInfo_t message = GetUnitMessage();
+  UnitMessageInfo_t message = GetUnitMessage(UMCoreInputImpulseOnTimer);
 }
 
 void TestGetNet() {

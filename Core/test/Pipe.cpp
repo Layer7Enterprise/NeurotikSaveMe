@@ -19,7 +19,7 @@ void BeginUnitPipe() {
   }
 }
 
-void SendUnitMessage(UnitMessage_t type, const unsigned char *msg, int len) {
+void SendUnitMessage(UnitMessageType_t type, const unsigned char *msg, int len) {
   //Copy into a message
   UnitMessageInfo_t info;
   info.type = type;
@@ -32,7 +32,7 @@ void SendUnitMessage(UnitMessage_t type, const unsigned char *msg, int len) {
   sem_post(semaphore);
 }
 
-UnitMessageInfo_t GetUnitMessage() {
+UnitMessageInfo_t GetUnitMessage(UnitMessageType_t type) {
   //Block until we have a message
   if (sem_wait(semaphore) < 0) {
     if (errno == EINVAL) {
@@ -51,5 +51,5 @@ UnitMessageInfo_t GetUnitMessage() {
   UnitMessageInfo_t message = messages.back();
   messages.pop();
   
-  return message;
+  return messages.back();
 }

@@ -1,6 +1,7 @@
 #ifndef PIPE_H_
 #define PIPE_H_
 
+#include <list>
 #include <queue>
 #include <sys/stat.h>
 #include <semaphore.h>
@@ -8,12 +9,13 @@
 
 #define MAX_UNIT_MESSAGE_SIZE 1000
 
-enum UnitMessage_t {
-  UMCoreInputImpulseOnTimer  //The core current input when the millisecond timer goes off
+#define NUM_UNIT_MESSAGE_TYPES 1
+enum UnitMessageType_t {
+  UMCoreInputImpulseOnTimer = 0,  //The core current input when the millisecond timer goes off
 };
 
 struct UnitMessageInfo_t {
-  UnitMessage_t type;
+  UnitMessageType_t type;
   unsigned char msg[MAX_UNIT_MESSAGE_SIZE];
   int len;
 };
@@ -21,9 +23,9 @@ struct UnitMessageInfo_t {
 void BeginUnitPipe();
 
 //Send a message to unit
-void SendUnitMessage(UnitMessage_t type, const unsigned char *msg, int len);
+void SendUnitMessage(UnitMessageType_t type, const unsigned char *msg, int len);
 
 //Get one unit message, return number of messages left
-UnitMessageInfo_t GetUnitMessage();
+UnitMessageInfo_t GetUnitMessage(UnitMessageType_t type);
 
 #endif
