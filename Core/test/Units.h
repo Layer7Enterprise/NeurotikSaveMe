@@ -28,6 +28,17 @@ void shouldEqual(float a, float b) {
   }
 }
 
+void isTrue(int a) {
+  printf("✔");
+  if (!a) {
+    fprintf(stderr, "\n*****************************************************\n");
+    fprintf(stderr, "˟ %s %s Test Failed! Is not true\n", currentDescribe, currentIt);
+    fprintf(stderr, "*****************************************************\n\n");
+    exit(EXIT_FAILURE);
+  }
+
+}
+
 void TestCoreManager() {
   describe("Core Manager");
 
@@ -50,10 +61,7 @@ void TestCoreManager() {
 
   it("Can receive a simple input");
 
-  static const char mm[] = { "hello world!" };
-  SendUnitMessage(UMCoreInputImpulseOnTimer, (const unsigned char *)&mm, strlen(mm));
   UnitMessageInfo_t message = GetUnitMessage();
-  printf("%s\n", message.msg);
 }
 
 void TestGetNet() {
