@@ -4,18 +4,22 @@
 std::queue<UnitMessageInfo_t> messages;
 
 sem_t *semaphore = NULL;
+std::list<sem_t *> semaphores;
 void BeginUnitPipe() {
-  //Generate a random name
-  srand(time(NULL));
-  const int randomNameLen = 20;
-  static char randomName[randomNameLen];
-  for (int i = 0; i < randomNameLen; ++i)
-    randomName[i] = RANDOM_CHAR();
-  semaphore = sem_open(randomName, O_CREAT, O_RDWR, 0);
+  //Create a semaphore for each message type
+  for (int i = 0; i < NUM_UNIT_MESSAGE_TYPES; ++i) {
+    //Generate a random name
+    srand(time(NULL));
+    const int randomNameLen = 20;
+    static char randomName[randomNameLen];
+    for (int i = 0; i < randomNameLen; ++i)
+      randomName[i] = RANDOM_CHAR();
+    semaphore = sem_open(randomName, O_CREAT, O_RDWR, 0);
 
-  if (!semaphore) {
-    fprintf(stderr, "Could not create semaphore: error code %d", errno);
-    exit(EXIT_FAILURE);
+    if (!semaphore) {
+      fprintf(stderr, "Could not create semaphore: error code %d", errno);
+      exit(EXIT_FAILURE);
+    }
   }
 }
 
