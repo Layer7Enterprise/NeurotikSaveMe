@@ -10,7 +10,7 @@ static Params_t *params = NULL;
 void CoreTick() {
   pthread_mutex_lock(&runningSegmentLock);
 
-  SendToUnits(UMCoreInputImpulseOnTimer, runningSegment, NET_INPUT_LEN(params));
+  SendUnitMessage(UMCoreInputImpulseOnTimer, runningSegment, NET_INPUT_LEN(params));
 
   pthread_mutex_unlock(&runningSegmentLock);
 }

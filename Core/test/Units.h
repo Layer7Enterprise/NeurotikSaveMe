@@ -28,9 +28,6 @@ void shouldEqual(float a, float b) {
   }
 }
 
-void call(void) {
-}
-
 void TestCoreManager() {
   describe("Core Manager");
 
@@ -52,9 +49,11 @@ void TestCoreManager() {
   shouldEqual(output_len, 2);
 
   it("Can receive a simple input");
-  UnitMessage_t message;
 
-  GetUnitMessage(&message);
+  static const char mm[] = { "hello world!" };
+  SendUnitMessage(UMCoreInputImpulseOnTimer, (const unsigned char *)&mm, strlen(mm));
+  UnitMessageInfo_t message = GetUnitMessage();
+  printf("%s\n", message.msg);
 }
 
 void TestGetNet() {

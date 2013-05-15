@@ -1,28 +1,40 @@
 #include "Pipe.h"
 
-sem_t semaphore;
-void BeginUnitPipe() {
-  int res = sem_init(&semaphore, 0, 0);
+#define RANDOM_CHAR() (0x45 + (rand() % 20))
+std::queue<UnitMessageInfo_t> messages;
 
-  if (res < 0) {
+sem_t *semaphore = NULL;
+void BeginUnitPipe() {
+  //Generate a random name
+  srand(time(NULL));
+  const int randomNameLen = 20;
+  static char randomName[randomNameLen];
+  for (int i = 0; i < randomNameLen; ++i)
+    randomName[i] = RANDOM_CHAR();
+  semaphore = sem_open(randomName, O_CREAT, O_RDWR, 0);
+
+  if (!semaphore) {
     fprintf(stderr, "Could not create semaphore: error code %d", errno);
     exit(EXIT_FAILURE);
   }
 }
 
-void SendToUnits(UnitMessage_t type, const unsigned char *msg, int len) {
+void SendUnitMessage(UnitMessage_t type, const unsigned char *msg, int len) {
   //Copy into a message
   UnitMessageInfo_t info;
   info.type = type;
   memcpy(&info.msg, msg, len);
   info.len = len;
 
+  messages.push(info);
+
   //Announce that there is an open semaphore
-  sem_post(&semaphore);
+  sem_post(semaphore);
 }
 
-void GetUnitMessage(UnitMessage_t *message) {
-  if (sem_wait(&semaphore) < 0) {
+UnitMessageInfo_t GetUnitMessage() {
+  //Block until we have a message
+  if (sem_wait(semaphore) < 0) {
     if (errno == EINVAL) {
       fprintf(stderr, "Could not wait on semaphore: invalid semaphore");
     } else if (errno == EDEADLK) {
@@ -35,4 +47,9 @@ void GetUnitMessage(UnitMessage_t *message) {
 
     exit(EXIT_FAILURE);
   }
+
+  UnitMessageInfo_t message = messages.back();
+  messages.pop();
+  
+  return message;
 }

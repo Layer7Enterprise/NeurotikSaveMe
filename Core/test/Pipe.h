@@ -20,9 +20,10 @@ struct UnitMessageInfo_t {
 
 void BeginUnitPipe();
 
-void SendToUnits(UnitMessage_t type, const unsigned char *msg, int len);
+//Send a message to unit
+void SendUnitMessage(UnitMessage_t type, const unsigned char *msg, int len);
 
 //Get one unit message, return number of messages left
-void GetUnitMessage(UnitMessage_t *message);
+UnitMessageInfo_t GetUnitMessage();
 
 #endif
