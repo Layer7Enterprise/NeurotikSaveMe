@@ -60,7 +60,10 @@ void TestCoreManager() {
   shouldEqual(output_len, 2);
 
   it("Can receive a simple input");
+  static char msg[] = { "Hellr" };
+  SendUnitMessage(UMCoreInputImpulseOnTimer, (const unsigned char *)msg, strlen(msg));
   UnitMessageInfo_t message = GetUnitMessage(UMCoreInputImpulseOnTimer);
+  printf("---%s\n", message.msg);
 }
 
 void TestGetNet() {
