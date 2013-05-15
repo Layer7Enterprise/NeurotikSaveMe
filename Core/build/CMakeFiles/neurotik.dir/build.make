@@ -167,13 +167,61 @@ CMakeFiles/neurotik.dir/Timer.cpp.o.provides: CMakeFiles/neurotik.dir/Timer.cpp.
 
 CMakeFiles/neurotik.dir/Timer.cpp.o.provides.build: CMakeFiles/neurotik.dir/Timer.cpp.o
 
+CMakeFiles/neurotik.dir/CoreManager.cpp.o: CMakeFiles/neurotik.dir/flags.make
+CMakeFiles/neurotik.dir/CoreManager.cpp.o: ../CoreManager.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/CoreManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/CoreManager.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/CoreManager.cpp
+
+CMakeFiles/neurotik.dir/CoreManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/CoreManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/CoreManager.cpp > CMakeFiles/neurotik.dir/CoreManager.cpp.i
+
+CMakeFiles/neurotik.dir/CoreManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/CoreManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/CoreManager.cpp -o CMakeFiles/neurotik.dir/CoreManager.cpp.s
+
+CMakeFiles/neurotik.dir/CoreManager.cpp.o.requires:
+.PHONY : CMakeFiles/neurotik.dir/CoreManager.cpp.o.requires
+
+CMakeFiles/neurotik.dir/CoreManager.cpp.o.provides: CMakeFiles/neurotik.dir/CoreManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/CoreManager.cpp.o.provides.build
+.PHONY : CMakeFiles/neurotik.dir/CoreManager.cpp.o.provides
+
+CMakeFiles/neurotik.dir/CoreManager.cpp.o.provides.build: CMakeFiles/neurotik.dir/CoreManager.cpp.o
+
+CMakeFiles/neurotik.dir/test/Pipe.cpp.o: CMakeFiles/neurotik.dir/flags.make
+CMakeFiles/neurotik.dir/test/Pipe.cpp.o: ../test/Pipe.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/test/Pipe.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/test/Pipe.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.cpp
+
+CMakeFiles/neurotik.dir/test/Pipe.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/test/Pipe.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.cpp > CMakeFiles/neurotik.dir/test/Pipe.cpp.i
+
+CMakeFiles/neurotik.dir/test/Pipe.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/test/Pipe.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.cpp -o CMakeFiles/neurotik.dir/test/Pipe.cpp.s
+
+CMakeFiles/neurotik.dir/test/Pipe.cpp.o.requires:
+.PHONY : CMakeFiles/neurotik.dir/test/Pipe.cpp.o.requires
+
+CMakeFiles/neurotik.dir/test/Pipe.cpp.o.provides: CMakeFiles/neurotik.dir/test/Pipe.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/test/Pipe.cpp.o.provides.build
+.PHONY : CMakeFiles/neurotik.dir/test/Pipe.cpp.o.provides
+
+CMakeFiles/neurotik.dir/test/Pipe.cpp.o.provides.build: CMakeFiles/neurotik.dir/test/Pipe.cpp.o
+
 # Object files for target neurotik
 neurotik_OBJECTS = \
 "CMakeFiles/neurotik.dir/main.cpp.o" \
 "CMakeFiles/neurotik.dir/Net.cpp.o" \
 "CMakeFiles/neurotik.dir/Schema.cpp.o" \
 "CMakeFiles/neurotik.dir/GetNet.cpp.o" \
-"CMakeFiles/neurotik.dir/Timer.cpp.o"
+"CMakeFiles/neurotik.dir/Timer.cpp.o" \
+"CMakeFiles/neurotik.dir/CoreManager.cpp.o" \
+"CMakeFiles/neurotik.dir/test/Pipe.cpp.o"
 
 # External object files for target neurotik
 neurotik_EXTERNAL_OBJECTS =
@@ -183,6 +231,8 @@ neurotik: CMakeFiles/neurotik.dir/Net.cpp.o
 neurotik: CMakeFiles/neurotik.dir/Schema.cpp.o
 neurotik: CMakeFiles/neurotik.dir/GetNet.cpp.o
 neurotik: CMakeFiles/neurotik.dir/Timer.cpp.o
+neurotik: CMakeFiles/neurotik.dir/CoreManager.cpp.o
+neurotik: CMakeFiles/neurotik.dir/test/Pipe.cpp.o
 neurotik: CMakeFiles/neurotik.dir/build.make
 neurotik: /usr/local/lib/libboost_system-mt.dylib
 neurotik: /usr/local/lib/libboost_filesystem-mt.dylib
@@ -199,6 +249,8 @@ CMakeFiles/neurotik.dir/requires: CMakeFiles/neurotik.dir/Net.cpp.o.requires
 CMakeFiles/neurotik.dir/requires: CMakeFiles/neurotik.dir/Schema.cpp.o.requires
 CMakeFiles/neurotik.dir/requires: CMakeFiles/neurotik.dir/GetNet.cpp.o.requires
 CMakeFiles/neurotik.dir/requires: CMakeFiles/neurotik.dir/Timer.cpp.o.requires
+CMakeFiles/neurotik.dir/requires: CMakeFiles/neurotik.dir/CoreManager.cpp.o.requires
+CMakeFiles/neurotik.dir/requires: CMakeFiles/neurotik.dir/test/Pipe.cpp.o.requires
 .PHONY : CMakeFiles/neurotik.dir/requires
 
 CMakeFiles/neurotik.dir/clean:

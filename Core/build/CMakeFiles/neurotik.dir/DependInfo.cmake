@@ -4,11 +4,13 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/sotownsend/Dev/Neurotik2/Core/CoreManager.cpp" "/Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles/neurotik.dir/CoreManager.cpp.o"
   "/Users/sotownsend/Dev/Neurotik2/Core/GetNet.cpp" "/Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles/neurotik.dir/GetNet.cpp.o"
   "/Users/sotownsend/Dev/Neurotik2/Core/Net.cpp" "/Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles/neurotik.dir/Net.cpp.o"
   "/Users/sotownsend/Dev/Neurotik2/Core/Schema.cpp" "/Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles/neurotik.dir/Schema.cpp.o"
   "/Users/sotownsend/Dev/Neurotik2/Core/Timer.cpp" "/Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles/neurotik.dir/Timer.cpp.o"
   "/Users/sotownsend/Dev/Neurotik2/Core/main.cpp" "/Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles/neurotik.dir/main.cpp.o"
+  "/Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.cpp" "/Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles/neurotik.dir/test/Pipe.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "Clang")
 

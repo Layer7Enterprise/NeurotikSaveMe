@@ -20,7 +20,6 @@ void *SkewTracker(void *) {
     usleep(1000 * 1000);
     last_read += 1000;
   }
-
 }
 
 void OnMillisecond(void (*callback)()) {

@@ -14,7 +14,7 @@
 #include <string.h>
 #include <pthread.h>
 
-//Call the callback function every millisecond
+//Call the callback function every millisecond and skew checking
 void OnMillisecond(void (*callback)());
 
 #endif

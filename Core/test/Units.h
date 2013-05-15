@@ -1,6 +1,7 @@
 #ifndef UNITS_H_
 #define UNITS_H_
 
+#include "Pipe.h"
 #include <string.h>
 #include <stdlib.h>
 
@@ -25,6 +26,32 @@ void shouldEqual(float a, float b) {
     fprintf(stderr, "*****************************************************\n\n");
     exit(EXIT_FAILURE);
   }
+}
+
+void call(void) {
+}
+
+void TestCoreManager() {
+  describe("Core Manager");
+
+  //Load schema (Port, name, etc)
+  Schema_t schema;
+  GetSchema("test/config/schema.txt", &schema);
+
+  //Load params (net list, large chunk of memory, etc)
+  Params_t params;
+  GetNet("test/config/net.txt", schema, &params);
+
+  int input_len = NET_INPUT_LEN(&params);
+  int output_len = NET_OUTPUT_LEN(&params);
+
+  it("Gets the right network input sizes");
+  shouldEqual(input_len, 2);
+
+  it("Gets the right network output sizes");
+  shouldEqual(output_len, 2);
+
+  it("Can receive a simple input");
 }
 
 void TestGetNet() {
@@ -145,7 +172,9 @@ void RunUnits() {
   printf("Running unit tests\n");
   printf("##################################################\n");
 
+  BeginUnitPipe();
   TestGetNet();
+  TestCoreManager();
 
   printf("\nPassed %d unit tests!\n", numTests);
   printf("##################################################\n\n");

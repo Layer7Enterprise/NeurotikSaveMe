@@ -1,13 +1,33 @@
-NetworkIn
-NetworkOut
-
 Neuron input[0]
 Type 1
 InhTime 0
 IB 0
 End End
 
+NetworkIn
+
+Neuron input[1]
+Type 2
+InhTime 0
+IB 0
+End End
+
+NetworkOut
+
+Neuron input[2]
+Type 9
+InhTime 20
+IB 10
+End End
+
 EndNetworkIn
+
+Neuron input[3]
+Type 1
+InhTime 0
+IB 0
+End End
+
 EndNetworkOut
 
 Connection
@@ -15,4 +35,25 @@ From input[0]
 To input[0]
 Weight 11.05
 Delay 1
+End End
+
+Connection
+From input[1]
+To input[2]
+Weight 20.0
+Delay 5
+End End
+
+Connection
+From input[3]
+To input[3]
+Weight 1.0
+Delay 20
+End End
+
+Connection
+From input[2]
+To input[0]
+Weight 2.0
+Delay 20
 End End

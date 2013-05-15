@@ -176,6 +176,3 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
     };
   }
 }
-
-
-  

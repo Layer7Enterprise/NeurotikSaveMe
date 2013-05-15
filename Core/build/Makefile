@@ -114,6 +114,30 @@ neurotik/fast:
 	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/build
 .PHONY : neurotik/fast
 
+CoreManager.o: CoreManager.cpp.o
+.PHONY : CoreManager.o
+
+# target to build an object file
+CoreManager.cpp.o:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/CoreManager.cpp.o
+.PHONY : CoreManager.cpp.o
+
+CoreManager.i: CoreManager.cpp.i
+.PHONY : CoreManager.i
+
+# target to preprocess a source file
+CoreManager.cpp.i:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/CoreManager.cpp.i
+.PHONY : CoreManager.cpp.i
+
+CoreManager.s: CoreManager.cpp.s
+.PHONY : CoreManager.s
+
+# target to generate assembly for a file
+CoreManager.cpp.s:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/CoreManager.cpp.s
+.PHONY : CoreManager.cpp.s
+
 GetNet.o: GetNet.cpp.o
 .PHONY : GetNet.o
 
@@ -234,6 +258,30 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test/Pipe.o: test/Pipe.cpp.o
+.PHONY : test/Pipe.o
+
+# target to build an object file
+test/Pipe.cpp.o:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/test/Pipe.cpp.o
+.PHONY : test/Pipe.cpp.o
+
+test/Pipe.i: test/Pipe.cpp.i
+.PHONY : test/Pipe.i
+
+# target to preprocess a source file
+test/Pipe.cpp.i:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/test/Pipe.cpp.i
+.PHONY : test/Pipe.cpp.i
+
+test/Pipe.s: test/Pipe.cpp.s
+.PHONY : test/Pipe.s
+
+# target to generate assembly for a file
+test/Pipe.cpp.s:
+	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/test/Pipe.cpp.s
+.PHONY : test/Pipe.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,6 +291,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... neurotik"
 	@echo "... rebuild_cache"
+	@echo "... CoreManager.o"
+	@echo "... CoreManager.i"
+	@echo "... CoreManager.s"
 	@echo "... GetNet.o"
 	@echo "... GetNet.i"
 	@echo "... GetNet.s"
@@ -258,6 +309,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test/Pipe.o"
+	@echo "... test/Pipe.i"
+	@echo "... test/Pipe.s"
 .PHONY : help
 
 
