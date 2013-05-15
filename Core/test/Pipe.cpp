@@ -6,6 +6,8 @@ std::queue<UnitMessageInfo_t> messages;
 sem_t *semaphore = NULL;
 std::list<sem_t *> semaphores;
 void BeginUnitPipe() {
+  int currentType = 0;
+
   //Create a semaphore for each message type
   for (int i = 0; i < NUM_UNIT_MESSAGE_TYPES; ++i) {
     //Generate a random name
@@ -14,7 +16,7 @@ void BeginUnitPipe() {
     static char randomName[randomNameLen];
     for (int i = 0; i < randomNameLen; ++i)
       randomName[i] = RANDOM_CHAR();
-    semaphore = sem_open(randomName, O_CREAT, O_RDWR, 0);
+    semaphores[currentType] = sem_open(randomName, O_CREAT, O_RDWR, 0);
 
     if (!semaphore) {
       fprintf(stderr, "Could not create semaphore: error code %d", errno);
