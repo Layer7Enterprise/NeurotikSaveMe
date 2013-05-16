@@ -22,42 +22,92 @@
 
 #include "test/Units.h"
 
-std::vector<int> *nextInput = NULL;
-pthread_mutex_t nextInputMutex = PTHREAD_MUTEX_INITIALIZER;
-void callback(const char *buffer) {
-  int len = sizeof(buffer);
-
-  if (!nextInput) {
-    nextInput = new std::vector<int>();
-    nextInput->resize(len);
-    for (int i = 0; i < nextInput->size(); ++i)
-      (*nextInput)[i] = 0;
-  }
-
-  pthread_mutex_lock(&nextInputMutex);
-    for (int i = 0; i < strlen(buffer); ++i) {
-      if (buffer[i] == '1')
-        (*nextInput)[i] |= 1;
-    }
-  pthread_mutex_unlock(&nextInputMutex);
-}
-
+static sem_t *isDone;
 void done() {
-  printf("yep\n");
+  alarm(0);
+  sem_post(isDone);
 }
 
+void handler(int) {}
+
+#define UNIT_ASYNC_MAX_WAIT 4
 typedef void (*Done_t)();
 void it(const char *str, void (^testFunction)(Done_t)) {
-  puts(str);
+  //Start timeout
+  alarm(UNIT_ASYNC_MAX_WAIT);
+  signal(SIGALRM, handler);
+  
+  //Call the function
   testFunction(done);
+
+  //What happened?  Did we get a semaphore or did an alarm get called
+  int res = sem_wait(isDone);
+  if (res < 0) {
+    fprintf(stderr, "Unit test failed.  Done was not called in %i seconds\n", UNIT_ASYNC_MAX_WAIT);
+    exit(EXIT_FAILURE);
+  }
+
 }
 
-int main() {
+void SetupUnitAsync() {
+  srand(time(NULL));
+
+  char randomName[20];
+  randomName[19] = 0;
+  for (int i = 0; i < sizeof(randomName)-1; ++i)
+    randomName[i] = 'A'+rand()%20;
+
+  isDone = sem_open(randomName, O_CREAT, O_RDWR, 0);
+
+  if (!isDone) {
+    fprintf(stderr, "Could not create semaphore for async done semaphore.  Error code %d\n", errno);
+    exit(EXIT_FAILURE);
+  }
+
+}
+
+int main () {
+  SetupUnitAsync();
+  printf("hey0\n");
+
+  
   it("is awesome", ^(Done_t done) {
-      printf("yo");
+      printf("yo\n");
       done();
-      });
-  /*RunUnits();*/
+  });
+
+  it("is also awesome", ^(Done_t done) {
+      printf("yo\n");
+      done();
+  });
+  
+  return 0;
+}
+
+
+/*std::vector<int> *nextInput = NULL;*/
+//pthread_mutex_t nextInputMutex = PTHREAD_MUTEX_INITIALIZER;
+//void callback(const char *buffer) {
+  //int len = sizeof(buffer);
+
+  //if (!nextInput) {
+    //nextInput = new std::vector<int>();
+    //nextInput->resize(len);
+    //for (int i = 0; i < nextInput->size(); ++i)
+      //(*nextInput)[i] = 0;
+  //}
+
+  //pthread_mutex_lock(&nextInputMutex);
+    //for (int i = 0; i < strlen(buffer); ++i) {
+      //if (buffer[i] == '1')
+        //(*nextInput)[i] |= 1;
+    //}
+  //pthread_mutex_unlock(&nextInputMutex);
+/*}*/
+
+
+/*int main() {*/
+  //RunUnits();
 
   ////Load schema (Port, name, etc)
   //Schema_t schema;
@@ -79,7 +129,7 @@ int main() {
 //#ifdef OSX
     //dispatch_main();
 //#endif
-  /*}*/
+  //}
 
-  return 0;
-}
+  //return 0;
+/*}*/

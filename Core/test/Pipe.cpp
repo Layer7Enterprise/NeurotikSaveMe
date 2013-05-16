@@ -12,7 +12,8 @@ void BeginUnitPipe() {
     //Generate a random name
     const int randomNameLen = 20;
     static char randomName[randomNameLen];
-    for (int x = 0; x < randomNameLen; ++x)
+    randomName[19] = 0;
+    for (int x = 0; x < randomNameLen-1; ++x)
       randomName[x] = RANDOM_CHAR();
     semaphores.push_back(sem_open(randomName, O_CREAT, O_RDWR, 0));
 
