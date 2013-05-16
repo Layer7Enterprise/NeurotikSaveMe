@@ -10,8 +10,6 @@ static Params_t *params = NULL;
 void CoreTick() {
   pthread_mutex_lock(&runningSegmentLock);
 
-  SendUnitMessage(UMCoreInputImpulseOnTimer, runningSegment, NET_INPUT_LEN(params));
-
   pthread_mutex_unlock(&runningSegmentLock);
 }
 

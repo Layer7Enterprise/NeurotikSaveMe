@@ -50,6 +50,8 @@ void TestCoreManager() {
   Params_t params;
   GetNet("test/config/net.txt", schema, &params);
 
+  CoreBegin(&params);
+
   int input_len = NET_INPUT_LEN(&params);
   int output_len = NET_OUTPUT_LEN(&params);
 
@@ -61,9 +63,12 @@ void TestCoreManager() {
 
   it("Can receive a simple input");
   static char msg[] = { "Hellr" };
-  SendUnitMessage(UMCoreInputImpulseOnTimer, (const unsigned char *)msg, strlen(msg));
+//  system("ruby test/utility/send_data.rb 101");
+
+  //SendUnitMessage(UMCoreInputImpulseOnTimer, (const unsigned char *)msg, strlen(msg));
   UnitMessageInfo_t message = GetUnitMessage(UMCoreInputImpulseOnTimer);
-  printf("---%s\n", message.msg);
+  
+  isTrue(0);
 }
 
 void TestGetNet() {
