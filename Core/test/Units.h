@@ -1,6 +1,12 @@
 #ifndef UNITS_H_
 #define UNITS_H_
 
+//Timeout for async units
+static int doneTimeout = 4;
+void setTimeout(int timeout) {
+  doneTimeout = timeout;
+}
+
 #include "Pipe.h"
 #include <string.h>
 #include <stdlib.h>
@@ -15,7 +21,7 @@ static int numTests = 0;
 void it(const char *message) {
   strcpy(currentIt, message);
   printf("\n\t+ %s %s ", currentDescribe, currentIt);
-  ++numTests ;
+  ++numTests;
 }
 
 void shouldEqual(float a, float b) {
@@ -36,7 +42,46 @@ void isTrue(int a) {
     fprintf(stderr, "*****************************************************\n\n");
     exit(EXIT_FAILURE);
   }
+}
 
+static sem_t *isDone;
+void done() {
+  alarm(0);
+  sem_post(isDone);
+}
+
+void AlarmHandler(int) {}
+
+void itAsyncFailed() {
+  printf("✔");
+  fprintf(stderr, "\n*****************************************************\n");
+  fprintf(stderr, "˟ %s %s Test Failed! Done not called in %i seconds\n", currentDescribe, currentIt, doneTimeout);
+  fprintf(stderr, "*****************************************************\n\n");
+  exit(EXIT_FAILURE);
+}
+
+typedef void (*Done_t)();
+void *asyncItHelper(void *ptr) {
+  void (^testFunction)(Done_t) = void (^)(Done_t); 
+
+  return NULL;
+}
+
+void it(const char *str, void (^testFunction)(Done_t)) {
+  //Normal it call
+  it(str);
+
+  //Start timeout
+  alarm(doneTimeout);
+  
+  pthread_t thread;
+  pthread_create(&thread, NULL, asyncItHelper, NULL);
+  //Call the function
+  testFunction(done);
+
+  //What happened?  Did we get a semaphore or did an alarm get called
+  int res = sem_wait(isDone);
+  if (res < 0) itAsyncFailed();
 }
 
 void TestCoreManager() {
@@ -185,9 +230,31 @@ void TestGetNet() {
 
 }
 
+void SetupUnitAsync() {
+  signal(SIGALRM, AlarmHandler);
+  srand(time(NULL));
+
+  char randomName[20];
+  randomName[19] = 0;
+  for (int i = 0; i < sizeof(randomName)-1; ++i)
+    randomName[i] = 'A'+rand()%20;
+
+  isDone = sem_open(randomName, O_CREAT, O_RDWR, 0);
+
+  if (!isDone) {
+    fprintf(stderr, "Could not create semaphore for async done semaphore.  Error code %d\n", errno);
+    exit(EXIT_FAILURE);
+  }
+
+}
+
+
 void RunUnits() {
   printf("Running unit tests\n");
   printf("##################################################\n");
+
+  //Setup async unit handler
+  SetupUnitAsync();
 
   //Setup the pipe queue
   BeginUnitPipe();

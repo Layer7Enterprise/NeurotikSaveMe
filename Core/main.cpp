@@ -22,49 +22,6 @@
 
 #include "test/Units.h"
 
-static sem_t *isDone;
-void done() {
-  alarm(0);
-  sem_post(isDone);
-}
-
-void handler(int) {}
-
-#define UNIT_ASYNC_MAX_WAIT 4
-typedef void (*Done_t)();
-void it(const char *str, void (^testFunction)(Done_t)) {
-  //Start timeout
-  alarm(UNIT_ASYNC_MAX_WAIT);
-  signal(SIGALRM, handler);
-  
-  //Call the function
-  testFunction(done);
-
-  //What happened?  Did we get a semaphore or did an alarm get called
-  int res = sem_wait(isDone);
-  if (res < 0) {
-    fprintf(stderr, "Unit test failed.  Done was not called in %i seconds\n", UNIT_ASYNC_MAX_WAIT);
-    exit(EXIT_FAILURE);
-  }
-
-}
-
-void SetupUnitAsync() {
-  srand(time(NULL));
-
-  char randomName[20];
-  randomName[19] = 0;
-  for (int i = 0; i < sizeof(randomName)-1; ++i)
-    randomName[i] = 'A'+rand()%20;
-
-  isDone = sem_open(randomName, O_CREAT, O_RDWR, 0);
-
-  if (!isDone) {
-    fprintf(stderr, "Could not create semaphore for async done semaphore.  Error code %d\n", errno);
-    exit(EXIT_FAILURE);
-  }
-
-}
 
 int main () {
   SetupUnitAsync();
@@ -73,7 +30,6 @@ int main () {
   
   it("is awesome", ^(Done_t done) {
       printf("yo\n");
-      done();
   });
 
   it("is also awesome", ^(Done_t done) {
