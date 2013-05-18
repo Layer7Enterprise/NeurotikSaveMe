@@ -2,7 +2,7 @@
 #define UNITS_H_
 
 //Timeout for async units
-static int doneTimeout = 4;
+static int doneTimeout = 1;
 void setTimeout(int timeout) {
   doneTimeout = timeout;
 }
@@ -10,6 +10,7 @@ void setTimeout(int timeout) {
 #include "Pipe.h"
 #include <string.h>
 #include <stdlib.h>
+#include <signal.h>
 
 static char currentDescribe[200];
 void describe(const char *message) {
@@ -50,7 +51,6 @@ void done() {
   sem_post(isDone);
 }
 
-void AlarmHandler(int) {}
 
 void itAsyncFailed() {
   printf("✔");
@@ -61,27 +61,34 @@ void itAsyncFailed() {
 }
 
 typedef void (*Done_t)();
+pthread_t itAsyncThread;
 void *asyncItHelper(void *ptr) {
-  void (^testFunction)(Done_t) = void (^)(Done_t); 
-
-  return NULL;
-}
-
-void it(const char *str, void (^testFunction)(Done_t)) {
-  //Normal it call
-  it(str);
+  void (^testFunction)(Done_t) = (void (^)(Done_t))ptr; 
 
   //Start timeout
   alarm(doneTimeout);
-  
-  pthread_t thread;
-  pthread_create(&thread, NULL, asyncItHelper, NULL);
-  //Call the function
+
   testFunction(done);
 
   //What happened?  Did we get a semaphore or did an alarm get called
   int res = sem_wait(isDone);
   if (res < 0) itAsyncFailed();
+
+  return NULL;
+}
+
+void AlarmHandler(int) {
+  pthread_kill(itAsyncThread, SIGKILL);
+}
+
+
+#define function(X) ^(Done_t X)
+void it(const char *str, void (^testFunction)(Done_t)) {
+  //Normal it call
+  it(str);
+
+  //Call the function
+  pthread_create(&itAsyncThread, NULL, asyncItHelper, testFunction);
 }
 
 void TestCoreManager() {
@@ -106,14 +113,12 @@ void TestCoreManager() {
   it("Gets the right network output sizes");
   shouldEqual(output_len, 2);
 
-  it("Can receive a simple input");
-  static char msg[] = { "Hellr" };
-//  system("ruby test/utility/send_data.rb 101");
+  it("Can receive a simple input", function(done) {
+      done();
+  });
 
-  //SendUnitMessage(UMCoreInputImpulseOnTimer, (const unsigned char *)msg, strlen(msg));
-  UnitMessageInfo_t message = GetUnitMessage(UMCoreInputImpulseOnTimer);
+  dispatch_main();
   
-  isTrue(0);
 }
 
 void TestGetNet() {
@@ -247,7 +252,6 @@ void SetupUnitAsync() {
   }
 
 }
-
 
 void RunUnits() {
   printf("Running unit tests\n");
