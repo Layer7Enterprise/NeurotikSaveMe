@@ -5,7 +5,6 @@ CMakeFiles/neurotik.dir/CoreManager.cpp.o: ../CoreManager.cpp
 CMakeFiles/neurotik.dir/CoreManager.cpp.o: ../CoreManager.h
 CMakeFiles/neurotik.dir/CoreManager.cpp.o: ../Params.h
 CMakeFiles/neurotik.dir/CoreManager.cpp.o: ../Timer.h
-CMakeFiles/neurotik.dir/CoreManager.cpp.o: ../test/Pipe.h
 
 CMakeFiles/neurotik.dir/GetNet.cpp.o: ../GetNet.cpp
 CMakeFiles/neurotik.dir/GetNet.cpp.o: ../GetNet.h
@@ -28,9 +27,5 @@ CMakeFiles/neurotik.dir/main.cpp.o: ../Params.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../Schema.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../Timer.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../main.cpp
-CMakeFiles/neurotik.dir/main.cpp.o: ../test/Pipe.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../test/Units.h
-
-CMakeFiles/neurotik.dir/test/Pipe.cpp.o: ../test/Pipe.cpp
-CMakeFiles/neurotik.dir/test/Pipe.cpp.o: ../test/Pipe.h
 

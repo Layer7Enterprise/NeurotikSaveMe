@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/seo/Dev/Layer7/Neurotik/Core/CoreManager.cpp
+CoreManager.h
+/Users/seo/Dev/Layer7/Neurotik/Core/CoreManager.h
+
 /Users/seo/Dev/Layer7/Neurotik/Core/CoreManager.h
 stdio.h
 -
@@ -17,12 +21,16 @@ queue
 -
 pthread.h
 -
+CCup.h
+-
 Params.h
 /Users/seo/Dev/Layer7/Neurotik/Core/Params.h
 Timer.h
 /Users/seo/Dev/Layer7/Neurotik/Core/Timer.h
-test/Pipe.h
-/Users/seo/Dev/Layer7/Neurotik/Core/test/Pipe.h
+
+/Users/seo/Dev/Layer7/Neurotik/Core/GetNet.cpp
+GetNet.h
+/Users/seo/Dev/Layer7/Neurotik/Core/GetNet.h
 
 /Users/seo/Dev/Layer7/Neurotik/Core/GetNet.h
 stdlib.h
@@ -37,6 +45,10 @@ Params.h
 /Users/seo/Dev/Layer7/Neurotik/Core/Params.h
 Schema.h
 /Users/seo/Dev/Layer7/Neurotik/Core/Schema.h
+
+/Users/seo/Dev/Layer7/Neurotik/Core/Net.cpp
+Net.h
+/Users/seo/Dev/Layer7/Neurotik/Core/Net.h
 
 /Users/seo/Dev/Layer7/Neurotik/Core/Net.h
 stdio.h
@@ -58,11 +70,19 @@ pthread.h
 map
 -
 
+/Users/seo/Dev/Layer7/Neurotik/Core/Schema.cpp
+Schema.h
+/Users/seo/Dev/Layer7/Neurotik/Core/Schema.h
+
 /Users/seo/Dev/Layer7/Neurotik/Core/Schema.h
 stdlib.h
 -
 stdio.h
 -
+
+/Users/seo/Dev/Layer7/Neurotik/Core/Timer.cpp
+Timer.h
+/Users/seo/Dev/Layer7/Neurotik/Core/Timer.h
 
 /Users/seo/Dev/Layer7/Neurotik/Core/Timer.h
 mach/mach.h
@@ -119,18 +139,6 @@ Timer.h
 /Users/seo/Dev/Layer7/Neurotik/Core/Timer.h
 test/Units.h
 /Users/seo/Dev/Layer7/Neurotik/Core/test/Units.h
-
-/Users/seo/Dev/Layer7/Neurotik/Core/test/Pipe.h
-list
--
-queue
--
-sys/stat.h
--
-semaphore.h
--
-errno.h
-/Users/seo/Dev/Layer7/Neurotik/Core/test/errno.h
 
 /Users/seo/Dev/Layer7/Neurotik/Core/test/Units.h
 CCup.h

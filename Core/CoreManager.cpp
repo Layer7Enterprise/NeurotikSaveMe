@@ -10,6 +10,8 @@ static Params_t *params = NULL;
 void CoreTick() {
   pthread_mutex_lock(&runningSegmentLock);
 
+  CCSend("test", "hello", 5);
+
   pthread_mutex_unlock(&runningSegmentLock);
 }
 

@@ -6,9 +6,9 @@
 #include <vector>
 #include <queue>
 #include <pthread.h>
+#include <CCup.h>
 #include "Params.h"
 #include "Timer.h"
-#include "test/Pipe.h"
 
 //Start the core
 void CoreBegin(Params_t *params);

@@ -162,6 +162,7 @@ void TestCoreManager() {
     char command[200];
     sprintf(command, "ruby ./test/utility/send_data.rb %s", data);
     system(command);
+    puts(command);
   });
 }
 

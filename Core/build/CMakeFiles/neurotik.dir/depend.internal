@@ -6,7 +6,6 @@ CMakeFiles/neurotik.dir/CoreManager.cpp.o
  /Users/seo/Dev/Layer7/Neurotik/Core/CoreManager.h
  /Users/seo/Dev/Layer7/Neurotik/Core/Params.h
  /Users/seo/Dev/Layer7/Neurotik/Core/Timer.h
- /Users/seo/Dev/Layer7/Neurotik/Core/test/Pipe.h
 CMakeFiles/neurotik.dir/GetNet.cpp.o
  /Users/seo/Dev/Layer7/Neurotik/Core/GetNet.cpp
  /Users/seo/Dev/Layer7/Neurotik/Core/GetNet.h
@@ -29,8 +28,4 @@ CMakeFiles/neurotik.dir/main.cpp.o
  /Users/seo/Dev/Layer7/Neurotik/Core/Schema.h
  /Users/seo/Dev/Layer7/Neurotik/Core/Timer.h
  /Users/seo/Dev/Layer7/Neurotik/Core/main.cpp
- /Users/seo/Dev/Layer7/Neurotik/Core/test/Pipe.h
  /Users/seo/Dev/Layer7/Neurotik/Core/test/Units.h
-CMakeFiles/neurotik.dir/test/Pipe.cpp.o
- /Users/seo/Dev/Layer7/Neurotik/Core/test/Pipe.cpp
- /Users/seo/Dev/Layer7/Neurotik/Core/test/Pipe.h

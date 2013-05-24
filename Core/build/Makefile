@@ -258,30 +258,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-test/Pipe.o: test/Pipe.cpp.o
-.PHONY : test/Pipe.o
-
-# target to build an object file
-test/Pipe.cpp.o:
-	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/test/Pipe.cpp.o
-.PHONY : test/Pipe.cpp.o
-
-test/Pipe.i: test/Pipe.cpp.i
-.PHONY : test/Pipe.i
-
-# target to preprocess a source file
-test/Pipe.cpp.i:
-	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/test/Pipe.cpp.i
-.PHONY : test/Pipe.cpp.i
-
-test/Pipe.s: test/Pipe.cpp.s
-.PHONY : test/Pipe.s
-
-# target to generate assembly for a file
-test/Pipe.cpp.s:
-	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/test/Pipe.cpp.s
-.PHONY : test/Pipe.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -309,9 +285,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... test/Pipe.o"
-	@echo "... test/Pipe.i"
-	@echo "... test/Pipe.s"
 .PHONY : help
 
 
