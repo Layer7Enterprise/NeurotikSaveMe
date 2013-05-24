@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/local/Cellar/cmake/2.8.10.2/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sotownsend/Dev/Neurotik2/Core
+CMAKE_SOURCE_DIR = /Users/seo/Dev/Layer7/Neurotik2/Core
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sotownsend/Dev/Neurotik2/Core/build
+CMAKE_BINARY_DIR = /Users/seo/Dev/Layer7/Neurotik2/Core/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/neurotik.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/neurotik.dir/flags.make
 
 CMakeFiles/neurotik.dir/main.cpp.o: CMakeFiles/neurotik.dir/flags.make
 CMakeFiles/neurotik.dir/main.cpp.o: ../main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/main.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/main.cpp.o -c /Users/seo/Dev/Layer7/Neurotik2/Core/main.cpp
 
 CMakeFiles/neurotik.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/main.cpp > CMakeFiles/neurotik.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/seo/Dev/Layer7/Neurotik2/Core/main.cpp > CMakeFiles/neurotik.dir/main.cpp.i
 
 CMakeFiles/neurotik.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/main.cpp -o CMakeFiles/neurotik.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/seo/Dev/Layer7/Neurotik2/Core/main.cpp -o CMakeFiles/neurotik.dir/main.cpp.s
 
 CMakeFiles/neurotik.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/neurotik.dir/main.cpp.o.requires
@@ -77,17 +77,17 @@ CMakeFiles/neurotik.dir/main.cpp.o.provides.build: CMakeFiles/neurotik.dir/main.
 
 CMakeFiles/neurotik.dir/Net.cpp.o: CMakeFiles/neurotik.dir/flags.make
 CMakeFiles/neurotik.dir/Net.cpp.o: ../Net.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/Net.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/Net.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/Net.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/Net.cpp.o -c /Users/seo/Dev/Layer7/Neurotik2/Core/Net.cpp
 
 CMakeFiles/neurotik.dir/Net.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/Net.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/Net.cpp > CMakeFiles/neurotik.dir/Net.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/seo/Dev/Layer7/Neurotik2/Core/Net.cpp > CMakeFiles/neurotik.dir/Net.cpp.i
 
 CMakeFiles/neurotik.dir/Net.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/Net.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/Net.cpp -o CMakeFiles/neurotik.dir/Net.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/seo/Dev/Layer7/Neurotik2/Core/Net.cpp -o CMakeFiles/neurotik.dir/Net.cpp.s
 
 CMakeFiles/neurotik.dir/Net.cpp.o.requires:
 .PHONY : CMakeFiles/neurotik.dir/Net.cpp.o.requires
@@ -100,17 +100,17 @@ CMakeFiles/neurotik.dir/Net.cpp.o.provides.build: CMakeFiles/neurotik.dir/Net.cp
 
 CMakeFiles/neurotik.dir/Schema.cpp.o: CMakeFiles/neurotik.dir/flags.make
 CMakeFiles/neurotik.dir/Schema.cpp.o: ../Schema.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/Schema.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/Schema.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/Schema.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/Schema.cpp.o -c /Users/seo/Dev/Layer7/Neurotik2/Core/Schema.cpp
 
 CMakeFiles/neurotik.dir/Schema.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/Schema.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/Schema.cpp > CMakeFiles/neurotik.dir/Schema.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/seo/Dev/Layer7/Neurotik2/Core/Schema.cpp > CMakeFiles/neurotik.dir/Schema.cpp.i
 
 CMakeFiles/neurotik.dir/Schema.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/Schema.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/Schema.cpp -o CMakeFiles/neurotik.dir/Schema.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/seo/Dev/Layer7/Neurotik2/Core/Schema.cpp -o CMakeFiles/neurotik.dir/Schema.cpp.s
 
 CMakeFiles/neurotik.dir/Schema.cpp.o.requires:
 .PHONY : CMakeFiles/neurotik.dir/Schema.cpp.o.requires
@@ -123,17 +123,17 @@ CMakeFiles/neurotik.dir/Schema.cpp.o.provides.build: CMakeFiles/neurotik.dir/Sch
 
 CMakeFiles/neurotik.dir/GetNet.cpp.o: CMakeFiles/neurotik.dir/flags.make
 CMakeFiles/neurotik.dir/GetNet.cpp.o: ../GetNet.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/GetNet.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/GetNet.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/GetNet.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/GetNet.cpp.o -c /Users/seo/Dev/Layer7/Neurotik2/Core/GetNet.cpp
 
 CMakeFiles/neurotik.dir/GetNet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/GetNet.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/GetNet.cpp > CMakeFiles/neurotik.dir/GetNet.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/seo/Dev/Layer7/Neurotik2/Core/GetNet.cpp > CMakeFiles/neurotik.dir/GetNet.cpp.i
 
 CMakeFiles/neurotik.dir/GetNet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/GetNet.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/GetNet.cpp -o CMakeFiles/neurotik.dir/GetNet.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/seo/Dev/Layer7/Neurotik2/Core/GetNet.cpp -o CMakeFiles/neurotik.dir/GetNet.cpp.s
 
 CMakeFiles/neurotik.dir/GetNet.cpp.o.requires:
 .PHONY : CMakeFiles/neurotik.dir/GetNet.cpp.o.requires
@@ -146,17 +146,17 @@ CMakeFiles/neurotik.dir/GetNet.cpp.o.provides.build: CMakeFiles/neurotik.dir/Get
 
 CMakeFiles/neurotik.dir/Timer.cpp.o: CMakeFiles/neurotik.dir/flags.make
 CMakeFiles/neurotik.dir/Timer.cpp.o: ../Timer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/Timer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/Timer.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/Timer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/Timer.cpp.o -c /Users/seo/Dev/Layer7/Neurotik2/Core/Timer.cpp
 
 CMakeFiles/neurotik.dir/Timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/Timer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/Timer.cpp > CMakeFiles/neurotik.dir/Timer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/seo/Dev/Layer7/Neurotik2/Core/Timer.cpp > CMakeFiles/neurotik.dir/Timer.cpp.i
 
 CMakeFiles/neurotik.dir/Timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/Timer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/Timer.cpp -o CMakeFiles/neurotik.dir/Timer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/seo/Dev/Layer7/Neurotik2/Core/Timer.cpp -o CMakeFiles/neurotik.dir/Timer.cpp.s
 
 CMakeFiles/neurotik.dir/Timer.cpp.o.requires:
 .PHONY : CMakeFiles/neurotik.dir/Timer.cpp.o.requires
@@ -169,17 +169,17 @@ CMakeFiles/neurotik.dir/Timer.cpp.o.provides.build: CMakeFiles/neurotik.dir/Time
 
 CMakeFiles/neurotik.dir/CoreManager.cpp.o: CMakeFiles/neurotik.dir/flags.make
 CMakeFiles/neurotik.dir/CoreManager.cpp.o: ../CoreManager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/CoreManager.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/CoreManager.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/CoreManager.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/CoreManager.cpp.o -c /Users/seo/Dev/Layer7/Neurotik2/Core/CoreManager.cpp
 
 CMakeFiles/neurotik.dir/CoreManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/CoreManager.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/CoreManager.cpp > CMakeFiles/neurotik.dir/CoreManager.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/seo/Dev/Layer7/Neurotik2/Core/CoreManager.cpp > CMakeFiles/neurotik.dir/CoreManager.cpp.i
 
 CMakeFiles/neurotik.dir/CoreManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/CoreManager.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/CoreManager.cpp -o CMakeFiles/neurotik.dir/CoreManager.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/seo/Dev/Layer7/Neurotik2/Core/CoreManager.cpp -o CMakeFiles/neurotik.dir/CoreManager.cpp.s
 
 CMakeFiles/neurotik.dir/CoreManager.cpp.o.requires:
 .PHONY : CMakeFiles/neurotik.dir/CoreManager.cpp.o.requires
@@ -192,17 +192,17 @@ CMakeFiles/neurotik.dir/CoreManager.cpp.o.provides.build: CMakeFiles/neurotik.di
 
 CMakeFiles/neurotik.dir/test/Pipe.cpp.o: CMakeFiles/neurotik.dir/flags.make
 CMakeFiles/neurotik.dir/test/Pipe.cpp.o: ../test/Pipe.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neurotik.dir/test/Pipe.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/test/Pipe.cpp.o -c /Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neurotik.dir/test/Pipe.cpp.o -c /Users/seo/Dev/Layer7/Neurotik2/Core/test/Pipe.cpp
 
 CMakeFiles/neurotik.dir/test/Pipe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neurotik.dir/test/Pipe.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.cpp > CMakeFiles/neurotik.dir/test/Pipe.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/seo/Dev/Layer7/Neurotik2/Core/test/Pipe.cpp > CMakeFiles/neurotik.dir/test/Pipe.cpp.i
 
 CMakeFiles/neurotik.dir/test/Pipe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neurotik.dir/test/Pipe.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.cpp -o CMakeFiles/neurotik.dir/test/Pipe.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/seo/Dev/Layer7/Neurotik2/Core/test/Pipe.cpp -o CMakeFiles/neurotik.dir/test/Pipe.cpp.s
 
 CMakeFiles/neurotik.dir/test/Pipe.cpp.o.requires:
 .PHONY : CMakeFiles/neurotik.dir/test/Pipe.cpp.o.requires
@@ -258,6 +258,6 @@ CMakeFiles/neurotik.dir/clean:
 .PHONY : CMakeFiles/neurotik.dir/clean
 
 CMakeFiles/neurotik.dir/depend:
-	cd /Users/sotownsend/Dev/Neurotik2/Core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/sotownsend/Dev/Neurotik2/Core /Users/sotownsend/Dev/Neurotik2/Core /Users/sotownsend/Dev/Neurotik2/Core/build /Users/sotownsend/Dev/Neurotik2/Core/build /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles/neurotik.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/seo/Dev/Layer7/Neurotik2/Core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/seo/Dev/Layer7/Neurotik2/Core /Users/seo/Dev/Layer7/Neurotik2/Core /Users/seo/Dev/Layer7/Neurotik2/Core/build /Users/seo/Dev/Layer7/Neurotik2/Core/build /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles/neurotik.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/neurotik.dir/depend
 

@@ -50,10 +50,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/local/Cellar/cmake/2.8.10.2/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sotownsend/Dev/Neurotik2/Core
+CMAKE_SOURCE_DIR = /Users/seo/Dev/Layer7/Neurotik2/Core
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sotownsend/Dev/Neurotik2/Core/build
+CMAKE_BINARY_DIR = /Users/seo/Dev/Layer7/Neurotik2/Core/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/neurotik.dir
@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /Users/sotownsend/Dev/Neurotik2/Core/build
 CMakeFiles/neurotik.dir/all:
 	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/depend
 	$(MAKE) -f CMakeFiles/neurotik.dir/build.make CMakeFiles/neurotik.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles  1 2 3 4 5 6 7
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles  1 2 3 4 5 6 7
 	@echo "Built target neurotik"
 .PHONY : CMakeFiles/neurotik.dir/all
 
@@ -72,9 +72,9 @@ all: CMakeFiles/neurotik.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/neurotik.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/neurotik.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sotownsend/Dev/Neurotik2/Core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seo/Dev/Layer7/Neurotik2/Core/build/CMakeFiles 0
 .PHONY : CMakeFiles/neurotik.dir/rule
 
 # Convenience name for target.

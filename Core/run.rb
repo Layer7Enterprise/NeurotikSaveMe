@@ -1,4 +1,3 @@
-#!/Users/sotownsend/.rvm/rubies/ruby-2.0.0-p0/bin/ruby
 require 'colorize'
 
 def start name

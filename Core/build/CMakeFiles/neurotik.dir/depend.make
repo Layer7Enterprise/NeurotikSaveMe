@@ -28,8 +28,8 @@ CMakeFiles/neurotik.dir/main.cpp.o: ../Params.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../Schema.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../Timer.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../main.cpp
+CMakeFiles/neurotik.dir/main.cpp.o: ../test/NewUnits.h
 CMakeFiles/neurotik.dir/main.cpp.o: ../test/Pipe.h
-CMakeFiles/neurotik.dir/main.cpp.o: ../test/Units.h
 
 CMakeFiles/neurotik.dir/test/Pipe.cpp.o: ../test/Pipe.cpp
 CMakeFiles/neurotik.dir/test/Pipe.cpp.o: ../test/Pipe.h

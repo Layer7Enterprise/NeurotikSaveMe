@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/sotownsend/Dev/Neurotik2/Core/CoreManager.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/CoreManager.h
 stdio.h
 -
 stdlib.h
@@ -18,13 +18,13 @@ queue
 pthread.h
 -
 Params.h
-/Users/sotownsend/Dev/Neurotik2/Core/Params.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Params.h
 Timer.h
-/Users/sotownsend/Dev/Neurotik2/Core/Timer.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Timer.h
 test/Pipe.h
-/Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/test/Pipe.h
 
-/Users/sotownsend/Dev/Neurotik2/Core/GetNet.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/GetNet.h
 stdlib.h
 -
 stdio.h
@@ -34,11 +34,11 @@ string.h
 string
 -
 Params.h
-/Users/sotownsend/Dev/Neurotik2/Core/Params.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Params.h
 Schema.h
-/Users/sotownsend/Dev/Neurotik2/Core/Schema.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Schema.h
 
-/Users/sotownsend/Dev/Neurotik2/Core/Net.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Net.h
 stdio.h
 -
 stdlib.h
@@ -54,17 +54,17 @@ arpa/inet.h
 pthread.h
 -
 
-/Users/sotownsend/Dev/Neurotik2/Core/Params.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Params.h
 map
 -
 
-/Users/sotownsend/Dev/Neurotik2/Core/Schema.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Schema.h
 stdlib.h
 -
 stdio.h
 -
 
-/Users/sotownsend/Dev/Neurotik2/Core/Timer.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Timer.h
 mach/mach.h
 -
 mach/mach_time.h
@@ -80,7 +80,7 @@ string.h
 pthread.h
 -
 
-/Users/sotownsend/Dev/Neurotik2/Core/main.cpp
+/Users/seo/Dev/Layer7/Neurotik2/Core/main.cpp
 stdio.h
 -
 string.h
@@ -106,21 +106,25 @@ mach/mach_time.h
 dispatch/dispatch.h
 -
 Net.h
-/Users/sotownsend/Dev/Neurotik2/Core/Net.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Net.h
 Schema.h
-/Users/sotownsend/Dev/Neurotik2/Core/Schema.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Schema.h
 Params.h
-/Users/sotownsend/Dev/Neurotik2/Core/Params.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Params.h
 GetNet.h
-/Users/sotownsend/Dev/Neurotik2/Core/GetNet.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/GetNet.h
 CoreManager.h
-/Users/sotownsend/Dev/Neurotik2/Core/CoreManager.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/CoreManager.h
 Timer.h
-/Users/sotownsend/Dev/Neurotik2/Core/Timer.h
-test/Units.h
-/Users/sotownsend/Dev/Neurotik2/Core/test/Units.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/Timer.h
+test/NewUnits.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/test/NewUnits.h
 
-/Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.h
+/Users/seo/Dev/Layer7/Neurotik2/Core/test/NewUnits.h
+CCup.h
+-
+
+/Users/seo/Dev/Layer7/Neurotik2/Core/test/Pipe.h
 list
 -
 queue
@@ -130,15 +134,5 @@ sys/stat.h
 semaphore.h
 -
 errno.h
-/Users/sotownsend/Dev/Neurotik2/Core/test/errno.h
-
-/Users/sotownsend/Dev/Neurotik2/Core/test/Units.h
-Pipe.h
-/Users/sotownsend/Dev/Neurotik2/Core/test/Pipe.h
-string.h
--
-stdlib.h
--
-signal.h
--
+/Users/seo/Dev/Layer7/Neurotik2/Core/test/errno.h
 
