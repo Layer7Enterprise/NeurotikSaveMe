@@ -156,6 +156,13 @@ void TestCoreManager() {
   It("Gets the right network output sizes", function() {
     IsEqual(output_len, 2);
   });
+
+  It("Can receive one piece of network data", _function() {
+    const char data[] = "101010";
+    char command[200];
+    sprintf(command, "ruby ./test/utility/send_data.rb %s", data);
+    system(command);
+  });
 }
 
 void RunUnits() {

@@ -42,7 +42,6 @@ void callback(const char *buffer) {
   pthread_mutex_unlock(&nextInputMutex);
 }
 
-
 int main() {
   RunUnits();
 
