@@ -1,7 +1,7 @@
 require 'socket'
 
 MULTICAST_ADDR = '224.4.5.6'
-PORT = 3001
+PORT = 3000
 
 begin
   socket = UDPSocket.open

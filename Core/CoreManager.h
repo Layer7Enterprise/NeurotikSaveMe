@@ -6,7 +6,6 @@
 #include <vector>
 #include <queue>
 #include <pthread.h>
-#include <CCup.h>
 #include "Params.h"
 #include "Timer.h"
 
@@ -17,6 +16,6 @@ void CoreBegin(Params_t *params);
 void CoreTick();
 
 //Current input from network, etc.
-void CoreOnImpulse(const char *impulse);
+void CoreOnImpulse(const unsigned char *impulse, int len);
 
 #endif

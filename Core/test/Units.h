@@ -3,16 +3,36 @@
 
 #include <CCup.h>
 
+static Schema_t schema;
+static Params_t params;
+
+void TestNetRcv() {
+  It("NetOnRcv thread Can physically one piece of network data", _function() {
+    //Send network data via ruby
+    const char data[] = "10";
+    char command[200];
+    sprintf(command, "ruby ./test/utility/send_data.rb %s", data);
+    system(command);
+
+    CCupMessage_t message = CCGet("NetGotSomething");
+    IsEqualData((unsigned char *)message.data, (unsigned char *)data, strlen(data));
+
+    done();
+  });
+
+  It("NetOnRcv thread is building the right output", _function() {
+    //Send network data via ruby
+    system("ruby ./test/utility/send_data.rb 10");
+
+    CCupMessage_t message = CCGet("NetSendToCallback");
+    unsigned char shouldBe[] = { 1, 0 };
+    IsEqualData((unsigned char *)message.data, shouldBe, 2);
+    done();
+  });
+}
+
 //Test the loading of the network files
 void TestGetNet() {
-  //Load schema (Port, name, etc)
-  Schema_t schema;
-  GetSchema("test/config/schema.txt", &schema);
-
-  //Load params (net list, large chunk of memory, etc)
-  Params_t params;
-  GetNet("test/config/net.txt", schema, &params);
-
   It("has the right network start position", function() {
     IsEqual(params.networkInStartPos, 1);
   });
@@ -104,7 +124,7 @@ void TestGetNet() {
     IsEqual(params.dConnections[0*10+1], 2);
     IsEqual(params.dConnections[2*10+1], -1);
     IsEqual(params.dConnections[3*10+1], -1);
-  });
+    });
   
   It("has the right initial weights", function() {
     IsEqual(params.dWeights[0*10+0], 11.05);
@@ -136,16 +156,6 @@ void TestGetNet() {
 }
 
 void TestCoreManager() {
-  //Load schema (Port, name, etc)
-  Schema_t schema;
-  GetSchema("test/config/schema.txt", &schema);
-
-  //Load params (net list, large chunk of memory, etc)
-  Params_t params;
-  GetNet("test/config/net.txt", schema, &params);
-
-  CoreBegin(&params);
-
   int input_len = NET_INPUT_LEN(&params);
   int output_len = NET_OUTPUT_LEN(&params);
 
@@ -156,26 +166,143 @@ void TestCoreManager() {
   It("Gets the right network output sizes", function() {
     IsEqual(output_len, 2);
   });
+  
+  It("Has the right idle network segment", _function() {
+    CCOn("CoreTickInput");
 
-  It("Can receive one piece of network data", _function() {
-    const char data[] = "101010";
-    char command[200];
-    sprintf(command, "ruby ./test/utility/send_data.rb %s", data);
-    system(command);
-    puts(command);
+    //Blank input
+    unsigned char inputSpike[NET_INPUT_LEN(&params)];
+    for (int i = 0; i < NET_INPUT_LEN(&params); ++i)
+      inputSpike[i] = 0;
+
+    CCupMessage_t message = CCGet("CoreTickInput");
+    IsEqualData((unsigned char *)message.data, inputSpike, 2);
+
+    done();
+    CCOff("CoreTickInput");
   });
+
+ It("CoreOnImpulse Can get data from Network (Same thread) at start", _function() {
+    CCOn("CoreOnImpulseStart");
+    //Send network data via ruby
+    system("ruby ./test/utility/send_data.rb 10");
+
+    CCupMessage_t message = CCGet("CoreOnImpulseStart");
+    unsigned char shouldBe[] = { 1, 0 };
+    IsEqualData((unsigned char *)message.data, shouldBe, 2);
+    done();
+    CCOff("CoreOnImpulseStart");
+  });
+
+  It("CoreOnImpulse Can get data from Network (Same thread) at end", _function() {
+    CCOn("CoreOnImpulseEnd");
+    //Send network data via ruby
+    system("ruby ./test/utility/send_data.rb 10");
+
+    CCupMessage_t message = CCGet("CoreOnImpulseEnd");
+    unsigned char shouldBe[] = { 1, 0 };
+    IsEqualData((unsigned char *)message.data, shouldBe, 2);
+    done();
+    CCOff("CoreOnImpulseEnd");
+  });
+
+
+  It("Core should have the right non-blank segment", _function() {
+    CCOn("CoreTickInputNotBlank");
+
+    //Send network data via ruby
+    system("ruby ./test/utility/send_data.rb 10");
+
+    char equivalentSpike[] = { 1, 0 };
+
+    CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+    IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+    done();
+
+    CCOff("CoreTickInputNotBlank");
+  });
+
+  It("Core should have the right non-blank segment (again)", _function() {
+    CCOn("CoreTickInputNotBlank");
+
+    //Send network data via ruby
+    system("ruby ./test/utility/send_data.rb 01");
+
+    char equivalentSpike[] = { 0, 1 };
+
+    CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+    IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+    done();
+
+    CCOff("CoreTickInputNotBlank");
+  });
+
+  It("Core should have the right non-blank segment (again)", _function() {
+    CCOn("CoreTickInputNotBlank");
+
+    //Send network data via ruby
+    system("ruby ./test/utility/send_data.rb 01");
+    system("ruby ./test/utility/send_data.rb 10");
+    system("ruby ./test/utility/send_data.rb 11");
+    system("ruby ./test/utility/send_data.rb 00");
+
+    {
+      char equivalentSpike[] = { 0, 1 };
+      CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+      IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+    }{
+      char equivalentSpike[] = { 1, 0 };
+      CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+      IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+    }{
+      char equivalentSpike[] = { 1, 1 };
+      CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+      IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+    }{
+      char equivalentSpike[] = { 0, 0 };
+      CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+      IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+    }
+
+    done();
+
+    CCOff("CoreTickInputNotBlank");
+  });
+
 }
 
 void RunUnits() {
+  //Load schema (Port, name, etc)
+  GetSchema("test/config/schema.txt", &schema);
+
+  //Load params (net list, large chunk of memory, etc)
+  GetNet("test/config/net.txt", schema, &params);
+
+  //Setup Core
+  CCOff("CoreTickInput");
+  CCOff("CoreTickInputNotBlank");
+  CCOff("CoreOnImpulseStart");
+  CCOff("CoreOnImpulseEnd");
+
   CCup(function() {
+    CCSelfTest();
     Describe("TestGetNet", function() {
       TestGetNet();
+    });
+
+    Describe("TestNetRcv", function() {
+      TestNetRcv();
     });
 
     Describe("TestCoreManager", function() {
       TestCoreManager();
     });
   });
+
+  CoreBegin(&params);
+
+  //Setup network receiving
+  NetRcvBegin(NET_IP, NET_PORT, CoreOnImpulse);
 
   dispatch_main();
 }

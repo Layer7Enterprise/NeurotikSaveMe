@@ -1,5 +1,8 @@
 #include "Net.h"
 
+//Debug?
+#include <CCup.h>
+
 //Sending Stuff
 //##############################
 static int netSendSocket;
@@ -32,7 +35,7 @@ void NetSend(const char *message, int len) {
 //##############################
 static int netRcvSocket;
 static sockaddr_in netRcvAddr;
-static void (*netRcvCallback)(const char *);
+static void (*netRcvCallback)(const unsigned char *, int len);
 static pthread_t netRcvThread;
 
 void *_NetRcvThread(void *) {
@@ -44,6 +47,10 @@ void *_NetRcvThread(void *) {
 
     int nBytes = recvfrom(netRcvSocket, buffer, MAXLEN, 0, (sockaddr *)&netRcvAddr, &addrlen);
 
+#ifdef CCUP
+    CCSend("NetGotSomething", buffer, nBytes);
+#endif
+
     if (nBytes < 0) {
       perror("Tried to recvfrom but failed");
       exit(EXIT_FAILURE);
@@ -54,11 +61,22 @@ void *_NetRcvThread(void *) {
       exit(EXIT_FAILURE);
     }
 
-    netRcvCallback(buffer);
+    //Perform the conversion to binary '10' => [1, 0]
+    static unsigned char integerVersion[MAXLEN];
+    for (int i = 0; i < nBytes; ++i) {
+      integerVersion[i] = buffer[i] == '1';
+    }
+
+#ifdef CCUP
+    //Integer version
+    CCSend("NetSendToCallback", (char *)integerVersion, nBytes);
+#endif
+
+    netRcvCallback(integerVersion, nBytes);
   }
 }
 
-void NetRcvBegin(const char *ip, int port, void (*callback )(const char *)) {
+void NetRcvBegin(const char *ip, int port, void (*callback )(const unsigned char *, int len)) {
   //Save callback
   netRcvCallback = callback;
 

@@ -1,5 +1,8 @@
 #include "CoreManager.h"
 
+//Debug?
+#include <CCup.h>
+
 //Inbound segment (INTEGER BASED!)
 pthread_mutex_t runningSegmentLock = PTHREAD_MUTEX_INITIALIZER;
 static unsigned char *runningSegment = NULL;
@@ -10,7 +13,24 @@ static Params_t *params = NULL;
 void CoreTick() {
   pthread_mutex_lock(&runningSegmentLock);
 
-  CCSend("test", "hello", 5);
+#ifdef CCUP
+  //Is segment blank?
+  int isBlank = 1;
+  for (int i = 0; i < NET_INPUT_LEN(params); ++i) {
+    if (runningSegment[i] == 1) {
+      isBlank = 0;
+      break;
+    }
+  }
+
+  CCSend("CoreTickInput", (const char *)runningSegment, NET_INPUT_LEN(params));
+
+  if (!isBlank)
+    CCSend("CoreTickInputNotBlank", (const char *)runningSegment, NET_INPUT_LEN(params));
+#endif
+
+  //Reset running
+  memset(runningSegment, 0, NET_INPUT_LEN(params));
 
   pthread_mutex_unlock(&runningSegmentLock);
 }
@@ -24,28 +44,36 @@ void CoreBegin(Params_t *p) {
   //Allocate running segment
   runningSegment = new unsigned char[NET_INPUT_LEN(params)];
   memset(runningSegment, 0, NET_INPUT_LEN(params));
+
+  //Create a mutex
+  pthread_mutex_init(&runningSegmentLock, NULL);
+
+  //Set segment to all 0's
+  for (int i = 0; i < NET_INPUT_LEN(params); ++i)
+    runningSegment[i] = 0;
 }
 
+void CoreOnImpulse(const unsigned char *impulse, int len) {
+  CCSend("CoreOnImpulseStart", (const char *)impulse, len);
 
-void CoreOnImpulse(const char *impulse) {
   //Confirm that the size of the impulse vector is right
-  int len = sizeof(impulse);
   if (len != NET_INPUT_LEN(params)) {
     fprintf(stderr, "Impulse size was not the same as the params length %d != %d\n", NET_INPUT_LEN(params), len);
     exit(EXIT_FAILURE);
   }
 
-  //OR the running segment (NOTE: impulse is an ASCII string, segment is integer)
+  //OR the running segment
   pthread_mutex_lock(&runningSegmentLock);
   for (int i = 0; i < len; ++i) {
-    if (impulse[i] == '1') {
-      runningSegment[i+params->networkInStartPos] |= 1;
-    } else if (impulse[i] == '0') {
+    if (impulse[i] == 1) {
+      runningSegment[i] |= 1;
+    } else if (impulse[i] == 0) {
       //Do nothing
     } else {
-      fprintf(stderr, "Impulse input was not an ASCII 1 or 0.  it was %c\n", impulse[i]);
+      fprintf(stderr, "Impulse input was not an 1 or 0.  it was %d\n", impulse[i]);
       exit(EXIT_FAILURE);
     }
   }
   pthread_mutex_unlock(&runningSegmentLock);
+  CCSend("CoreOnImpulseEnd", (const char *)runningSegment, len);
 }
