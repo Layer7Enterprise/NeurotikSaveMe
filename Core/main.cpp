@@ -20,7 +20,7 @@
 #define SCHEMA_FILE "config/schema.txt"
 #define NET_FILE "config/net.txt"
 
-#include "test/NewUnits.h"
+#include "test/Units.h"
 
 std::vector<int> *nextInput = NULL;
 pthread_mutex_t nextInputMutex = PTHREAD_MUTEX_INITIALIZER;
