@@ -52,10 +52,20 @@ void *_NetRcvThread(void *) {
     nBytes = nBytes - 5;
     buffer += 5;
 
-    char counter[6];
+    static char counter[6];
     memcpy(counter, _buffer, sizeof(counter)-1);
     counter[sizeof(counter)-1] = '\0';
-    unsigned int byteCount = atoi(counter);
+    int byteCount = atoi(counter);
+    static int lastByteCount = -1;  //Keep track of this below
+    static int droppedPacketsEstimate = 0;
+
+    if (lastByteCount != -1) {
+      if (byteCount - lastByteCount > 1) {
+        printf("\nWarning: Byte count was out of order. Went from %d -> %d\n", lastByteCount, byteCount);
+        droppedPacketsEstimate += byteCount - lastByteCount - 1;
+        CCSend("NetDroppedPacketsEstimate", (char *)&droppedPacketsEstimate, sizeof(droppedPacketsEstimate));
+      }
+    }
 
 #ifdef CCUP
     CCSend("NetGotSomething", buffer, nBytes);
@@ -83,6 +93,7 @@ void *_NetRcvThread(void *) {
     CCSend("NetSendToCallback", (char *)integerVersion, nBytes);
 #endif
 
+    lastByteCount = byteCount;
     netRcvCallback(integerVersion, nBytes);
   }
 }

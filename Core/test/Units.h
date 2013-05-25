@@ -8,9 +8,23 @@ static Params_t params;
 
 void TestNetRcv() {
   It("NetOnRcv can count", _function() {
-    system("ruby ./test/utility/send_data.rb 10 01 11");
+    system("ruby ./test/utility/send_data.rb 10 10 11");
 
     CCupMessage_t message = CCGet("NetCounter");
+    message = CCGet("NetCounter");
+    message = CCGet("NetCounter");
+    int count = *(int *)message.data;
+    IsEqual(count, 2);
+
+    done();
+  });
+
+  It("NetOnRcv can count again", _function() {
+    system("ruby ./test/utility/send_data.rb 10 10 11 00");
+
+    CCupMessage_t message = CCGet("NetCounter");
+    message = CCGet("NetCounter");
+    message = CCGet("NetCounter");
     message = CCGet("NetCounter");
     int count = *(int *)message.data;
     IsEqual(count, 3);
@@ -27,6 +41,21 @@ void TestNetRcv() {
 
     CCupMessage_t message = CCGet("NetGotSomething");
     IsEqualData((unsigned char *)message.data, (unsigned char *)data, 2);
+
+    done();
+  });
+
+  It("NetOnRcv thread can detect dropped packets", _function() {
+    CCOn("NetDroppedPacketsEstimate");
+    //Send network data via ruby
+    system("ruby ./test/utility/send_data.rb 10 d 10 d d 11 d 00");
+
+    CCupMessage_t message = CCGet("NetDroppedPacketsEstimate");
+    message = CCGet("NetDroppedPacketsEstimate");
+    message = CCGet("NetDroppedPacketsEstimate");
+
+    int count = *(int *)message.data;
+    IsEqual(count, 4);
 
     done();
   });
