@@ -195,15 +195,6 @@ __global__ void IGNeurotikCore(const int NN, const int ND, const int globalTime,
 #pragma endregion
 
 #pragma region Normalize
-
-								   if (idx == 84) {
-									   for (int i = 0; i < 9; ++i) {
-										   if (dConnection[i] > 0)
-											   debug[i] = dWeight[i];
-										   else
-											   debug[i] = -11;
-									   }
-								   }
    //Neuron fired more than than T0/2 ago and hasen't since
    if (globalTime == lastSpikeTime && type & GLU & !death) {
 	   float sigma = 0;

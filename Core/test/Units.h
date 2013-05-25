@@ -419,6 +419,42 @@ void TestCore() {
   });
 }
 
+#include "../Core/Helpers.h"
+void TestCoreHelpers() {
+  It("Does know what to potentiate", function() {
+      bool glu = ShouldPotentiate(GLU);
+      bool gaba = ShouldPotentiate(GABA);
+      bool gluNoLearn = ShouldPotentiate(GLU | NO_LRN);
+      bool gabaNoLearn = ShouldPotentiate(GABA | NO_LRN);
+
+      IsEqual(glu, true);
+      IsEqual(gaba, false);
+      IsEqual(gluNoLearn, false);
+      IsEqual(gabaNoLearn, false);
+  });
+
+  It("Does update the correct dendrites", _function() {
+    CCupMessage_t message;
+    //These messages should have been qued in order
+    //[D1 D2 D3] #Neuron 1
+    //[D1 D2 D3] #Neuron 2
+    for (int idx = 0; idx < params.NN; ++idx) {  //Neuron #
+      for (int di = 0; di < params.ND; ++di) {  //Dendrite #
+       CCupMessage_t message = CCGet("CoreDendriteIsActive");
+        int isActive = params.dConnections[params.ND*idx + di];  //This dendrite is active
+
+        if (isActive >= 0) {
+          IsEqual(*(int *)message.data, true);
+        } else {
+          IsEqual(*(int *)message.data, false);
+        }
+      }
+    }
+
+    done();
+  });
+}
+
 void RunUnits() {
   //Load schema (Port, name, etc)
   GetSchema("test/config/schema.txt", &schema);
@@ -438,6 +474,7 @@ void RunUnits() {
       TestGetNet();
     });
 
+    CoreBegin(&params);
     Describe("TestNetRcv", function() {
       TestNetRcv();
     });
@@ -450,9 +487,10 @@ void RunUnits() {
       TestCore();
     });
 
+    Describe("TestCoreHelpers", function() {
+      TestCoreHelpers();
+    });
   });
-
-  CoreBegin(&params);
 
   //Setup network receiving
   NetRcvBegin(NET_IP, NET_PORT, CoreOnImpulse);

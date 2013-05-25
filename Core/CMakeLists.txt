@@ -1,5 +1,5 @@
 project(NeurotikCore)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
 set(CMAKE_BUILD_TYPE "DEBUG")
-add_executable(neurotik main.cpp Net.cpp Schema.cpp GetNet.cpp Timer.cpp CoreManager.cpp Core/Core.cpp)
+add_executable(neurotik main.cpp Net.cpp Schema.cpp GetNet.cpp Timer.cpp CoreManager.cpp Core/Core.cpp Core/Helpers.cpp)
 target_link_libraries(neurotik ccup)
