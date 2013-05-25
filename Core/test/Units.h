@@ -330,6 +330,7 @@ void RunUnits() {
 
   //Setup network receiving
   NetRcvBegin(NET_IP, NET_PORT, CoreOnImpulse);
+  NetSendBegin(NET_IP, NET_PORT+1);
 
   dispatch_main();
 }

@@ -29,6 +29,13 @@ void CoreTick() {
     CCSend("CoreTickInputNotBlank", (const char *)runningSegment, NET_INPUT_LEN(params));
 #endif
 
+  //Load into core
+  //CoreLoad
+  
+
+  //Get data from core and send it out
+  NetSend("00", 2);
+
   //Reset running
   memset(runningSegment, 0, NET_INPUT_LEN(params));
 

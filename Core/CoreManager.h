@@ -8,6 +8,7 @@
 #include <pthread.h>
 #include "Params.h"
 #include "Timer.h"
+#include "Net.h"
 
 //Start the core
 void CoreBegin(Params_t *params);
