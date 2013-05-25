@@ -11,5 +11,5 @@ sock.bind(Socket::INADDR_ANY, PORT)
 
 loop do
     msg, info = sock.recvfrom(1024)
-      puts "MSG: #{msg} from #{info[2]} (#{info[3]})/#{info[1]} len #{msg.size}" 
+    puts msg.split("").inspect
 end

@@ -45,10 +45,13 @@ void CoreTick() {
     //Add a count (5 ASCII bytes) to the outgoing to track dropped packets
     static int byteCount = 0;
     static char *outputSegmentWithCount = new char[NET_OUTPUT_LEN(params)+5];
-    memcpy(outputSegmentWithCount+5, outputSegment, NET_OUTPUT_LEN(params));
-    sprintf((char *)outputSegmentWithCount, "%05d", byteCount);
 
-    NetSend((char *)outputSegmentWithCount, NET_OUTPUT_LEN(params)+4);
+    //Make sure you sprintf first because it generates the new line
+    sprintf((char *)outputSegmentWithCount, "%05d", byteCount);
+    memcpy(outputSegmentWithCount+5, outputSegment, NET_OUTPUT_LEN(params));
+
+    int outCount = NET_OUTPUT_LEN(params)+5;
+    NetSend((char *)outputSegmentWithCount, NET_OUTPUT_LEN(params)+5);
     ++byteCount;
     byteCount = byteCount % 99999;  //No more than 5 digits
   }
