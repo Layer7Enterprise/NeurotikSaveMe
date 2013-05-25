@@ -1,0 +1,93 @@
+[ 12%] Building CXX object CMakeFiles/neurotik.dir/main.cpp.o
+[ 25%] Building CXX object CMakeFiles/neurotik.dir/Net.cpp.o
+[ 37%] Building CXX object CMakeFiles/neurotik.dir/Schema.cpp.o
+[ 50%] Building CXX object CMakeFiles/neurotik.dir/GetNet.cpp.o
+[ 62%] Building CXX object CMakeFiles/neurotik.dir/Timer.cpp.o
+[ 75%] Building CXX object CMakeFiles/neurotik.dir/CoreManager.cpp.o
+[ 87%] Building CXX object CMakeFiles/neurotik.dir/Core/Core.cpp.o
+[100%] Building CXX object CMakeFiles/neurotik.dir/Core/Helpers.cpp.o
+Linking CXX executable neurotik
+[100%] Built target neurotik
+[H[J>Loaded schema file (test/config/schema.txt)
+	Name: Prodigy
+	# Neurons: 9
+	# Dendrites: 15
+	Server Port: 3000
+>Loaded network file (test/config/net.txt)
+0 -> 0
+1 -> 2
+3 -> 3
+2 -> 0
+2 -> 0
+++++++++++++++++++++++++++++++++
+Starting unit tests!
+++++++++++++++++++++++++++++++++
+>CCup Test
+	+Can send and receive ✔
+	+Can start listening for messages and ignore some ✔
+	+Can start listening for messages, ignore, then restart again ✔✔
+	+Can check data equality ✔✔
+>TestGetNet
+	+has the right network start position ✔
+	+has the right network in end position ✔
+	+has the right network out start position ✔
+	+has the right network out end position ✔
+	+has the right NN ✔
+	+has the right dendrites ✔
+	+has the right initial global time ✔
+	+has the right inhibitory times ✔✔✔✔
+	+has the right initial spike times ✔✔✔✔
+	+has the right initial voltage ✔✔✔✔
+	+has the right initial current ✔✔✔✔
+	+has the right initial U ✔✔✔✔
+	+has the right initial inh ✔✔✔✔
+	+has the right intrinsic bursting ✔✔✔✔
+	+has the right types ✔✔✔✔
+	+has the right connections ✔✔✔✔✔✔✔✔✔
+	+has the right initial weights ✔✔✔✔
+	+has the right initial delays ✔✔✔✔
+	+has the right initial last spike times ✔✔✔✔
+	+has the right initial spike ques ✔✔✔✔
+>TestNetRcv
+Skew nan%
+	+NetOnRcv can count !!! 0
+!!! 1
+!!! 2
+!!! 3
+!!! 4
+!!! 5
+!!! 6
+!!! 7
+!!! 8
+✔
+	+NetOnRcv can count again ✔
+	+NetOnRcv thread Can physically one piece of network data ✔
+	+NetOnRcv thread can detect dropped packets 
+Warning: Byte count was out of order. Went from 0 -> 2
+
+Warning: Byte count was out of order. Went from 2 -> 5
+
+Warning: Byte count was out of order. Went from 5 -> 7
+✔
+	+NetOnRcv thread is building the right output ✔
+>TestCoreManager
+	+Gets the right network input sizes ✔
+	+Gets the right network output sizes ✔
+	+Has the right idle network segment ✔
+	+CoreOnImpulse Can get data from Network (Same thread) at start ✔
+	+CoreOnImpulse Can get data from Network (Same thread) at end ✔
+	+Core should have the right non-blank segment ✔
+	+Core should have the right non-blank segment (again) ✔
+	+Core should have the right non-blank segment (lots of them) ✔✔✔✔
+	+Core should have the right non-blank segment (serious lots of them) Skew 0.100000%
+✔✔✔✔✔✔✔✔
+>TestCore
+	+Has the right initial params ✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
+>TestCoreHelpers
+	+Does know what to potentiate ✔✔✔✔
+	+Does update the correct dendrites 0
+✔2
+✔-1
+✔-1
+✔-1
+✖
