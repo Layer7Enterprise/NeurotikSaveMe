@@ -7,6 +7,17 @@ static Schema_t schema;
 static Params_t params;
 
 void TestNetRcv() {
+  It("NetOnRcv can count", _function() {
+    system("ruby ./test/utility/send_data.rb 10 01 11");
+
+    CCupMessage_t message = CCGet("NetCounter");
+    message = CCGet("NetCounter");
+    int count = *(int *)message.data;
+    IsEqual(count, 3);
+
+    done();
+  });
+
   It("NetOnRcv thread Can physically one piece of network data", _function() {
     //Send network data via ruby
     const char data[] = "10";
@@ -15,7 +26,7 @@ void TestNetRcv() {
     system(command);
 
     CCupMessage_t message = CCGet("NetGotSomething");
-    IsEqualData((unsigned char *)message.data, (unsigned char *)data, strlen(data));
+    IsEqualData((unsigned char *)message.data, (unsigned char *)data, 2);
 
     done();
   });

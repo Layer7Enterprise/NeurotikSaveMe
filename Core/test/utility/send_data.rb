@@ -7,7 +7,13 @@ begin
   socket = UDPSocket.open
 
     socket.setsockopt Socket::IPPROTO_IP, Socket::IP_TTL, [1].pack('i')
-    socket.send ARGV[0], 0, MULTICAST_ADDR, PORT
-ensure
+
+    ARGV.each_with_index do |data, index|
+      data = sprintf "%05d%s", index, data
+      socket.send data, 0, MULTICAST_ADDR, PORT
+    end
+
+    ensure
   socket.close
 end
+

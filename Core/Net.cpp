@@ -43,12 +43,23 @@ void *_NetRcvThread(void *) {
     socklen_t addrlen = sizeof(sockaddr_in);
 
     const int MAXLEN = 100;
-    static char buffer[MAXLEN];
+    static char _buffer[MAXLEN];
+    char *buffer = _buffer;
 
     int nBytes = recvfrom(netRcvSocket, buffer, MAXLEN, 0, (sockaddr *)&netRcvAddr, &addrlen);
 
+    //Offset counter
+    nBytes = nBytes - 5;
+    buffer += 5;
+
+    char counter[6];
+    memcpy(counter, _buffer, sizeof(counter)-1);
+    counter[sizeof(counter)-1] = '\0';
+    unsigned int byteCount = atoi(counter);
+
 #ifdef CCUP
     CCSend("NetGotSomething", buffer, nBytes);
+    CCSend("NetCounter", (char *)&byteCount, sizeof(byteCount));
 #endif
 
     if (nBytes < 0) {
