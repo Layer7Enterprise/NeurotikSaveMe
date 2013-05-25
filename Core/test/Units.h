@@ -103,8 +103,8 @@ void TestGetNet() {
 
   It("has the right inhibitory times", function() {
     IsEqual(params.nInhibitoryTime[0], 0);
-    IsEqual(params.nInhibitoryTime[1], 0);
-    IsEqual(params.nInhibitoryTime[2], 20);
+    IsEqual(params.nInhibitoryTime[1], 7);
+    IsEqual(params.nInhibitoryTime[2], 0);
     IsEqual(params.nInhibitoryTime[3], 0);
   });
   
@@ -388,6 +388,7 @@ void TestCore() {
         IsEqual(neuron.type, GABA);
         IsEqual(neuron.inh, -1);
         IsEqual(neuron.ib, 0);
+        IsEqual(neuron.inhibitoryTime, 7);
       } else if (i == 2) {
         IsEqual(neuron.dConnection[0], 1);
         IsEqual(neuron.dDelay[0], 5);

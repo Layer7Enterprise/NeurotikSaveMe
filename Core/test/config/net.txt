@@ -8,7 +8,7 @@ NetworkIn
 
 Neuron input[1]
 Type 2
-InhTime 0
+InhTime 7
 IB 0
 End End
 
@@ -16,7 +16,7 @@ NetworkOut
 
 Neuron input[2]
 Type 9
-InhTime 20
+InhTime 0
 IB 10
 End End
 
