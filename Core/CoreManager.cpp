@@ -6,6 +6,7 @@
 //Inbound segment (INTEGER BASED!)
 pthread_mutex_t runningSegmentLock = PTHREAD_MUTEX_INITIALIZER;
 static unsigned char *runningSegment = NULL;
+static char *outputSegment = NULL;
 
 //Global params (Check main for loading)
 static Params_t *params = NULL;
@@ -31,10 +32,26 @@ void CoreTick() {
 
   //Load into core
   //CoreLoad
-  
 
   //Get data from core and send it out
-  NetSend("00", 2);
+  for (int i = 0; i < NET_OUTPUT_LEN(params); ++i) {
+    outputSegment[i] = '0';
+
+    if (i < NET_INPUT_LEN(params))
+      outputSegment[i] = runningSegment[i] ? '1' : '0';
+  }
+
+  if (!isBlank) {
+    //Add a count (5 ASCII bytes) to the outgoing to track dropped packets
+    static int byteCount = 0;
+    static char *outputSegmentWithCount = new char[NET_OUTPUT_LEN(params)+5];
+    memcpy(outputSegmentWithCount+5, outputSegment, NET_OUTPUT_LEN(params));
+    sprintf((char *)outputSegmentWithCount, "%05d", byteCount);
+
+    NetSend((char *)outputSegmentWithCount, NET_OUTPUT_LEN(params)+4);
+    ++byteCount;
+    byteCount = byteCount % 99999;  //No more than 5 digits
+  }
 
   //Reset running
   memset(runningSegment, 0, NET_INPUT_LEN(params));
@@ -51,6 +68,8 @@ void CoreBegin(Params_t *p) {
   //Allocate running segment
   runningSegment = new unsigned char[NET_INPUT_LEN(params)];
   memset(runningSegment, 0, NET_INPUT_LEN(params));
+
+  outputSegment = new char[NET_OUTPUT_LEN(params)];
 
   //Create a mutex
   pthread_mutex_init(&runningSegmentLock, NULL);
