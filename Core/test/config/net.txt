@@ -28,6 +28,36 @@ InhTime 0
 IB 0
 End End
 
+Neuron input[4]
+Type 1
+InhTime 0
+IB 0
+End End
+
+Neuron input[5]
+Type 1
+InhTime 0
+IB 0
+End End
+
+Neuron input[6]
+Type 1
+InhTime 0
+IB 0
+End End
+
+Neuron input[7]
+Type 1
+InhTime 0
+IB 0
+End End
+
+Neuron input[8]
+Type 1
+InhTime 0
+IB 0
+End End
+
 EndNetworkOut
 
 Connection

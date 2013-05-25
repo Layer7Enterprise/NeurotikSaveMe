@@ -46,11 +46,11 @@ void TestGetNet() {
   });
 
   It("has the right network out end position", function() {
-    IsEqual(params.networkOutEndPos, 4);
+    IsEqual(params.networkOutEndPos, 9);
   });
 
   It("has the right NN", function() {
-    IsEqual(params.NN, 4);
+    IsEqual(params.NN, 10);
   });
 
   It("has the right dendrites", function() {
@@ -164,7 +164,7 @@ void TestCoreManager() {
   });
 
   It("Gets the right network output sizes", function() {
-    IsEqual(output_len, 2);
+    IsEqual(output_len, 7);
   });
   
   It("Has the right idle network segment", _function() {
