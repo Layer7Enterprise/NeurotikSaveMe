@@ -9,7 +9,7 @@
 #include "Params.h"
 #include "Timer.h"
 #include "Net.h"
-#include "Core.h"
+#include "Core/Core.h"
 
 //Start the core
 void CoreBegin(Params_t *params);
