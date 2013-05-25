@@ -62,15 +62,18 @@ struct NeuronSnapshot_t {
     int NN;
     int ND;
     int globalTime;
+
     const int *dConnection;
     const int *dDelay;
     float *dWeight;
     int *dLastSpikeTime;
     long long *dSpikeQue;
+
     float v;
     float u;
     float I;
     int lastSpikeTime;
+    int inhibitoryTime;
     int inh;
     int ib;
     NeuronType_t type;

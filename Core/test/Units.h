@@ -90,7 +90,7 @@ void TestGetNet() {
   });
 
   It("has the right NN", function() {
-    IsEqual(params.NN, 10);
+    IsEqual(params.NN, 9);
   });
 
   It("has the right dendrites", function() {
@@ -351,15 +351,68 @@ void TestCore() {
       IsEqual(neuron.ND, params.ND);
       IsEqual(neuron.globalTime, 0);
 
+      if (neuron.dConnection[0] != -1) {
+        IsEqual(neuron.dLastSpikeTime[0], -1000);
+        IsEqual(neuron.dSpikeQue[0], 0);
+      }
+
+      if (neuron.dConnection[1] != -1) {
+        IsEqual(neuron.dLastSpikeTime[1], -1000);
+        IsEqual(neuron.dSpikeQue[1], 0);
+      }
+
+      IsEqual(neuron.I, 0);
+      IsEqual(neuron.lastSpikeTime, -1000);
+      if (neuron.type & GLU) {
+        IsEqual(neuron.v, NEURON_GABA_V);
+        IsEqual(neuron.u, NEURON_GLU_B * NEURON_GLU_C);
+      } else if (neuron.type & GABA) {
+        IsEqual(neuron.v, NEURON_GABA_V);
+        IsEqual(neuron.u, NEURON_GABA_B * NEURON_GABA_C);
+      }
+
       if (i == 0) {
         IsEqual(neuron.dConnection[0], 0);
         IsEqual(neuron.dConnection[1], 2);
         IsEqual(neuron.dConnection[2], -1);
+        IsEqual(neuron.dDelay[0], 1);
+        IsEqual(neuron.dDelay[1], 20);
+        IsEqual(neuron.dWeight[0], 11.05);
+        IsEqual(neuron.dWeight[1], 2);
+
+        IsEqual(neuron.type, GLU);
+        IsEqual(neuron.ib, 0);
+        IsEqual(neuron.inh, -1);
       } else if (i == 1) {
+        IsEqual(neuron.dConnection[0], -1);
+        IsEqual(neuron.type, GABA);
+        IsEqual(neuron.ib, 0);
+        IsEqual(neuron.inh, 0);
       } else if (i == 2) {
+        IsEqual(neuron.dConnection[0], 1);
+        IsEqual(neuron.dDelay[0], 5);
+        IsEqual(neuron.dWeight[0], 20);
+        IsEqual(neuron.type, GLU | NO_LRN);
+        IsEqual(neuron.ib, 10);
+        IsEqual(neuron.inh, -1);
       } else if (i == 3) {
+        IsEqual(neuron.dConnection[0], 3);
+        IsEqual(neuron.dDelay[0], 20);
+        IsEqual(neuron.dWeight[0], 1);
+        IsEqual(neuron.type, GLU);
+        IsEqual(neuron.ib, 0);
+        IsEqual(neuron.inh, -1);
       } else if (i == 4) {
+        IsEqual(neuron.type, GLU);
+        IsEqual(neuron.ib, 0);
+        IsEqual(neuron.inh, 0);
+        IsEqual(neuron.inh, 0);
       } else if (i == 5) {
+        IsEqual(neuron.dConnection[0], -1);
+        IsEqual(neuron.type, GLU);
+        IsEqual(neuron.ib, 0);
+        IsEqual(neuron.inh, 0);
+        IsEqual(neuron.inh, 0);
       }
     }
 
