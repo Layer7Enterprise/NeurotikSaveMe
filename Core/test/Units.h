@@ -105,7 +105,7 @@ void TestGetNet() {
     IsEqual(params.nInhibitoryTime[0], 0);
     IsEqual(params.nInhibitoryTime[1], 7);
     IsEqual(params.nInhibitoryTime[2], 0);
-    IsEqual(params.nInhibitoryTime[3], 0);
+    IsEqual(params.nInhibitoryTime[3], 4);
   });
   
   It("has the right initial spike times", function() {
@@ -154,7 +154,7 @@ void TestGetNet() {
     IsEqual(params.nType[0], GLU);
     IsEqual(params.nType[1], GABA);
     IsEqual(params.nType[2], GLU | NO_LRN);
-    IsEqual(params.nType[3], GLU);
+    IsEqual(params.nType[3], GABA);
   });
   
   It("has the right connections", function() {
@@ -400,7 +400,7 @@ void TestCore() {
         IsEqual(neuron.dConnection[0], 3);
         IsEqual(neuron.dDelay[0], 20);
         IsEqual(neuron.dWeight[0], 1);
-        IsEqual(neuron.type, GLU);
+        IsEqual(neuron.type, GABA);
         IsEqual(neuron.inh, -1);
         IsEqual(neuron.ib, 0);
       } else if (i == 4) {

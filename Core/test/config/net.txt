@@ -23,8 +23,8 @@ End End
 EndNetworkIn
 
 Neuron input[3]
-Type 1
-InhTime 0
+Type 2
+InhTime 4
 IB 0
 End End
 
