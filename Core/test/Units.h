@@ -440,13 +440,15 @@ void TestCoreHelpers() {
     //[D1 D2 D3] #Neuron 2
     for (int idx = 0; idx < params.NN; ++idx) {  //Neuron #
       for (int di = 0; di < params.ND; ++di) {  //Dendrite #
-       CCupMessage_t message = CCGet("CoreDendriteIsActive");
         int isActive = params.dConnections[params.ND*idx + di];  //This dendrite is active
 
+        CCupMessage_t message = CCGet("CoreDendriteIsActive");
         if (isActive >= 0) {
           IsEqual(*(int *)message.data, true);
         } else {
+          //Match what the actual loop does
           IsEqual(*(int *)message.data, false);
+          break;
         }
       }
     }
