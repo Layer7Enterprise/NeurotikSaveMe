@@ -381,38 +381,36 @@ void TestCore() {
         IsEqual(neuron.dWeight[1], 2);
 
         IsEqual(neuron.type, GLU);
-        IsEqual(neuron.ib, 0);
         IsEqual(neuron.inh, -1);
+        IsEqual(neuron.ib, 0);
       } else if (i == 1) {
         IsEqual(neuron.dConnection[0], -1);
         IsEqual(neuron.type, GABA);
+        IsEqual(neuron.inh, -1);
         IsEqual(neuron.ib, 0);
-        IsEqual(neuron.inh, 0);
       } else if (i == 2) {
         IsEqual(neuron.dConnection[0], 1);
         IsEqual(neuron.dDelay[0], 5);
         IsEqual(neuron.dWeight[0], 20);
         IsEqual(neuron.type, GLU | NO_LRN);
-        IsEqual(neuron.ib, 10);
         IsEqual(neuron.inh, -1);
+        IsEqual(neuron.ib, 10);
       } else if (i == 3) {
         IsEqual(neuron.dConnection[0], 3);
         IsEqual(neuron.dDelay[0], 20);
         IsEqual(neuron.dWeight[0], 1);
         IsEqual(neuron.type, GLU);
-        IsEqual(neuron.ib, 0);
         IsEqual(neuron.inh, -1);
+        IsEqual(neuron.ib, 0);
       } else if (i == 4) {
         IsEqual(neuron.type, GLU);
+        IsEqual(neuron.inh, -1);
         IsEqual(neuron.ib, 0);
-        IsEqual(neuron.inh, 0);
-        IsEqual(neuron.inh, 0);
       } else if (i == 5) {
         IsEqual(neuron.dConnection[0], -1);
         IsEqual(neuron.type, GLU);
+        IsEqual(neuron.inh, -1);
         IsEqual(neuron.ib, 0);
-        IsEqual(neuron.inh, 0);
-        IsEqual(neuron.inh, 0);
       }
     }
 
