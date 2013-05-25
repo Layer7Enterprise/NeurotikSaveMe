@@ -54,7 +54,26 @@ struct Params_t {
   float *dWeights;       //Weight matrix
   int *dDelays;          //Delay matrix
   int *dLastSpikeTimes;  //Last spike time
-  int *dSpikeQues;        //Spike que
+  long long *dSpikeQues;        //Spike que
+};
+
+struct NeuronSnapshot_t {
+    int idx;
+    int NN;
+    int ND;
+    int globalTime;
+    const int *dConnection;
+    const int *dDelay;
+    float *dWeight;
+    int *dLastSpikeTime;
+    long long *dSpikeQue;
+    float v;
+    float u;
+    float I;
+    int lastSpikeTime;
+    int inh;
+    int ib;
+    NeuronType_t type;
 };
 
 #endif

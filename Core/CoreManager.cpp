@@ -30,8 +30,8 @@ void CoreTick() {
     CCSend("CoreTickInputNotBlank", (const char *)runningSegment, NET_INPUT_LEN(params));
 #endif
 
-  //Load into core
-  //CoreLoad
+  for (int idx = 0; idx < params->NN; ++idx)
+    CoreTick(idx, params);
 
   //Get data from core and send it out
   for (int i = 0; i < NET_OUTPUT_LEN(params); ++i) {
@@ -58,6 +58,9 @@ void CoreTick() {
 
   //Reset running
   memset(runningSegment, 0, NET_INPUT_LEN(params));
+
+  //Update global clock
+  ++params->globalTime;
 
   pthread_mutex_unlock(&runningSegmentLock);
 }

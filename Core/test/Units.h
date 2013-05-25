@@ -94,7 +94,7 @@ void TestGetNet() {
   });
 
   It("has the right dendrites", function() {
-    IsEqual(params.ND, 10);
+    IsEqual(params.ND, 15);
   });
 
   It("has the right initial global time", function() {
@@ -158,40 +158,43 @@ void TestGetNet() {
   });
   
   It("has the right connections", function() {
-    IsEqual(params.dConnections[0*10+0], 0);
-    IsEqual(params.dConnections[2*10+0], 1);
-    IsEqual(params.dConnections[3*10+0], 3);
-    IsEqual(params.dConnections[0*10+1], 2);
-    IsEqual(params.dConnections[2*10+1], -1);
-    IsEqual(params.dConnections[3*10+1], -1);
+    IsEqual(params.dConnections[0*15+0], 0);
+    IsEqual(params.dConnections[2*15+0], 1);
+    IsEqual(params.dConnections[3*15+0], 3);
+    IsEqual(params.dConnections[0*15+1], 2);
+    IsEqual(params.dConnections[0*15+2], -1);
+    IsEqual(params.dConnections[1*15+0], -1);
+    IsEqual(params.dConnections[1*15+0], -1);
+    IsEqual(params.dConnections[2*15+1], -1);
+    IsEqual(params.dConnections[3*15+1], -1);
     });
   
   It("has the right initial weights", function() {
-    IsEqual(params.dWeights[0*10+0], 11.05);
-    IsEqual(params.dWeights[2*10+0], 20.0);
-    IsEqual(params.dWeights[3*10+0], 1.0);
-    IsEqual(params.dWeights[0*10+1], 2.0);
+    IsEqual(params.dWeights[0*15+0], 11.05);
+    IsEqual(params.dWeights[2*15+0], 20.0);
+    IsEqual(params.dWeights[3*15+0], 1.0);
+    IsEqual(params.dWeights[0*15+1], 2.0);
   });
   
   It("has the right initial delays", function() {
-    IsEqual(params.dDelays[0*10+0], 1);
-    IsEqual(params.dDelays[2*10+0], 5);
-    IsEqual(params.dDelays[3*10+0], 20);
-    IsEqual(params.dDelays[0*10+1], 20);
+    IsEqual(params.dDelays[0*15+0], 1);
+    IsEqual(params.dDelays[2*15+0], 5);
+    IsEqual(params.dDelays[3*15+0], 20);
+    IsEqual(params.dDelays[0*15+1], 20);
   });
   
   It("has the right initial last spike times", function() {
-    IsEqual(params.dLastSpikeTimes[0*10+0], -1000);
-    IsEqual(params.dLastSpikeTimes[2*10+0], -1000);
-    IsEqual(params.dLastSpikeTimes[3*10+0], -1000);
-    IsEqual(params.dLastSpikeTimes[0*10+1], -1000);
+    IsEqual(params.dLastSpikeTimes[0*15+0], -1000);
+    IsEqual(params.dLastSpikeTimes[2*15+0], -1000);
+    IsEqual(params.dLastSpikeTimes[3*15+0], -1000);
+    IsEqual(params.dLastSpikeTimes[0*15+1], -1000);
   });
   
   It("has the right initial spike ques", function() {
-    IsEqual(params.dSpikeQues[0*10+0], 0);
-    IsEqual(params.dSpikeQues[2*10+0], 0);
-    IsEqual(params.dSpikeQues[3*10+0], 0);
-    IsEqual(params.dSpikeQues[0*10+1], 0);
+    IsEqual(params.dSpikeQues[0*15+0], 0);
+    IsEqual(params.dSpikeQues[2*15+0], 0);
+    IsEqual(params.dSpikeQues[3*15+0], 0);
+    IsEqual(params.dSpikeQues[0*15+1], 0);
   });
 }
 
@@ -334,8 +337,34 @@ void TestCoreManager() {
 
     CCOff("CoreTickInputNotBlank");
   });
+}
 
+void TestCore() {
+  It("Has the right initial params", _function() {
+    for (int i = 0; i < params.NN; ++i) {
+      CCupMessage_t message = CCGet("CoreInitialParams");
+      NeuronSnapshot_t neuron = *(NeuronSnapshot_t *)message.data;
 
+      //Global
+      IsEqual(neuron.idx, i);
+      IsEqual(neuron.NN, params.NN);
+      IsEqual(neuron.ND, params.ND);
+      IsEqual(neuron.globalTime, 0);
+
+      if (i == 0) {
+        IsEqual(neuron.dConnection[0], 0);
+        IsEqual(neuron.dConnection[1], 2);
+        IsEqual(neuron.dConnection[2], -1);
+      } else if (i == 1) {
+      } else if (i == 2) {
+      } else if (i == 3) {
+      } else if (i == 4) {
+      } else if (i == 5) {
+      }
+    }
+
+    done();
+  });
 }
 
 void RunUnits() {
@@ -364,6 +393,11 @@ void RunUnits() {
     Describe("TestCoreManager", function() {
       TestCoreManager();
     });
+
+    Describe("TestCore", function() {
+      TestCore();
+    });
+
   });
 
   CoreBegin(&params);

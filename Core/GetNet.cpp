@@ -34,7 +34,7 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
   params->dWeights = new float[NN*ND];
   params->dDelays = new int[NN*ND];
   params->dLastSpikeTimes = new int[NN*ND];
-  params->dSpikeQues = new int[NN*ND];
+  params->dSpikeQues = new long long[NN*ND];
 
   for (int i = 0; i < NN*ND; ++i) {
     params->dConnections[i] = -1;
@@ -74,6 +74,10 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
       fprintf(stderr, "Error, invalid parse state '%s'...\n", header);
       exit(EXIT_FAILURE);
     }
+    
+    //Make sure we didn't hit the EOF
+    if (feof(f))
+      break;
 
     static int openPosition = 0;
     switch (parseState) {
@@ -136,10 +140,21 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
         fromNode = (*params->neuronNameToLocation)[from];
         toNode = (*params->neuronNameToLocation)[to];
 
+        if ((*params->neuronNameToLocation).find(from) == (*params->neuronNameToLocation).end()) {
+          fprintf(stderr, "Could not find the mapping from name to location for %s\n", from);
+          exit(EXIT_FAILURE);
+        }
+
+        if ((*params->neuronNameToLocation).find(to) == (*params->neuronNameToLocation).end()) {
+          fprintf(stderr, "Could not find the mapping from name to location for %s\n", to);
+          exit(EXIT_FAILURE);
+        }
+
         //Get an open connection
         static int pos;
-        pos = -1;
+        pos = -1; //Position might not get set
         for (int i = 0; i < ND; ++i) {
+          printf("%d -> %d\n", fromNode, toNode);
           pos = toNode*ND + i;
           if (params->dConnections[pos] == -1) {
             params->dConnections[pos] = fromNode;

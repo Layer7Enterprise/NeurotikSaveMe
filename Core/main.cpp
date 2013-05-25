@@ -25,25 +25,6 @@
 #include "test/Units.h"
 
 int main() {
-  //system("ps -x | grep rcv_data | xargs -n 1 | head -n 1 | xargs kill");
-  //sleep(1);
-
-  //Setup network
-  /*NetRcvBegin(NET_IP, NET_PORT, CoreOnImpulse);*/
-  //NetSendBegin(NET_IP, NET_PORT+1);
-
-  //FILE *pipe = popen("ruby ./test/utility/rcv.rb", "r");
-  //if (pipe <= 0) {
-    //fprintf(stderr, "\nUnit test could not open send_data.rb\n");
-    //exit(EXIT_FAILURE);
-  //}
-
-  //NetSend("101", 3);
-
-  //char output[100];
-  //fgets(output, sizeof(output), pipe);
-  /*puts(output);*/
-
   RunUnits();
   return 0;
 }
