@@ -1,32 +1,7 @@
 #include "Core.h"
 
 #include <CCup.h>
-
-//Test the initial params
-void TestInitialParams(int idx, int NN, int ND, int globalTime, const int *dConnection, const int *dDelay, float *dWeight, int *dLastSpikeTime, long long *dSpikeQue, float v, float u, float I, int lastSpikeTime, int inh, int inhibitoryTime, int ib, NeuronType_t type) {
-#ifdef CCUP
-  NeuronSnapshot_t initialParamsSnapshot;
-  initialParamsSnapshot.idx = idx;
-  initialParamsSnapshot.NN = NN;
-  initialParamsSnapshot.ND = ND;
-  initialParamsSnapshot.globalTime = globalTime;
-  initialParamsSnapshot.dConnection = dConnection;
-  initialParamsSnapshot.dDelay = dDelay;
-  initialParamsSnapshot.dWeight = dWeight;
-  initialParamsSnapshot.dLastSpikeTime = dLastSpikeTime;
-  initialParamsSnapshot.dSpikeQue = dSpikeQue;
-  initialParamsSnapshot.v = v;
-  initialParamsSnapshot.u = u;
-  initialParamsSnapshot.I = I;
-  initialParamsSnapshot.lastSpikeTime = lastSpikeTime;
-  initialParamsSnapshot.inh = inh;
-  initialParamsSnapshot.ib = ib;
-  initialParamsSnapshot.inhibitoryTime = inhibitoryTime;
-  initialParamsSnapshot.type = type;
-
-  CCSend("CoreInitialParams", (char *)&initialParamsSnapshot, sizeof(NeuronSnapshot_t));
-#endif
-}
+#include "Test.h"
 
 //1 Millisecond
 void CoreTick(int idx, Params_t *params) {
@@ -53,5 +28,5 @@ void CoreTick(int idx, Params_t *params) {
    NeuronType_t type = *(params->nType + idx);
 
    if (globalTime == 0)
-   TestInitialParams(idx, NN, ND, globalTime, dConnection, dDelay, dWeight, dLastSpikeTime, dSpikeQue, v, u, I, lastSpikeTime, inh, inhibitoryTime, ib, type);
+   SendSnapshot("CoreInitialParams", idx, NN, ND, globalTime, dConnection, dDelay, dWeight, dLastSpikeTime, dSpikeQue, v, u, I, lastSpikeTime, inh, inhibitoryTime, ib, type);
 }
