@@ -23,4 +23,3 @@ begin
     ensure
   socket.close
 end
-

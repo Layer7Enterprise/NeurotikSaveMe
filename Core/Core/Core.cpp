@@ -5,7 +5,6 @@
 
 #include "Test.h"
 
-//Only run if it's the first round
 #define only_first if (globalTime == 0)
 
 //Called every millisecond
@@ -40,11 +39,11 @@ void CoreTick(int idx, Params_t *params) {
      //Is this an active dendrite
      if (dConnection[i] < 0) {
        static int falseValue = 0;
-       only_first CCSend("CoreDendriteIsActive", 0);
+       only_first CCSend("CoreDendriteIsActive", false);
 
        break;
      } else {
-       only_first CCSend("CoreDendriteIsActive", 1);
+       only_first CCSend("CoreDendriteIsActive", true);
      }
    }
 }
