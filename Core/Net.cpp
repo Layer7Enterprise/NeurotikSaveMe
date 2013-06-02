@@ -31,6 +31,34 @@ void NetSend(const char *message, int len) {
   }
 }
 
+//Sending Debug Info
+//############################################################
+static int netSendSocketDebug;
+static sockaddr_in netSendAddrDebug;
+void NetSendBeginDebug(const char *ip, int port) {
+  //Create a new socket
+  netSendSocket = socket(AF_INET, SOCK_DGRAM, 0);
+  if (netSendSocketDebug < 0) {
+    perror("Could not create send debug socket");
+    exit(EXIT_FAILURE);
+  }
+
+  //Setup address
+  memset(&netSendAddr, 0, sizeof(sockaddr_in));
+  netSendAddr.sin_family = AF_INET;
+  netSendAddr.sin_addr.s_addr = inet_addr(ip);
+  netSendAddr.sin_port = htons(port);
+}
+
+void NetSendDebug(const char *message, int len) {
+  int res = sendto(netSendSocketDebug, message, len, 0, (sockaddr *)&netSendAddrDebug, sizeof(sockaddr_in));
+
+  if (res < 0) {
+    perror("Could not send debug data");
+    exit(EXIT_FAILURE);
+  }
+}
+
 //Receiving Stuff (Primary)
 //##############################
 static int netRcvSocket;

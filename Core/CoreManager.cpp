@@ -34,6 +34,8 @@ void CoreTick() {
   for (int idx = 0; idx < params->NN; ++idx)
     CoreTick(idx, params);
 
+  //Dump debug information to port 3002
+
   //Get data from core and send it out
   for (int i = 0; i < NET_OUTPUT_LEN(params); ++i) {
     outputSegment[i] = '0';

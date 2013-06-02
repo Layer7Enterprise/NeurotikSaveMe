@@ -81,4 +81,23 @@ struct NeuronSnapshot_t {
     NeuronType_t type;
 };
 
+//Debug output networking structs
+struct NeuronDebugNetworkOutput_t {
+  //Neuron type
+  NeuronType_t type;
+
+  //Index
+  int idx;
+
+  //Voltage and U of diff equations
+  float v;
+  float u;
+
+  //For tracking when spikes actually occur
+  int lastSpikeTime;
+
+  //For tracking how long inhibitory are currently active
+  int inh;
+};
+
 #endif

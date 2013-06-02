@@ -539,6 +539,7 @@ void RunUnits() {
   //Setup network receiving
   NetRcvBegin(NET_IP, NET_PORT, CoreOnImpulse);
   NetSendBegin(NET_IP, NET_PORT+1);
+  NetSendBeginDebug(NET_IP, NET_PORT+2);
 
   dispatch_main();
 }

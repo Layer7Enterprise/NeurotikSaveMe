@@ -11,9 +11,11 @@
 
 //Setup UDP Multicast sending
 void NetSendBegin(const char *ip, int port);
+void NetSendBeginDebug(const char *ip, int port);
 
-//Send UDP multicast
+//Send UDP
 void NetSend(const char *message, int len);
+void NetSendDebug(const char *message, int len);
 
 //Setup UDP Multicast receiver
 void NetRcvBegin(const char *ip, int port, void (*callback)(const unsigned char *, int));
