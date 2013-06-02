@@ -12,8 +12,6 @@ static char *outputSegment = NULL;
 static Params_t *params = NULL;
 
 void CoreTick() {
-  static int id = 0;
-  ++id;
   pthread_mutex_lock(&runningSegmentLock);
 
 #ifdef CCUP

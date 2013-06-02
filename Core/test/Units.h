@@ -2,6 +2,7 @@
 #define UNITS_H_
 
 #include <CCup.h>
+#include "Units2.h"  //Just more
 
 static Schema_t schema;
 static Params_t params;
@@ -510,6 +511,10 @@ void RunUnits() {
 
     Describe("TestCoreHelpers", function() {
       TestCoreHelpers();
+    });
+
+    Describe("TestNetworkDebug", function() {
+      TestNetworkDebug();
     });
   });
 
