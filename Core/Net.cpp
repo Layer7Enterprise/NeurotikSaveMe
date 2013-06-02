@@ -94,18 +94,6 @@ void *_NetRcvThread(void *) {
     CCSend("NetSendToCallback", (char *)integerVersion, nBytes);
 #endif
 
-//Is segment blank?
-  int isBlank = 1;
-  for (int i = 0; i < nBytes; ++i) {
-    if (integerVersion[i] == 1) {
-      isBlank = 0;
-      break;
-    }
-  }
-
-  if (!isBlank) {
-    printf("also blank!\n");
-  }
     lastByteCount = byteCount;
     netRcvCallback(integerVersion, nBytes);
   }

@@ -30,7 +30,6 @@ void CoreTick() {
 
   if (!isBlank) {
     CCSend("CoreTickInputNotBlank", (const char *)runningSegment, NET_INPUT_LEN(params));
-    printf("NOTBLANK! %d\n", id);
   }
 #endif
 
