@@ -31,10 +31,32 @@ void CoreTick() {
   }
 #endif
 
+  //########################################
+  //Execute core
   for (int idx = 0; idx < params->NN; ++idx)
     CoreTick(idx, params);
+  //########################################
 
-  //Dump debug information to port 3002
+  //########################################
+  //Dump debug information
+  for (auto i = params->neuronDebugLocations->begin(); i != params->neuronDebugLocations->end(); ++i) {
+    int idx = *i;
+    NeuronDebugNetworkOutput_t debugOutput;
+
+    //Basic params
+    debugOutput.globalTime = params->globalTime;
+    debugOutput.V = params->nV[idx];
+    debugOutput.U = params->nU[idx];
+    debugOutput.idx = idx;
+    debugOutput.type = params->nType[idx];
+    debugOutput.lastSpikeTime = params->nLastSpikeTime[idx];
+    debugOutput.inh = params->nInh[idx];
+
+    //Dendrite potentiation
+
+    NetSendDebug((char *)&debugOutput, sizeof(debugOutput));
+  }
+  //########################################
 
   //Get data from core and send it out
   for (int i = 0; i < NET_OUTPUT_LEN(params); ++i) {

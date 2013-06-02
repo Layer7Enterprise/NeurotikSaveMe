@@ -84,14 +84,17 @@ struct NeuronSnapshot_t {
 //Debug output networking structs
 struct NeuronDebugNetworkOutput_t {
   //Neuron type
-  NeuronType_t type;
+  int type;
 
   //Index
   int idx;
 
+  //Global time
+  int globalTime;
+
   //Voltage and U of diff equations
-  float v;
-  float u;
+  float V;
+  float U;
 
   //For tracking when spikes actually occur
   int lastSpikeTime;
