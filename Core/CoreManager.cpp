@@ -12,6 +12,8 @@ static char *outputSegment = NULL;
 static Params_t *params = NULL;
 
 void CoreTick() {
+  static int id = 0;
+  ++id;
   pthread_mutex_lock(&runningSegmentLock);
 
 #ifdef CCUP
@@ -26,8 +28,10 @@ void CoreTick() {
 
   CCSend("CoreTickInput", (const char *)runningSegment, NET_INPUT_LEN(params));
 
-  if (!isBlank)
+  if (!isBlank) {
     CCSend("CoreTickInputNotBlank", (const char *)runningSegment, NET_INPUT_LEN(params));
+    printf("NOTBLANK! %d\n", id);
+  }
 #endif
 
   for (int idx = 0; idx < params->NN; ++idx)

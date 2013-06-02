@@ -1,11 +1,10 @@
 require 'socket'
 
-MULTICAST_ADDR = '224.4.5.6'
+MULTICAST_ADDR = 'localhost'
 PORT = 3000
 
 begin
   socket = UDPSocket.open
-
     socket.setsockopt Socket::IPPROTO_IP, Socket::IP_TTL, [1].pack('i')
 
     index = 0

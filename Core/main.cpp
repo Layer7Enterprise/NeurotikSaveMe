@@ -19,7 +19,7 @@
 
 /*#define SCHEMA_FILE "config/schema.txt"*/
 /*#define NET_FILE "config/net.txt"*/
-#define NET_IP "224.4.5.6"
+#define NET_IP "127.0.0.1"
 #define NET_PORT 3000  //Input = 3000, Output = 3001
 
 #include "test/Units.h"

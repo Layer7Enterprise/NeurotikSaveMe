@@ -256,8 +256,7 @@ void TestCoreManager() {
     CCOff("CoreOnImpulseEnd");
   });
 
-
-  It("Core should have the right non-blank segment", _function() {
+  It("Core should have the right non-blank segment", function() {
     CCOn("CoreTickInputNotBlank");
     IsEqual(CCCount("CoreTickInputNotBlank"), 0);
 
@@ -273,87 +272,95 @@ void TestCoreManager() {
 
     CCOff("CoreTickInputNotBlank");
 
-    done();
+    //done();
   });
 
-  /*It("Core should have the right non-blank segment (again)", _function() {*/
-    //IsEqual(CCCount("CoreTickInputNotBlank"), 0);
-    //CCOn("CoreTickInputNotBlank");
+  It("Core should have the right non-blank segment (again)", _function() {
+    IsEqual(CCCount("CoreTickInputNotBlank"), 0);
+    CCOn("CoreTickInputNotBlank");
 
-    ////Send network data via ruby
-    //system("ruby ./test/utility/send_data.rb 01");
+    //Send network data via ruby
+    system("ruby ./test/utility/send_data.rb 01");
 
-    //char equivalentSpike[] = { 0, 1 };
+    char equivalentSpike[] = { 0, 1 };
 
-    //CCupMessage_t message = CCGet("CoreTickInputNotBlank");
-    //IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
-    //done();
+    CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+    IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+    done();
 
-    //CCOff("CoreTickInputNotBlank");
-  /*});*/
+    CCOff("CoreTickInputNotBlank");
+    });
 
-  /*It("Core should have the right non-blank segment (lots of them)", _function() {*/
-    //CCOn("CoreTickInputNotBlank");
+  sleep(1);
+  SetTimeout(10);
 
-    ////Send network data via ruby
-    //system("ruby ./test/utility/send_data.rb 01");
-    //system("ruby ./test/utility/send_data.rb 10");
-    //system("ruby ./test/utility/send_data.rb 11");
-    //system("ruby ./test/utility/send_data.rb 11");
+  It("Core should have the right non-blank segment (lots of them)", _function() {
+      IsEqual(CCCount("CoreTickInputNotBlank"), 0);
+      CCOn("CoreTickInputNotBlank");
 
-    //{
-      //char equivalentSpike[] = { 0, 1 };
-      //CCupMessage_t message = CCGet("CoreTickInputNotBlank");
-      //IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
-    //}{
-      //char equivalentSpike[] = { 1, 0 };
-      //CCupMessage_t message = CCGet("CoreTickInputNotBlank");
-      //IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
-    //}{
-      //char equivalentSpike[] = { 1, 1 };
-      //CCupMessage_t message = CCGet("CoreTickInputNotBlank");
-      //IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
-    //}{
-      //char equivalentSpike[] = { 1, 1 };
-      //CCupMessage_t message = CCGet("CoreTickInputNotBlank");
-      //IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
-    //}
+      //Send network data via ruby
+      system("ruby ./test/utility/send_data.rb 01");
+      sleep(1);
+      system("ruby ./test/utility/send_data.rb 10");
+      sleep(1);
+      system("ruby ./test/utility/send_data.rb 11");
+      sleep(1);
+      system("ruby ./test/utility/send_data.rb 11");
+      sleep(1);
 
-    //done();
+      {
+      char equivalentSpike[] = { 0, 1 };
+      CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+      IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+      }{
+      char equivalentSpike[] = { 1, 0 };
+      CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+      IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+      }{
+      char equivalentSpike[] = { 1, 1 };
+      CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+      IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+      }{
+        char equivalentSpike[] = { 1, 1 };
+        CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+        IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+      }
 
-    //CCOff("CoreTickInputNotBlank");
-  /*});*/
+      done();
 
-  /*It("Core should have the right non-blank segment (serious lots of them)", _function() {*/
-    //CCOn("CoreTickInputNotBlank");
+      CCOff("CoreTickInputNotBlank");
+  });
 
-    ////Send network data via ruby
-    //for (int i = 0; i < 4; ++i) {
-      //system("ruby ./test/utility/send_data.rb 01");
-      //system("ruby ./test/utility/send_data.rb 10");
-    //}
+  It("Core should have the right non-blank segment (serious lots of them)", _function() {
+  CCOn("CoreTickInputNotBlank");
 
-    //for (int i = 0; i < 4; ++i) {
-      //{
-        //char equivalentSpike[] = { 0, 1 };
-        //CCupMessage_t message = CCGet("CoreTickInputNotBlank");
-        //IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
-      //}{
-        //char equivalentSpike[] = { 1, 0 };
-        //CCupMessage_t message = CCGet("CoreTickInputNotBlank");
-        //IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
-      //}
-    //}
+  //Send network data via ruby
+  for (int i = 0; i < 4; ++i) {
+  system("ruby ./test/utility/send_data.rb 01");
+  system("ruby ./test/utility/send_data.rb 10");
+  }
 
-    //done();
+  for (int i = 0; i < 4; ++i) {
+  {
+  char equivalentSpike[] = { 0, 1 };
+  CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+  IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+  }{
+  char equivalentSpike[] = { 1, 0 };
+  CCupMessage_t message = CCGet("CoreTickInputNotBlank");
+  IsEqualData((unsigned char *)message.data, (unsigned char *)equivalentSpike, NET_INPUT_LEN(&params));
+  }
+  }
 
-    //CCOff("CoreTickInputNotBlank");
-  /*});*/
+  done();
+
+  CCOff("CoreTickInputNotBlank");
+  });
 }
 
 void TestCore() {
   It("Has the right initial params", _function() {
-    for (int i = 0; i < params.NN; ++i) {
+      for (int i = 0; i < params.NN; ++i) {
       CCupMessage_t message = CCGet("CoreInitialParams");
       NeuronSnapshot_t neuron = *(NeuronSnapshot_t *)message.data;
 
@@ -364,13 +371,13 @@ void TestCore() {
       IsEqual(neuron.globalTime, 0);
 
       if (neuron.dConnection[0] != -1) {
-        IsEqual(neuron.dLastSpikeTime[0], -1000);
-        IsEqual(neuron.dSpikeQue[0], 0);
+      IsEqual(neuron.dLastSpikeTime[0], -1000);
+      IsEqual(neuron.dSpikeQue[0], 0);
       }
 
       if (neuron.dConnection[1] != -1) {
-        IsEqual(neuron.dLastSpikeTime[1], -1000);
-        IsEqual(neuron.dSpikeQue[1], 0);
+      IsEqual(neuron.dLastSpikeTime[1], -1000);
+      IsEqual(neuron.dSpikeQue[1], 0);
       }
 
       IsEqual(neuron.I, 0);
@@ -425,9 +432,9 @@ void TestCore() {
         IsEqual(neuron.inh, -1);
         IsEqual(neuron.ib, 0);
       }
-    }
+      }
 
-    done();
+      done();
   });
 }
 
@@ -443,29 +450,29 @@ void TestCoreHelpers() {
       IsEqual(gaba, false);
       IsEqual(gluNoLearn, false);
       IsEqual(gabaNoLearn, false);
-  });
+      });
 
   It("Does update the correct dendrites", _function() {
-    CCupMessage_t message;
-    //These messages should have been qued in order
-    //[D1 D2 D3] #Neuron 1
-    //[D1 D2 D3] #Neuron 2
-    for (int idx = 0; idx < params.NN; ++idx) {  //Neuron #
+      CCupMessage_t message;
+      //These messages should have been qued in order
+      //[D1 D2 D3] #Neuron 1
+      //[D1 D2 D3] #Neuron 2
+      for (int idx = 0; idx < params.NN; ++idx) {  //Neuron #
       for (int di = 0; di < params.ND; ++di) {  //Dendrite #
-        int isActive = params.dConnections[params.ND*idx + di];  //This dendrite is active
+      int isActive = params.dConnections[params.ND*idx + di];  //This dendrite is active
 
-        CCupMessage_t message = CCGet("CoreDendriteIsActive");
-        if (isActive >= 0) {
-          IsEqual(*(int *)message.data, true);
-        } else {
-          //Match what the actual loop does
-          IsEqual(*(int *)message.data, false);
-          break;
-        }
+      CCupMessage_t message = CCGet("CoreDendriteIsActive");
+      if (isActive >= 0) {
+      IsEqual(*(int *)message.data, true);
+      } else {
+      //Match what the actual loop does
+      IsEqual(*(int *)message.data, false);
+      break;
       }
-    }
+      }
+      }
 
-    done();
+      done();
   });
 }
 

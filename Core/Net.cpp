@@ -45,6 +45,7 @@ void *_NetRcvThread(void *) {
     const int MAXLEN = 100;
     static char _buffer[MAXLEN];
     char *buffer = _buffer;
+    memset(_buffer, 0, sizeof(buffer));
 
     int nBytes = recvfrom(netRcvSocket, buffer, MAXLEN, 0, (sockaddr *)&netRcvAddr, &addrlen);
 
@@ -55,7 +56,7 @@ void *_NetRcvThread(void *) {
     static char counter[6];
     memcpy(counter, _buffer, sizeof(counter)-1);
     counter[sizeof(counter)-1] = '\0';
-    int byteCount = atoi(counter);
+    int byteCount = atoi(counter); //What number byte
     static int lastByteCount = -1;  //Keep track of this below
     static int droppedPacketsEstimate = 0;
 
@@ -93,6 +94,18 @@ void *_NetRcvThread(void *) {
     CCSend("NetSendToCallback", (char *)integerVersion, nBytes);
 #endif
 
+//Is segment blank?
+  int isBlank = 1;
+  for (int i = 0; i < nBytes; ++i) {
+    if (integerVersion[i] == 1) {
+      isBlank = 0;
+      break;
+    }
+  }
+
+  if (!isBlank) {
+    printf("also blank!\n");
+  }
     lastByteCount = byteCount;
     netRcvCallback(integerVersion, nBytes);
   }
@@ -122,15 +135,15 @@ void NetRcvBegin(const char *ip, int port, void (*callback )(const unsigned char
     exit(EXIT_FAILURE);
   }
 
-  //Join Multicast group
-  ip_mreq mreq;
-  mreq.imr_multiaddr.s_addr = inet_addr(ip);
-  mreq.imr_interface.s_addr = htonl(INADDR_ANY);
-  res = setsockopt(netRcvSocket, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(ip_mreq));
-  if (res < 0) {
-    perror("Could not join IP Multicast Group");
-    exit(EXIT_FAILURE);
-  }
+  //Join Multicast group DID NOT WORK BECAUSE OF DUPLICATES
+  /*ip_mreq mreq;*/
+  //mreq.imr_multiaddr.s_addr = inet_addr(ip);
+  //mreq.imr_interface.s_addr = htonl(INADDR_ANY);
+  //res = setsockopt(netRcvSocket, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(ip_mreq));
+  //if (res < 0) {
+    //perror("Could not join IP Multicast Group");
+    //exit(EXIT_FAILURE);
+  /*}*/
 
   //Start threaded server
   pthread_create(&netRcvThread, NULL, _NetRcvThread, NULL);
