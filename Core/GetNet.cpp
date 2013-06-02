@@ -18,6 +18,7 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
   params->globalTime = 0;
   params->neuronNameToLocation = new std::map<std::string, int>();
   params->neuronLocationToName = new std::map<int, std::string>();
+  params->neuronDebugLocations = new std::vector<int>();
 
   //Initalize neurons
   params->nInhibitoryTime = new int[NN];
@@ -87,11 +88,16 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
         int neuronInhibitoryTime;
         float neuronMaximumG;
         int neuronIb;
+        char isDebug[100];
         fscanf(f, "%s", neuronName);
         fscanf(f, "%s %d", trash, (int *)&neuronType);
         fscanf(f, "%s %d", trash, &neuronInhibitoryTime);
         fscanf(f, "%s %d", trash, &neuronIb);
-        fscanf(f, "%s %s", trash, trash);
+        fscanf(f, "%s %s", isDebug, trash);
+
+        if (!strcmp(isDebug, "Debug")) {
+          (*params->neuronDebugLocations).push_back(openPosition);
+        }
 
         if (strcmp(trash, "End")) {
           fprintf(stderr, "Error, last neuron comment wasn't an End");

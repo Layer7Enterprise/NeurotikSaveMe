@@ -2,7 +2,7 @@
 #define UNITS_H_
 
 #include <CCup.h>
-#include "Units2.h"  //Just more
+#include <iostream>
 
 static Schema_t schema;
 static Params_t params;
@@ -474,6 +474,24 @@ void TestCoreHelpers() {
       }
 
       done();
+  });
+}
+
+void TestNetworkDebug() {
+  It("Has the right neurons set for debug", function() {
+    //0, 1, and 3
+    try {
+      IsEqual(params.neuronDebugLocations->at(0), 0);
+      IsEqual(params.neuronDebugLocations->at(1), 1);
+      IsEqual(params.neuronDebugLocations->at(2), 3);
+      IsEqual(params.neuronDebugLocations->size(), 3);
+    } catch (std::exception &e) {
+      std::cout << std::endl << "Exception occureed! " << e.what()<< std::endl;
+      exit(EXIT_FAILURE);
+    }
+  });
+
+  It("Sends out the voltages for the right neurons", function() {
   });
 }
 

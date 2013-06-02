@@ -2,6 +2,7 @@
 #define PARAMS_H_
 
 #include <map>
+#include <vector>
 
 enum NeuronType_t {
   GLU = 1,
@@ -32,6 +33,7 @@ struct Params_t {
   int globalTime;        //Current running time
   std::map<std::string, int> *neuronNameToLocation;
   std::map<int, std::string> *neuronLocationToName;
+  std::vector<int> *neuronDebugLocations;
 
   //Network in/out
   int networkInStartPos;
