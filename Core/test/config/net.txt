@@ -2,7 +2,7 @@ Neuron input[0]
 Type 1
 InhTime 0
 IB 0
-End End
+Debug End
 
 NetworkIn
 
@@ -10,7 +10,7 @@ Neuron input[1]
 Type 2
 InhTime 7
 IB 0
-End End
+Debug End
 
 NetworkOut
 
@@ -26,7 +26,7 @@ Neuron input[3]
 Type 2
 InhTime 4
 IB 0
-End End
+Debug End
 
 Neuron input[4]
 Type 1

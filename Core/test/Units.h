@@ -492,24 +492,24 @@ void RunUnits() {
 
   CCup(function() {
     CCSelfTest();
-    Describe("TestGetNet", function() {
+    xDescribe("TestGetNet", function() {
       TestGetNet();
     });
 
     CoreBegin(&params);
-    Describe("TestNetRcv", function() {
+    xDescribe("TestNetRcv", function() {
       TestNetRcv();
     });
 
-    Describe("TestCoreManager", function() {
+    xDescribe("TestCoreManager", function() {
       TestCoreManager();
     });
 
-    Describe("TestCore", function() {
+    xDescribe("TestCore", function() {
       TestCore();
     });
 
-    Describe("TestCoreHelpers", function() {
+    xDescribe("TestCoreHelpers", function() {
       TestCoreHelpers();
     });
 

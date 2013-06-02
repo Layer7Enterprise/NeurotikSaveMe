@@ -154,7 +154,6 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
         static int pos;
         pos = -1; //Position might not get set
         for (int i = 0; i < ND; ++i) {
-          printf("%d -> %d\n", fromNode, toNode);
           pos = toNode*ND + i;
           if (params->dConnections[pos] == -1) {
             params->dConnections[pos] = fromNode;
