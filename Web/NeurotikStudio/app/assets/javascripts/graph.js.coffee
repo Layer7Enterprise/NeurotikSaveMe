@@ -64,7 +64,7 @@ class NeuronGraph
     @graph.drawRegion {start: t, end: t+2}, "white", 1.0
 
   noteInh: (tStart, tEnd) =>
-    @graph.drawRegion {start: tStart, end: t+1}, "red"
+    @graph.drawRegion {start: tStart, end: tStart+1}, "red"
 
   addV: (points) =>
     @graph.drawLine points, "green"
@@ -104,92 +104,61 @@ compressAndFitHistory = (history, startTime, zoom, size) ->
       u: u
       inh: inh
       spike: spike
-    #Find up to the size if possible
-    cutOffNum = v.length - size
-    return output if cutOffNum <= 0
-
-    output.v.splice cutOffNum
-    output.u.splice cutOffNum
-    output.inh.splice cutOffNum
-    output.spike.splice cutOffNum
+    output.v.splice size
+    output.u.splice size
+    output.inh.splice size
+    output.spike.splice size
     return output
+
+class ScrollingNeuronGraph
+  #Divider id and a history object
+  constructor: (id, @history) ->
+    @graph = new NeuronGraph id
+    @startTime = 0
+    @trackEnd = false
+
+  draw: =>
+      #Not filled up whole window
+    tempHistory = compressAndFitHistory @history, @startTime, 1, @graph.size()
+    @graph.begin()
+    @graph.addV tempHistory.v
+    @graph.addU tempHistory.u
+
+    for x, i in tempHistory.spike 
+      @graph.noteSpike i if x == true
+
+    for x, i in tempHistory.inh 
+      @graph.noteInh i if x == true
+
+    #Follow the updates?
+    if @trackEnd == true
+      if tempHistory.v.length >= @graph.size()
+        @startTime += 30
 
 $ ->
   neuronA = new History 0, "neuronA"
+  graph = new ScrollingNeuronGraph "graphA", neuronA
 
-  graph = new NeuronGraph "graphA"
+  running = false
+  globalTime = 0
+  render = ->
+    return if !running
+    $("#time").html globalTime
+    globalTime += 100
+    for x in [1..100]
+      neuronA.record Math.random()*0.2, 0, Math.random() > 0.7 ,Math.random() > 0.9
+    graph.draw()
 
-  #Make up some data
-  for x in [1..2000]
-    neuronA.record Math.random()*1.0, Math.random()*1.0, Math.random() > 0.0,Math.random() > 0.9
+  setInterval render, 100
 
-  #Should be ... nil
-  tempHistory = compressAndFitHistory neuronA, 0, 1, graph.size()
+  $("#start").click ->
+    running = true
+    graph.trackEnd = true
+  $("#stop").click ->
+    running = false
+    graph.trackEnd = false
 
-  graph.begin()
-  graph.addV tempHistory.v
-  graph.addU tempHistory.u
-
-  for x, i in tempHistory.spike 
-    graph.noteSpike i if x == true
-
-  for x, i in tempHistory.inh 
-    if x == true
-      alert 'yes'
-    graph.noteInh i if x == true
-
-
-  #neuralGraphA = new NeuronGraph "graphA" 
-  #neuralGraphB = new NeuronGraph "graphB" 
-  #neuralGraphC = new NeuronGraph "graphC" 
-  #delta = 0
-  #render  = (neuralGraph) ->
-    #neuralGraph.begin()
-    #neuralGraph.noteSpike 100
-    #neuralGraph.noteInh 150, 300
-
-    #data = new Array(neuralGraph.size()+1)
-    #data[0] = 0
-    #for x, i in data
-      #continue if i == 0
-      #data[i] = Math.sin((i + delta) / 10)
-      #data[i] /= 4
-      #data[i] += 0.5
-
-    #neuralGraph.addV data
-    ##neuralGraph.addU data2
-    #delta += 1.52
-
-  #update = ->
-    #render neuralGraphA
-    #render neuralGraphB
-    #render neuralGraphC
-
-  #setInterval update, 60 / 1000
-
-  #graph = new Graph "graph"
-
-  #delta = 0
-  #renderLoop = ->
-
-    #graph.render()
-    #graph.drawRegion {start: 0, end: 400}, "orange"
-    #graph.drawRegion {start: 300, end: 500}, "red"
-    #graph.drawRegion {start: 500, end: 600}, "white"
-
-    
-    #graph.drawLine data, "#DDD"
-
-    #delta += 1.3
-
-  #setInterval renderLoop, 20 / 1000
-
-  ##canvas = document.getElementById("graph")
-  ##ctx = canvas.getContext '2d'
-
-  ##ctx.fillStyle = '#333'
-  ##ctx.fillRect 0, 0, canvas.width, canvas.height
-
-  ##ctx.moveTo 100, 150
-  ##ctx.lineTo 400, 400
-  ##ctx.stroke()
+  $("#goto button").click ->
+    pos = parseInt($("#goto input").val())
+    graph.startTime = pos
+    graph.draw()
