@@ -10,6 +10,7 @@
 #include "Timer.h"
 #include "Net.h"
 #include "Core/Core.h"
+#include "Serialize.h"
 
 //Start the core
 void CoreBegin(Params_t *params);

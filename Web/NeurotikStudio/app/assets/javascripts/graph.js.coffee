@@ -133,7 +133,7 @@ class ScrollingNeuronGraph
     #Follow the updates?
     if @trackEnd == true
       if tempHistory.v.length >= @graph.size()
-        @startTime += 30
+        @startTime += 1
 
 $ ->
   neuronA = new History 0, "neuronA"
@@ -141,15 +141,15 @@ $ ->
 
   running = false
   globalTime = 0
-  render = ->
-    return if !running
-    $("#time").html globalTime
-    globalTime += 100
-    for x in [1..100]
-      neuronA.record Math.random()*0.2, 0, Math.random() > 0.7 ,Math.random() > 0.9
-    graph.draw()
+  #render = ->
+    #return if !running
+    #$("#time").html globalTime
+    #globalTime += 500
+    #for x in [1..500]
+      #neuronA.record Math.random()*0.2, 0, Math.random() > 0.7 ,Math.random() > 0.9
+    #graph.draw()
 
-  setInterval render, 100
+  #setInterval render, 500
 
   $("#start").click ->
     running = true
@@ -162,3 +162,15 @@ $ ->
     pos = parseInt($("#goto input").val())
     graph.startTime = pos
     graph.draw()
+
+  socket = io.connect 'http://localhost:80'
+
+  socket.on 'data', (data) ->
+    return if !running
+    data = JSON.parse data
+
+    $("#time").html globalTime
+    globalTime += 10
+    neuronA.record data.v, data.u, 0, 0
+    graph.draw()
+

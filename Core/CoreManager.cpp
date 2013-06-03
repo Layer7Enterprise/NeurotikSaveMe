@@ -39,22 +39,26 @@ void CoreTick() {
 
   //########################################
   //Dump debug information
-  for (auto i = params->neuronDebugLocations->begin(); i != params->neuronDebugLocations->end(); ++i) {
-    int idx = *i;
-    NeuronDebugNetworkOutput_t debugOutput;
+  if (params->globalTime % 10 == 0) {
+    for (auto i = params->neuronDebugLocations->begin(); i != params->neuronDebugLocations->end(); ++i) {
+      int idx = *i;
+      NeuronDebugNetworkOutput_t debugOutput;
 
-    //Basic params
-    debugOutput.globalTime = params->globalTime;
-    debugOutput.V = params->nV[idx];
-    debugOutput.U = params->nU[idx];
-    debugOutput.idx = idx;
-    debugOutput.type = params->nType[idx];
-    debugOutput.lastSpikeTime = params->nLastSpikeTime[idx];
-    debugOutput.inh = params->nInh[idx];
+      //Basic params
+      debugOutput.globalTime = params->globalTime;
+      debugOutput.V = params->nV[idx];
+      debugOutput.U = params->nU[idx];
+      debugOutput.idx = idx;
+      debugOutput.type = params->nType[idx];
+      debugOutput.lastSpikeTime = params->nLastSpikeTime[idx];
+      debugOutput.inh = params->nInh[idx];
 
-    //Dendrite potentiation
+      char output[500];
+      SerializeDebugOutput(&debugOutput, output);
 
-    NetSendDebug((char *)&debugOutput, sizeof(debugOutput));
+      //Dendrite potentiation
+      NetSendDebug(output, strlen(output));
+    }
   }
   //########################################
 

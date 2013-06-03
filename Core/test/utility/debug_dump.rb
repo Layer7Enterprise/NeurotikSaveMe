@@ -21,6 +21,7 @@ sock.bind "127.0.0.1", 3002
 
   p = Packet.new
   p.read msg
+  puts msg
 
-  puts "#{p.globalTime} #{p.type} #{p.idx} #{p.voltage} #{p.uu} #{p.lastSpikeTime} #{p.inh}"
+#  puts "#{p.globalTime} #{p.type} #{p.idx} #{p.voltage} #{p.uu} #{p.lastSpikeTime} #{p.inh}"
 end
