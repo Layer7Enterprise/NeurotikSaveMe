@@ -20,4 +20,7 @@ void NetSendDebug(const char *message, int len);
 //Setup UDP Multicast receiver
 void NetRcvBegin(const char *ip, int port, void (*callback)(const unsigned char *, int));
 
+//Setup TCP Control port
+void NetControlBegin(const char *ip, int port, void (*callback)(const unsigned char *, int));
+
 #endif

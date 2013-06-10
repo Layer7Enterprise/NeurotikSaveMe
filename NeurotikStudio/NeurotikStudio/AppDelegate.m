@@ -12,9 +12,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [[self trackView] hasHorizontalRuler];
-    [[self trackView] hasHorizontalScroller];
-    [self trackView] class
 }
 
 @end

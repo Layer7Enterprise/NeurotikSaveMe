@@ -40,20 +40,30 @@ void CoreTick() {
   //########################################
   //Dump debug information
   for (auto i = params->neuronDebugLocations->begin(); i != params->neuronDebugLocations->end(); ++i) {
+    //For detecting dropped packets
+    static int debugCount = 0;
+
     int idx = *i;
     NeuronDebugNetworkOutput_t debugOutput;
 
     //Basic params
+    debugOutput.count = debugCount;
     debugOutput.globalTime = params->globalTime;
     debugOutput.V = params->nV[idx];
     debugOutput.U = params->nU[idx];
+
+    std::string name = params->neuronLocationToName->operator[](3);
+    strcpy(debugOutput.name, name.c_str());
+
     debugOutput.idx = idx;
     debugOutput.type = params->nType[idx];
     debugOutput.lastSpikeTime = params->nLastSpikeTime[idx];
     debugOutput.inh = params->nInh[idx];
 
     //Dendrite potentiation
-    ////NetSendDebug(output, strlen(output));
+    NetSendDebug((char *)&debugOutput, sizeof(NeuronDebugNetworkOutput_t));
+
+    ++debugCount;
   }
   //########################################
 

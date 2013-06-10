@@ -83,11 +83,17 @@ struct NeuronSnapshot_t {
 
 //Debug output networking structs
 struct NeuronDebugNetworkOutput_t {
-  //Neuron type
-  int type;
+  //Debug output count (For detecting dropped packets)
+  int count;
 
   //Index
   int idx;
+
+  //Neuron type
+  int type;
+
+  //Name
+  char name[100];
 
   //Global time
   int globalTime;

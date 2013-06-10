@@ -164,3 +164,49 @@ void NetRcvBegin(const char *ip, int port, void (*callback )(const unsigned char
   //Start threaded server
   pthread_create(&netRcvThread, NULL, _NetRcvThread, NULL);
 }
+
+//Control port (TCP)
+//########################################
+static pthread_t netControlThread;
+static int netControlSocket = -1;
+static sockaddr_in netControlAddr;
+
+void *_NetControlThread(void *a) {
+  while (1) {
+    listen(netControlSocket, 1024);
+
+    static unsigned char buffer[200];
+    recv(netControlSocket, buffer, sizeof(buffer), 0);
+
+    //Process command
+    switch (buffer[0]) {
+      case 0:
+        break;
+    }
+  }
+}
+
+void NetControlBegin(const char *ip, int port) {
+  //Setup socket
+  netControlSocket = socket(AF_INET, SOCK_STREAM, 0);
+  if (netControlSocket < 0) {
+    perror("Could not create control socket");
+    exit(EXIT_FAILURE);
+  }
+
+  //Setup address
+  memset(&netControlAddr, 0, sizeof(sockaddr_in));
+  netControlAddr.sin_family = AF_INET;
+  netControlAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+  netControlAddr.sin_port = htons(port);
+
+  //Bind
+  int res = bind(netControlSocket, (sockaddr *)&netControlAddr, sizeof(sockaddr_in));
+  if (res < 0) {
+    perror("Could not bind receive socket");
+    exit(EXIT_FAILURE);
+  }
+
+  //Start threaded server
+  pthread_create(&netControlThread, NULL, _NetControlThread, NULL);
+}
