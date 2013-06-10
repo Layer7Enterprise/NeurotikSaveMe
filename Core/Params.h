@@ -7,7 +7,8 @@
 enum NeuronType_t {
   GLU = 1,
   GABA = 2,
-  NO_LRN = 8
+  NO_LRN = 8,
+  GLU_SIGNAL = 16,
 };
 
 //Params
@@ -22,6 +23,9 @@ enum NeuronType_t {
 #define NEURON_GABA_C -65.0f 
 #define NEURON_GABA_D 2
 #define NEURON_GABA_V -65.0f
+
+#define NEURON_T0 20.0f  //exp(t/t0)
+#define NEURON_TH 22.1f  //Threshold calculations are made off this
 
 #define NET_INPUT_LEN(X) ((X)->networkInEndPos - (X)->networkInStartPos)
 #define NET_OUTPUT_LEN(X) ((X)->networkOutEndPos - (X)->networkOutStartPos)

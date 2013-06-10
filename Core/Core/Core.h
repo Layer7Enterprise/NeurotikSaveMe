@@ -1,6 +1,7 @@
 #ifndef CORE_H_
 #define CORE_H_
 
+#include <math.h>
 #include "../Params.h"
 #include "Helpers.h"
 

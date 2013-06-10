@@ -20,6 +20,8 @@ enum NeuronType_t {
 #define NEURON_GABA_D 2
 #define NEURON_GABA_V -65.0f
 
+#define NEURON_T0 20.0f  //exp(t/t0)
+
 #define NET_INPUT_LEN(X) ((X)->networkInEndPos - (X)->networkInStartPos)
 #define NET_OUTPUT_LEN(X) ((X)->networkOutEndPos - (X)->networkOutStartPos)
 
