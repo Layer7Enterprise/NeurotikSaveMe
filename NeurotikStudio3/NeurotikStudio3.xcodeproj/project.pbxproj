@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAF2AAE51764FAB100916890 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF2AAE41764FAB100916890 /* Cocoa.framework */; };
+		AAF2AAEF1764FAB100916890 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAF2AAED1764FAB100916890 /* InfoPlist.strings */; };
+		AAF2AAF11764FAB100916890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AAF01764FAB100916890 /* main.m */; };
+		AAF2AAF51764FAB100916890 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AAF2AAF31764FAB100916890 /* Credits.rtf */; };
+		AAF2AAF81764FAB100916890 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AAF71764FAB100916890 /* AppDelegate.m */; };
+		AAF2AAFB1764FAB200916890 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF2AAF91764FAB200916890 /* MainMenu.xib */; };
+		AAF2AB031764FB8A00916890 /* TrackInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB021764FB8A00916890 /* TrackInfoView.m */; };
+		AAF2AB061765014400916890 /* FullTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB051765014400916890 /* FullTrackView.m */; };
+		AAF2AB091765047F00916890 /* TrackDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB081765047F00916890 /* TrackDataView.m */; };
+		AAF2AB0F176524C200916890 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB0E176524C200916890 /* TrackViewController.m */; };
+		AAF2AB1217654FBD00916890 /* DebugClient.c in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB1017654FBD00916890 /* DebugClient.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAF2AAE11764FAB100916890 /* NeurotikStudio3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeurotikStudio3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF2AAE41764FAB100916890 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AAF2AAE71764FAB100916890 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		AAF2AAE81764FAB100916890 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AAF2AAE91764FAB100916890 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AAF2AAEC1764FAB100916890 /* NeurotikStudio3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NeurotikStudio3-Info.plist"; sourceTree = "<group>"; };
+		AAF2AAEE1764FAB100916890 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AAF2AAF01764FAB100916890 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAF2AAF21764FAB100916890 /* NeurotikStudio3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NeurotikStudio3-Prefix.pch"; sourceTree = "<group>"; };
+		AAF2AAF41764FAB100916890 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		AAF2AAF61764FAB100916890 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AAF2AAF71764FAB100916890 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAF2AAFA1764FAB200916890 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AAF2AB011764FB8A00916890 /* TrackInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackInfoView.h; sourceTree = "<group>"; };
+		AAF2AB021764FB8A00916890 /* TrackInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackInfoView.m; sourceTree = "<group>"; };
+		AAF2AB041765014400916890 /* FullTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTrackView.h; sourceTree = "<group>"; };
+		AAF2AB051765014400916890 /* FullTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTrackView.m; sourceTree = "<group>"; };
+		AAF2AB071765047F00916890 /* TrackDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackDataView.h; sourceTree = "<group>"; };
+		AAF2AB081765047F00916890 /* TrackDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackDataView.m; sourceTree = "<group>"; };
+		AAF2AB0D176524C200916890 /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
+		AAF2AB0E176524C200916890 /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
+		AAF2AB1017654FBD00916890 /* DebugClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DebugClient.c; path = ../DebugClient.c; sourceTree = "<group>"; };
+		AAF2AB1117654FBD00916890 /* DebugClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugClient.h; path = ../DebugClient.h; sourceTree = "<group>"; };
+		AAF2AB1317654FD200916890 /* Params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Params.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAF2AADE1764FAB100916890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF2AAE51764FAB100916890 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAF2AAD81764FAB100916890 = {
+			isa = PBXGroup;
+			children = (
+				AAF2AAEA1764FAB100916890 /* NeurotikStudio3 */,
+				AAF2AAE31764FAB100916890 /* Frameworks */,
+				AAF2AAE21764FAB100916890 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAF2AAE21764FAB100916890 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2AAE11764FAB100916890 /* NeurotikStudio3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAF2AAE31764FAB100916890 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2AAE41764FAB100916890 /* Cocoa.framework */,
+				AAF2AAE61764FAB100916890 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAF2AAE61764FAB100916890 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2AAE71764FAB100916890 /* AppKit.framework */,
+				AAF2AAE81764FAB100916890 /* CoreData.framework */,
+				AAF2AAE91764FAB100916890 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		AAF2AAEA1764FAB100916890 /* NeurotikStudio3 */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2AB1517654FE500916890 /* TrackView */,
+				AAF2AB1417654FDF00916890 /* DebugClient */,
+				AAF2AAF61764FAB100916890 /* AppDelegate.h */,
+				AAF2AAF71764FAB100916890 /* AppDelegate.m */,
+				AAF2AAF91764FAB200916890 /* MainMenu.xib */,
+				AAF2AAEB1764FAB100916890 /* Supporting Files */,
+			);
+			path = NeurotikStudio3;
+			sourceTree = "<group>";
+		};
+		AAF2AAEB1764FAB100916890 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2AAEC1764FAB100916890 /* NeurotikStudio3-Info.plist */,
+				AAF2AAED1764FAB100916890 /* InfoPlist.strings */,
+				AAF2AAF01764FAB100916890 /* main.m */,
+				AAF2AAF21764FAB100916890 /* NeurotikStudio3-Prefix.pch */,
+				AAF2AAF31764FAB100916890 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAF2AB1417654FDF00916890 /* DebugClient */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2AB1317654FD200916890 /* Params.h */,
+				AAF2AB1017654FBD00916890 /* DebugClient.c */,
+				AAF2AB1117654FBD00916890 /* DebugClient.h */,
+			);
+			name = DebugClient;
+			sourceTree = "<group>";
+		};
+		AAF2AB1517654FE500916890 /* TrackView */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2AB011764FB8A00916890 /* TrackInfoView.h */,
+				AAF2AB021764FB8A00916890 /* TrackInfoView.m */,
+				AAF2AB041765014400916890 /* FullTrackView.h */,
+				AAF2AB051765014400916890 /* FullTrackView.m */,
+				AAF2AB071765047F00916890 /* TrackDataView.h */,
+				AAF2AB081765047F00916890 /* TrackDataView.m */,
+				AAF2AB0D176524C200916890 /* TrackViewController.h */,
+				AAF2AB0E176524C200916890 /* TrackViewController.m */,
+			);
+			name = TrackView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAF2AAE01764FAB100916890 /* NeurotikStudio3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF2AAFE1764FAB200916890 /* Build configuration list for PBXNativeTarget "NeurotikStudio3" */;
+			buildPhases = (
+				AAF2AADD1764FAB100916890 /* Sources */,
+				AAF2AADE1764FAB100916890 /* Frameworks */,
+				AAF2AADF1764FAB100916890 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeurotikStudio3;
+			productName = NeurotikStudio3;
+			productReference = AAF2AAE11764FAB100916890 /* NeurotikStudio3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAF2AAD91764FAB100916890 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Seo Townsend";
+			};
+			buildConfigurationList = AAF2AADC1764FAB100916890 /* Build configuration list for PBXProject "NeurotikStudio3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AAF2AAD81764FAB100916890;
+			productRefGroup = AAF2AAE21764FAB100916890 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAF2AAE01764FAB100916890 /* NeurotikStudio3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAF2AADF1764FAB100916890 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF2AAEF1764FAB100916890 /* InfoPlist.strings in Resources */,
+				AAF2AAF51764FAB100916890 /* Credits.rtf in Resources */,
+				AAF2AAFB1764FAB200916890 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAF2AADD1764FAB100916890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF2AAF11764FAB100916890 /* main.m in Sources */,
+				AAF2AAF81764FAB100916890 /* AppDelegate.m in Sources */,
+				AAF2AB031764FB8A00916890 /* TrackInfoView.m in Sources */,
+				AAF2AB061765014400916890 /* FullTrackView.m in Sources */,
+				AAF2AB091765047F00916890 /* TrackDataView.m in Sources */,
+				AAF2AB0F176524C200916890 /* TrackViewController.m in Sources */,
+				AAF2AB1217654FBD00916890 /* DebugClient.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AAF2AAED1764FAB100916890 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAF2AAEE1764FAB100916890 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AAF2AAF31764FAB100916890 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAF2AAF41764FAB100916890 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		AAF2AAF91764FAB200916890 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAF2AAFA1764FAB200916890 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAF2AAFC1764FAB200916890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AAF2AAFD1764FAB200916890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AAF2AAFF1764FAB200916890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NeurotikStudio3/NeurotikStudio3-Prefix.pch";
+				INFOPLIST_FILE = "NeurotikStudio3/NeurotikStudio3-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AAF2AB001764FAB200916890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NeurotikStudio3/NeurotikStudio3-Prefix.pch";
+				INFOPLIST_FILE = "NeurotikStudio3/NeurotikStudio3-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAF2AADC1764FAB100916890 /* Build configuration list for PBXProject "NeurotikStudio3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF2AAFC1764FAB200916890 /* Debug */,
+				AAF2AAFD1764FAB200916890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF2AAFE1764FAB200916890 /* Build configuration list for PBXNativeTarget "NeurotikStudio3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF2AAFF1764FAB200916890 /* Debug */,
+				AAF2AB001764FAB200916890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAF2AAD91764FAB100916890 /* Project object */;
+}

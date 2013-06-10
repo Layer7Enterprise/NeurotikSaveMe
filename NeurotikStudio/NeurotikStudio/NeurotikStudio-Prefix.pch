@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'NeurotikStudio' target in the 'NeurotikStudio' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
