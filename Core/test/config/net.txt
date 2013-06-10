@@ -25,7 +25,7 @@ EndNetworkIn
 Neuron input[3]
 Type 2
 InhTime 4
-IB 5
+IB 0
 Debug End
 
 Neuron input[4]

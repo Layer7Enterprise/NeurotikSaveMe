@@ -9,6 +9,7 @@
 
 //Called every millisecond
 void CoreTick(int idx, Params_t *params) {
+#pragma region Get Info
    //Global
    static int &globalTime = params->globalTime;
    static int NN = params->NN;
@@ -33,10 +34,17 @@ void CoreTick(int idx, Params_t *params) {
 
    //Send an initial snapshot (Only when CCUp is included)
    only_first SendSnapshot("CoreInitialParams", idx, NN, ND, globalTime, dConnection, dDelay, dWeight, dLastSpikeTime, dSpikeQue, v, u, I, lastSpikeTime, inh, inhibitoryTime, ib, type);
-   if (ib && (globalTime % ib == 0)) {
+#pragma endregion
+
+#pragma region Periodic
+   if (ib > 0 && (globalTime % ib == 0)) {
      I = 24.0f;
    }
 
+  I = 24.0f;
+#pragma endregion
+
+#pragma region Dendrites
   //Dendrites
   for (int i = 0; i < ND; ++i) {
     //Is this an active dendrite
@@ -92,9 +100,9 @@ void CoreTick(int idx, Params_t *params) {
       dSpikeQue[i] >>= 1;
     }
   }
+#pragma endregion
 
 #pragma region Core Update
-
   //Reduce the switching dynamics to tighten the neuron up (Logistic equation)
   //22 is related to how the threshold is about 20, we want to make sure we're in
   //the range when we hit ~22
@@ -114,13 +122,9 @@ void CoreTick(int idx, Params_t *params) {
   } else if (type & GABA) {
     u += NEURON_GABA_A*(NEURON_GABA_B*v - u);
   }
-
-  //Start to reset INH
-  --inh;
 #pragma endregion
 
 #pragma region NeuronFire
-  
   if (v > 30.0f) {
     //Reset V and U
     if (type & GLU) {
@@ -158,6 +162,14 @@ void CoreTick(int idx, Params_t *params) {
 
     lastSpikeTime = globalTime;
   }
+#pragma endregion
 
+#pragma region Normalize
+#pragma endregion
+
+#pragma region Updates
+  //Update params
+  --inh;
+  I = 0;
 #pragma endregion
 }

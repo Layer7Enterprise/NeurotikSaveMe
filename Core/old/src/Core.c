@@ -92,8 +92,7 @@ __global__ void IGNeurotikCore(const int NN, const int ND, const int globalTime,
 
 													   int deltaTime = globalTime - lastSpikeTime; //Previous Neuron's spike
 													   float delta = 0.05*exp(-deltaTime / NEURON_T0);
-												   delta *= plasticity;
-
+												   delta *= plasticity; 
 												   if (deltaTime < NEURON_T0 && !death)
 													   dWeight[i] -= delta;
 
