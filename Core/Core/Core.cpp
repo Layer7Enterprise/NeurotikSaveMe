@@ -33,6 +33,10 @@ void CoreTick(int idx, Params_t *params) {
 
    //Send an initial snapshot (Only when CCUp is included)
    only_first SendSnapshot("CoreInitialParams", idx, NN, ND, globalTime, dConnection, dDelay, dWeight, dLastSpikeTime, dSpikeQue, v, u, I, lastSpikeTime, inh, inhibitoryTime, ib, type);
+   if (ib && (globalTime % ib == 0)) {
+     I = 24.0f;
+     lastSpikeTime = globalTime;
+   }
 
    //Dendrites
    for (int i = 0; i < ND; ++i) {

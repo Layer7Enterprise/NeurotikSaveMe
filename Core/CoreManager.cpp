@@ -52,7 +52,7 @@ void CoreTick() {
     debugOutput.V = params->nV[idx];
     debugOutput.U = params->nU[idx];
 
-    std::string name = params->neuronLocationToName->operator[](3);
+    std::string name = params->neuronLocationToName->operator[](idx);
     strcpy(debugOutput.name, name.c_str());
 
     debugOutput.idx = idx;
