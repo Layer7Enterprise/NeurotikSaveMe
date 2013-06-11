@@ -98,4 +98,16 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
     [self.trackTimeView setStringValue:[NSString stringWithFormat:@"%f", -self.fullTrackView.trackDataView.seekTime]];
 }
 
+- (IBAction)changeTrackType:(id)sender {
+    NSSegmentedControl *control = sender;
+    
+    //Discrete
+    if ([control selectedSegment] == 0) {
+        [self.fullTrackView.trackDataView setHidden:NO];
+        [self.fullTrackView.trackWaveView setHidden:YES];
+    } else {
+        [self.fullTrackView.trackDataView setHidden:YES];
+        [self.fullTrackView.trackWaveView setHidden:NO];
+    }
+}
 @end

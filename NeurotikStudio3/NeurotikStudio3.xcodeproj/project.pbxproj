@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AAD4DE3017669D5600FDEDFE /* DebugClient.c in Sources */ = {isa = PBXBuildFile; fileRef = AAD4DE2E17669D5600FDEDFE /* DebugClient.c */; };
+		AAD4DE341766A46900FDEDFE /* TrackWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD4DE331766A46900FDEDFE /* TrackWaveView.m */; };
 		AAF2AAE51764FAB100916890 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF2AAE41764FAB100916890 /* Cocoa.framework */; };
 		AAF2AAEF1764FAB100916890 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAF2AAED1764FAB100916890 /* InfoPlist.strings */; };
 		AAF2AAF11764FAB100916890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AAF01764FAB100916890 /* main.m */; };
@@ -24,6 +25,8 @@
 		AAD4DE2E17669D5600FDEDFE /* DebugClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DebugClient.c; sourceTree = "<group>"; };
 		AAD4DE2F17669D5600FDEDFE /* DebugClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugClient.h; sourceTree = "<group>"; };
 		AAD4DE3117669D6A00FDEDFE /* Params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Params.h; path = ../../Core/Params.h; sourceTree = "<group>"; };
+		AAD4DE321766A46900FDEDFE /* TrackWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackWaveView.h; sourceTree = "<group>"; };
+		AAD4DE331766A46900FDEDFE /* TrackWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackWaveView.m; sourceTree = "<group>"; };
 		AAF2AAE11764FAB100916890 /* NeurotikStudio3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeurotikStudio3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF2AAE41764FAB100916890 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AAF2AAE71764FAB100916890 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -141,6 +144,8 @@
 				AAF2AB081765047F00916890 /* TrackDataView.m */,
 				AAF2AB0D176524C200916890 /* TrackViewController.h */,
 				AAF2AB0E176524C200916890 /* TrackViewController.m */,
+				AAD4DE321766A46900FDEDFE /* TrackWaveView.h */,
+				AAD4DE331766A46900FDEDFE /* TrackWaveView.m */,
 			);
 			name = TrackView;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				AAF2AB091765047F00916890 /* TrackDataView.m in Sources */,
 				AAF2AB0F176524C200916890 /* TrackViewController.m in Sources */,
 				AAD4DE3017669D5600FDEDFE /* DebugClient.c in Sources */,
+				AAD4DE341766A46900FDEDFE /* TrackWaveView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
