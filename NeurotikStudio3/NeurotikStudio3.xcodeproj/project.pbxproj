@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAD4DE3017669D5600FDEDFE /* DebugClient.c in Sources */ = {isa = PBXBuildFile; fileRef = AAD4DE2E17669D5600FDEDFE /* DebugClient.c */; };
 		AAF2AAE51764FAB100916890 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF2AAE41764FAB100916890 /* Cocoa.framework */; };
 		AAF2AAEF1764FAB100916890 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAF2AAED1764FAB100916890 /* InfoPlist.strings */; };
 		AAF2AAF11764FAB100916890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AAF01764FAB100916890 /* main.m */; };
@@ -17,10 +18,12 @@
 		AAF2AB061765014400916890 /* FullTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB051765014400916890 /* FullTrackView.m */; };
 		AAF2AB091765047F00916890 /* TrackDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB081765047F00916890 /* TrackDataView.m */; };
 		AAF2AB0F176524C200916890 /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB0E176524C200916890 /* TrackViewController.m */; };
-		AAF2AB1217654FBD00916890 /* DebugClient.c in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AB1017654FBD00916890 /* DebugClient.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAD4DE2E17669D5600FDEDFE /* DebugClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DebugClient.c; sourceTree = "<group>"; };
+		AAD4DE2F17669D5600FDEDFE /* DebugClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugClient.h; sourceTree = "<group>"; };
+		AAD4DE3117669D6A00FDEDFE /* Params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Params.h; path = ../../Core/Params.h; sourceTree = "<group>"; };
 		AAF2AAE11764FAB100916890 /* NeurotikStudio3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeurotikStudio3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF2AAE41764FAB100916890 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AAF2AAE71764FAB100916890 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -42,9 +45,6 @@
 		AAF2AB081765047F00916890 /* TrackDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackDataView.m; sourceTree = "<group>"; };
 		AAF2AB0D176524C200916890 /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
 		AAF2AB0E176524C200916890 /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
-		AAF2AB1017654FBD00916890 /* DebugClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DebugClient.c; path = ../DebugClient.c; sourceTree = "<group>"; };
-		AAF2AB1117654FBD00916890 /* DebugClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugClient.h; path = ../DebugClient.h; sourceTree = "<group>"; };
-		AAF2AB1317654FD200916890 /* Params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Params.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +123,9 @@
 		AAF2AB1417654FDF00916890 /* DebugClient */ = {
 			isa = PBXGroup;
 			children = (
-				AAF2AB1317654FD200916890 /* Params.h */,
-				AAF2AB1017654FBD00916890 /* DebugClient.c */,
-				AAF2AB1117654FBD00916890 /* DebugClient.h */,
+				AAD4DE3117669D6A00FDEDFE /* Params.h */,
+				AAD4DE2E17669D5600FDEDFE /* DebugClient.c */,
+				AAD4DE2F17669D5600FDEDFE /* DebugClient.h */,
 			);
 			name = DebugClient;
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 				AAF2AB061765014400916890 /* FullTrackView.m in Sources */,
 				AAF2AB091765047F00916890 /* TrackDataView.m in Sources */,
 				AAF2AB0F176524C200916890 /* TrackViewController.m in Sources */,
-				AAF2AB1217654FBD00916890 /* DebugClient.c in Sources */,
+				AAD4DE3017669D5600FDEDFE /* DebugClient.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +351,7 @@
 				AAF2AB001764FAB200916890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

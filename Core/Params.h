@@ -1,8 +1,10 @@
 #ifndef PARAMS_H_
 #define PARAMS_H_
 
+#ifdef __cplusplus
 #include <map>
 #include <vector>
+#endif
 
 enum NeuronType_t {
   GLU = 1,
@@ -35,9 +37,12 @@ struct Params_t {
   int NN;                //Number of neurons
   int ND;                //Number of dendrites
   int globalTime;        //Current running time
+
+#ifdef __cplusplus
   std::map<std::string, int> *neuronNameToLocation;
   std::map<int, std::string> *neuronLocationToName;
   std::vector<int> *neuronDebugLocations;
+#endif
 
   //Network in/out
   int networkInStartPos;
@@ -53,7 +58,7 @@ struct Params_t {
   float *nI;                 //Instantenous current
   int *nInh;                 //Inhibitor is active
   int *nIb;                  //Intrinsict burst time
-  NeuronType_t *nType;       //What kind of neuron?
+  enum NeuronType_t *nType;       //What kind of neuron?
 
   //Dendrites
   int *dConnections;     //Connection matrix
@@ -82,7 +87,7 @@ struct NeuronSnapshot_t {
     int inhibitoryTime;
     int inh;
     int ib;
-    NeuronType_t type;
+    enum NeuronType_t type;
 };
 
 //Debug output networking structs
