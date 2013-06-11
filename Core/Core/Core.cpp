@@ -36,6 +36,13 @@ void CoreTick(int idx, Params_t *params) {
    only_first SendSnapshot("CoreInitialParams", idx, NN, ND, globalTime, dConnection, dDelay, dWeight, dLastSpikeTime, dSpikeQue, v, u, I, lastSpikeTime, inh, inhibitoryTime, ib, type);
 #pragma endregion
 
+/*if (globalTime % 10 == 0)*/
+  //v = 30.0f;
+//else
+  //v = -65.0f;
+
+/*return;*/
+
 #pragma region Periodic
    if (ib > 0 && (globalTime % ib == 0)) {
      I = 24.0f;

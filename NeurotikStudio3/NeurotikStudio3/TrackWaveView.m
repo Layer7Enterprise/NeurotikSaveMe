@@ -59,6 +59,7 @@
     }
     
     self.recordOffsetTime += 1.0f;
+    lastValues = values;
 }
 
 - (void)drawTrack {
