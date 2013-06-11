@@ -17,6 +17,7 @@ void onDrop() {
 //Running colors, pushed on a negative change in idx
 static NSMutableArray *colors;
 static NSMutableArray *names;
+static NSMutableArray *values;
 static BOOL hasSetNames = NO;
 
 void onData(struct NeuronDebugNetworkOutput_t output) {
@@ -31,10 +32,13 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
                 [[[theTrackViewController fullTrackView] trackInfoView] setNeedsDisplay:YES];
             }
             
-            if ([theTrackViewController isRecording])
+            if ([theTrackViewController isRecording]) {
                 [theTrackViewController addColorColumn:colors];
+                [theTrackViewController addWaveColumn:values];
+            }
         }
         colors = [NSMutableArray new];
+        values = [NSMutableArray new];
     }
 
     lastIdx = output.idx;
@@ -44,6 +48,13 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
             [names addObject:[NSString stringWithFormat:@"%s", output.name]];
         }
     }
+    
+    //Normalize voltages [-65.0V -> 40.0] => [0 -> 1.0]
+    float rawVoltage = output.V;
+    rawVoltage += 70.0f;
+    rawVoltage /= 110.0f;
+    NSNumber *value = [[NSNumber alloc] initWithFloat:rawVoltage];
+    [values addObject:value];
     
     if (output.inh > 0) {
         [colors addObject:[NSColor redColor]];
@@ -60,6 +71,7 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
     theTrackViewController = self;
     colors = [NSMutableArray new];
     names = [NSMutableArray new];
+    values = [NSMutableArray new];
     
     NUDebugClientSetDropped(onDrop);
     NUDebugClientSetCallback(onData);
@@ -68,33 +80,42 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
 
 - (void)addColorColumn: (NSMutableArray *)colors {
     [[[self fullTrackView] trackDataView] addColorColumn:colors];
-    
+
     [self.trackTimeView setStringValue:[NSString stringWithFormat:@"%f", -self.fullTrackView.trackDataView.seekTime]];
+}
+
+- (void)addWaveColumn: (NSMutableArray *)values {
+    [[[self fullTrackView] trackWaveView] addWaveColumn:values];
 }
 
 - (IBAction)recordClick:(id)sender {
     if (self.isRecording) {
         self.isRecording = NO;
         [self.fullTrackView.trackDataView setScrollToLatest:NO];
+        [self.fullTrackView.trackWaveView setScrollToLatest:NO];
     } else {
         self.isRecording = YES;
         [self.fullTrackView.trackDataView setScrollToLatest:YES];
+        [self.fullTrackView.trackWaveView setScrollToLatest:YES];
     }
 }
 
 - (IBAction)gotoClick:(id)sender {
     int value = [[self.gotoField stringValue] intValue];
     [self.fullTrackView.trackDataView setSeekTime:-value];
+    [self.fullTrackView.trackWaveView setSeekTime:-value];
     [self.trackTimeView setStringValue:[NSString stringWithFormat:@"%f", -self.fullTrackView.trackDataView.seekTime]];
 }
 
 - (IBAction)left:(id)sender {
     self.fullTrackView.trackDataView.seekTime += 10;
+    self.fullTrackView.trackWaveView.seekTime += 10;
     [self.trackTimeView setStringValue:[NSString stringWithFormat:@"%f", -self.fullTrackView.trackDataView.seekTime]];
 }
 
 - (IBAction)right:(id)sender {
     self.fullTrackView.trackDataView.seekTime -= 10;
+    self.fullTrackView.trackWaveView.seekTime -= 10;
     [self.trackTimeView setStringValue:[NSString stringWithFormat:@"%f", -self.fullTrackView.trackDataView.seekTime]];
 }
 

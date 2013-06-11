@@ -18,6 +18,7 @@
 @property (nonatomic) int currentTime;
 
 - (void)addColorColumn: (NSMutableArray *)colors;
+- (void)addWaveColumn: (NSMutableArray *)values;
 
 - (IBAction)recordClick:(id)sender;
 @property (atomic) BOOL isRecording;

@@ -2,7 +2,7 @@
 
 #define kTrackBufferSize 600000
 #define kTrackElementWidth 5 //Size of each discrete track data
-#define kTrackElementHeight 20
+#define kTrackElementHeight 40
 #define TIME_TO_OFFSCREEN_OFFSET(time) (time*kTrackElementWidth)
 #define OFFSCREEN_OFFSET_TO_TIME(offset) (offset/kTrackElementWidth)
 
@@ -38,6 +38,7 @@
     int index = 0;
     for (NSColor *color in colors) {
         CGContextSetRGBFillColor(self.offscreenContext, [color redComponent], [color greenComponent], [color blueComponent], [color alphaComponent]);
+        
         CGContextFillRect(self.offscreenContext, CGRectMake(TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), index*kTrackElementHeight, kTrackElementWidth, kTrackElementHeight));
         
         CGContextSetRGBStrokeColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
