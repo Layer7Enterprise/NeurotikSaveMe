@@ -38,19 +38,10 @@ void CoreTick(int idx, Params_t *params) {
 #endif
 #pragma endregion
 
-/*if (globalTime % 10 == 0)*/
-  //v = 30.0f;
-//else
-  //v = -65.0f;
-
-/*return;*/
-
 #pragma region Periodic
    if (ib > 0 && (globalTime % ib == 0)) {
-     I = 24.0f;
+     I = 25.0f;
    }
-
-  I = 24.0f;
 #pragma endregion
 
 #pragma region Dendrites
@@ -121,14 +112,13 @@ void CoreTick(int idx, Params_t *params) {
   //the range when we hit ~22
   I *= 1 / (1 + exp(100.0f*(22.0f - I)));
 
+  //Ceiling current
   if (I > NEURON_TH*1.5f)
     I = NEURON_TH*1.5f;
 
   //Update neuron
-  if (inh <= 0) {
-    v += 0.5f*(0.04f*v*v + 5.0f*v + 140.0f - u + I);
-    v += 0.5f*(0.04f*v*v + 5.0f*v + 140.0f - u + I);
-  }
+  v += 0.5f*(0.04f*v*v + 5.0f*v + 140.0f - u + I);
+  v += 0.5f*(0.04f*v*v + 5.0f*v + 140.0f - u + I);
 
   if (type & GLU) {
     u += NEURON_GLU_A*(NEURON_GLU_B*v - u);
@@ -138,7 +128,7 @@ void CoreTick(int idx, Params_t *params) {
 #pragma endregion
 
 #pragma region NeuronFire
-  if (v > 30.0f) {
+  if (v > 30.0f && inh <= 0) {
     //Reset V and U
     if (type & GLU) {
       v = NEURON_GLU_C;

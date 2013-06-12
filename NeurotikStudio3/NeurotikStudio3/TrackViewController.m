@@ -59,7 +59,7 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
     if (output.inh > 0) {
         [colors addObject:[NSColor redColor]];
     } else if (output.lastSpikeTime == output.globalTime) {
-        [colors addObject:[NSColor greenColor]];
+        [colors addObject:[NSColor yellowColor]];
     } else {
         [colors addObject:[NSColor brownColor]];
     }
