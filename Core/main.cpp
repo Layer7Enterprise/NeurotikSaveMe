@@ -22,9 +22,26 @@
 #define NET_IP "127.0.0.1"
 #define NET_PORT 3000  //Input = 3000, Output = 3001
 
-#include "test/Units.h"
+//#include "test/Units.h"
 
 int main() {
-  RunUnits();
+  Schema_t schema;
+  Params_t params;
+
+  //Load schema (Port, name, etc)
+  GetSchema("config/schema.txt", &schema);
+
+  //Load params (net list, large chunk of memory, etc)
+  GetNet("config/net.txt", schema, &params);
+
+  //Setup network receiving
+  NetRcvBegin(NET_IP, NET_PORT, CoreOnImpulse);
+  NetSendBegin(NET_IP, NET_PORT+1);
+  NetSendBeginDebug(NET_IP, NET_PORT+2);
+
+  CoreBegin(&params);
+  puts("Core online...");
+
+  dispatch_main();
   return 0;
 }

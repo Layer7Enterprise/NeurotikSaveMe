@@ -12,9 +12,11 @@ void TestNetRcv() {
   It("NetOnRcv can count", _function() {
     system("ruby ./test/utility/send_data.rb 10 10 11");
 
+#ifdef CCUP
     CCupMessage_t message = CCGet("NetCounter");
     message = CCGet("NetCounter");
     message = CCGet("NetCounter");
+#endif
     int count = *(int *)message.data;
     IsEqual(count, 2);
     done();

@@ -6,6 +6,8 @@
 #include <vector>
 #include <queue>
 #include <pthread.h>
+#include <map>
+#include <string>
 #include "Params.h"
 #include "Timer.h"
 #include "Net.h"

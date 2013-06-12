@@ -1,7 +1,7 @@
 #include "Core.h"
 
 //Enable testing
-#include <CCup.h>
+//#include <CCup.h>
 
 #include "Test.h"
 
@@ -33,7 +33,9 @@ void CoreTick(int idx, Params_t *params) {
    NeuronType_t type = *(params->nType + idx);
 
    //Send an initial snapshot (Only when CCUp is included)
+#ifdef CCUP
    only_first SendSnapshot("CoreInitialParams", idx, NN, ND, globalTime, dConnection, dDelay, dWeight, dLastSpikeTime, dSpikeQue, v, u, I, lastSpikeTime, inh, inhibitoryTime, ib, type);
+#endif
 #pragma endregion
 
 /*if (globalTime % 10 == 0)*/
@@ -56,10 +58,14 @@ void CoreTick(int idx, Params_t *params) {
   for (int i = 0; i < ND; ++i) {
     //Is this an active dendrite
     if (dConnection[i] < 0) {
+#ifdef CCUP
       only_first CCSend("CoreDendriteIsActive", false);
+#endif
        break;
      } else {
+#ifdef CCUP
        only_first CCSend("CoreDendriteIsActive", true);
+#endif
 
        //We got a message from the axon
        if (params->nLastSpikeTime[dConnection[i]] == globalTime-1) {

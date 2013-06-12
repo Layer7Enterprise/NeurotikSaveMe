@@ -1,7 +1,7 @@
 #include "CoreManager.h"
 
 //Debug?
-#include <CCup.h>
+//#include <CCup.h>
 
 //Inbound segment (INTEGER BASED!)
 pthread_mutex_t runningSegmentLock = PTHREAD_MUTEX_INITIALIZER;
@@ -14,7 +14,6 @@ static Params_t *params = NULL;
 void CoreTick() {
   pthread_mutex_lock(&runningSegmentLock);
 
-#ifdef CCUP
   //Is segment blank?
   int isBlank = 1;
   for (int i = 0; i < NET_INPUT_LEN(params); ++i) {
@@ -24,6 +23,7 @@ void CoreTick() {
     }
   }
 
+#ifdef CCUP
   CCSend("CoreTickInput", (const char *)runningSegment, NET_INPUT_LEN(params));
 
   if (!isBlank) {
@@ -120,7 +120,9 @@ void CoreBegin(Params_t *p) {
 }
 
 void CoreOnImpulse(const unsigned char *impulse, int len) {
+#ifdef CCUP
   CCSend("CoreOnImpulseStart", (const char *)impulse, len);
+#endif
 
   //Confirm that the size of the impulse vector is right
   if (len != NET_INPUT_LEN(params)) {
@@ -141,5 +143,7 @@ void CoreOnImpulse(const unsigned char *impulse, int len) {
     }
   }
   pthread_mutex_unlock(&runningSegmentLock);
+#ifdef CCUP
   CCSend("CoreOnImpulseEnd", (const char *)runningSegment, len);
+#endif
 }

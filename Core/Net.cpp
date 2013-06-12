@@ -1,7 +1,7 @@
 #include "Net.h"
 
 //Debug?
-#include <CCup.h>
+//#include <CCup.h>
 
 //Sending Stuff
 //##############################
@@ -92,7 +92,9 @@ void *_NetRcvThread(void *) {
       if (byteCount - lastByteCount > 1) {
         printf("\nWarning: Byte count was out of order. Went from %d -> %d\n", lastByteCount, byteCount);
         droppedPacketsEstimate += byteCount - lastByteCount - 1;
+#ifdef CCUP
         CCSend("NetDroppedPacketsEstimate", (char *)&droppedPacketsEstimate, sizeof(droppedPacketsEstimate));
+#endif
       }
     }
 

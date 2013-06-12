@@ -48,12 +48,14 @@
     int index = 0;
     for (NSNumber *value in values) {
         CGContextSetRGBStrokeColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
+        CGContextSetRGBFillColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
 
         NSNumber *lastValue = [lastValues objectAtIndex:index];
-        CGContextMoveToPoint(self.offscreenContext, TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime-1), kTrackElementHeight*[lastValue floatValue] + index*kTrackElementHeight);
-        CGContextAddLineToPoint(self.offscreenContext, TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), kTrackElementHeight*[value floatValue] + index*kTrackElementHeight);
-        
-        CGContextStrokePath(self.offscreenContext);
+        CGContextFillRect(self.offscreenContext, CGRectMake(TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), kTrackElementHeight*[value floatValue] + index*kTrackElementHeight, 2, 2));
+//        CGContextMoveToPoint(self.offscreenContext, TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime-1), kTrackElementHeight*[lastValue floatValue] + index*kTrackElementHeight);
+//        CGContextAddLineToPoint(self.offscreenContext, TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), kTrackElementHeight*[value floatValue] + index*kTrackElementHeight);
+//        
+//        CGContextStrokePath(self.offscreenContext);
         
         ++index;
     }
