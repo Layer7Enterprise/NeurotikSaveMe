@@ -27,15 +27,15 @@
 		AAD4DE3117669D6A00FDEDFE /* Params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Params.h; path = ../../Core/Params.h; sourceTree = "<group>"; };
 		AAD4DE321766A46900FDEDFE /* TrackWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackWaveView.h; sourceTree = "<group>"; };
 		AAD4DE331766A46900FDEDFE /* TrackWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackWaveView.m; sourceTree = "<group>"; };
-		AAF2AAE11764FAB100916890 /* NeurotikStudio3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeurotikStudio3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF2AAE11764FAB100916890 /* DendriteStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DendriteStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF2AAE41764FAB100916890 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AAF2AAE71764FAB100916890 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		AAF2AAE81764FAB100916890 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AAF2AAE91764FAB100916890 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AAF2AAEC1764FAB100916890 /* NeurotikStudio3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NeurotikStudio3-Info.plist"; sourceTree = "<group>"; };
+		AAF2AAEC1764FAB100916890 /* DendriteStudio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DendriteStudio-Info.plist"; sourceTree = "<group>"; };
 		AAF2AAEE1764FAB100916890 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AAF2AAF01764FAB100916890 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AAF2AAF21764FAB100916890 /* NeurotikStudio3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NeurotikStudio3-Prefix.pch"; sourceTree = "<group>"; };
+		AAF2AAF21764FAB100916890 /* DendriteStudio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DendriteStudio-Prefix.pch"; sourceTree = "<group>"; };
 		AAF2AAF41764FAB100916890 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		AAF2AAF61764FAB100916890 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAF2AAF71764FAB100916890 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		AAF2AAD81764FAB100916890 = {
 			isa = PBXGroup;
 			children = (
-				AAF2AAEA1764FAB100916890 /* NeurotikStudio3 */,
+				AAF2AAEA1764FAB100916890 /* DendriteStudio */,
 				AAF2AAE31764FAB100916890 /* Frameworks */,
 				AAF2AAE21764FAB100916890 /* Products */,
 			);
@@ -74,7 +74,7 @@
 		AAF2AAE21764FAB100916890 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAF2AAE11764FAB100916890 /* NeurotikStudio3.app */,
+				AAF2AAE11764FAB100916890 /* DendriteStudio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		AAF2AAEA1764FAB100916890 /* NeurotikStudio3 */ = {
+		AAF2AAEA1764FAB100916890 /* DendriteStudio */ = {
 			isa = PBXGroup;
 			children = (
 				AAF2AB1517654FE500916890 /* TrackView */,
@@ -108,16 +108,17 @@
 				AAF2AAF91764FAB200916890 /* MainMenu.xib */,
 				AAF2AAEB1764FAB100916890 /* Supporting Files */,
 			);
+			name = DendriteStudio;
 			path = NeurotikStudio3;
 			sourceTree = "<group>";
 		};
 		AAF2AAEB1764FAB100916890 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AAF2AAEC1764FAB100916890 /* NeurotikStudio3-Info.plist */,
+				AAF2AAEC1764FAB100916890 /* DendriteStudio-Info.plist */,
 				AAF2AAED1764FAB100916890 /* InfoPlist.strings */,
 				AAF2AAF01764FAB100916890 /* main.m */,
-				AAF2AAF21764FAB100916890 /* NeurotikStudio3-Prefix.pch */,
+				AAF2AAF21764FAB100916890 /* DendriteStudio-Prefix.pch */,
 				AAF2AAF31764FAB100916890 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -153,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AAF2AAE01764FAB100916890 /* NeurotikStudio3 */ = {
+		AAF2AAE01764FAB100916890 /* DendriteStudio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAF2AAFE1764FAB200916890 /* Build configuration list for PBXNativeTarget "NeurotikStudio3" */;
+			buildConfigurationList = AAF2AAFE1764FAB200916890 /* Build configuration list for PBXNativeTarget "DendriteStudio" */;
 			buildPhases = (
 				AAF2AADD1764FAB100916890 /* Sources */,
 				AAF2AADE1764FAB100916890 /* Frameworks */,
@@ -165,9 +166,9 @@
 			);
 			dependencies = (
 			);
-			name = NeurotikStudio3;
+			name = DendriteStudio;
 			productName = NeurotikStudio3;
-			productReference = AAF2AAE11764FAB100916890 /* NeurotikStudio3.app */;
+			productReference = AAF2AAE11764FAB100916890 /* DendriteStudio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -179,7 +180,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Seo Townsend";
 			};
-			buildConfigurationList = AAF2AADC1764FAB100916890 /* Build configuration list for PBXProject "NeurotikStudio3" */;
+			buildConfigurationList = AAF2AADC1764FAB100916890 /* Build configuration list for PBXProject "DendriteStudio" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -191,7 +192,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAF2AAE01764FAB100916890 /* NeurotikStudio3 */,
+				AAF2AAE01764FAB100916890 /* DendriteStudio */,
 			);
 		};
 /* End PBXProject section */
@@ -319,9 +320,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NeurotikStudio3/NeurotikStudio3-Prefix.pch";
-				INFOPLIST_FILE = "NeurotikStudio3/NeurotikStudio3-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "NeurotikStudio3/DendriteStudio-Prefix.pch";
+				INFOPLIST_FILE = "NeurotikStudio3/DendriteStudio-Info.plist";
+				PRODUCT_NAME = DendriteStudio;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -331,9 +332,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NeurotikStudio3/NeurotikStudio3-Prefix.pch";
-				INFOPLIST_FILE = "NeurotikStudio3/NeurotikStudio3-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "NeurotikStudio3/DendriteStudio-Prefix.pch";
+				INFOPLIST_FILE = "NeurotikStudio3/DendriteStudio-Info.plist";
+				PRODUCT_NAME = DendriteStudio;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -341,7 +342,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAF2AADC1764FAB100916890 /* Build configuration list for PBXProject "NeurotikStudio3" */ = {
+		AAF2AADC1764FAB100916890 /* Build configuration list for PBXProject "DendriteStudio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAF2AAFC1764FAB200916890 /* Debug */,
@@ -350,7 +351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAF2AAFE1764FAB200916890 /* Build configuration list for PBXNativeTarget "NeurotikStudio3" */ = {
+		AAF2AAFE1764FAB200916890 /* Build configuration list for PBXNativeTarget "DendriteStudio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAF2AAFF1764FAB200916890 /* Debug */,

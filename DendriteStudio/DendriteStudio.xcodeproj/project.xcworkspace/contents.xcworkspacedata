@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NeurotikStudio3.xcodeproj">
+      location = "self:DendriteStudio.xcodeproj">
    </FileRef>
 </Workspace>

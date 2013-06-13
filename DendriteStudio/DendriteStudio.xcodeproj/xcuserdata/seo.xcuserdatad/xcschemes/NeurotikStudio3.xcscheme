@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AAF2AAE01764FAB100916890"
                BuildableName = "NeurotikStudio3.app"
-               BlueprintName = "NeurotikStudio3"
-               ReferencedContainer = "container:NeurotikStudio3.xcodeproj">
+               BlueprintName = "DendriteStudio"
+               ReferencedContainer = "container:DendriteStudio.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAF2AAE01764FAB100916890"
             BuildableName = "NeurotikStudio3.app"
-            BlueprintName = "NeurotikStudio3"
-            ReferencedContainer = "container:NeurotikStudio3.xcodeproj">
+            BlueprintName = "DendriteStudio"
+            ReferencedContainer = "container:DendriteStudio.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAF2AAE01764FAB100916890"
             BuildableName = "NeurotikStudio3.app"
-            BlueprintName = "NeurotikStudio3"
-            ReferencedContainer = "container:NeurotikStudio3.xcodeproj">
+            BlueprintName = "DendriteStudio"
+            ReferencedContainer = "container:DendriteStudio.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAF2AAE01764FAB100916890"
             BuildableName = "NeurotikStudio3.app"
-            BlueprintName = "NeurotikStudio3"
-            ReferencedContainer = "container:NeurotikStudio3.xcodeproj">
+            BlueprintName = "DendriteStudio"
+            ReferencedContainer = "container:DendriteStudio.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
