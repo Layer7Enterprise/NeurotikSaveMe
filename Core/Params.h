@@ -71,6 +71,11 @@ struct Params_t {
   int debugDendriteIdx;
 };
 
+enum NeuronDebugControlCodes_t {
+  kNDControlTrackDendrite,  //Tell the engine to track one neuron's dendrites
+  kNDControlGetNeuronsPriorOnDendrites,  //Get a list of the neuron names for the dendrites
+};
+
 struct NeuronSnapshot_t {
     int idx;
     int NN;

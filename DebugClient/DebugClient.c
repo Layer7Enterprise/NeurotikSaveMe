@@ -100,9 +100,47 @@ void NUDebugClientDendriteTrack(const char *name) {
     exit(EXIT_FAILURE);
   }
 
+  char buffer[100];
+  strcpy(buffer+1, name);
+  buffer[0] = kNDControlTrackDendrite;  //Track control code
+
+  int bufferLen = 1 + strlen(name) + sizeof('\0');
+
   //Send the name off
-  sendto(sockTrack, name, strlen(name)+1, 0, (struct sockaddr *)&addr, sizeof(struct sockaddr));
+  sendto(sockTrack, buffer, bufferLen, 0, (struct sockaddr *)&addr, sizeof(struct sockaddr));
 }
+
+void NUDebugClientDendriteGetNames(char *names) {
+  //Setup a socket
+  int sockTrack = socket(AF_INET, SOCK_STREAM, 0);
+  if (sock < 0) {
+    perror("NUDebugClient: Could not create socket track socket");
+    exit(EXIT_FAILURE);
+  }
+
+  struct sockaddr_in trackAddr;
+
+  memset(&trackAddr, 0, sizeof(struct sockaddr_in));
+  trackAddr.sin_family = AF_INET;
+  trackAddr.sin_port = htons(DEBUG_PORT+1);
+  trackAddr.sin_addr.s_addr = INADDR_ANY;
+
+  int res = connect(sockTrack, (struct sockaddr *)&trackAddr, sizeof(struct sockaddr_in));
+  if (res < 0) {
+    perror("Could not connect to setup client track...");
+    exit(EXIT_FAILURE);
+  }
+
+  char buffer[] = { kNDControlGetNeuronsPriorOnDendrites };
+
+  //Send the name off
+  sendto(sockTrack, buffer, sizeof(buffer), 0, (struct sockaddr *)&addr, sizeof(struct sockaddr));
+
+  //Get the names back
+  socklen_t trackAddrLen = sizeof(struct sockaddr_in);
+  recvfrom(sockTrack, names, 2048, 0, (struct sockaddr *)&trackAddr, &trackAddrLen);
+}
+
 
 void *_DRcvThread(void *threadInput) {
   while (1) {
