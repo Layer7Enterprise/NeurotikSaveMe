@@ -8,6 +8,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <pthread.h>
+#include "Params.h"
 
 //Setup UDP Multicast sending
 void NetSendBegin(const char *ip, int port);
@@ -21,6 +22,6 @@ void NetSendDebug(const char *message, int len);
 void NetRcvBegin(const char *ip, int port, void (*callback)(const unsigned char *, int));
 
 //Setup TCP Control port
-void NetControlBegin(const char *ip, int port, void (*callback)(const unsigned char *, int));
+void NetControlBegin(const char *ip, int port, Params_t *params);
 
 #endif

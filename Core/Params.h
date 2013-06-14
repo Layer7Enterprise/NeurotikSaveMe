@@ -66,6 +66,9 @@ struct Params_t {
   int *dDelays;          //Delay matrix
   int *dLastSpikeTimes;  //Last spike time
   long long *dSpikeQues;        //Spike que
+
+  //Debug assistant
+  int debugDendriteIdx;
 };
 
 struct NeuronSnapshot_t {
@@ -116,6 +119,15 @@ struct NeuronDebugNetworkOutput_t {
 
   //For tracking how long inhibitory are currently active
   int inh;
+};
+
+//Debug dendrites packet
+struct NeuronDDebugNetwork_t {
+  //Number of dendrites
+  int count;
+
+  //Name of dendrites
+  char dendrite[0][0];
 };
 
 #endif

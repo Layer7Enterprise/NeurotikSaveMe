@@ -37,10 +37,13 @@ int main() {
   //Setup network receiving
   NetRcvBegin(NET_IP, NET_PORT, CoreOnImpulse);
   NetSendBegin(NET_IP, NET_PORT+1);
+
+  //Setup debug
   NetSendBeginDebug(NET_IP, NET_PORT+2);
+  NetControlBegin(NET_IP, NET_PORT+3, &params);
 
   CoreBegin(&params);
-  puts("Core online...");
+  puts(">Core online!");
 
   dispatch_main();
   return 0;

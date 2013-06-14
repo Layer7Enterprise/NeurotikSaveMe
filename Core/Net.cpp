@@ -67,6 +67,7 @@ static void (*netRcvCallback)(const unsigned char *, int len);
 static pthread_t netRcvThread;
 
 void *_NetRcvThread(void *) {
+  puts(">Net Recieve Listening...");
   while (true) {
     socklen_t addrlen = sizeof(sockaddr_in);
 
@@ -167,13 +168,14 @@ void NetRcvBegin(const char *ip, int port, void (*callback )(const unsigned char
   pthread_create(&netRcvThread, NULL, _NetRcvThread, NULL);
 }
 
-//Control port (TCP)
+//Debug Control port (TCP) +3
 //########################################
 static pthread_t netControlThread;
 static int netControlSocket = -1;
 static sockaddr_in netControlAddr;
 
 void *_NetControlThread(void *a) {
+  puts(">Net Control Listening...");
   while (1) {
     listen(netControlSocket, 1024);
 
@@ -182,13 +184,19 @@ void *_NetControlThread(void *a) {
 
     //Process command
     switch (buffer[0]) {
+      //Track a certain neuron name
       case 0:
+        //Get name
+        char *name = (char *)buffer;
+        ++name;  //Remove control code
         break;
     }
   }
+
+  puts("horah");
 }
 
-void NetControlBegin(const char *ip, int port) {
+void NetControlBegin(const char *ip, int port, Params_t *params) {
   //Setup socket
   netControlSocket = socket(AF_INET, SOCK_STREAM, 0);
   if (netControlSocket < 0) {
@@ -200,7 +208,7 @@ void NetControlBegin(const char *ip, int port) {
   memset(&netControlAddr, 0, sizeof(sockaddr_in));
   netControlAddr.sin_family = AF_INET;
   netControlAddr.sin_addr.s_addr = htonl(INADDR_ANY);
-  netControlAddr.sin_port = htons(port);
+  netControlAddr.sin_port = htons(port+3);
 
   //Bind
   int res = bind(netControlSocket, (sockaddr *)&netControlAddr, sizeof(sockaddr_in));

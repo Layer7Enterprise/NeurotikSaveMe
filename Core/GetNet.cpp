@@ -20,6 +20,9 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
   params->neuronLocationToName = new std::map<int, std::string>();
   params->neuronDebugLocations = new std::vector<int>();
 
+  //Debug setup
+  params->debugDendriteIdx = -1;  //Dendrite tracking index
+
   //Initalize neurons
   params->nInhibitoryTime = new int[NN];
   params->nLastSpikeTime = new int[NN];

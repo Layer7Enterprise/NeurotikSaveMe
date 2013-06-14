@@ -67,3 +67,79 @@ void NUDebugClientSetCallback(void (*callback)(struct NeuronDebugNetworkOutput_t
 void NUDebugClientSetDropped(void (*callback)()) {
   onDrop = callback;
 }
+
+//##############################
+//Dendrite related
+//##############################
+
+//Networking
+static int dendriteRcvSock;
+static struct sockaddr_in dendriteRcvAddr;
+
+//Callback for recieving data
+static void (*onDendriteData)(struct NeuronDDebugNetwork_t output);
+
+void NUDebugDClientTrack(const char *name) {
+  //Setup a socket
+  int sockTrack = socket(AF_INET, SOCK_DGRAM, 0);
+  if (sock < 0) {
+    perror("NUDebugClient: Could not create socket track socket");
+    exit(EXIT_FAILURE);
+  }
+
+  struct sockaddr_in trackAddr;
+
+  memset(&trackAddr, 0, sizeof(struct sockaddr_in));
+  trackAddr.sin_family = AF_INET;
+  trackAddr.sin_port = htons(DEBUG_PORT+1);
+  trackAddr.sin_addr.s_addr = INADDR_ANY;
+
+  //Send the name off
+  sendto(sockTrack, name, strlen(name)+1, 0, (struct sockaddr *)&addr, sizeof(struct sockaddr));
+}
+
+void *_DRcvThread(void *threadInput) {
+  while (1) {
+    char buffer[1000];
+    socklen_t sockLen = sizeof(struct sockaddr);
+    int num = recv(dendriteRcvSock, buffer, sizeof(buffer), 0);
+    if (num < 0) {
+      perror("NUDDebugClient: Could not recieve from the socket");
+      exit(EXIT_FAILURE);
+    }
+
+    struct NeuronDDebugNetwork_t output;
+    memcpy(&output, buffer, sizeof(struct NeuronDDebugNetwork_t));
+
+    onDendriteData(output);
+  }
+
+  return NULL;
+}
+
+void NUDebugDClientBegin(const char ip[]) {
+  puts("NUDDebugClient listeninng...");
+
+  //Setup socket
+  dendriteRcvSock = socket(AF_INET, SOCK_DGRAM, 0);
+  if (sock < 0) {
+    perror("NUDDebugClient: Could not create socket");
+    exit(EXIT_FAILURE);
+  }
+
+  memset(&dendriteRcvAddr, 0, sizeof(struct sockaddr_in));
+  dendriteRcvAddr.sin_family = AF_INET;
+  dendriteRcvAddr.sin_port = htons(DEBUG_PORT+2);
+  dendriteRcvAddr.sin_addr.s_addr = INADDR_ANY;
+
+  bind(dendriteRcvSock, (struct sockaddr *)&dendriteRcvAddr, sizeof(struct sockaddr));
+  
+  pthread_t d_rcv_thread;
+  pthread_create(&d_rcv_thread, NULL, _DRcvThread, NULL);
+}
+
+//Set callback for receiving data
+void NUDebugDClientSetCallback(void (*callback)(struct NeuronDDebugNetwork_t output)) {
+  onDendriteData = callback;
+}
+

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AAF2AAE01764FAB100916890"
-               BuildableName = "NeurotikStudio3.app"
+               BuildableName = "DendriteStudio.app"
                BlueprintName = "DendriteStudio"
                ReferencedContainer = "container:DendriteStudio.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAF2AAE01764FAB100916890"
-            BuildableName = "NeurotikStudio3.app"
+            BuildableName = "DendriteStudio.app"
             BlueprintName = "DendriteStudio"
             ReferencedContainer = "container:DendriteStudio.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAF2AAE01764FAB100916890"
-            BuildableName = "NeurotikStudio3.app"
+            BuildableName = "DendriteStudio.app"
             BlueprintName = "DendriteStudio"
             ReferencedContainer = "container:DendriteStudio.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAF2AAE01764FAB100916890"
-            BuildableName = "NeurotikStudio3.app"
+            BuildableName = "DendriteStudio.app"
             BlueprintName = "DendriteStudio"
             ReferencedContainer = "container:DendriteStudio.xcodeproj">
          </BuildableReference>
