@@ -22,12 +22,12 @@ void NUDebugClientSetDropped(void (*)());
 //Dendrite tracking
 
 //Set the name to record
-void NUDebugDClientTrack(const char *name);
+void NUDebugClientDendriteTrack(const char *name);
 
 //Start recieving dentrite information
-void NUDebugDClientBegin(const char ip[]);
+void NUDebugClientDendriteBegin(const char ip[]);
 
 //Set callback for receiving data
-void NUDebugDClientSetCallback(void (*)(struct NeuronDDebugNetwork_t output));
+void NUDebugClientDendriteSetCallback(void (*)(struct NeuronDDebugNetwork_t output));
 
 #endif

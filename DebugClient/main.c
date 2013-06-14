@@ -18,14 +18,14 @@ void onDData(struct NeuronDDebugNetwork_t output) {
 }
 
 int main() {
-  NUDebugClientBegin("127.0.0.1");
   NUDebugClientSetCallback(onData);
   NUDebugClientSetDropped(onDrop);
+  NUDebugClientBegin("127.0.0.1");
 
-  NUDebugDClientTrack("Hello world!");
+  NUDebugClientDendriteTrack("Hello world!");
 
-  NUDebugDClientBegin("127.0.0.1");
-  NUDebugDClientSetCallback(onDData);
+  NUDebugClientDendriteBegin("127.0.0.1");
+  NUDebugClientDendriteSetCallback(onDData);
 
   while (1)
     sleep(1);

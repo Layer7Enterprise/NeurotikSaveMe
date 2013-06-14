@@ -79,9 +79,9 @@ static struct sockaddr_in dendriteRcvAddr;
 //Callback for recieving data
 static void (*onDendriteData)(struct NeuronDDebugNetwork_t output);
 
-void NUDebugDClientTrack(const char *name) {
+void NUDebugClientDendriteTrack(const char *name) {
   //Setup a socket
-  int sockTrack = socket(AF_INET, SOCK_DGRAM, 0);
+  int sockTrack = socket(AF_INET, SOCK_STREAM, 0);
   if (sock < 0) {
     perror("NUDebugClient: Could not create socket track socket");
     exit(EXIT_FAILURE);
@@ -93,6 +93,12 @@ void NUDebugDClientTrack(const char *name) {
   trackAddr.sin_family = AF_INET;
   trackAddr.sin_port = htons(DEBUG_PORT+1);
   trackAddr.sin_addr.s_addr = INADDR_ANY;
+
+  int res = connect(sockTrack, (struct sockaddr *)&trackAddr, sizeof(struct sockaddr_in));
+  if (res < 0) {
+    perror("Could not connect to setup client track...");
+    exit(EXIT_FAILURE);
+  }
 
   //Send the name off
   sendto(sockTrack, name, strlen(name)+1, 0, (struct sockaddr *)&addr, sizeof(struct sockaddr));
@@ -117,7 +123,7 @@ void *_DRcvThread(void *threadInput) {
   return NULL;
 }
 
-void NUDebugDClientBegin(const char ip[]) {
+void NUDebugClientDendriteBegin(const char ip[]) {
   puts("NUDDebugClient listeninng...");
 
   //Setup socket
@@ -139,7 +145,7 @@ void NUDebugDClientBegin(const char ip[]) {
 }
 
 //Set callback for receiving data
-void NUDebugDClientSetCallback(void (*callback)(struct NeuronDDebugNetwork_t output)) {
+void NUDebugClientDendriteSetCallback(void (*callback)(struct NeuronDDebugNetwork_t output)) {
   onDendriteData = callback;
 }
 

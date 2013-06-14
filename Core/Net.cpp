@@ -177,10 +177,16 @@ static sockaddr_in netControlAddr;
 void *_NetControlThread(void *a) {
   puts(">Net Control Listening...");
   while (1) {
-    listen(netControlSocket, 1024);
+    //Accept client
+    listen(netControlSocket, 5);
+    int clientSocket = accept(netControlSocket, NULL, NULL);
 
     static unsigned char buffer[200];
-    recv(netControlSocket, buffer, sizeof(buffer), 0);
+    int len = recv(clientSocket, buffer, sizeof(buffer), 0);
+    if (len < 1) {
+      perror("Could not recieve from client control socket...");
+      exit(EXIT_FAILURE);
+    }
 
     //Process command
     switch (buffer[0]) {
@@ -191,9 +197,9 @@ void *_NetControlThread(void *a) {
         ++name;  //Remove control code
         break;
     }
-  }
 
-  puts("horah");
+    close(clientSocket);
+  }
 }
 
 void NetControlBegin(const char *ip, int port, Params_t *params) {
@@ -208,7 +214,7 @@ void NetControlBegin(const char *ip, int port, Params_t *params) {
   memset(&netControlAddr, 0, sizeof(sockaddr_in));
   netControlAddr.sin_family = AF_INET;
   netControlAddr.sin_addr.s_addr = htonl(INADDR_ANY);
-  netControlAddr.sin_port = htons(port+3);
+  netControlAddr.sin_port = htons(port);
 
   //Bind
   int res = bind(netControlSocket, (sockaddr *)&netControlAddr, sizeof(sockaddr_in));
