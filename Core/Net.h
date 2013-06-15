@@ -8,6 +8,8 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <pthread.h>
+#include <string>
+#include <map>
 #include "Params.h"
 
 //Setup UDP Multicast sending

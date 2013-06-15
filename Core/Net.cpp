@@ -2,6 +2,9 @@
 
 //Debug?
 //#include <CCup.h>
+//
+
+static Params_t *params;
 
 //Sending Stuff
 //##############################
@@ -148,6 +151,8 @@ void NetRcvBegin(const char *ip, int port, void (*callback )(const unsigned char
   netRcvAddr.sin_port = htons(port);
 
   //Bind
+  int tr;
+  setsockopt(netRcvSocket,SOL_SOCKET,SO_REUSEADDR,&tr,sizeof(int));
   int res = bind(netRcvSocket, (sockaddr *)&netRcvAddr, sizeof(sockaddr_in));
   if (res < 0) {
     perror("Could not bind receive socket");
@@ -183,7 +188,7 @@ void *_NetControlThread(void *a) {
 
     static unsigned char buffer[200];
     int len = recv(clientSocket, buffer, sizeof(buffer), 0);
-    if (len < 1) {
+    if (len < 0) {
       perror("Could not recieve from client control socket...");
       exit(EXIT_FAILURE);
     }
@@ -195,6 +200,19 @@ void *_NetControlThread(void *a) {
         //Get name
         char *name = (char *)buffer;
         ++name;  //Remove control code
+
+        std::map<std::string, int>::iterator it = params->neuronNameToLocation->find(name);
+
+        if (it == params->neuronNameToLocation->end()) {
+          fprintf(stderr, "Tried to set neuron name for dendrite tracking, but it did not exist!  (%s)\n", name);
+          return NULL;
+        }
+
+        printf("Tracking the neuron [%s]\n", name);
+
+        int idx = params->neuronNameToLocation->operator[](name);
+        params->debugDendriteIdx = idx;
+
         break;
     }
 
@@ -202,7 +220,10 @@ void *_NetControlThread(void *a) {
   }
 }
 
-void NetControlBegin(const char *ip, int port, Params_t *params) {
+void NetControlBegin(const char *ip, int port, Params_t *_params) {
+  //Params
+  params = _params;
+
   //Setup socket
   netControlSocket = socket(AF_INET, SOCK_STREAM, 0);
   if (netControlSocket < 0) {
@@ -217,6 +238,8 @@ void NetControlBegin(const char *ip, int port, Params_t *params) {
   netControlAddr.sin_port = htons(port);
 
   //Bind
+  int tr;
+  setsockopt(netControlSocket,SOL_SOCKET,SO_REUSEADDR,&tr,sizeof(int));
   int res = bind(netControlSocket, (sockaddr *)&netControlAddr, sizeof(sockaddr_in));
   if (res < 0) {
     perror("Could not bind receive socket");
@@ -225,4 +248,27 @@ void NetControlBegin(const char *ip, int port, Params_t *params) {
 
   //Start threaded server
   pthread_create(&netControlThread, NULL, _NetControlThread, NULL);
+}
+
+//Net Dendrite Debug
+//##############################
+static int dendriteDebugSocket;
+static sockaddr_in dendriteDebugAddr;
+
+void NetDendriteDebugBegin(const char *ip, int port) {
+  //Setup socket
+  dendriteDebugSocket = socket(AF_INET, SOCK_DGRAM, 0);
+
+  memset(&dendriteDebugAddr, 0, sizeof(sockaddr));
+  dendriteDebugAddr.sin_family = AF_INET;
+  dendriteDebugAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+  dendriteDebugAddr.sin_port = htons(port);
+}
+
+void NetDendriteDebugSend(unsigned char *data, int len) {
+  int res = sendto(dendriteDebugSocket, data, len, 0, (sockaddr *)&dendriteDebugAddr, sizeof(sockaddr *));
+  if (res < 0) {
+    fprintf(stderr, "Dendrite debug could not send data");
+    exit(EXIT_FAILURE);
+  }
 }

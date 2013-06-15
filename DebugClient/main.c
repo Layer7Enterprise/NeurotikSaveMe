@@ -14,7 +14,7 @@ void onDrop() {
 }
 
 //Dendrite related
-void onDData(struct NeuronDDebugNetwork_t output) {
+void onDData(struct NeuronDendriteDebugNetwork_t output) {
 }
 
 int main() {
@@ -22,7 +22,7 @@ int main() {
   NUDebugClientSetDropped(onDrop);
   NUDebugClientBegin("127.0.0.1");
 
-  NUDebugClientDendriteTrack("Hello world!");
+  NUDebugClientDendriteTrack("neuronA");
 
   NUDebugClientDendriteBegin("127.0.0.1");
   NUDebugClientDendriteSetCallback(onDData);

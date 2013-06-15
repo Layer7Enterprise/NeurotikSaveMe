@@ -127,12 +127,11 @@ struct NeuronDebugNetworkOutput_t {
 };
 
 //Debug dendrites packet
-struct NeuronDDebugNetwork_t {
+struct NeuronDendriteDebugNetwork_t {
   //Number of dendrites
-  int count;
-
-  //Name of dendrites
-  char dendrite[0][0];
+  int idx;
+  char name[200];
+  float v;
 };
 
 #endif

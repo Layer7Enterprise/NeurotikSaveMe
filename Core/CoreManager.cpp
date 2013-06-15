@@ -65,6 +65,9 @@ void CoreTick() {
 
     ++debugCount;
   }
+
+  if (params->debugDendriteIdx != -1) {
+  }
   //########################################
 
   //Get data from core and send it out

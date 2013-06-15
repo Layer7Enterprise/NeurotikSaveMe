@@ -28,6 +28,6 @@ void NUDebugClientDendriteTrack(const char *name);
 void NUDebugClientDendriteBegin(const char ip[]);
 
 //Set callback for receiving data
-void NUDebugClientDendriteSetCallback(void (*)(struct NeuronDDebugNetwork_t output));
+void NUDebugClientDendriteSetCallback(void (*)(struct NeuronDendriteDebugNetwork_t output));
 
 #endif
