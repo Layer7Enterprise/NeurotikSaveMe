@@ -17,15 +17,19 @@ class Neuron
     @@name_to_neuron[name]
   end
 
-  def initialize name, type
+  #Number of neurons including the array
+  def self.count
+    return @@global_count
+  end
+
+  def initialize name, type, count=1
     @name = name
     @type = type
-    @count = 1
+    @count = count
     @inhTime = 0
     @ib = 0
     @isDebug = false
-    @idx = @@global_count
-    @@global_count = @@global_count + 1
+    @@global_count = @@global_count + count
     @@name_to_neuron[@name] = self
     @@neurons << self
   end
@@ -40,10 +44,6 @@ class Neuron
 
   def enable_debug
     @isDebug = true
-  end
-
-  def set_count count
-    @count = count
   end
 
   def name_array
@@ -84,18 +84,19 @@ end
     #:ib - What modulus does this neuron pulse out
     #:debug - Should this show up in studio?
 def neuron name, type, params=nil
-  new_neuron = Neuron.new name, type 
+  count = params[:count] unless params.nil?
+
+  new_neuron = Neuron.new name, type, count
   unless params.nil?
-    count = params[:count]
     ib = params[:ib]
     inhTime = params[:inh]
     isDebug = params[:debug]
 
-    new_neuron.set_count count unless count.nil?
     new_neuron.set_intrinsic_burst ib unless ib.nil?
     new_neuron.set_inhibitory_time inhTime unless inhTime.nil?
     new_neuron.enable_debug unless isDebug.nil? or isDebug == false
   end
+
   write new_neuron.to_code
 end
 

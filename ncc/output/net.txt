@@ -42,3 +42,17 @@ Weight 24.0
 Delay 1.0
 End End
 
+Connection
+From test[0]
+To testA[0]
+Weight 24.0
+Delay 1.0
+End End
+
+Connection
+From test[1]
+To testA[1]
+Weight 24.0
+Delay 1.0
+End End
+

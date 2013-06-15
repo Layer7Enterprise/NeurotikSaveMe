@@ -43,16 +43,22 @@ def output
   end
 end
 
-if ARGV.count != 1
-  puts "usage ncc [input]"
-  exit
+unless ARGV[0].nil?
+  load ARGV[0]
+else
+  load 'main.rb'
 end
-
-load ARGV[0]
 
 compile
 
-File.open "output/net.txt", "w" do |file|
+File.open "schema.txt", "w" do |file|
+  file.write "Name: Prodigy\n"
+  file.write "NumberOfNeurons: #{Neuron.count}\n"
+  file.write "NumberOfDendrites: #{Connection.count_max_dendrites}\n"
+  file.write "BasePort: 3000\n"
+end
+
+File.open "net.txt", "w" do |file|
   for x in @to_compile
     if x[:type] == :string
       file.write x[:string]

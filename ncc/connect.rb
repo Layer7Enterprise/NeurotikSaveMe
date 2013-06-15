@@ -2,11 +2,24 @@ DEFAULT_WEIGHT = 24.0
 DEFAULT_DELAY = 1.0
 
 class Connection
+  @@dendrite_count = {}
+
+  #Get the most number of dendrites ever used
+  def self.count_max_dendrites
+    @@dendrite_count.max_by {|k, v| v}[1]
+  end
+
   def initialize from, to
     @from = from
     @to = to
     @delay = 1
     @weight = 0
+
+    if @@dendrite_count[to] != nil
+      @@dendrite_count[to] += 1
+    else
+      @@dendrite_count[to] = 1
+    end
   end
 
   def set_weight weight

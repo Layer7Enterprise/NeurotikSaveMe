@@ -1,4 +1,5 @@
 connect :test, :testA, :one_to_one
+connect :test, :testA, :one_to_one
 
 input do
   glu :test, :count => 2
