@@ -66,7 +66,27 @@ void CoreTick() {
     ++debugCount;
   }
 
-  if (params->debugDendriteIdx != -1) {
+  if (params->debugDendriteIdx != -1 && params->globalTime % 10 == 0) {
+    for (int i = 0; i < params->ND; ++i) {
+      //Skip non-connected
+      int dIndex = params->debugDendriteIdx*params->ND + i;
+
+      int subIndex = -1;
+      if (params->dConnections[dIndex] < 0)
+        break;
+      else
+        subIndex = params->dConnections[dIndex];
+
+      NeuronDendriteDebugNetwork_t debugOutput;
+      strcpy(debugOutput.name, params->neuronLocationToName->operator[](subIndex).c_str());
+      debugOutput.weight = params->dWeights[dIndex];
+      debugOutput.idx = subIndex;
+
+      //Is this the first neuron in the set?
+      debugOutput.isFirst = (i == 0);
+
+      NetDendriteDebugSend(&debugOutput, sizeof(NeuronDendriteDebugNetwork_t));
+    }
   }
   //########################################
 

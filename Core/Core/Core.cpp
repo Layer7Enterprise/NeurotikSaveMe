@@ -32,6 +32,13 @@ void CoreTick(int idx, Params_t *params) {
    int ib = *(params->nIb + idx);
    NeuronType_t type = *(params->nType + idx);
 
+   for (int i = 0; i < params->ND; ++i) {
+     if (dConnection[i] < 0)
+       break;
+
+     dWeight[i] += (rand() % 100)/100.0f - 0.5f;
+   }
+
    //Send an initial snapshot (Only when CCUp is included)
 #ifdef CCUP
    only_first SendSnapshot("CoreInitialParams", idx, NN, ND, globalTime, dConnection, dDelay, dWeight, dLastSpikeTime, dSpikeQue, v, u, I, lastSpikeTime, inh, inhibitoryTime, ib, type);

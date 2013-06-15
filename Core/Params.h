@@ -69,6 +69,9 @@ struct Params_t {
 
   //Debug assistant
   int debugDendriteIdx;
+
+  //Name
+  char debugDendriteName[200];
 };
 
 enum NeuronDebugControlCodes_t {
@@ -131,7 +134,8 @@ struct NeuronDendriteDebugNetwork_t {
   //Number of dendrites
   int idx;
   char name[200];
-  float v;
+  float weight;
+  int isFirst;
 };
 
 #endif

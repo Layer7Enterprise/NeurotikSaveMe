@@ -2,7 +2,7 @@
 
 #define kTrackBufferSize 600000
 #define kTrackElementWidth 5 //Size of each discrete track data
-#define kTrackElementHeight 100
+#define kTrackElementHeight 40
 #define TIME_TO_OFFSCREEN_OFFSET(time) (time*kTrackElementWidth)
 #define OFFSCREEN_OFFSET_TO_TIME(offset) (offset/kTrackElementWidth)
 
@@ -32,17 +32,40 @@
     self.offscreenContext = CGLayerGetContext(self.offscreenLayer);
 }
 
-- (void)addColorColumn: (NSMutableArray *)colors {
+- (void)addBarColumn: (NSMutableArray *)values {
     if (self.offscreenContext == 0)
         return;
     int index = 0;
-    for (NSColor *color in colors) {
-        CGContextSetRGBFillColor(self.offscreenContext, [color redComponent], [color greenComponent], [color blueComponent], [color alphaComponent]);
+    
+    if ([values count] == 0)
+        return;
+    
+    CGContextClearRect(self.offscreenContext, CGRectMake(0.0f, 0.0f, self.frame.size.width, self.frame.size.height));
+    
+    CGContextSelectFont(self.offscreenContext, "Monaco", 1.5f, kCGEncodingMacRoman);
+    CGContextSetTextDrawingMode(self.offscreenContext, kCGTextFill);
+    CGContextSetTextMatrix(self.offscreenContext, CGAffineTransformMakeScale(13.0f, 13.0f));
+    
+    for (NSNumber *value in values) {
+        if ([value floatValue] > 0.0f) {
+            CGContextSetRGBFillColor(self.offscreenContext, 0.0f, 1.0f, 0.0f, 1.0f);
+        } else {
+            CGContextSetRGBFillColor(self.offscreenContext, 1.0f, 0.0f, 0.0f, 1.0f);
+        }
         
-        CGContextFillRect(self.offscreenContext, CGRectMake(TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), index*kTrackElementHeight, kTrackElementWidth, kTrackElementHeight));
+        float value2 = [value floatValue];
+        if (value2 < 0)
+            value2 = -value2;
         
+         CGContextFillRect(self.offscreenContext, CGRectMake(0, index*kTrackElementHeight, value2*self.frame.size.width, kTrackElementHeight));
+        
+        CGContextSetLineWidth(self.offscreenContext, 3.0f);
         CGContextSetRGBStrokeColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
-        CGContextStrokeRect(self.offscreenContext, CGRectMake(TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), index*kTrackElementHeight, kTrackElementWidth, kTrackElementHeight));
+        CGContextStrokeRect(self.offscreenContext, CGRectMake(0, index*kTrackElementHeight, value2*self.frame.size.width, kTrackElementHeight));
+        
+        CGContextSetRGBFillColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
+        CGContextShowTextAtPoint(self.offscreenContext, 100.0f, index*kTrackElementHeight + kTrackElementHeight / 2, [[value stringValue] UTF8String], [[value stringValue] length]);
+        
         
         ++index;
     }
@@ -62,12 +85,6 @@
     if (isFirst) {
         isFirst = NO;
         [self firstDraw];
-    }
-    
-    if (self.scrollToLatest) {
-        if (TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime) + TIME_TO_OFFSCREEN_OFFSET(self.seekTime) > self.frame.size.width) {
-            self.seekTime = -self.recordOffsetTime;
-        }
     }
     
     [self drawTrack];

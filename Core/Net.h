@@ -26,4 +26,8 @@ void NetRcvBegin(const char *ip, int port, void (*callback)(const unsigned char 
 //Setup TCP Control port
 void NetControlBegin(const char *ip, int port, Params_t *params);
 
+//Send dendrite information
+void NetDendriteDebugBegin(const char *ip, int port);
+void NetDendriteDebugSend(NeuronDendriteDebugNetwork_t *data, int len);
+
 #endif

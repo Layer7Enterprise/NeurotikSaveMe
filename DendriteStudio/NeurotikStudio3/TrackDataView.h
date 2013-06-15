@@ -11,7 +11,7 @@
 @interface TrackDataView : NSView
 
 //Add colors
-- (void)addColorColumn: (NSMutableArray *)colors;
+- (void)addBarColumn: (NSMutableArray *)colors;
 
 //Offscreen data buffer
 @property (atomic) CGContextRef offscreenContext;

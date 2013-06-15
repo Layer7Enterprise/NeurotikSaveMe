@@ -212,6 +212,7 @@ void *_NetControlThread(void *a) {
 
         int idx = params->neuronNameToLocation->operator[](name);
         params->debugDendriteIdx = idx;
+        strcpy(params->debugDendriteName, name);
 
         break;
     }
@@ -265,10 +266,10 @@ void NetDendriteDebugBegin(const char *ip, int port) {
   dendriteDebugAddr.sin_port = htons(port);
 }
 
-void NetDendriteDebugSend(unsigned char *data, int len) {
-  int res = sendto(dendriteDebugSocket, data, len, 0, (sockaddr *)&dendriteDebugAddr, sizeof(sockaddr *));
+void NetDendriteDebugSend(NeuronDendriteDebugNetwork_t *data, int len) {
+  int res = sendto(dendriteDebugSocket, data, len, 0, (sockaddr *)&dendriteDebugAddr, sizeof(sockaddr));
   if (res < 0) {
-    fprintf(stderr, "Dendrite debug could not send data");
+    perror("Dendrite debug could not send data");
     exit(EXIT_FAILURE);
   }
 }

@@ -73,13 +73,13 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
     names = [NSMutableArray new];
     values = [NSMutableArray new];
     
-    NUDebugClientSetDropped(onDrop);
-    NUDebugClientSetCallback(onData);
-    NUDebugClientBegin("127.0.0.1");
+//    NUDebugClientSetDropped(onDrop);
+//    NUDebugClientSetCallback(onData);
+//    NUDebugClientBegin("127.0.0.1");
 }
 
 - (void)addColorColumn: (NSMutableArray *)colors {
-    [[[self fullTrackView] trackDataView] addColorColumn:colors];
+//    [[[self fullTrackView] trackDataView] addColorColumn:colors];
 
     [self.trackTimeView setStringValue:[NSString stringWithFormat:@"%f", -self.fullTrackView.trackDataView.seekTime]];
 }

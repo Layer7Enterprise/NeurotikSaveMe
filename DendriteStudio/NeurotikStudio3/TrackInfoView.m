@@ -1,6 +1,6 @@
 #import "TrackInfoView.h"
 
-#define LABEL_HEIGHT 100.0
+#define LABEL_HEIGHT 40.0f
 
 @implementation TrackInfoView
 
@@ -19,8 +19,9 @@
     
     CGContextFillRect(context, CGRectMake(pos.x, pos.y, self.frame.size.width, LABEL_HEIGHT));
     
-    CGContextSelectFont(context, "Monaco", 1.0f, kCGEncodingMacRoman);
+    CGContextSelectFont(context, "Monaco", 1.5f, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetTextMatrix(context, CGAffineTransformMakeScale(13.0f, 13.0f));
     
     int index = 0;
     for (NSString *name in self.neuronNames) {

@@ -15,6 +15,7 @@ void onDrop() {
 
 //Dendrite related
 void onDData(struct NeuronDendriteDebugNetwork_t output) {
+  printf("idx: %d name: %s weight: %f isFirst: %d\n", output.idx, output.name, output.weight, output.isFirst);
 }
 
 int main() {

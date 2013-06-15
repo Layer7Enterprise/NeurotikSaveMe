@@ -42,6 +42,8 @@ int main() {
   NetSendBeginDebug(NET_IP, NET_PORT+2);
   NetControlBegin(NET_IP, NET_PORT+3, &params);
 
+  NetDendriteDebugBegin(NET_IP, NET_PORT+4);
+
   CoreBegin(&params);
   puts(">Core online!");
 

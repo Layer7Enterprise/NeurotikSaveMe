@@ -31,7 +31,14 @@ End End
 
 Connection
 From neuronC
-To neuronB
+To neuronA
+Weight 12.0
+Delay 5
+End End
+
+Connection
+From neuronB
+To neuronA
 Weight 10.0
 Delay 5
 End End
