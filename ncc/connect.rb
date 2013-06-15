@@ -1,5 +1,5 @@
 DEFAULT_WEIGHT = 24.0
-DEFAULT_DELAY = 1.0
+DEFAULT_DELAY = 1
 
 class Connection
   @@dendrite_count = {}

@@ -57,24 +57,30 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
   parseState = PS_NEURON;
 
   char trash[100];
+  char trash2[100];
   while (!feof(f)) {
     char header[100];
     fscanf(f, "%s", header);
 
     //Get state
-    if (!strcmp(header, "Neuron"))
+    if (!strcmp(header, "Neuron")) {
       parseState = PS_NEURON;
-    else if (!strcmp(header, "Connection"))
+    }
+    else if (!strcmp(header, "Connection")) {
       parseState = PS_CONNECTION;
-    else if (!strcmp(header, "NetworkIn"))
+    }
+    else if (!strcmp(header, "NetworkIn")) {
       parseState = PS_NETWORKIN;
-    else if (!strcmp(header, "NetworkOut"))
+    }
+    else if (!strcmp(header, "NetworkOut")) {
       parseState = PS_NETWORKOUT;
-    else if (!strcmp(header, "EndNetworkIn"))
+    }
+    else if (!strcmp(header, "EndNetworkIn")) {
       parseState = PS_ENDNETWORKIN;
-    else if (!strcmp(header, "EndNetworkOut"))
+    }
+    else if (!strcmp(header, "EndNetworkOut")) {
       parseState = PS_ENDNETWORKOUT;
-    else {
+    } else {
       fprintf(stderr, "Error, invalid parse state '%s'...\n", header);
       exit(EXIT_FAILURE);
     }
@@ -142,7 +148,8 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
         fscanf(f, "%s %s", trash, to);
         fscanf(f, "%s %f", trash, &weight);
         fscanf(f, "%s %d", trash, &delay);
-        fscanf(f, "%s %s", trash, trash);
+        fscanf(f, "%s %s", trash, trash2);
+        printf("%s %s", trash, trash2);
 
         static int fromNode;
         static int toNode;

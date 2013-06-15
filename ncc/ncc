@@ -57,6 +57,7 @@ File.open "schema.txt", "w" do |file|
   file.write "NumberOfDendrites: #{Connection.count_max_dendrites}\n"
   file.write "BasePort: 3000\n"
 end
+puts @to_compile
 
 File.open "net.txt", "w" do |file|
   for x in @to_compile
