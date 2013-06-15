@@ -16,6 +16,7 @@ end
 File.open(file, "r") do |file|
   #First line should be a length
   @vectorSize = file.readline.to_i
+  puts "Vector Size: #{@vectorSize}"
 
   while !file.eof
     line = file.readline
@@ -56,7 +57,7 @@ end
 #Vector means you put in 1010 => "WordA Wordb"
 #Words means "WordA WordB" => 1010
 if type == "vector"
-  puts "Started vector mode 0.0.0.0:#{portFrom} => 0.0.0.0:#{portTo}"
+  puts "Started vector[1110->abc] mode 0.0.0.0:#{portFrom} => 0.0.0.0:#{portTo}"
   socket = UDPSocket.new
   socket.bind "0.0.0.0", portFrom.to_i
   loop do
@@ -66,4 +67,12 @@ if type == "vector"
   end
 #Input
 elsif type == "words"
+  puts "Started words[abc->1110] mode 0.0.0.0:#{portFrom} => 0.0.0.0:#{portTo}"
+  socket = UDPSocket.new
+  socket.bind "0.0.0.0", portFrom.to_i
+  loop do
+    msg, info = socket.recvfrom 1024
+    vector = wordsToVector msg
+    socket.send vector, 0, "0.0.0.0", portTo
+  end
 end
