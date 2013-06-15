@@ -1,12 +1,12 @@
 NetworkOut
 
 Neuron testA[0]
-Type glu
+Type 1
 InhTime 0
 IB 0
 Debug End
 Neuron testA[1]
-Type glu
+Type 1
 InhTime 0
 IB 0
 Debug End
@@ -16,12 +16,12 @@ EndNetworkOut
 NetworkIn
 
 Neuron test[0]
-Type glu
+Type 1
 InhTime 0
 IB 0
 End End
 Neuron test[1]
-Type glu
+Type 1
 InhTime 0
 IB 0
 End End
@@ -31,14 +31,14 @@ EndNetworkIn
 Connection
 From test[0]
 To testA[0]
-Weight 0
-Delay 1
+Weight 24.0
+Delay 1.0
 End End
 
 Connection
 From test[1]
 To testA[1]
-Weight 0
-Delay 1
+Weight 24.0
+Delay 1.0
 End End
 

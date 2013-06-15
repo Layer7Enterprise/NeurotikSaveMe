@@ -52,7 +52,7 @@ load ARGV[0]
 
 compile
 
-File.open "net.txt", "w" do |file|
+File.open "output/net.txt", "w" do |file|
   for x in @to_compile
     if x[:type] == :string
       file.write x[:string]

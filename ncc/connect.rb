@@ -1,3 +1,6 @@
+DEFAULT_WEIGHT = 24.0
+DEFAULT_DELAY = 1.0
+
 class Connection
   def initialize from, to
     @from = from
@@ -43,13 +46,21 @@ def one_to_one from, to, params=nil
     exit -1
   end
 
+  weight = DEFAULT_WEIGHT
+  delay = DEFAULT_DELAY
+
+  unless params.nil?
+    weight = params[:weight] unless params[:weight].nil?
+    delay = params[:delay] unless params[:delay].nil?
+  end
+
   connections = []
   from.count.times do |index|
     connection = Connection.new from[index], to[index]
+    connection.set_weight(weight)
+    connection.set_delay(delay)
     connections << connection
   end
 
   return connections
 end
-
-#connect :a, :b, :one_to_one, nil

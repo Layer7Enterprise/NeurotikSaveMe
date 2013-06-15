@@ -59,7 +59,7 @@ class Neuron
     code = "\n"
     self.name_array.each do |name|
       code += "Neuron #{name}\n" 
-      code += "Type #{@type}\n"
+      code += "Type #{NEURON_TYPES[@type]}\n"
       code += "InhTime #{@inhTime}\n"
       code += "IB #{@ib}\n"
 
