@@ -84,11 +84,6 @@ void onDData(struct NeuronDendriteDebugNetwork_t info) {
     
     hasSetNames = NO;
     hasStartedOver = NO;
-    
-    NSMutableArray *values = [NSMutableArray new];
-    [values addObject:[NSNumber numberWithFloat: 0.3f]];
-    
-    [self.trackDataView addBarColumn:values];
 }
 
 - (void)addName: (NSString *)name {

@@ -442,9 +442,10 @@
         </menu>
         <window title="DendriteStudio" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="1142" height="582"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <value key="minSize" type="size" width="1036" height="582"/>
             <value key="maxSize" type="size" width="1036" height="582"/>
             <view key="contentView" id="372">
@@ -479,7 +480,7 @@
                         </constraints>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="778">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="779"/>
                         </popUpButtonCell>
                     </popUpButton>
@@ -557,6 +558,7 @@
         <class className="TrackViewController" superclassName="NSViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TrackViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changeTrackType:"/>
                 <relationship kind="action" name="gotoClick:"/>
                 <relationship kind="action" name="left:"/>
                 <relationship kind="action" name="recordClick:"/>

@@ -31,6 +31,12 @@ void CoreTick() {
   }
 #endif
 
+  //Copy running segment into the core (With the right I)
+  for (int i = 0; i < NET_INPUT_LEN(params); ++i) {
+    if (runningSegment[i] == 1)
+      params->nI[i] = NEURON_TH;
+  }
+
   //########################################
   //Execute core
   for (int idx = 0; idx < params->NN; ++idx)
@@ -91,14 +97,16 @@ void CoreTick() {
   //########################################
 
   //Get data from core and send it out
+  int outputIsBlank = 1;
   for (int i = 0; i < NET_OUTPUT_LEN(params); ++i) {
-    outputSegment[i] = '0';
+    int isSpike = params->nLastSpikeTime[i] == params->globalTime;
+    outputSegment[i] = isSpike ? '1' : '0'; 
 
-    if (i < NET_INPUT_LEN(params))
-      outputSegment[i] = runningSegment[i] ? '1' : '0';
+    if (isSpike)
+      outputIsBlank = 0;
   }
 
-  if (!isBlank) {
+  if (!outputIsBlank) {
     //Add a count (5 ASCII bytes) to the outgoing to track dropped packets
     static int byteCount = 0;
     static char *outputSegmentWithCount = new char[NET_OUTPUT_LEN(params)+5];

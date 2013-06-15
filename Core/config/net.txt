@@ -2,43 +2,16 @@ NetworkOut
 NetworkIn
 
 Neuron neuronA
-Type 9
-InhTime 0
+Type 1
+1nhTime 0
 IB 20
 Debug End
 
 Neuron neuronB
-Type 9
+Type 1
 InhTime 0
-IB 0
+IB 10
 Debug End
 
-Neuron neuronC
-Type 2
-InhTime 5
-IB 20
-Debug End
-
-EndNetworkIn
 EndNetworkOut
-
-Connection
-From neuronA
-To neuronB
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From neuronC
-To neuronA
-Weight 12.0
-Delay 5
-End End
-
-Connection
-From neuronB
-To neuronA
-Weight 10.0
-Delay 5
-End End
+EndNetworkIn
