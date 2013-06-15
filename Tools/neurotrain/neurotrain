@@ -1,0 +1,46 @@
+#! /usr/bin/env ruby
+
+require 'socket'
+
+if ARGV.count < 1
+  puts "[mode(basic) ....]"
+  exit
+end
+
+mode = ARGV[0] 
+
+if mode == "basic"
+  if ARGV.count != 4
+    #DelayBetweenExample = How to long to wait between each example
+    puts "basic [port trainingFile delayBetweenExamples]"
+    exit
+  end
+
+  port = ARGV[1].to_i
+  trainingFile = ARGV[2]
+  delayBetweenExamples = ARGV[3].to_i
+
+  puts "Loading nbtrain basic file #{trainingFile}, the delay between examples at #{delayBetweenExamples}ms, and sending this data to 0.0.0.0:#{port}"
+  examples = {}
+  File.open(trainingFile, "r") do |file|
+    while !file.eof
+      example = file.readline.split(" ")
+      examples[example[0]] = example[1]
+      puts "#{example[0]} => #{example[1]}"
+    end
+  end
+
+  loop do
+    randomKey = examples.keys.sample
+    randomValue = examples[randomKey]
+    puts "Testing #{randomKey} => #{randomValue}"
+
+    s = UDPSocket.new
+    s.send(randomKey + randomValue, 0, "0.0.0.0", port)
+
+    sleep delayBetweenExamples / 1000.0
+  end
+else
+  puts "Not a mode"
+  exit
+end
