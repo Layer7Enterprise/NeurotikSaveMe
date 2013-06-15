@@ -1,0 +1,53 @@
+#! /usr/bin/env coffee
+
+dgram = require 'dgram'
+
+#Get arguments
+timePacket = process.argv[2]
+fromPort = process.argv[3]
+toPort = process.argv[4]
+
+if process.argv.length != 5
+  console.log "[timePacket fromPort toPort]"
+  process.exit -1
+
+console.log "Running neuromunch from 0.0.0.0:#{fromPort} => 0.0.0.0:#{toPort} with packet time of #{timePacket}ms"
+
+socket = dgram.createSocket 'udp4'
+socket.bind fromPort
+
+#States
+  #0 - Waiting for first piece of data (Timer not started)
+  #1 - Waiting for timer to elapse
+state = 0
+
+runningBuffer = null
+msLeft = 0
+
+resetBuffer = () ->
+  for x, i in runningBuffer
+    runningBuffer[i] = 0x30
+
+socket.on "message", (msg) ->
+  msLeft = timePacket
+  state = 1
+
+  #Capture length
+  if runningBuffer == null
+    runningBuffer = new Buffer(msg.length - 5)
+    resetBuffer()
+
+  vector = msg.slice(5, msg.length)
+  for x, i in runningBuffer
+    if vector[i] == 0x31
+      runningBuffer[i] = 0x31
+
+#Milliseconds left to send the message
+tick = ->
+  msLeft -= 10
+  if msLeft <= 0 and state == 1
+    socket.send runningBuffer, 0, runningBuffer.length, toPort, "0.0.0.0", ->
+      resetBuffer()
+      state = 0
+
+setInterval tick, 10
