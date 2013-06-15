@@ -1,8 +1,8 @@
 #! /usr/bin/env ruby
 
-load 'frame.rb'
-load 'neuron_generation.rb'
-load 'connect.rb'
+require '/usr/bin/frame.rb'
+require '/usr/bin/neuron_generation.rb'
+require '/usr/bin/connect.rb'
 
 @to_compile = [
 ]
