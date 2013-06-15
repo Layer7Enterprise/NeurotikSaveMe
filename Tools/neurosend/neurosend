@@ -1,0 +1,11 @@
+#! /usr/bin/env ruby
+
+require 'socket'
+
+#Get user data
+ip = ARGV[0]
+port = ARGV[1]
+vector = ARGV[2]
+
+s = UDPSocket.new
+s.send(vector, 0, ip, port)

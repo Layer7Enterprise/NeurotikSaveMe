@@ -1,6 +1,6 @@
 #import "TrackInfoView.h"
 
-#define LABEL_HEIGHT 100.0
+#define LABEL_HEIGHT 50.0f
 
 @implementation TrackInfoView
 
@@ -30,7 +30,7 @@
         
         //Draw text
         CGContextSetRGBFillColor(context, 0.0f, 0.0f, 0.0f, 1.0f);
-        CGContextShowTextAtPoint(context, LABEL_HEIGHT, index*LABEL_HEIGHT + 4, [name UTF8String], [name length]);
+        CGContextShowTextAtPoint(context, 0, index*LABEL_HEIGHT + 4, [name UTF8String], [name length]);
         ++index;
     }
 
