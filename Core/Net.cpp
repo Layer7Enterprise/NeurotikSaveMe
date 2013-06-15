@@ -2,7 +2,9 @@
 
 //Debug?
 //#include <CCup.h>
-//
+
+//Check recieved byte count.  (Might not exist)
+//#define CHECK_RCV_BYTE_COUNT
 
 static Params_t *params;
 
@@ -81,6 +83,7 @@ void *_NetRcvThread(void *) {
 
     int nBytes = recvfrom(netRcvSocket, buffer, MAXLEN, 0, (sockaddr *)&netRcvAddr, &addrlen);
 
+#ifdef CHECK_RCV_BYTE_COUNT
     //Offset counter
     nBytes = nBytes - 5;
     buffer += 5;
@@ -106,6 +109,7 @@ void *_NetRcvThread(void *) {
     CCSend("NetGotSomething", buffer, nBytes);
     CCSend("NetCounter", (char *)&byteCount, sizeof(byteCount));
 #endif
+#endif
 
     if (nBytes < 0) {
       perror("Tried to recvfrom but failed");
@@ -128,7 +132,9 @@ void *_NetRcvThread(void *) {
     CCSend("NetSendToCallback", (char *)integerVersion, nBytes);
 #endif
 
+#ifdef CHECK_RCV_BYTE_COUNT
     lastByteCount = byteCount;
+#endif
     netRcvCallback(integerVersion, nBytes);
   }
 }
