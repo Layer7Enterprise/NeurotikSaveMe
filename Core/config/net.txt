@@ -3,7 +3,7 @@ NetworkIn
 
 Neuron neuronA
 Type 1
-1nhTime 0
+InhTime 0
 IB 20
 Debug End
 

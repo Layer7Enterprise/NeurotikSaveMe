@@ -1,0 +1,61 @@
+#! /usr/bin/env ruby
+
+load 'frame.rb'
+load 'neuron_generation.rb'
+load 'connect.rb'
+
+@to_compile = [
+]
+
+#Add raw text
+def add_compile_string priority, string
+  @to_compile << {:priority => priority, :type => :string, :string => string}
+end
+
+#Add code
+def add_compile_block priority, proc
+  @to_compile << {:priority => priority, :type => :code, :proc => proc}
+end
+
+def compile
+  #Sort
+  @to_compile = @to_compile.sort {|x, y| x[:priority] <=> y[:priority]}
+  @to_compile.each do |x|
+    if x[:type] == :code
+      x[:proc].call
+    end
+  end
+end
+
+def input
+  begin_frame 0 do 
+    write "NetworkIn"
+    yield
+    write "EndNetworkIn"
+  end
+end
+
+def output
+  begin_frame 0 do
+    write "NetworkOut"
+    yield
+    write "EndNetworkOut"
+  end
+end
+
+if ARGV.count != 1
+  puts "usage ncc [input]"
+  exit
+end
+
+load ARGV[0]
+
+compile
+
+File.open "net.txt", "w" do |file|
+  for x in @to_compile
+    if x[:type] == :string
+      file.write x[:string]
+    end
+  end
+end
