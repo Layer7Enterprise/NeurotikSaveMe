@@ -158,7 +158,7 @@ void CoreOnImpulse(const unsigned char *impulse, int len) {
   //Confirm that the size of the impulse vector is right
   if (len != NET_INPUT_LEN(params)) {
     fprintf(stderr, "Impulse size was not the same as the params length %d != %d\n", NET_INPUT_LEN(params), len);
-    exit(EXIT_FAILURE);
+    return;
   }
 
   //OR the running segment
