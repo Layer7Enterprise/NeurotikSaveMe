@@ -1,4 +1,4 @@
-#define kTrackInfoSize 200
+#define kTrackInfoSize 150
 
 #import "TrackNameView.h"
 #import "DebugClient.h"

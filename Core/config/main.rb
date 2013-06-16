@@ -1,5 +1,5 @@
 input do 
-  glu "input", :debug => true, :count => 5
+  glu "input", :debug => true, :count => 10
   glu "signal", :debug => true
 end 
 

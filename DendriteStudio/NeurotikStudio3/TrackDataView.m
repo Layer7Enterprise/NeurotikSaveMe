@@ -2,7 +2,7 @@
 
 #define kTrackBufferSize 600000
 #define kTrackElementWidth 5 //Size of each discrete track data
-#define kTrackElementHeight 40
+#define kTrackElementHeight 20
 #define TIME_TO_OFFSCREEN_OFFSET(time) (time*kTrackElementWidth)
 #define OFFSCREEN_OFFSET_TO_TIME(offset) (offset/kTrackElementWidth)
 
@@ -42,7 +42,7 @@
     
     CGContextClearRect(self.offscreenContext, CGRectMake(0.0f, 0.0f, self.frame.size.width, self.frame.size.height));
     
-    CGContextSelectFont(self.offscreenContext, "Monaco", 1.5f, kCGEncodingMacRoman);
+    CGContextSelectFont(self.offscreenContext, "Monaco", 1.0f, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(self.offscreenContext, kCGTextFill);
     CGContextSetTextMatrix(self.offscreenContext, CGAffineTransformMakeScale(13.0f, 13.0f));
     
@@ -57,14 +57,14 @@
         if (value2 < 0)
             value2 = -value2;
         
-         CGContextFillRect(self.offscreenContext, CGRectMake(0, index*kTrackElementHeight, value2*self.frame.size.width, kTrackElementHeight));
+         CGContextFillRect(self.offscreenContext, CGRectMake(0, index*kTrackElementHeight, value2*self.frame.size.width*0.8f, kTrackElementHeight));
         
         CGContextSetLineWidth(self.offscreenContext, 3.0f);
         CGContextSetRGBStrokeColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
-        CGContextStrokeRect(self.offscreenContext, CGRectMake(0, index*kTrackElementHeight, value2*self.frame.size.width, kTrackElementHeight));
+        CGContextStrokeRect(self.offscreenContext, CGRectMake(0, index*kTrackElementHeight, value2*self.frame.size.width*0.8f, kTrackElementHeight));
         
         CGContextSetRGBFillColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
-        CGContextShowTextAtPoint(self.offscreenContext, 100.0f, index*kTrackElementHeight + kTrackElementHeight / 2, [[value stringValue] UTF8String], [[value stringValue] length]);
+        CGContextShowTextAtPoint(self.offscreenContext, 20.0f, index*kTrackElementHeight + 5, [[value stringValue] UTF8String], [[value stringValue] length]);
         
         
         ++index;
