@@ -260,11 +260,15 @@ def some_to_many from, to, params=nil
     count = params[:count] unless params[:count].nil?
   end
 
+  count = count.to_i
+  percent = percent.to_i
+
   if count <= 0
     connections = []
     to.count.times do |index|
       from.count.times do |index2|
-        if rand(100) > percent
+        roll = rand(100)
+        if roll >= percent
           next
         end
 
