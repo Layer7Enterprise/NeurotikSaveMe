@@ -29,6 +29,7 @@ resetBuffer = () ->
     runningBuffer[i] = 0x30
 
 socket.on "message", (msg) ->
+  console.log msg
   msLeft = timePacket
   state = 1
 
@@ -44,10 +45,10 @@ socket.on "message", (msg) ->
 
 #Milliseconds left to send the message
 tick = ->
-  msLeft -= 10
+  msLeft -= 5
   if msLeft <= 0 and state == 1
     socket.send runningBuffer, 0, runningBuffer.length, toPort, "0.0.0.0", ->
       resetBuffer()
       state = 0
 
-setInterval tick, 10
+setInterval tick, 5

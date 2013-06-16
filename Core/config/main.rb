@@ -4,10 +4,10 @@ input do
 end 
 
 output do
+  glu_signal "output", :debug => true
 end
 
 main do
-  glu_signal "output", :debug => true
 end
 
 connect "signal", "output", :one_to_one, :delay => 10

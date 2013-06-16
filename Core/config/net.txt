@@ -62,7 +62,6 @@ Debug End
 
 EndNetworkIn
 NetworkOut
-EndNetworkOut
 
 Neuron output[0]
 Type 17
@@ -71,6 +70,7 @@ IB 0
 Debug End
 
 
+EndNetworkOut
 Connection
 From signal[0]
 To output[0]

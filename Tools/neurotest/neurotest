@@ -1,6 +1,7 @@
 #! /usr/bin/env ruby
 
 require 'socket'
+require 'timeout'
 
 if ARGV.count < 1
   puts "[mode(basic) ....]"
@@ -10,17 +11,19 @@ end
 mode = ARGV[0] 
 
 if mode == "basic"
-  if ARGV.count != 4
+  if ARGV.count != 6
     #DelayBetweenExample = How to long to wait between each example
-    puts "basic [port trainingFile delayBetweenExamples]"
+    puts "basic [inputPort outputPort trainingFile delayBetweenExamples attempts]"
     exit
   end
 
-  port = ARGV[1].to_i
-  trainingFile = ARGV[2]
-  delayBetweenExamples = ARGV[3].to_i
+  inputPort = ARGV[1].to_i
+  outputPort = ARGV[2].to_i
+  trainingFile = ARGV[3]
+  delayBetweenExamples = ARGV[4].to_i
+  attempts = ARGV[5].to_i
 
-  puts "Loading nbtrain basic file #{trainingFile}, the delay between examples at #{delayBetweenExamples}ms, and sending this data to 0.0.0.0:#{port}"
+  puts "Loading nbtrain basic file #{trainingFile}, the delay between examples at #{delayBetweenExamples}ms, and sending this data to 0.0.0.0:#{outputPort}, getting data from 0.0.0.0:#{inputPort}.  I will try #{attempts} times"
   examples = {}
   File.open(trainingFile, "r") do |file|
     while !file.eof
@@ -30,16 +33,37 @@ if mode == "basic"
     end
   end
 
-  loop do
+  s = UDPSocket.new
+  s.bind "0.0.0.0", inputPort
+
+  failed = {}
+  attempts.times do |attempt_index|
+    puts "#{attempt_index+1} / #{attempts}"
+
     randomKey = examples.keys.sample
     randomValue = examples[randomKey]
     puts "Testing #{randomKey} => #{randomValue}"
 
-    s = UDPSocket.new
-    s.send(randomKey + randomValue, 0, "0.0.0.0", port)
+    s.send(randomKey + "0"*randomValue.length, 0, "0.0.0.0", outputPort)
+    begin
+      timeout(1) do
+        msg, info = s.recvfrom 1024
+        if msg != randomValue
+          puts "failed"
+          failed[randomKey] = 0 if failed[randomKey].nil?
+          failed[randomKey] += 1
+        end
+      end
+    rescue
+      puts "failed"
+      failed[randomKey] = 0 if failed[randomKey].nil?
+      failed[randomKey] += 1
+    end
 
     sleep delayBetweenExamples / 1000.0
   end
+
+  puts failed
 else
   puts "Not a mode"
   exit

@@ -34,7 +34,7 @@ void CoreTick() {
   //Copy running segment into the core (With the right I)
   for (int i = 0; i < NET_INPUT_LEN(params); ++i) {
     if (runningSegment[i] == 1)
-      params->nI[i] = NEURON_TH;
+      params->nI[i+params->networkInStartPos] = NEURON_TH;
   }
 
   //########################################
@@ -99,7 +99,7 @@ void CoreTick() {
   //Get data from core and send it out
   int outputIsBlank = 1;
   for (int i = 0; i < NET_OUTPUT_LEN(params); ++i) {
-    int isSpike = params->nLastSpikeTime[i] == params->globalTime;
+    int isSpike = params->nLastSpikeTime[i+params->networkOutStartPos] == params->globalTime;
     outputSegment[i] = isSpike ? '1' : '0'; 
 
     if (isSpike)
