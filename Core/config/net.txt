@@ -244,127 +244,280 @@ IB 0
 End End
 
 
+
+Neuron layer1[0]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[1]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[2]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[3]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[4]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[5]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[6]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[7]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[8]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[9]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[10]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[11]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[12]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[13]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[14]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[15]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[16]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[17]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[18]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[19]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[20]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[21]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[22]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[23]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[24]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[25]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[26]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[27]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[28]
+Type 9
+InhTime 0
+IB 0
+End End
+Neuron layer1[29]
+Type 9
+InhTime 0
+IB 0
+End End
+
+
 Connection
 From signal[0]
 To output[0]
 Weight 24.0
-Delay 6
+Delay 9
 End End
 
 Connection
 From signal[1]
 To output[1]
 Weight 24.0
-Delay 6
+Delay 9
 End End
 
 Connection
 From signal[2]
 To output[2]
 Weight 24.0
-Delay 6
+Delay 9
 End End
 
 Connection
-From input[6]
+From input[7]
 To layer0[0]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[1]
-To layer0[0]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[6]
-To layer0[0]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[9]
-To layer0[1]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[4]
-To layer0[1]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[0]
-To layer0[1]
+To layer0[0]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[7]
-To layer0[2]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[2]
-To layer0[2]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[9]
-To layer0[2]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[5]
-To layer0[3]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[1]
-To layer0[3]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[0]
-To layer0[3]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[5]
-To layer0[4]
+To layer0[0]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[8]
-To layer0[4]
+To layer0[1]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[0]
+To layer0[1]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[8]
+To layer0[1]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[5]
+To layer0[2]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[1]
+To layer0[2]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[9]
+To layer0[2]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[7]
+To layer0[3]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[4]
+To layer0[3]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[8]
+To layer0[3]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[2]
+To layer0[4]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[7]
+To layer0[4]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[1]
 To layer0[4]
 Weight 12
 Delay 1
@@ -378,29 +531,15 @@ Delay 1
 End End
 
 Connection
-From input[6]
+From input[8]
 To layer0[5]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[1]
+From input[9]
 To layer0[5]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[4]
-To layer0[6]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[1]
-To layer0[6]
 Weight 12
 Delay 1
 End End
@@ -413,8 +552,15 @@ Delay 1
 End End
 
 Connection
-From input[2]
-To layer0[7]
+From input[4]
+To layer0[6]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[4]
+To layer0[6]
 Weight 12
 Delay 1
 End End
@@ -427,28 +573,28 @@ Delay 1
 End End
 
 Connection
-From input[0]
+From input[2]
 To layer0[7]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[9]
+From input[5]
+To layer0[7]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[8]
 To layer0[8]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[9]
-To layer0[8]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[2]
+From input[0]
 To layer0[8]
 Weight 12
 Delay 1
@@ -456,6 +602,27 @@ End End
 
 Connection
 From input[7]
+To layer0[8]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[1]
+To layer0[9]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[1]
+To layer0[9]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[4]
 To layer0[9]
 Weight 12
 Delay 1
@@ -463,42 +630,21 @@ End End
 
 Connection
 From input[3]
-To layer0[9]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[8]
-To layer0[9]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[4]
 To layer0[10]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[0]
+From input[7]
 To layer0[10]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[3]
+From input[5]
 To layer0[10]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[4]
-To layer0[11]
 Weight 12
 Delay 1
 End End
@@ -511,84 +657,91 @@ Delay 1
 End End
 
 Connection
-From input[2]
+From input[8]
 To layer0[11]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[4]
-To layer0[12]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[6]
-To layer0[12]
-Weight 12
-Delay 1
-End End
-
-Connection
 From input[0]
+To layer0[11]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[1]
 To layer0[12]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[5]
-To layer0[13]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[5]
-To layer0[13]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[8]
-To layer0[13]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[7]
-To layer0[14]
+To layer0[12]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[8]
-To layer0[14]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[4]
-To layer0[14]
+To layer0[12]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[9]
+To layer0[13]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[9]
+To layer0[13]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[1]
+To layer0[13]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[5]
+To layer0[14]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[5]
+To layer0[14]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[6]
+To layer0[14]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[2]
 To layer0[15]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[0]
+From input[8]
 To layer0[15]
 Weight 12
 Delay 1
@@ -602,7 +755,7 @@ Delay 1
 End End
 
 Connection
-From input[4]
+From input[2]
 To layer0[16]
 Weight 12
 Delay 1
@@ -616,14 +769,14 @@ Delay 1
 End End
 
 Connection
-From input[4]
+From input[5]
 To layer0[16]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[4]
+From input[3]
 To layer0[17]
 Weight 12
 Delay 1
@@ -644,98 +797,105 @@ Delay 1
 End End
 
 Connection
-From input[8]
+From input[1]
 To layer0[18]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[9]
+From input[5]
 To layer0[18]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[6]
-To layer0[18]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[9]
-To layer0[19]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[7]
-To layer0[19]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[0]
-To layer0[19]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[0]
-To layer0[20]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[7]
-To layer0[20]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[6]
-To layer0[20]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[6]
-To layer0[21]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[9]
-To layer0[21]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[1]
-To layer0[21]
+To layer0[18]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[8]
+To layer0[19]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[3]
-To layer0[22]
+To layer0[19]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[7]
+To layer0[19]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[1]
+To layer0[20]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[2]
+To layer0[20]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[5]
+To layer0[20]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[5]
+To layer0[21]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[4]
+To layer0[21]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[5]
+To layer0[21]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[7]
+To layer0[22]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[3]
+To layer0[22]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[7]
 To layer0[22]
 Weight 12
 Delay 1
@@ -743,27 +903,13 @@ End End
 
 Connection
 From input[6]
-To layer0[22]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[3]
 To layer0[23]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[3]
-To layer0[23]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[0]
+From input[9]
 To layer0[23]
 Weight 12
 Delay 1
@@ -771,27 +917,41 @@ End End
 
 Connection
 From input[1]
+To layer0[23]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[4]
 To layer0[24]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[5]
+From input[2]
 To layer0[24]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[5]
+From input[9]
 To layer0[24]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[0]
+From input[6]
+To layer0[25]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[6]
 To layer0[25]
 Weight 12
 Delay 1
@@ -805,43 +965,22 @@ Delay 1
 End End
 
 Connection
-From input[0]
-To layer0[25]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[9]
-To layer0[26]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[9]
-To layer0[26]
-Weight 12
-Delay 1
-End End
-
-Connection
-From input[0]
-To layer0[26]
-Weight 12
-Delay 1
-End End
-
-Connection
 From input[6]
-To layer0[27]
+To layer0[26]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[9]
+To layer0[26]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[7]
-To layer0[27]
+To layer0[26]
 Weight 12
 Delay 1
 End End
@@ -855,20 +994,34 @@ End End
 
 Connection
 From input[7]
-To layer0[28]
+To layer0[27]
 Weight 12
 Delay 1
 End End
 
 Connection
 From input[3]
+To layer0[27]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[7]
 To layer0[28]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[4]
+From input[8]
+To layer0[28]
+Weight 12
+Delay 1
+End End
+
+Connection
+From input[9]
 To layer0[28]
 Weight 12
 Delay 1
@@ -882,14 +1035,14 @@ Delay 1
 End End
 
 Connection
-From input[8]
+From input[7]
 To layer0[29]
 Weight 12
 Delay 1
 End End
 
 Connection
-From input[9]
+From input[0]
 To layer0[29]
 Weight 12
 Delay 1
@@ -897,629 +1050,839 @@ End End
 
 Connection
 From layer0[0]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[0]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[0]
-To output[2]
-Weight 0
+To layer1[0]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[1]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[1]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[1]
-To output[2]
-Weight 0
+To layer1[1]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[2]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[2]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[2]
-To output[2]
-Weight 0
+To layer1[2]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[3]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[3]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[3]
-To output[2]
-Weight 0
+To layer1[3]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[4]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[4]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[4]
-To output[2]
-Weight 0
+To layer1[4]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[5]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[5]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[5]
-To output[2]
-Weight 0
+To layer1[5]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[6]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[6]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[6]
-To output[2]
-Weight 0
+To layer1[6]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[7]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[7]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[7]
-To output[2]
-Weight 0
+To layer1[7]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[8]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[8]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[8]
-To output[2]
-Weight 0
+To layer1[8]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[9]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[9]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[9]
-To output[2]
-Weight 0
+To layer1[9]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[10]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[10]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[10]
-To output[2]
-Weight 0
+To layer1[10]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[11]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[11]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[11]
-To output[2]
-Weight 0
+To layer1[11]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[12]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[12]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[12]
-To output[2]
-Weight 0
+To layer1[12]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[13]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[13]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[13]
-To output[2]
-Weight 0
+To layer1[13]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[14]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[14]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[14]
-To output[2]
-Weight 0
+To layer1[14]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[15]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[15]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[15]
-To output[2]
-Weight 0
+To layer1[15]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[16]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[16]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[16]
-To output[2]
-Weight 0
+To layer1[16]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[17]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[17]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[17]
-To output[2]
-Weight 0
+To layer1[17]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[18]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[18]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[18]
-To output[2]
-Weight 0
+To layer1[18]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[19]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[19]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[19]
-To output[2]
-Weight 0
+To layer1[19]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[20]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[20]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[20]
-To output[2]
-Weight 0
+To layer1[20]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[21]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[21]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[21]
-To output[2]
-Weight 0
+To layer1[21]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[22]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[22]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[22]
-To output[2]
-Weight 0
+To layer1[22]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[23]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[23]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[23]
-To output[2]
-Weight 0
+To layer1[23]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[24]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[24]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[24]
-To output[2]
-Weight 0
+To layer1[24]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[25]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[25]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer0[25]
-To output[2]
-Weight 0
+To layer1[25]
+Weight 24.0
 Delay 1
 End End
 
 Connection
 From layer0[26]
+To layer1[26]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From layer0[27]
+To layer1[27]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From layer0[28]
+To layer1[28]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From layer0[29]
+To layer1[29]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From layer1[0]
 To output[0]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[26]
+From layer1[0]
 To output[1]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[26]
+From layer1[0]
 To output[2]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[27]
+From layer1[1]
 To output[0]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[27]
+From layer1[1]
 To output[1]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[27]
+From layer1[1]
 To output[2]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[28]
+From layer1[2]
 To output[0]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[28]
+From layer1[2]
 To output[1]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[28]
+From layer1[2]
 To output[2]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[29]
+From layer1[3]
 To output[0]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[29]
+From layer1[3]
 To output[1]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer0[29]
+From layer1[3]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[4]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[4]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[4]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[5]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[5]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[5]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[6]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[6]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[6]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[7]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[7]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[7]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[8]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[8]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[8]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[9]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[9]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[9]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[10]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[10]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[10]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[11]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[11]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[11]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[12]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[12]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[12]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[13]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[13]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[13]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[14]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[14]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[14]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[15]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[15]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[15]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[16]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[16]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[16]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[17]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[17]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[17]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[18]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[18]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[18]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[19]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[19]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[19]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[20]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[20]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[20]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[21]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[21]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[21]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[22]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[22]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[22]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[23]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[23]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[23]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[24]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[24]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[24]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[25]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[25]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[25]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[26]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[26]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[26]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[27]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[27]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[27]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[28]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[28]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[28]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[29]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[29]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From layer1[29]
 To output[2]
 Weight 0
 Delay 1
