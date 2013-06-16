@@ -196,7 +196,7 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
        continue;
 
     //Are we (not) in this hit region?
-    if (lastSpikeTime > dLastSpikeTime[i] && lastSpikeTime - dLastSpikeTime[i] < NEURON_T0/2) {
+    if (lastSpikeTime > dLastSpikeTime[i] && lastSpikeTime - dLastSpikeTime[i] < NEURON_T0) {
       sigma += dWeight[i];
       ++count;
     }
@@ -217,7 +217,7 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
        continue;
 
     //All that fired (Look at the previous when we set -1000 to show that they didn't fire)
-    if (lastSpikeTime > dLastSpikeTime[i] && (lastSpikeTime - dLastSpikeTime[i] < NEURON_T0/2)) {
+    if (lastSpikeTime > dLastSpikeTime[i] && (lastSpikeTime - dLastSpikeTime[i] < NEURON_T0)) {
       //sigma += 0.00001f;
       sigma += 0.0001f;
       float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);

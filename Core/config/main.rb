@@ -8,7 +8,7 @@ output do
 end
 
 main do
-  no_learn "layer0", :count => 20
+  no_learn "layer0", :count => 30
 end
 
 #Arbitrary connections
@@ -16,5 +16,5 @@ end
 
 #Establish output
 connect "signal", "output", :linear, :delay => 6
-connect "input", "layer0", :some_to_many, :count => 1
+connect "input", "layer0", :some_to_many, :count => 3, :weight => 12
 connect "layer0", "output", :many_to_many, :weight => 0
