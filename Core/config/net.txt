@@ -58,12 +58,32 @@ Type 1
 InhTime 0
 IB 0
 Debug End
+Neuron signal[1]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron signal[2]
+Type 1
+InhTime 0
+IB 0
+Debug End
 
 
 EndNetworkIn
 NetworkOut
 
 Neuron output[0]
+Type 17
+InhTime 0
+IB 0
+Debug End
+Neuron output[1]
+Type 17
+InhTime 0
+IB 0
+Debug End
+Neuron output[2]
 Type 17
 InhTime 0
 IB 0
@@ -79,8 +99,36 @@ Delay 10
 End End
 
 Connection
+From signal[1]
+To output[1]
+Weight 24.0
+Delay 10
+End End
+
+Connection
+From signal[2]
+To output[2]
+Weight 24.0
+Delay 10
+End End
+
+Connection
 From input[0]
 To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To output[2]
 Weight 0
 Delay 1
 End End
@@ -93,8 +141,36 @@ Delay 1
 End End
 
 Connection
+From input[1]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[2]
 To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To output[2]
 Weight 0
 Delay 1
 End End
@@ -107,8 +183,36 @@ Delay 1
 End End
 
 Connection
+From input[3]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[4]
 To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To output[2]
 Weight 0
 Delay 1
 End End
@@ -121,8 +225,36 @@ Delay 1
 End End
 
 Connection
+From input[5]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[6]
 To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To output[2]
 Weight 0
 Delay 1
 End End
@@ -135,6 +267,20 @@ Delay 1
 End End
 
 Connection
+From input[7]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[8]
 To output[0]
 Weight 0
@@ -142,8 +288,36 @@ Delay 1
 End End
 
 Connection
+From input[8]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To output[2]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[9]
 To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To output[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To output[2]
 Weight 0
 Delay 1
 End End

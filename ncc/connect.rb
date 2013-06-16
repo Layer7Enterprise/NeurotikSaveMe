@@ -137,3 +137,60 @@ def many_to_one from, to, params=nil
 
   return connections
 end
+
+def many_to_many from, to, params=nil
+  if from.count <= 1
+    puts "#{from.count} <= 1 for many_to_many"
+    exit
+  end
+
+  if to.count <= 1
+    puts "#{to.count} <= 1 for many_to_many"
+    exit
+  end
+
+  weight = DEFAULT_WEIGHT
+  delay = DEFAULT_DELAY
+
+  unless params.nil?
+    weight = params[:weight] unless params[:weight].nil?
+    delay = params[:delay] unless params[:delay].nil?
+  end
+
+  connections = []
+  from.count.times do |index|
+    to.count.times do |index2|
+      connection = Connection.new from[index], to[index2]
+      connection.set_weight(weight)
+      connection.set_delay(delay)
+      connections << connection
+    end
+  end
+
+  return connections
+end
+
+def linear from, to, params=nil
+  if from.count != to.count
+    puts "#{from.count} != #{to.count} for linear"
+    exit
+  end
+
+  weight = DEFAULT_WEIGHT
+  delay = DEFAULT_DELAY
+
+  unless params.nil?
+    weight = params[:weight] unless params[:weight].nil?
+    delay = params[:delay] unless params[:delay].nil?
+  end
+
+  connections = []
+  from.count.times do |index|
+    connection = Connection.new from[index], to[index]
+    connection.set_weight(weight)
+    connection.set_delay(delay)
+    connections << connection
+  end
+
+  return connections
+end
