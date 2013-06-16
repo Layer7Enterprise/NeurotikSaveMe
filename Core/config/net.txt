@@ -10,6 +10,21 @@ Type 1
 InhTime 0
 IB 0
 Debug End
+Neuron input[2]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[3]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[4]
+Type 1
+InhTime 0
+IB 0
+Debug End
 
 
 
@@ -47,6 +62,27 @@ End End
 
 Connection
 From input[1]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
 To output[0]
 Weight 0
 Delay 1

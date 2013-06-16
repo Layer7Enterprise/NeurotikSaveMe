@@ -1,6 +1,6 @@
 #import "TrackInfoView.h"
 
-#define LABEL_HEIGHT 50.0f
+#define LABEL_HEIGHT 20.0f
 
 @implementation TrackInfoView
 

@@ -22,26 +22,19 @@ static BOOL hasSetNames = NO;
 
 void onData(struct NeuronDebugNetworkOutput_t output) {
     static int lastIdx = -1;
+    static int finalIdx = -1;
     
-    //Push
-    if (lastIdx > output.idx) {
-        @autoreleasepool {
-            if (!hasSetNames) {
-                hasSetNames = YES;
-                [[[theTrackViewController fullTrackView] trackInfoView] setNeuronNames:names];
-                [[[theTrackViewController fullTrackView] trackInfoView] setNeedsDisplay:YES];
-            }
-            
-            if ([theTrackViewController isRecording]) {
-                [theTrackViewController addColorColumn:colors];
-                [theTrackViewController addWaveColumn:values];
-            }
+    static BOOL hasReset = NO;
+    if (!hasReset) {
+        if (lastIdx > output.idx) {
+            hasReset = YES;
+            lastIdx = output.idx;
+            return;
+        } else {
+            lastIdx = output.idx;
+            return;
         }
-        colors = [NSMutableArray new];
-        values = [NSMutableArray new];
     }
-
-    lastIdx = output.idx;
     
     if (!hasSetNames) {
         @autoreleasepool {
@@ -63,6 +56,26 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
     } else {
         [colors addObject:[NSColor brownColor]];
     }
+    
+    //Push
+    if (lastIdx > output.idx) {
+        @autoreleasepool {
+            if (!hasSetNames) {
+                hasSetNames = YES;
+                [[[theTrackViewController fullTrackView] trackInfoView] setNeuronNames:names];
+                [[[theTrackViewController fullTrackView] trackInfoView] setNeedsDisplay:YES];
+            }
+            
+            if ([theTrackViewController isRecording]) {
+                [theTrackViewController addColorColumn:colors];
+                [theTrackViewController addWaveColumn:values];
+            }
+        }
+        colors = [NSMutableArray new];
+        values = [NSMutableArray new];
+    }
+    
+    lastIdx = output.idx;
 }
 
 @implementation TrackViewController

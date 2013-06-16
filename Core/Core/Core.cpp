@@ -68,11 +68,18 @@ void CoreTick(int idx, Params_t *params) {
       if (dSpikeQue[i] & 1) {
         dLastSpikeTime[i] = globalTime;
          
-        //Only for GLU class neurons
+        //Only for GLU class neurons that fired to us
         if (params->nType[dConnection[i]] & GLU) {
           I += dWeight[i];
-          //Neg pot
-          if (!(type & GABA) && !(type & NO_LRN)) {
+
+          //Neg pot (The dendrites!)
+          //##############################
+
+          //Avoid depot the signal leading neuron
+
+          //Don't potentiate dendrites if this is a gaba or no_lrn neuron
+          int isFirstSignal = type & GLU_SIGNAL && i == 0;
+          if (!(type & GABA) && !(type & NO_LRN) && !isFirstSignal) {
             int deltaTime = globalTime - lastSpikeTime; //Previous Neuron's spike
             float delta = 0.05*exp(-deltaTime / NEURON_T0);
 
@@ -100,7 +107,6 @@ void CoreTick(int idx, Params_t *params) {
         }
       }
 
-      //Move que
       dSpikeQue[i] >>= 1;
     }
   }
@@ -119,6 +125,7 @@ void CoreTick(int idx, Params_t *params) {
   //Update neuron
   v += 0.5f*(0.04f*v*v + 5.0f*v + 140.0f - u + I);
   v += 0.5f*(0.04f*v*v + 5.0f*v + 140.0f - u + I);
+
 
   if (type & GLU) {
     u += NEURON_GLU_A*(NEURON_GLU_B*v - u);
@@ -173,20 +180,13 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
    float sigma = 0;
    float count = 0;
 
-   int hadSignal = 0;
-  
   for (int i = 0; i < ND; ++i) {
     if (dConnection[i] < 0)
       break;
 
      //SKIP?
-     if (i == 0 && (type & GLU_SIGNAL)) {
-       //Check if signal fired
-       if (lastSpikeTime > dLastSpikeTime[i] && lastSpikeTime - dLastSpikeTime[i] < NEURON_T0/2) {
-         hadSignal = 1;
-       }
+     if (i == 0 && (type & GLU_SIGNAL))
        continue;
-     }
 
      if (type & NO_LRN)
        continue;
@@ -203,9 +203,6 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
 
   //Round 2, normalize all that fired
   for (int i = 0; i < ND; ++i) {
-    if (!hadSignal)
-      break;
-
     if (dConnection[i] < 0)
       break;
 
@@ -223,7 +220,7 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
       //sigma += 0.00001f;
       sigma += 0.0001f;
       float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
-      dWeight[i] = dwdt*0.05 + dWeight[i];
+      dWeight[i] = dwdt*0.01 + dWeight[i];
     }
   }
 }

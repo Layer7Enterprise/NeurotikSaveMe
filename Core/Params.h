@@ -27,7 +27,7 @@ enum NeuronType_t {
 #define NEURON_GABA_V -65.0f
 
 #define NEURON_T0 22.0f  //exp(t/t0)
-#define NEURON_TH 22.1f  //Threshold calculations are made off this
+#define NEURON_TH 24.0f  //Threshold calculations are made off this
 
 #define NET_INPUT_LEN(X) ((X)->networkInEndPos - (X)->networkInStartPos)
 #define NET_OUTPUT_LEN(X) ((X)->networkOutEndPos - (X)->networkOutStartPos)

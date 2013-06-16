@@ -4,7 +4,7 @@
 NEURON_TYPES = {
   :glu => 1,
   :gaba => 2,
-  :no_learn => 8,
+  :no_learn => 9, #GLU & NO_LRN
   :glu_signal => 17 #GLU & Signal
 }
 
