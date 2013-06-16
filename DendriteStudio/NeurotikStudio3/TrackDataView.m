@@ -2,7 +2,7 @@
 
 #define kTrackBufferSize 600000
 #define kTrackElementWidth 5 //Size of each discrete track data
-#define kTrackElementHeight 20
+#define kTrackElementHeight 15
 #define TIME_TO_OFFSCREEN_OFFSET(time) (time*kTrackElementWidth)
 #define OFFSCREEN_OFFSET_TO_TIME(offset) (offset/kTrackElementWidth)
 
@@ -28,7 +28,7 @@
 
 - (void)firstDraw {
     //Setup offscreen buffer
-    self.offscreenLayer = CGLayerCreateWithContext([self.window.graphicsContext graphicsPort], CGSizeMake(kTrackBufferSize, self.frame.size.height), nil);
+    self.offscreenLayer = CGLayerCreateWithContext([self.window.graphicsContext graphicsPort], CGSizeMake(kTrackBufferSize, 10000), nil);
     self.offscreenContext = CGLayerGetContext(self.offscreenLayer);
 }
 
@@ -59,12 +59,12 @@
         
          CGContextFillRect(self.offscreenContext, CGRectMake(0, index*kTrackElementHeight, value2*self.frame.size.width*0.8f, kTrackElementHeight));
         
-        CGContextSetLineWidth(self.offscreenContext, 3.0f);
+        CGContextSetLineWidth(self.offscreenContext, 0.85f);
         CGContextSetRGBStrokeColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
         CGContextStrokeRect(self.offscreenContext, CGRectMake(0, index*kTrackElementHeight, value2*self.frame.size.width*0.8f, kTrackElementHeight));
         
         CGContextSetRGBFillColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
-        CGContextShowTextAtPoint(self.offscreenContext, 20.0f, index*kTrackElementHeight + 5, [[value stringValue] UTF8String], [[value stringValue] length]);
+        CGContextShowTextAtPoint(self.offscreenContext, 20.0f, index*kTrackElementHeight + 2, [[value stringValue] UTF8String], [[value stringValue] length]);
         
         
         ++index;

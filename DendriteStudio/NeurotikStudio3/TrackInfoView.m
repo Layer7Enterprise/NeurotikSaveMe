@@ -1,6 +1,6 @@
 #import "TrackInfoView.h"
 
-#define LABEL_HEIGHT 20.0f
+#define LABEL_HEIGHT 15.0f
 
 @implementation TrackInfoView
 
@@ -19,7 +19,7 @@
     
     CGContextFillRect(context, CGRectMake(pos.x, pos.y, self.frame.size.width, LABEL_HEIGHT));
     
-    CGContextSelectFont(context, "Monaco", 1.0f, kCGEncodingMacRoman);
+    CGContextSelectFont(context, "Monaco", 0.8f, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
     CGContextSetTextMatrix(context, CGAffineTransformMakeScale(13.0f, 13.0f));
     

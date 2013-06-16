@@ -109,9 +109,9 @@ def glu_signal name, params=nil
 end
 
 
-def gaba name, ib, params=nil
+def gaba name, inhTime, params=nil
   params = {} if params.nil?
-  params[:ib] = ib
+  params[:inh] = inhTime
 
   neuron name, :gaba, params
 end

@@ -13,6 +13,18 @@ pthread_mutex_t mutex;
 
 void onNData(struct NeuronDebugNetworkOutput_t output) {
     static int lastIdx = -1;
+    static BOOL hasReset = NO;
+    if (!hasReset) {
+        if (lastIdx > output.idx) {
+            hasReset = YES;
+            lastIdx = output.idx;
+            return;
+        } else {
+            lastIdx = output.idx;
+            return;
+        }
+    }
+
     
     static BOOL hasSetNames = NO;
     if (!hasSetNames) {
@@ -20,11 +32,6 @@ void onNData(struct NeuronDebugNetworkOutput_t output) {
             [names addObject:[NSString stringWithFormat:@"%s", output.name]];
             [theTrackNameView addName:[NSString stringWithFormat:@"%s", output.name]];
         }
-    }
-    
-    if (lastIdx == -1) {
-        lastIdx = output.idx;
-        return;
     }
 
     if (lastIdx > output.idx) {
@@ -56,7 +63,6 @@ void onDData(struct NeuronDendriteDebugNetwork_t info) {
                 [[theTrackNameView trackInfoView] setNeuronNames:dendriteNames];
                 [[theTrackNameView trackInfoView] setNeedsDisplay:YES];
                 hasSetNames = YES;
-                hasStartedOver = NO;
             }
         } else {
             [values addObject:[NSNumber numberWithFloat:info.weight / NEURON_TH]];
@@ -65,7 +71,6 @@ void onDData(struct NeuronDendriteDebugNetwork_t info) {
             if (info.isFirst) {
                 [theTrackNameView.trackDataView addBarColumn:values];
                 values = [NSMutableArray new];
-                hasStartedOver = YES;
             }
         }
         }

@@ -72,7 +72,7 @@ void CoreTick() {
     ++debugCount;
   }
 
-  if (params->debugDendriteIdx != -1 && params->globalTime % 10 == 0) {
+  if (params->debugDendriteIdx != -1 && params->globalTime % 40 == 0) {
     for (int i = 0; i < params->ND; ++i) {
       //Skip non-connected
       int dIndex = params->debugDendriteIdx*params->ND + i;

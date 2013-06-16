@@ -135,7 +135,7 @@ void CoreTick(int idx, Params_t *params) {
 #pragma endregion
 
 #pragma region NeuronFire
-  if (v > 30.0f && inh <= 0) {
+  if (v > 30.0f) {
     //Reset V and U
     if (type & GLU) {
       v = NEURON_GLU_C;
@@ -145,32 +145,33 @@ void CoreTick(int idx, Params_t *params) {
       u += NEURON_GABA_D;
     }
 
-    //Pos Pot
-    if (!(type & GABA) && !(type & NO_LRN)) {
-      for (int i = 0; i < ND; ++i) {
-        if (dConnection[i] < 0)
-          break;
+    if (inh <= 0) {
+      //Pos Pot
+      if (!(type & GABA) && !(type & NO_LRN)) {
+        for (int i = 0; i < ND; ++i) {
+          if (dConnection[i] < 0)
+            break;
 
-        //Skip signal
-        if (i == 0 && (type & GLU_SIGNAL))
-          continue;
+          //Skip signal
+          if (i == 0 && (type & GLU_SIGNAL))
+            continue;
 
-        int deltaTime = globalTime - dLastSpikeTime[i];
+          int deltaTime = globalTime - dLastSpikeTime[i];
 
-        float delta = 0.0f;
-        if (deltaTime > 0) {
-          if (deltaTime < NEURON_T0)
-            delta = 0.05*exp(-deltaTime / NEURON_T0);
+          float delta = 0.0f;
+          if (deltaTime > 0) {
+            if (deltaTime < NEURON_T0)
+              delta = 0.05*exp(-deltaTime / NEURON_T0);
+          }
+
+          dWeight[i] += delta;
+
+          if (dWeight[i] > NEURON_TH)
+            dWeight[i] = NEURON_TH;
         }
-
-        dWeight[i] += delta;
-
-        if (dWeight[i] > NEURON_TH)
-          dWeight[i] = NEURON_TH;
       }
+      lastSpikeTime = globalTime;
     }
-
-    lastSpikeTime = globalTime;
   }
 #pragma endregion
 
@@ -220,7 +221,7 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
       //sigma += 0.00001f;
       sigma += 0.0001f;
       float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
-      dWeight[i] = dwdt*0.01 + dWeight[i];
+      dWeight[i] = dwdt*0.02 + dWeight[i];
     }
   }
 }
