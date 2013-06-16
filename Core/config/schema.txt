@@ -1,4 +1,4 @@
 Name: Prodigy
-NumberOfNeurons: 46
-NumberOfDendrites: 11
+NumberOfNeurons: 36
+NumberOfDendrites: 21
 BasePort: 3000
