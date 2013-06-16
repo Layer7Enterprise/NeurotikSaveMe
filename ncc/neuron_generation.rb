@@ -5,7 +5,7 @@ NEURON_TYPES = {
   :glu => 1,
   :gaba => 2,
   :no_learn => 8,
-  :signal => 16
+  :glu_signal => 17 #GLU & Signal
 }
 
 class Neuron
@@ -83,34 +83,39 @@ end
     #:inh - How long this neuron inhibits for (Max 64)
     #:ib - What modulus does this neuron pulse out
     #:debug - Should this show up in studio?
-def neuron name, type, count, params=nil
-  begin_frame 0 do 
-    new_neuron = Neuron.new name, type, count
-    unless params.nil?
-      ib = params[:ib]
-      inhTime = params[:inh]
-      isDebug = params[:debug]
+def neuron name, type, params=nil
+  count = 1
+  count = params[:count] if !params.nil? and !params[:count].nil?
+  new_neuron = Neuron.new name, type, count
+  unless params.nil?
+    ib = params[:ib]
+    inhTime = params[:inh]
+    isDebug = params[:debug]
 
-      new_neuron.set_intrinsic_burst ib unless ib.nil?
-      new_neuron.set_inhibitory_time inhTime unless inhTime.nil?
-      new_neuron.enable_debug unless isDebug.nil? or isDebug == false
-    end
-
-    write new_neuron.to_code
+    new_neuron.set_intrinsic_burst ib unless ib.nil?
+    new_neuron.set_inhibitory_time inhTime unless inhTime.nil?
+    new_neuron.enable_debug unless isDebug.nil? or isDebug == false
   end
+
+  write new_neuron.to_code
 end
 
-def glu name, count=1, params=nil
-  neuron name, :glu, count, params
+def glu name, params=nil
+  neuron name, :glu, params
 end
 
-def gaba name, ib, count=1, params=nil
+def glu_signal name, params=nil
+  neuron name, :glu_signal, params
+end
+
+
+def gaba name, ib, params=nil
   params = {} if params.nil?
   params[:ib] = ib
 
-  neuron name, :gaba, count, params
+  neuron name, :gaba, params
 end
 
-def no_learn name, count=1, params=nil
-  neuron name, :no_learn, count, params
+def no_learn name, params=nil
+  neuron name, :no_learn, params
 end

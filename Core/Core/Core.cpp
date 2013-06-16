@@ -168,6 +168,56 @@ void CoreTick(int idx, Params_t *params) {
 #pragma endregion
 
 #pragma region Normalize
+//Neuron fired more than than T0/2 ago and hasen't since
+if (globalTime == lastSpikeTime && (type & GLU)) {
+   float sigma = 0;
+   float count = 0;
+  
+  for (int i = 0; i < ND; ++i) {
+    if (dConnection[i] < 0)
+      break;
+
+    //SKIP
+     if (i == 0 && (type & GLU_SIGNAL))
+       continue;
+
+     if (type & NO_LRN)
+       continue;
+
+     if (params->nType[dConnection[i]] & GABA)
+       continue;
+
+    //Are we (not) in this hit region?
+    if (lastSpikeTime > dLastSpikeTime[i] && lastSpikeTime - dLastSpikeTime[i] < NEURON_T0/2) {
+      sigma += dWeight[i];
+      ++count;
+    }
+  }
+
+  //Round 2, normalize all that fired
+  for (int i = 0; i < ND; ++i) {
+    if (dConnection[i] < 0)
+      break;
+
+    if (i == 0 && (type & GLU_SIGNAL))
+       continue;
+
+    if (type & NO_LRN)
+      continue;
+
+    if (params->nType[dConnection[i]] & GABA)
+       continue;
+
+    //All that fired (Look at the previous when we set -1000 to show that they didn't fire)
+    if (lastSpikeTime > dLastSpikeTime[i] && (lastSpikeTime - dLastSpikeTime[i] < NEURON_T0/2)) {
+      //sigma += 0.00001f;
+      sigma += 0.0001f;
+      float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
+      dWeight[i] = dwdt*0.05 + dWeight[i];
+    }
+  }
+}
+
 #pragma endregion
 
 #pragma region Updates

@@ -1,27 +1,54 @@
+NetworkIn
 
-Neuron neuronA[0]
+Neuron input[0]
 Type 1
 InhTime 0
 IB 0
-End End
-
-
-
-Neuron neuronB[0]
+Debug End
+Neuron input[1]
 Type 1
 InhTime 0
 IB 0
-End End
+Debug End
 
 
+
+Neuron signal[0]
+Type 1
+InhTime 0
+IB 0
+Debug End
+
+
+EndNetworkIn
 NetworkOut
 EndNetworkOut
-NetworkIn
-EndNetworkIn
+
+Neuron output[0]
+Type 17
+InhTime 0
+IB 0
+Debug End
+
+
 Connection
-From neuronA[0]
-To neuronB[0]
+From signal[0]
+To output[0]
 Weight 24.0
+Delay 10
+End End
+
+Connection
+From input[0]
+To output[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To output[0]
+Weight 0
 Delay 1
 End End
 

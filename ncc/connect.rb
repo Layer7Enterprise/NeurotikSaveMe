@@ -56,7 +56,7 @@ end
 def one_to_one from, to, params=nil
   if from.count != to.count
     puts "#{from.count} != #{to.count} for one_to_one"
-    exit -1
+    exit
   end
 
   weight = DEFAULT_WEIGHT
@@ -70,6 +70,66 @@ def one_to_one from, to, params=nil
   connections = []
   from.count.times do |index|
     connection = Connection.new from[index], to[index]
+    connection.set_weight(weight)
+    connection.set_delay(delay)
+    connections << connection
+  end
+
+  return connections
+end
+
+def one_to_many from, to, params=nil
+  if from.count != 1
+    puts "#{from.count} != 1 for one_to_many"
+    exit
+  end
+
+  if to.count <= 1
+    puts "#{to.count} <= 1 for one_to_many"
+    exit
+  end
+
+  weight = DEFAULT_WEIGHT
+  delay = DEFAULT_DELAY
+
+  unless params.nil?
+    weight = params[:weight] unless params[:weight].nil?
+    delay = params[:delay] unless params[:delay].nil?
+  end
+
+  connections = []
+  to.count.times do |index|
+    connection = Connection.new from[0], to[index]
+    connection.set_weight(weight)
+    connection.set_delay(delay)
+    connections << connection
+  end
+
+  return connections
+end
+
+def many_to_one from, to, params=nil
+  if from.count <= 1
+    puts "#{from.count} <= 1 for many_to_one"
+    exit
+  end
+
+  if to.count != 1
+    puts "#{to.count} != 1 for many_to_one"
+    exit
+  end
+
+  weight = DEFAULT_WEIGHT
+  delay = DEFAULT_DELAY
+
+  unless params.nil?
+    weight = params[:weight] unless params[:weight].nil?
+    delay = params[:delay] unless params[:delay].nil?
+  end
+
+  connections = []
+  from.count.times do |index|
+    connection = Connection.new from[index], to[0]
     connection.set_weight(weight)
     connection.set_delay(delay)
     connections << connection

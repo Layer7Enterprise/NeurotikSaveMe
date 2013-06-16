@@ -149,7 +149,6 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
         fscanf(f, "%s %f", trash, &weight);
         fscanf(f, "%s %d", trash, &delay);
         fscanf(f, "%s %s", trash, trash2);
-        printf("%s %s", trash, trash2);
 
         static int fromNode;
         static int toNode;

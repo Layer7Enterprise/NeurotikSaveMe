@@ -30,7 +30,7 @@ end
 def input
   begin_frame 0 do 
     write "NetworkIn"
-    yield
+      yield
     write "EndNetworkIn"
   end
 end
@@ -38,8 +38,14 @@ end
 def output
   begin_frame 0 do
     write "NetworkOut"
-    yield
+      yield
     write "EndNetworkOut"
+  end
+end
+
+def main
+  begin_frame 0 do
+    yield
   end
 end
 
@@ -49,6 +55,7 @@ else
   load 'main.rb'
 end
 
+puts @to_compile
 compile
 
 File.open "schema.txt", "w" do |file|
@@ -57,7 +64,6 @@ File.open "schema.txt", "w" do |file|
   file.write "NumberOfDendrites: #{Connection.count_max_dendrites}\n"
   file.write "BasePort: 3000\n"
 end
-puts @to_compile
 
 File.open "net.txt", "w" do |file|
   for x in @to_compile
