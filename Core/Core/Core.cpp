@@ -172,14 +172,21 @@ void CoreTick(int idx, Params_t *params) {
 if (globalTime == lastSpikeTime && (type & GLU)) {
    float sigma = 0;
    float count = 0;
+
+   int hadSignal = 0;
   
   for (int i = 0; i < ND; ++i) {
     if (dConnection[i] < 0)
       break;
 
-    //SKIP
-     if (i == 0 && (type & GLU_SIGNAL))
+     //SKIP?
+     if (i == 0 && (type & GLU_SIGNAL)) {
+       //Check if signal fired
+       if (lastSpikeTime > dLastSpikeTime[i] && lastSpikeTime - dLastSpikeTime[i] < NEURON_T0/2) {
+         hadSignal = 1;
+       }
        continue;
+     }
 
      if (type & NO_LRN)
        continue;
@@ -196,6 +203,9 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
 
   //Round 2, normalize all that fired
   for (int i = 0; i < ND; ++i) {
+    if (!hadSignal)
+      break;
+
     if (dConnection[i] < 0)
       break;
 
