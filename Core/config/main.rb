@@ -8,17 +8,17 @@ output do
 end
 
 main do
-  no_learn "layer0", :count => 200
-  no_learn "layer1", :count => 200
-  gaba "layer1i", 2, :count => 200
-  glu "layer2", :count => 200
+  no_learn "layer0", :count => 100
+  no_learn "layer1", :count => 100
+  gaba "layer1i", 2, :count => 100
+  glu "layer2", :count => 20
 end
 
 #nArbitrary connections
 #connect "input", "layer0", :some_to_many, :count => 2, :weight => 12
 
 #Establish output
-connect "signal", "output", :linear, :delay => 11
+connect "signal", "output", :linear, :delay => 13
 
 connect "input", "layer0", :some_to_many, :count => 3, :weight => 12
 connect "input", "layer0", :some_to_many, :count => 3, :weight => 12
