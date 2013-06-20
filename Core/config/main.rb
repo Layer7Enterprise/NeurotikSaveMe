@@ -8,14 +8,21 @@ output do
 end
 
 main do
-  no_learn "layer0", :count => 20
+  no_learn "inv", :count => 2, :debug => true
+  gaba "invG", 5, :count => 2, :debug => true
   #no_learn "layer1", :count => 100
   #gaba "layer1i", 2, :count => 100
   #glu "layer2", :count => 100
 end
 
-connect "signal", "output", :linear, :delay => 5
-connect "input", "output", :many_to_many, :weight => 0
+offset = 3
+connect "signal", "output", :linear, :delay => 5 + offset
+connect "input", "output", :many_to_many, :weight => 0, :delay => 3 + offset
+
+connect "input", "inv", :many_to_many, :delay => 4
+connect "invG", "inv", :linear
+connect "input", "invG", :linear
+connect "inv", "output", :many_to_many, :weight => 0
 #connect "layer0", "output", :many_to_many, :weight => 0
 
 ##nArbitrary connections

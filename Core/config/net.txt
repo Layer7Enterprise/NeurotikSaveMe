@@ -52,166 +52,187 @@ Debug End
 
 EndNetworkOut
 
-Neuron layer0[0]
+Neuron inv[0]
 Type 9
 InhTime 0
 IB 0
-End End
-Neuron layer0[1]
+Debug End
+Neuron inv[1]
 Type 9
 InhTime 0
 IB 0
-End End
-Neuron layer0[2]
-Type 9
-InhTime 0
+Debug End
+
+
+
+Neuron invG[0]
+Type 2
+InhTime 5
 IB 0
-End End
-Neuron layer0[3]
-Type 9
-InhTime 0
+Debug End
+Neuron invG[1]
+Type 2
+InhTime 5
 IB 0
-End End
-Neuron layer0[4]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[5]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[6]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[7]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[8]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[9]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[10]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[11]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[12]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[13]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[14]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[15]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[16]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[17]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[18]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron layer0[19]
-Type 9
-InhTime 0
-IB 0
+Debug End
+
+
+Connection
+From input[0]
+To output[0]
+Weight 0
+Delay 6
 End End
 
+Connection
+From input[0]
+To output[1]
+Weight 0
+Delay 6
+End End
+
+Connection
+From input[0]
+To output[2]
+Weight 0
+Delay 6
+End End
+
+Connection
+From input[1]
+To output[0]
+Weight 0
+Delay 6
+End End
+
+Connection
+From input[1]
+To output[1]
+Weight 0
+Delay 6
+End End
+
+Connection
+From input[1]
+To output[2]
+Weight 0
+Delay 6
+End End
 
 Connection
 From signal[0]
 To output[0]
 Weight 24.0
-Delay 5
+Delay 8
 End End
 
 Connection
 From signal[1]
 To output[1]
 Weight 24.0
-Delay 5
+Delay 8
 End End
 
 Connection
 From signal[2]
 To output[2]
 Weight 24.0
-Delay 5
+Delay 8
 End End
 
 Connection
 From input[0]
+To inv[0]
+Weight 24.0
+Delay 4
+End End
+
+Connection
+From input[0]
+To inv[1]
+Weight 24.0
+Delay 4
+End End
+
+Connection
+From input[1]
+To inv[0]
+Weight 24.0
+Delay 4
+End End
+
+Connection
+From input[1]
+To inv[1]
+Weight 24.0
+Delay 4
+End End
+
+Connection
+From invG[0]
+To inv[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From invG[1]
+To inv[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[0]
+To invG[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[1]
+To invG[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From inv[0]
 To output[0]
 Weight 0
 Delay 1
 End End
 
 Connection
-From input[0]
+From inv[0]
 To output[1]
 Weight 0
 Delay 1
 End End
 
 Connection
-From input[0]
+From inv[0]
 To output[2]
 Weight 0
 Delay 1
 End End
 
 Connection
-From input[1]
+From inv[1]
 To output[0]
 Weight 0
 Delay 1
 End End
 
 Connection
-From input[1]
+From inv[1]
 To output[1]
 Weight 0
 Delay 1
 End End
 
 Connection
-From input[1]
+From inv[1]
 To output[2]
 Weight 0
 Delay 1

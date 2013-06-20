@@ -78,7 +78,7 @@ void CoreTick(int idx, Params_t *params) {
           //Avoid depot the signal leading neuron
 
           //Don't potentiate dendrites if this is a gaba or no_lrn neuron
-          int isFirstSignal = type & GLU_SIGNAL && i == 0;
+          int isFirstSignal = (type & GLU_SIGNAL) && i == 0;
           if (!(type & GABA) && !(type & NO_LRN) && !isFirstSignal) {
             int deltaTime = globalTime - lastSpikeTime; //Previous Neuron's spike
             float delta = 0.05*exp(-deltaTime / NEURON_T0);
