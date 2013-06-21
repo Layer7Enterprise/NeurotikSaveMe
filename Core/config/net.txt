@@ -81,63 +81,63 @@ Connection
 From input[0]
 To output[0]
 Weight 0
-Delay 6
+Delay 3
 End End
 
 Connection
 From input[0]
 To output[1]
 Weight 0
-Delay 6
+Delay 3
 End End
 
 Connection
 From input[0]
 To output[2]
 Weight 0
-Delay 6
+Delay 3
 End End
 
 Connection
 From input[1]
 To output[0]
 Weight 0
-Delay 6
+Delay 3
 End End
 
 Connection
 From input[1]
 To output[1]
 Weight 0
-Delay 6
+Delay 3
 End End
 
 Connection
 From input[1]
 To output[2]
 Weight 0
-Delay 6
+Delay 3
 End End
 
 Connection
 From signal[0]
 To output[0]
 Weight 24.0
-Delay 8
+Delay 5
 End End
 
 Connection
 From signal[1]
 To output[1]
 Weight 24.0
-Delay 8
+Delay 5
 End End
 
 Connection
 From signal[2]
 To output[2]
 Weight 24.0
-Delay 8
+Delay 5
 End End
 
 Connection
