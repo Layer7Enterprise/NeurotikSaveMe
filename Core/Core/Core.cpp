@@ -78,8 +78,8 @@ void CoreTick(int idx, Params_t *params) {
           //Avoid depot the signal leading neuron
 
           //Don't potentiate dendrites if this is a gaba or no_lrn neuron
-          int isFirstSignal = type & GLU_SIGNAL && i == 0;
-          if (!(type & GABA) && !(type & NO_LRN) && !isFirstSignal) {
+          int isSignal = params->nType[dConnection[i]] & GLU_SIGNAL;
+          if (!(type & GABA) && !(type & NO_LRN) && !isSignal) {
             int deltaTime = globalTime - lastSpikeTime; //Previous Neuron's spike
             float delta = 0.05*exp(-deltaTime / NEURON_T0);
 
@@ -153,7 +153,8 @@ void CoreTick(int idx, Params_t *params) {
             break;
 
           //Skip signal
-          if (i == 0 && (type & GLU_SIGNAL))
+          int isSignal = params->nType[dConnection[i]] & GLU_SIGNAL;
+          if (isSignal)
             continue;
 
           int deltaTime = globalTime - dLastSpikeTime[i];
@@ -185,8 +186,8 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
     if (dConnection[i] < 0)
       break;
 
-     //SKIP?
-     if (i == 0 && (type & GLU_SIGNAL))
+     int isSignal = params->nType[dConnection[i]] & GLU_SIGNAL;
+     if (isSignal)
        continue;
 
      if (type & NO_LRN)
@@ -207,8 +208,9 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
     if (dConnection[i] < 0)
       break;
 
-    if (i == 0 && (type & GLU_SIGNAL))
-       continue;
+    int isSignal = params->nType[dConnection[i]] & GLU_SIGNAL;
+    if (isSignal)
+      continue;
 
     if (type & NO_LRN)
       continue;
