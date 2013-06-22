@@ -233,6 +233,6 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
 #pragma region Updates
   //Update params
   --inh;
-  I = 0;
+  I *= 0.5;
 #pragma endregion
 }
