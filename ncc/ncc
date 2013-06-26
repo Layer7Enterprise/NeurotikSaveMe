@@ -8,18 +8,28 @@ require '/usr/bin/connect.rb'
 ]
 
 #Add raw text
-def add_compile_string priority, string
-  @to_compile << {:priority => priority, :type => :string, :string => string}
+def add_compile_string priority, sub_priority, string
+  @to_compile << {:priority => priority, :sub_priority => sub_priority, :type => :string, :string => string}
 end
 
 #Add code
-def add_compile_block priority, proc
-  @to_compile << {:priority => priority, :type => :code, :proc => proc}
+def add_compile_block priority, sub_priority, proc
+  @to_compile << {:priority => priority, :sub_priority => sub_priority, :type => :code, :proc => proc}
 end
 
 def compile
   #Sort
-  @to_compile = @to_compile.sort {|x, y| x[:priority] <=> y[:priority]}
+  @to_compile = @to_compile.sort do |x, y|
+    if x[:priority] == y[:priority]
+      x[:sub_priority] <=> y[:sub_priority]
+    else
+      x[:priority] <=> y[:priority]
+    end
+  end
+
+  #Sort connections in the correct order
+
+  #Compile all the code
   @to_compile.each do |x|
     if x[:type] == :code
       x[:proc].call
@@ -28,7 +38,7 @@ def compile
 end
 
 def input
-  begin_frame 0 do 
+  begin_frame 0, 0 do 
     write "NetworkIn"
       yield
     write "EndNetworkIn"
@@ -36,7 +46,7 @@ def input
 end
 
 def output
-  begin_frame 0 do
+  begin_frame 0, 0 do
     write "NetworkOut"
       yield
     write "EndNetworkOut"
@@ -44,7 +54,7 @@ def output
 end
 
 def main
-  begin_frame 0 do
+  begin_frame 0, 0 do
     yield
   end
 end

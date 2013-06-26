@@ -10,6 +10,7 @@ Type 1
 InhTime 0
 IB 0
 End End
+<<<<<<< HEAD
 Neuron input[2]
 Type 1
 InhTime 0
@@ -20602,61 +20603,161 @@ End End
 
 Connection
 From layer2[192]
+=======
+
+
+
+Neuron signal[0]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron signal[1]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron signal[2]
+Type 1
+InhTime 0
+IB 0
+Debug End
+
+
+EndNetworkIn
+NetworkOut
+
+Neuron output[0]
+Type 17
+InhTime 0
+IB 0
+Debug End
+Neuron output[1]
+Type 17
+InhTime 0
+IB 0
+Debug End
+Neuron output[2]
+Type 17
+InhTime 0
+IB 0
+Debug End
+
+
+EndNetworkOut
+
+Neuron inv[0]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron inv[1]
+Type 9
+InhTime 0
+IB 0
+Debug End
+
+
+
+Neuron invG[0]
+Type 2
+InhTime 5
+IB 0
+Debug End
+Neuron invG[1]
+Type 2
+InhTime 5
+IB 0
+Debug End
+
+
+Connection
+From input[0]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[0]
 Weight 0
-Delay 1
+Delay 3
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[192]
+=======
+From input[0]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[1]
 Weight 0
-Delay 1
+Delay 3
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[192]
+=======
+From input[0]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[2]
 Weight 0
-Delay 1
+Delay 3
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[193]
+=======
+From input[1]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[0]
 Weight 0
-Delay 1
+Delay 3
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[193]
+=======
+From input[1]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[1]
 Weight 0
-Delay 1
+Delay 3
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[193]
+=======
+From input[1]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[2]
 Weight 0
-Delay 1
+Delay 3
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[194]
+=======
+From signal[0]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[0]
-Weight 0
-Delay 1
+Weight 24.0
+Delay 5
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[194]
+=======
+From signal[1]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[1]
-Weight 0
-Delay 1
+Weight 24.0
+Delay 5
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[194]
 To output[2]
 Weight 0
@@ -20702,67 +20803,149 @@ Connection
 From layer2[196]
 To output[2]
 Weight 0
+=======
+From signal[2]
+To output[2]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From input[0]
+To inv[0]
+Weight 24.0
+Delay 4
+End End
+
+Connection
+From input[0]
+To inv[1]
+Weight 24.0
+Delay 4
+End End
+
+Connection
+From input[1]
+To inv[0]
+Weight 24.0
+Delay 4
+End End
+
+Connection
+From input[1]
+To inv[1]
+Weight 24.0
+Delay 4
+End End
+
+Connection
+From invG[0]
+To inv[0]
+Weight 24.0
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 Delay 1
 End End
 
 Connection
+<<<<<<< HEAD
 From layer2[197]
+To output[0]
+Weight 0
+=======
+From invG[1]
+To inv[1]
+Weight 24.0
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
+Delay 1
+End End
+
+Connection
+<<<<<<< HEAD
+From layer2[197]
+To output[1]
+Weight 0
+=======
+From input[0]
+To invG[0]
+Weight 24.0
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
+Delay 1
+End End
+
+Connection
+<<<<<<< HEAD
+From layer2[197]
+To output[2]
+Weight 0
+=======
+From input[1]
+To invG[1]
+Weight 24.0
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
+Delay 1
+End End
+
+Connection
+<<<<<<< HEAD
+From layer2[198]
+=======
+From inv[0]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[0]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer2[197]
+<<<<<<< HEAD
+From layer2[198]
+=======
+From inv[0]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[1]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer2[197]
+<<<<<<< HEAD
+From layer2[198]
+=======
+From inv[0]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[2]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer2[198]
+<<<<<<< HEAD
+From layer2[199]
+=======
+From inv[1]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[0]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer2[198]
+<<<<<<< HEAD
+From layer2[199]
+=======
+From inv[1]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[1]
 Weight 0
 Delay 1
 End End
 
 Connection
-From layer2[198]
-To output[2]
-Weight 0
-Delay 1
-End End
-
-Connection
+<<<<<<< HEAD
 From layer2[199]
-To output[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer2[199]
-To output[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From layer2[199]
+=======
+From inv[1]
+>>>>>>> 7ec8f440f079301b714dd3e77322b85a351735bc
 To output[2]
 Weight 0
 Delay 1

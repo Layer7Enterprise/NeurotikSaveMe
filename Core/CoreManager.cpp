@@ -90,7 +90,6 @@ void CoreTick() {
 
       //Is this the first neuron in the set?
       debugOutput.isFirst = (i == 0);
-
       NetDendriteDebugSend(&debugOutput, sizeof(NeuronDendriteDebugNetwork_t));
     }
   }

@@ -2,7 +2,12 @@ DEFAULT_WEIGHT = 24.0
 DEFAULT_DELAY = 1
 
 class Connection
+  attr_accessor :index
+
+  #Per dendrite, not global max
   @@dendrite_count = {}
+
+  @@global_count = 0
 
   #Get the most number of dendrites ever used
   def self.count_max_dendrites
@@ -14,6 +19,8 @@ class Connection
     @to = to
     @delay = 1
     @weight = 0
+    @index = @@global_count
+    @@global_count += 1
 
     if @@dendrite_count[to] != nil
       @@dendrite_count[to] += 1
@@ -41,16 +48,18 @@ class Connection
 end
 
 def connect from, to, method, params=nil
-  begin_frame 1 do
+  begin_frame 1, 1 do
     from_set = Neuron.name_to_neuron(from).name_array
     to_set = Neuron.name_to_neuron(to).name_array
 
     connection_array = send method, from_set, to_set, params
 
-    connection_array.each do |connection|
-      write connection.to_code
+      connection_array.each do |connection|
+        begin_frame 1, connection.index do
+          write connection.to_code
+        end
+      end
     end
-  end
 end
 
 def one_to_one from, to, params=nil
