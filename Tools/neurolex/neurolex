@@ -43,6 +43,10 @@ def help
     puts "\tw2vi file out_port"
   puts "Convert incomming vectors to stdout"
     puts "\tv2wi file in_port"
+  puts "Generate a basic training file for word pairing"
+    puts "\ttrain_pair file pair_file"
+    puts "\t(hint) use > operator to save a basic training file"
+    puts "\tPair file is \n seperated pair of words e.g. 'a b\\nc d'"
   exit
 end
 
@@ -152,6 +156,29 @@ def v2wi
   end
 end
 
+def train_pair
+  lex_file = ARGV[1]
+  pair_file = ARGV[2]
+
+  lexicon, inverted_lexicon = file_to_lexicons lex_file
+
+  File.open pair_file, "r" do |file|
+    while !file.eof?
+      wordA, wordB = file.readline.split " "
+      vectorA = inverted_lexicon[wordA]
+      vectorB = inverted_lexicon[wordB]
+      if vectorA.nil?
+        puts "Word A did not exist! #{wordA}"
+        return
+      end
+      if vectorB.nil?
+        puts "Word B did not exist! #{wordB}"
+        return
+      end
+      puts "#{vectorA} #{vectorB}"
+    end
+  end
+end
 
 if ARGV[0] == "help"
   help
@@ -163,6 +190,8 @@ elsif ARGV[0] == "w2vi"
   w2vi
 elsif ARGV[0] == "v2wi"
   v2wi
+elsif ARGV[0] == "train_pair"
+  train_pair
 else
   help
 end
