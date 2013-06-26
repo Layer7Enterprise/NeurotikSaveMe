@@ -44,9 +44,9 @@ def help
   puts "Convert incomming vectors to stdout"
     puts "\tv2wi file in_port"
   puts "Generate a basic training file for word pairing"
-    puts "\ttrain_pair file pair_file"
+    puts "\tgen_train_pair file pair_file"
     puts "\t(hint) use > operator to save a basic training file"
-    puts "\tPair file is \n seperated pair of words e.g. 'a b\\nc d'"
+    puts "\tPair file is seperated pair of words e.g. 'a b\\nc d'"
   exit
 end
 
@@ -134,6 +134,8 @@ def w2vi
       full_vector = join_vectors vector, full_vector
     end
 
+    full_vector = full_vector + "0"*full_vector.length
+
     socket.send full_vector, 0, "127.0.0.1", out_port
     puts full_vector
   end
@@ -151,12 +153,18 @@ def v2wi
 
   loop do
     vector, info = socket.recvfrom 1024
-    word = lexicon[vector]
-    puts "=> #{word}"
+    vector.split("").each_with_index do |letter, index|
+      new_vector = "0"*vector.length
+      if (letter == "1")
+        new_vector[index] = "1"
+        word = lexicon[new_vector]
+        puts "=> #{word}"
+      end
+    end
   end
 end
 
-def train_pair
+def gen_train_pair
   lex_file = ARGV[1]
   pair_file = ARGV[2]
 
@@ -164,18 +172,29 @@ def train_pair
 
   File.open pair_file, "r" do |file|
     while !file.eof?
-      wordA, wordB = file.readline.split " "
-      vectorA = inverted_lexicon[wordA]
-      vectorB = inverted_lexicon[wordB]
-      if vectorA.nil?
-        puts "Word A did not exist! #{wordA}"
-        return
+      words = file.readline.split " "
+      is_currently_output = false
+      input_vector = nil
+      output_vector = nil
+      words.each do |word|
+        if word == "|"
+          is_currently_output = true
+          next
+        end
+
+        if inverted_lexicon[word].nil?
+          puts "Word not found #{word}"
+          return
+        end
+
+        if !is_currently_output
+          input_vector = join_vectors inverted_lexicon[word], input_vector
+        else
+          output_vector = join_vectors inverted_lexicon[word], output_vector
+        end
       end
-      if vectorB.nil?
-        puts "Word B did not exist! #{wordB}"
-        return
-      end
-      puts "#{vectorA} #{vectorB}"
+
+      puts "#{input_vector} #{output_vector}"
     end
   end
 end
@@ -190,8 +209,8 @@ elsif ARGV[0] == "w2vi"
   w2vi
 elsif ARGV[0] == "v2wi"
   v2wi
-elsif ARGV[0] == "train_pair"
-  train_pair
+elsif ARGV[0] == "gen_train_pair"
+  gen_train_pair
 else
   help
 end
