@@ -38,7 +38,11 @@ def help
     puts "\tgen wordA wordB wordC wordD"
     puts "\t(hint) use > operator to save to a lexicon file"
   puts "Convert a word to vector [w2v]"
-    puts "\tw2v word (Accepts STDIN lexicon)"
+    puts "\tw2v file word"
+  puts "Convert a word to vector [w2vd] interactively"
+    puts "\tw2vi file out_port"
+  puts "Convert incomming vectors to stdout"
+    puts "\tv2wi file in_port"
   exit
 end
 
@@ -57,16 +61,97 @@ def gen
   end
 end
 
-def w2v
-  #word = ARGV[1]
+def file_to_lexicons file_name
+  lexicon = {}
+  reverse_lexicon = {}
 
-  require 'pry'; binding.pry
-  #ARGF.each do |line|
-    #binding.pry
-    #word, lexicon = line.split(" ")
-    #puts vector
-  #end
+  File.open file_name, "r" do |file|
+    while !file.eof?
+      word, vector = file.readline.split(" ")
+      lexicon[vector] = word
+      reverse_lexicon[word] = vector
+    end
+  end
+
+  return [lexicon, reverse_lexicon]
 end
+
+def w2v
+  file_name = ARGV[1]
+  word = ARGV[2]
+
+  File.open file_name, "r" do |file|
+    while !file.eof?
+      vector_word, vector = file.readline.split(" ")
+      if word == vector_word
+        puts vector
+        return
+      end
+    end
+  end
+end
+
+def join_vectors vectorA, vectorB=nil
+  new_vector = "0" * vectorA.length
+
+  vectorA.length.times do |i|
+    if vectorB.nil?
+      return vectorA
+    elsif
+      if vectorA[i] == "1" or vectorB[i] == "1"
+        new_vector[i] = "1"
+      end
+    end
+  end
+
+  return new_vector
+end
+
+#Interactive mode
+def w2vi
+  file_name = ARGV[1]
+  out_port = ARGV[2]
+
+  lexicon, reverse_lexicon = file_to_lexicons file_name
+
+  socket = UDPSocket.new
+
+  loop do
+    full_vector = nil
+
+    words = $stdin.gets.strip.split(" ")
+    words.each do |word|
+      vector = reverse_lexicon[word]
+      if vector.nil?
+        puts "Not found..."
+        next
+      end
+
+      full_vector = join_vectors vector, full_vector
+    end
+
+    socket.send full_vector, 0, "127.0.0.1", out_port
+    puts full_vector
+  end
+end
+
+def v2wi
+  file_name = ARGV[1]
+  in_port = ARGV[2]
+
+  lexicon, reverse_lexicon = file_to_lexicons file_name
+
+  socket = UDPSocket.new
+  socket.bind "0.0.0.0", in_port.to_i
+  puts "Listening on port #{in_port.to_i}"
+
+  loop do
+    vector, info = socket.recvfrom 1024
+    word = lexicon[vector]
+    puts "=> #{word}"
+  end
+end
+
 
 if ARGV[0] == "help"
   help
@@ -74,6 +159,10 @@ elsif ARGV[0] == "gen"
   gen
 elsif ARGV[0] == "w2v"
   w2v
+elsif ARGV[0] == "w2vi"
+  w2vi
+elsif ARGV[0] == "v2wi"
+  v2wi
 else
   help
 end
