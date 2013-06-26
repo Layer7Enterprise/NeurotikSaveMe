@@ -2,15 +2,83 @@
 
 require 'socket'
 
+#10010 => wordA wordC
+def vectorToWords vector
+  words = []
+
+  vector.split("").each_with_index do |x, i|
+    if vector[i] == "1"
+      words << @lexicon[i]
+    end
+  end
+
+  words = words.join(" ")
+  return words
+end
+
+#wordA wordC => "10010"
+def words_to_vector words, inverted_lexicon
+  vector = "0"*inverted_lexicon.keys.count
+
+  words.split(" ").each_with_index do |x, i|
+    vector[inverted_lexicon[x]] = "1"
+  end
+
+  vector
+end
+
 file = ARGV[0]
 type = ARGV[1]
 portFrom = ARGV[2]
 portTo = ARGV[3]
 
-if ARGV.count != 4
-  puts "[file type(vector|words) portFrom portTo]"
+def help
+  puts "NeuroLex - Lexicon Swiss Knife"
+  puts "[gen]erate a lexicon list from a set of words"
+    puts "\tgen wordA wordB wordC wordD"
+    puts "\t(hint) use > operator to save to a lexicon file"
+  puts "Convert a word to vector [w2v]"
+    puts "\tw2v word (Accepts STDIN lexicon)"
   exit
 end
+
+#Generate lexicon compatible 'stream' from a list of words
+def gen
+  words = ARGV[1..-1]
+  inverted_lexicon= {}
+
+  words.each_with_index do |word, index|
+    inverted_lexicon[word] = index
+  end
+
+  words.each do |word|
+    vector = words_to_vector word, inverted_lexicon
+    puts "#{word} #{vector}"
+  end
+end
+
+def w2v
+  #word = ARGV[1]
+
+  require 'pry'; binding.pry
+  #ARGF.each do |line|
+    #binding.pry
+    #word, lexicon = line.split(" ")
+    #puts vector
+  #end
+end
+
+if ARGV[0] == "help"
+  help
+elsif ARGV[0] == "gen"
+  gen
+elsif ARGV[0] == "w2v"
+  w2v
+else
+  help
+end
+
+exit
 
 @vectorSize = 0
 @lexicon = {}
@@ -31,30 +99,6 @@ File.open(file, "r") do |file|
 end
 @invertedLexicon = @lexicon.invert
 
-#10010 => wordA wordC
-def vectorToWords vector
-  words = []
-
-  vector.split("").each_with_index do |x, i|
-    if vector[i] == "1"
-      words << @lexicon[i]
-    end
-  end
-
-  words = words.join(" ")
-  return words
-end
-
-#wordA wordC => "10010"
-def wordsToVector words
-  vector = "0"*@vectorSize
-
-  words.split(" ").each_with_index do |x, i|
-    vector[@invertedLexicon[x]] = "1"
-  end
-
-  vector
-end
 
 #Vector means you put in 1010 => "WordA Wordb"
 #Words means "WordA WordB" => 1010

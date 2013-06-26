@@ -1,10 +1,10 @@
 input do 
   glu "input", :count => 10
-  glu "signal", :debug => true, :count => 3
+  glu_signal "signal", :debug => true, :count => 3
 end 
 
 output do
-  glu_signal "output", :debug => true, :count => 3
+  glu "output", :debug => true, :count => 3
 end
 
 main do
