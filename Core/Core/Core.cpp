@@ -162,7 +162,7 @@ void CoreTick(int idx, Params_t *params) {
           float delta = 0.0f;
           if (deltaTime > 0) {
             if (deltaTime < NEURON_T0)
-              delta = 0.15*exp(-deltaTime / NEURON_T0);
+              delta = 0.05*exp(-deltaTime / NEURON_T0);
           }
 
           dWeight[i] += delta;
@@ -223,7 +223,7 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
       //sigma += 0.00001f;
       sigma += 0.0001f;
       float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
-      dWeight[i] = dwdt*0.01 + dWeight[i];
+      dWeight[i] = dwdt*0.05 + dWeight[i];
     }
   }
 }

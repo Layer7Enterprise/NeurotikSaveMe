@@ -1,10 +1,11 @@
+count = 18
 input do 
-  glu "input", :debug => true, :count => 11
-  glu "signal", :debug => true, :count => 11
+  glu "input", :debug => true, :count => count
+  glu_signal "signal", :debug => true, :count => count
 end 
 
 output do
-  glu_signal "output", :debug => true, :count => 11
+  glu "output", :debug => true, :count => count
 end
 
 main do

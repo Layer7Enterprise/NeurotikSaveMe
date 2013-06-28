@@ -20,7 +20,7 @@ end
 def words_to_vector words, inverted_lexicon
   vector = "0"*inverted_lexicon.keys.count
 
-  words.split(" ").each_with_index do |x, i|
+  words.split(" ").uniq.each_with_index do |x, i|
     vector[inverted_lexicon[x]] = "1"
   end
 
@@ -40,7 +40,7 @@ def help
   puts "Convert a word to vector [w2v]"
     puts "\tw2v file word"
   puts "Convert a word to vector [w2vd] interactively"
-    puts "\tw2vi file out_port"
+    puts "\tw2vi file out_port delay"
   puts "Convert incomming vectors to stdout"
     puts "\tv2wi file in_port"
   puts "Generate a basic training file for word pairing"
@@ -55,7 +55,7 @@ def gen
   words = ARGV[1..-1]
   inverted_lexicon= {}
 
-  words.each_with_index do |word, index|
+  words.uniq.each_with_index do |word, index|
     inverted_lexicon[word] = index
   end
 
@@ -115,14 +115,13 @@ end
 def w2vi
   file_name = ARGV[1]
   out_port = ARGV[2]
+  delay = ARGV[3]
 
   lexicon, reverse_lexicon = file_to_lexicons file_name
 
   socket = UDPSocket.new
 
   loop do
-    full_vector = nil
-
     words = $stdin.gets.strip.split(" ")
     words.each do |word|
       vector = reverse_lexicon[word]
@@ -131,13 +130,12 @@ def w2vi
         next
       end
 
-      full_vector = join_vectors vector, full_vector
+      blank_half = "0"*vector.length
+      vector = vector + blank_half
+
+      socket.send vector, 0, "127.0.0.1", out_port
+      sleep delay.to_f / 1000.0
     end
-
-    full_vector = full_vector + "0"*full_vector.length
-
-    socket.send full_vector, 0, "127.0.0.1", out_port
-    puts full_vector
   end
 end
 
@@ -158,9 +156,10 @@ def v2wi
       if (letter == "1")
         new_vector[index] = "1"
         word = lexicon[new_vector]
-        puts "=> #{word}"
+        print "#{word} "
       end
     end
+    puts ""
   end
 end
 
