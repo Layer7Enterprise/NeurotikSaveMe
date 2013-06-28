@@ -3,7 +3,8 @@
 require 'socket'
 
 if ARGV.count < 1
-  puts "[mode(basic) ....]"
+  puts "[mode(basic) ....] - Based on a simple pairing"
+  puts "[mode(timed) ....] - Based on the more complex timing"
   exit
 end
 
@@ -40,6 +41,8 @@ if mode == "basic"
 
     sleep delayBetweenExamples / 1000.0
   end
+elsif mode == "timed"
+
 else
   puts "Not a mode"
   exit

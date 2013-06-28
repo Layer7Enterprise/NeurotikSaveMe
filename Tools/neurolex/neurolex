@@ -188,12 +188,13 @@ def gen_train_pair
 
         if !is_currently_output
           input_vector = join_vectors inverted_lexicon[word], input_vector
+          puts "#{inverted_lexicon[word]} #{"0"*input_vector.length}"
         else
           output_vector = join_vectors inverted_lexicon[word], output_vector
         end
       end
-
-      puts "#{input_vector} #{output_vector}"
+      puts "#{"0"*output_vector.length} #{output_vector}"
+      puts "----"
     end
   end
 end
