@@ -13,6 +13,10 @@
     return self;
 }
 
+-(void)drawNumber: (NSNumber *)number {
+    self.number = number;
+}
+
 - (void)drawName: (NSString *)name atPosition: (CGPoint) pos {
     CGContextRef context = [[[self window] graphicsContext] graphicsPort];
     CGContextSetRGBFillColor(context, 0.3f, 0.3f, 0.3f, 1.0f);
@@ -33,6 +37,15 @@
         CGContextSetRGBFillColor(context, 0.0f, 0.0f, 0.0f, 1.0f);
         CGContextShowTextAtPoint(context, LABEL_HEIGHT, index*LABEL_HEIGHT + 4, [name UTF8String], [name length]);
         ++index;
+    }
+    
+    CGContextSetRGBFillColor(context, 0.3f, 0.3f, 0.3f, 1.0f);
+    CGContextSelectFont(context, "Monaco", 0.8f, kCGEncodingMacRoman);
+    CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetTextMatrix(context, CGAffineTransformMakeScale(13.0f, 13.0f));
+    
+    if (self.number) {
+    CGContextShowTextAtPoint(context, 0, 0, [[self.number stringValue] UTF8String], [[self.number stringValue] length]);
     }
 
 }

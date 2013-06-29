@@ -26,6 +26,7 @@ void CoreTick(int idx, Params_t *params) {
    float &v = *(params->nV + idx);
    float &u = *(params->nU + idx);
    float &I = *(params->nI + idx);
+   float &plasticity = *(params->nPlasticity + idx);
    int &lastSpikeTime = *(params->nLastSpikeTime + idx);
    int &inh = *(params->nInh + idx);
    int inhibitoryTime = *(params->nInhibitoryTime + idx);
@@ -83,8 +84,10 @@ void CoreTick(int idx, Params_t *params) {
             int deltaTime = globalTime - lastSpikeTime; //Previous Neuron's spike
             float delta = 0.05*exp(-deltaTime / NEURON_T0);
 
-            if (deltaTime < NEURON_T0)
+            if (deltaTime < NEURON_T0) {
+              delta *= plasticity;
               dWeight[i] -= delta;
+            }
 
             if (dWeight[i] < 0.0f)
               dWeight[i] = 0.0f;
@@ -165,6 +168,7 @@ void CoreTick(int idx, Params_t *params) {
               delta = 0.05*exp(-deltaTime / NEURON_T0);
           }
 
+          delta *= plasticity;
           dWeight[i] += delta;
 
           if (dWeight[i] > NEURON_TH)
@@ -223,6 +227,11 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
       //sigma += 0.00001f;
       sigma += 0.0001f;
       float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
+      dwdt = dwdt * plasticity;
+      plasticity = plasticity - plasticity*dwdt*0.005f;
+      if (plasticity < 0.0f)
+        plasticity = 0.0f;
+
       dWeight[i] = dwdt*0.05 + dWeight[i];
     }
   }
@@ -234,5 +243,5 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
   //Update params
   --inh;
   I *= 0.5;
-#pragma endregion
+  #pragma endregion
 }

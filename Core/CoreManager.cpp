@@ -64,6 +64,7 @@ void CoreTick() {
     debugOutput.idx = idx;
     debugOutput.type = params->nType[idx];
     debugOutput.lastSpikeTime = params->nLastSpikeTime[idx];
+    debugOutput.plasticity = params->nPlasticity[idx];
     debugOutput.inh = params->nInh[idx];
 
     //Dendrite potentiation

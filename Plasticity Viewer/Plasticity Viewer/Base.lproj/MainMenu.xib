@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4457.9" systemVersion="12D78" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4439" systemVersion="13A451" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4457.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4439"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -98,10 +97,10 @@
         </customObject>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
-                <menuItem title="DendriteStudio" id="56">
-                    <menu key="submenu" title="DendriteStudio" systemMenu="apple" id="57">
+                <menuItem title="Plasticity Viewer" id="56">
+                    <menu key="submenu" title="Plasticity Viewer" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About DendriteStudio" id="58">
+                            <menuItem title="About Plasticity Viewer" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="236">
@@ -117,7 +116,7 @@
                             <menuItem isSeparatorItem="YES" id="144">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Hide DendriteStudio" keyEquivalent="h" id="134"/>
+                            <menuItem title="Hide Plasticity Viewer" keyEquivalent="h" id="134"/>
                             <menuItem title="Hide Others" keyEquivalent="h" id="145">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                             </menuItem>
@@ -125,7 +124,7 @@
                             <menuItem isSeparatorItem="YES" id="149">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Quit DendriteStudio" keyEquivalent="q" id="136"/>
+                            <menuItem title="Quit Plasticity Viewer" keyEquivalent="q" id="136"/>
                         </items>
                     </menu>
                 </menuItem>
@@ -434,91 +433,20 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="491">
                         <items>
-                            <menuItem title="DendriteStudio Help" keyEquivalent="?" id="492"/>
+                            <menuItem title="Plasticity Viewer Help" keyEquivalent="?" id="492"/>
                         </items>
                     </menu>
                 </menuItem>
             </items>
         </menu>
-        <window title="DendriteStudio" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+        <window title="Plasticity Viewer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="1142" height="582"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
-            <value key="minSize" type="size" width="1036" height="582"/>
-            <value key="maxSize" type="size" width="1036" height="582"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="1142" height="582"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="749">
-                        <rect key="frame" x="508" y="520" width="173" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="750">
-                            <font key="font" metaFont="system"/>
-                            <segments>
-                                <segment label="Absolute" selected="YES"/>
-                                <segment label="Differential" tag="1"/>
-                            </segments>
-                        </segmentedCell>
-                    </segmentedControl>
-                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="767">
-                        <rect key="frame" x="17" y="530" width="93" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Current Name" id="768">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="777">
-                        <rect key="frame" x="18" y="498" width="222" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="217" id="788"/>
-                        </constraints>
-                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="778">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" title="OtherViews" id="779"/>
-                        </popUpButtonCell>
-                    </popUpButton>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="804">
-                        <rect key="frame" x="32" y="20" width="1090" height="461"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tbZ-6A-PuO">
-                        <rect key="frame" x="245" y="504" width="120" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Current Plasticity: " id="UKe-do-Fk9">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-JQ-ttK">
-                        <rect key="frame" x="370" y="503" width="30" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.0f" id="xma-i5-SKB">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="749" firstAttribute="top" secondItem="372" secondAttribute="top" constant="39" id="752"/>
-                    <constraint firstItem="749" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="510" id="753"/>
-                    <constraint firstItem="777" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="20" symbolic="YES" id="789"/>
-                    <constraint firstItem="767" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="20" symbolic="YES" id="791"/>
-                    <constraint firstItem="777" firstAttribute="top" secondItem="767" secondAttribute="bottom" constant="8" symbolic="YES" id="792"/>
-                    <constraint firstItem="767" firstAttribute="top" secondItem="372" secondAttribute="top" constant="35" id="793"/>
-                    <constraint firstItem="804" firstAttribute="top" secondItem="777" secondAttribute="bottom" constant="20" id="809"/>
-                    <constraint firstItem="804" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="32" id="816"/>
-                    <constraint firstAttribute="trailing" secondItem="804" secondAttribute="trailing" constant="20" symbolic="YES" id="818"/>
-                    <constraint firstAttribute="bottom" secondItem="804" secondAttribute="bottom" constant="20" symbolic="YES" id="819"/>
-                </constraints>
             </view>
         </window>
         <customObject id="494" customClass="AppDelegate">
@@ -535,67 +463,5 @@
                 <action selector="orderFrontFontPanel:" destination="389" id="424"/>
             </connections>
         </customObject>
-        <viewController id="665" customClass="TrackViewController">
-            <connections>
-                <action selector="changeTrackType:" destination="749" id="754"/>
-                <outlet property="currentName" destination="767" id="794"/>
-                <outlet property="selectName" destination="777" id="795"/>
-            </connections>
-        </viewController>
-        <customObject id="796" customClass="TrackNameView">
-            <connections>
-                <action selector="onNameSelected:" destination="777" id="803"/>
-                <outlet property="mainView" destination="804" id="820"/>
-                <outlet property="selectNameBox" destination="777" id="801"/>
-                <outlet property="selectedName" destination="767" id="802"/>
-            </connections>
-        </customObject>
     </objects>
-    <classes>
-        <class className="AppDelegate" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AppDelegate.h"/>
-            <relationships>
-                <relationship kind="outlet" name="window" candidateClass="NSWindow"/>
-            </relationships>
-        </class>
-        <class className="FullTrackView" superclassName="NSView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FullTrackView.h"/>
-        </class>
-        <class className="NSDocument">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSDocument.h"/>
-            <relationships>
-                <relationship kind="action" name="printDocument:"/>
-                <relationship kind="action" name="revertDocumentToSaved:"/>
-                <relationship kind="action" name="runPageLayout:"/>
-                <relationship kind="action" name="saveDocument:"/>
-                <relationship kind="action" name="saveDocumentAs:"/>
-                <relationship kind="action" name="saveDocumentTo:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="TrackNameView" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrackNameView.h"/>
-            <relationships>
-                <relationship kind="action" name="onNameSelected:"/>
-                <relationship kind="outlet" name="mainView" candidateClass="NSView"/>
-                <relationship kind="outlet" name="selectNameBox" candidateClass="NSPopUpButton"/>
-                <relationship kind="outlet" name="selectedName" candidateClass="NSTextField"/>
-            </relationships>
-        </class>
-        <class className="TrackViewController" superclassName="NSViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrackViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeTrackType:"/>
-                <relationship kind="action" name="gotoClick:"/>
-                <relationship kind="action" name="left:"/>
-                <relationship kind="action" name="recordClick:"/>
-                <relationship kind="action" name="right:"/>
-                <relationship kind="outlet" name="fullTrackView" candidateClass="FullTrackView"/>
-                <relationship kind="outlet" name="gotoField" candidateClass="NSTextField"/>
-                <relationship kind="outlet" name="trackTimeView" candidateClass="NSTextField"/>
-            </relationships>
-        </class>
-    </classes>
 </document>

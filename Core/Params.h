@@ -58,6 +58,7 @@ struct Params_t {
   float *nI;                 //Instantenous current
   int *nInh;                 //Inhibitor is active
   int *nIb;                  //Intrinsict burst time
+  float *nPlasticity;        //Modifies the amount of change possible on dendrites
   enum NeuronType_t *nType;       //What kind of neuron?
 
   //Dendrites
@@ -111,6 +112,9 @@ struct NeuronDebugNetworkOutput_t {
 
   //Neuron type
   int type;
+
+  //Plasticity
+  float plasticity;
 
   //Name
   char name[100];

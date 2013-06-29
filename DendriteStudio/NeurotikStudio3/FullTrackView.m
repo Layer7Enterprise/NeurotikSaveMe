@@ -15,6 +15,8 @@
     [self.trackInfoView setFrame: trackInfoRect];
     [self addSubview:self.trackInfoView];
     
+    [self.trackInfoView drawNumber:[NSNumber numberWithFloat:32.03]];
+    
     //Add track data
     NSRect trackDataRect = self.frame;
     trackDataRect.size.width -= kTrackInfoSize; //Rest of view is data

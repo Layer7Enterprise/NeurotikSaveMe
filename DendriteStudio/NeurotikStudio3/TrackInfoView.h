@@ -11,5 +11,8 @@
 @interface TrackInfoView : NSView
 
 @property (nonatomic) NSMutableArray *neuronNames;
+@property (atomic) NSNumber *number;
+
+-(void)drawNumber: (NSNumber *)number;
 
 @end

@@ -2,7 +2,7 @@
 
 #define kTrackBufferSize 600000
 #define kTrackElementWidth 1 //Size of each discrete track data
-#define kTrackElementHeight 10.0f
+#define kTrackElementHeight 20.0f
 #define TIME_TO_OFFSCREEN_OFFSET(time) (time*kTrackElementWidth)
 #define OFFSCREEN_OFFSET_TO_TIME(offset) (offset/kTrackElementWidth)
 
@@ -47,11 +47,11 @@
         return;
     int index = 0;
     for (NSNumber *value in values) {
-        CGContextSetRGBStrokeColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
+        CGContextSetRGBStrokeColor(self.offscreenContext, 0.0f, [value floatValue], 0.0f, 1.0f);
         CGContextSetRGBFillColor(self.offscreenContext, 0.0f, 0.0f, 0.0f, 1.0f);
 
         NSNumber *lastValue = [lastValues objectAtIndex:index];
-        CGContextFillRect(self.offscreenContext, CGRectMake(TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), kTrackElementHeight*[value floatValue] + index*kTrackElementHeight, 2, 2));
+        CGContextFillRect(self.offscreenContext, CGRectMake(TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), kTrackElementHeight*[value floatValue] + index*kTrackElementHeight, 1, 1));
 //        CGContextMoveToPoint(self.offscreenContext, TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime-1), kTrackElementHeight*[lastValue floatValue] + index*kTrackElementHeight);
 //        CGContextAddLineToPoint(self.offscreenContext, TIME_TO_OFFSCREEN_OFFSET(self.recordOffsetTime), kTrackElementHeight*[value floatValue] + index*kTrackElementHeight);
 //        

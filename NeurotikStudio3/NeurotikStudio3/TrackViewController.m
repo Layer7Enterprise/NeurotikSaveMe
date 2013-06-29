@@ -46,6 +46,7 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
     float rawVoltage = output.V;
     rawVoltage += 70.0f;
     rawVoltage /= 110.0f;
+    rawVoltage = output.plasticity;
     NSNumber *value = [[NSNumber alloc] initWithFloat:rawVoltage];
     [values addObject:value];
     

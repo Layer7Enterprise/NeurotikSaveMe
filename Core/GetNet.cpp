@@ -31,6 +31,7 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
   params->nI = new float[NN];
   params->nInh = new int[NN];
   params->nIb = new int[NN];
+  params->nPlasticity = new float[NN];
   params->nType = new NeuronType_t[NN];
 
   //Initialize Dendrites
@@ -127,6 +128,7 @@ void GetNet(const char *filename, Schema_t schema, Params_t *params) {
         params->nInh[openPosition] = -1;
         params->nInhibitoryTime[openPosition] = neuronInhibitoryTime;
         params->nIb[openPosition] = neuronIb;
+        params->nPlasticity[openPosition] = 1.0f;
 
         params->nType[openPosition] = neuronType;
 
