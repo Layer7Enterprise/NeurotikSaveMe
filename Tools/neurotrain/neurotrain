@@ -60,7 +60,7 @@ elsif mode == "timed"
     example = []
     while !file.eof
       line = file.readline.strip
-      if line == "----"
+      if line == "---"
         examples << example
         example = []
         next

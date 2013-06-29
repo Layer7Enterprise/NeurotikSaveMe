@@ -285,2394 +285,2394 @@ Connection
 From input[0]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[0]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[1]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[2]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[3]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[4]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[5]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[6]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[7]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[8]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[9]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[10]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[11]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[12]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[13]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[14]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[15]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[16]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[0]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[1]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[2]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[3]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[4]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[5]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[6]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[7]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[8]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[9]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[10]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[11]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[12]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[13]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[14]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[15]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[16]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From input[17]
 To input[17]
 Weight 0
-Delay 1
+Delay 5
 End End
 
 Connection
 From signal[0]
 To input[0]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[1]
 To input[1]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[2]
 To input[2]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[3]
 To input[3]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[4]
 To input[4]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[5]
 To input[5]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[6]
 To input[6]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[7]
 To input[7]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[8]
 To input[8]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[9]
 To input[9]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[10]
 To input[10]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[11]
 To input[11]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[12]
 To input[12]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[13]
 To input[13]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[14]
 To input[14]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[15]
 To input[15]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[16]
 To input[16]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
 From signal[17]
 To input[17]
 Weight 24.0
-Delay 3
+Delay 8
 End End
 
 Connection
