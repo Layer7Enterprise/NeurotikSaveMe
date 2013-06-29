@@ -42,6 +42,47 @@ if mode == "basic"
     sleep delayBetweenExamples / 1000.0
   end
 elsif mode == "timed"
+  if ARGV.count != 5
+    #DelayBetweenExample = How to long to wait between each example
+    #DelayBetweenWords = How long to wait to produce the next 'word'
+    puts "timed [port trainingFile delayBetweenWords delayBetweenExamples]"
+    exit
+  end
+
+  port = ARGV[1].to_i
+  trainingFile = ARGV[2]
+  delayBetweenWords = ARGV[3].to_i
+  delayBetweenExamples = ARGV[4].to_i
+
+  puts "Loading nbtrain timed file #{trainingFile}, the delay between examples at #{delayBetweenExamples}ms, the delay between words is #{delayBetweenWords} and sending this data to 0.0.0.0:#{port}"
+  examples = []
+  File.open(trainingFile, "r") do |file|
+    example = []
+    while !file.eof
+      line = file.readline.strip
+      if line == "----"
+        examples << example
+        example = []
+        next
+      end
+
+      split_apart = line.split(" ")
+      example << {:input => split_apart[0], :output => split_apart[1]}
+    end
+  end
+
+  s = UDPSocket.new
+  loop do
+    randomExample = examples.sample
+    puts "Testing #{randomExample}"
+
+    randomExample.each do |word|
+      s.send(word[:input] + word[:output], 0, "0.0.0.0", port)
+      sleep delayBetweenWords / 1000.0
+    end
+
+    sleep delayBetweenExamples / 1000.0
+  end
 
 else
   puts "Not a mode"

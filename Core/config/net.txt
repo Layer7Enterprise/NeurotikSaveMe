@@ -97,92 +97,92 @@ Neuron signal[0]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[1]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[2]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[3]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[4]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[5]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[6]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[7]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[8]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[9]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[10]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[11]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[12]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[13]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[14]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[15]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[16]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron signal[17]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 
 
 EndNetworkIn
@@ -192,92 +192,92 @@ Neuron output[0]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[1]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[2]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[3]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[4]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[5]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[6]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[7]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[8]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[9]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[10]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[11]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[12]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[13]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[14]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[15]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[16]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron output[17]
 Type 1
 InhTime 0
 IB 0
-Debug End
+End End
 
 
 EndNetworkOut
@@ -2553,126 +2553,126 @@ Connection
 From signal[0]
 To input[0]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[1]
 To input[1]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[2]
 To input[2]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[3]
 To input[3]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[4]
 To input[4]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[5]
 To input[5]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[6]
 To input[6]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[7]
 To input[7]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[8]
 To input[8]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[9]
 To input[9]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[10]
 To input[10]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[11]
 To input[11]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[12]
 To input[12]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[13]
 To input[13]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[14]
 To input[14]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[15]
 To input[15]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[16]
 To input[16]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection
 From signal[17]
 To input[17]
 Weight 24.0
-Delay 1
+Delay 3
 End End
 
 Connection

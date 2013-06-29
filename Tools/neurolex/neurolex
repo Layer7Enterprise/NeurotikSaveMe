@@ -163,39 +163,57 @@ def v2wi
   end
 end
 
+#Join ["010", "101"] => "111"
+def join_impulse impulses
+  output = "0"*impulses[0].length
+  impulses.each do |impulse|
+    impulse.split("").each_with_index do |letter, index|
+      if letter == "1"
+        output[index] = "1"
+      end
+    end
+  end
+
+  return output
+end
+
 def gen_train_pair
   lex_file = ARGV[1]
   pair_file = ARGV[2]
 
-  lexicon, inverted_lexicon = file_to_lexicons lex_file
+  lexicon, @inverted_lexicon = file_to_lexicons lex_file
+
+  def get_vector word
+    vector = @inverted_lexicon[word] 
+    if vector == nil
+      puts "Did not find word #{word}"
+      exit
+    end
+
+    return vector
+  end
 
   File.open pair_file, "r" do |file|
-    while !file.eof?
-      words = file.readline.split " "
-      is_currently_output = false
-      input_vector = nil
-      output_vector = nil
-      words.each do |word|
-        if word == "|"
-          is_currently_output = true
-          next
-        end
+    examples = file.read.split("\n")
+    examples = examples.map {|x| x.split(" | ")}
+    examples = examples.map {|x| {:input =>x[0].split(" "), :output => x[1]}}
 
-        if inverted_lexicon[word].nil?
-          puts "Word not found #{word}"
-          return
-        end
+    examples.each do |example|
+      input = example[:input]
+      input = input.map {|x| get_vector(x)}
+      output = get_vector(example[:output])
 
-        if !is_currently_output
-          input_vector = join_vectors inverted_lexicon[word], input_vector
-          puts "#{inverted_lexicon[word]} #{"0"*input_vector.length}"
+      input.each_with_index do |frag, index|
+        #Last
+        if index == (input.count - 1)
+          puts "#{frag} #{output}"
         else
-          output_vector = join_vectors inverted_lexicon[word], output_vector
+          puts "#{frag} #{"0"*frag.length}"
         end
       end
-      puts "#{"0"*output_vector.length} #{output_vector}"
-      puts "----"
+      puts "---"
     end
+
   end
 end
 
