@@ -1,292 +1,3 @@
-
-Neuron Packetinput[0]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[1]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[2]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[3]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[4]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[5]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[6]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[7]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[8]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[9]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[10]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[11]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[12]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[13]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[14]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[15]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[16]
-Type 2
-InhTime 40
-IB 0
-End End
-Neuron Packetinput[17]
-Type 2
-InhTime 40
-IB 0
-End End
-
-
-
-Neuron Packetprimary_inh[0]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[1]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[2]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[3]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[4]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[5]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[6]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[7]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[8]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[9]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[10]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[11]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[12]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[13]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[14]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[15]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[16]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[17]
-Type 2
-InhTime 3
-IB 2
-End End
-
-
-NetworkOut
-
-Neuron output[0]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[1]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[2]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[3]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[4]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[5]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[6]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[7]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[8]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[9]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[10]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[11]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[12]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[13]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[14]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[15]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[16]
-Type 9
-InhTime 0
-IB 0
-End End
-Neuron output[17]
-Type 9
-InhTime 0
-IB 0
-End End
-
-
-EndNetworkOut
-
-Neuron Packetmain_ib[0]
-Type 17
-InhTime 0
-IB 25
-End End
-
-
 NetworkIn
 
 Neuron input[0]
@@ -375,6 +86,21 @@ InhTime 0
 IB 0
 Debug End
 Neuron input[17]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[18]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[19]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[20]
 Type 1
 InhTime 0
 IB 0
@@ -472,953 +198,136 @@ Type 17
 InhTime 0
 IB 0
 End End
+Neuron signal[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[20]
+Type 17
+InhTime 0
+IB 0
+End End
 
 
 EndNetworkIn
+NetworkOut
 
-Neuron Packetmain_exc[0]
-Type 1
+Neuron output[0]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[1]
-Type 1
+Neuron output[1]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[2]
-Type 1
+Neuron output[2]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[3]
-Type 1
+Neuron output[3]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[4]
-Type 1
+Neuron output[4]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[5]
-Type 1
+Neuron output[5]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[6]
-Type 1
+Neuron output[6]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[7]
-Type 1
+Neuron output[7]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[8]
-Type 1
+Neuron output[8]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[9]
-Type 1
+Neuron output[9]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[10]
-Type 1
+Neuron output[10]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[11]
-Type 1
+Neuron output[11]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[12]
-Type 1
+Neuron output[12]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[13]
-Type 1
+Neuron output[13]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[14]
-Type 1
+Neuron output[14]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[15]
-Type 1
+Neuron output[15]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[16]
-Type 1
+Neuron output[16]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetmain_exc[17]
-Type 1
+Neuron output[17]
+Type 9
 InhTime 0
 IB 0
 End End
-
-
-
-Neuron Packetsync[0]
-Type 17
+Neuron output[18]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetsync[1]
-Type 17
+Neuron output[19]
+Type 9
 InhTime 0
 IB 0
 End End
-Neuron Packetsync[2]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[3]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[4]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[5]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[6]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[7]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[8]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[9]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[10]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[11]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[12]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[13]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[14]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[15]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[16]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron Packetsync[17]
-Type 17
+Neuron output[20]
+Type 9
 InhTime 0
 IB 0
 End End
 
 
-Connection
-From Packetinput[0]
-To Packetprimary_inh[0]
-Weight 24.0
-Delay 1
-End End
+EndNetworkOut
 
-Connection
-From Packetinput[1]
-To Packetprimary_inh[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[2]
-To Packetprimary_inh[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[3]
-To Packetprimary_inh[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[4]
-To Packetprimary_inh[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[5]
-To Packetprimary_inh[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[6]
-To Packetprimary_inh[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[7]
-To Packetprimary_inh[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[8]
-To Packetprimary_inh[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[9]
-To Packetprimary_inh[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[10]
-To Packetprimary_inh[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[11]
-To Packetprimary_inh[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[12]
-To Packetprimary_inh[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[13]
-To Packetprimary_inh[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[14]
-To Packetprimary_inh[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[15]
-To Packetprimary_inh[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[16]
-To Packetprimary_inh[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[17]
-To Packetprimary_inh[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[0]
-To Packetmain_exc[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[1]
-To Packetmain_exc[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[2]
-To Packetmain_exc[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[3]
-To Packetmain_exc[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[4]
-To Packetmain_exc[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[5]
-To Packetmain_exc[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[6]
-To Packetmain_exc[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[7]
-To Packetmain_exc[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[8]
-To Packetmain_exc[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[9]
-To Packetmain_exc[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[10]
-To Packetmain_exc[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[11]
-To Packetmain_exc[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[12]
-To Packetmain_exc[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[13]
-To Packetmain_exc[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[14]
-To Packetmain_exc[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[15]
-To Packetmain_exc[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[16]
-To Packetmain_exc[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetprimary_inh[17]
-To Packetmain_exc[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_ib[0]
-To Packetmain_exc[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[0]
-To Packetsync[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[1]
-To Packetsync[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[2]
-To Packetsync[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[3]
-To Packetsync[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[4]
-To Packetsync[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[5]
-To Packetsync[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[6]
-To Packetsync[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[7]
-To Packetsync[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[8]
-To Packetsync[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[9]
-To Packetsync[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[10]
-To Packetsync[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[11]
-To Packetsync[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[12]
-To Packetsync[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[13]
-To Packetsync[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[14]
-To Packetsync[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[15]
-To Packetsync[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[16]
-To Packetsync[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetmain_exc[17]
-To Packetsync[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[0]
-To Packetinput[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[1]
-To Packetinput[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[2]
-To Packetinput[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[3]
-To Packetinput[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[4]
-To Packetinput[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[5]
-To Packetinput[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[6]
-To Packetinput[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[7]
-To Packetinput[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[8]
-To Packetinput[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[9]
-To Packetinput[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[10]
-To Packetinput[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[11]
-To Packetinput[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[12]
-To Packetinput[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[13]
-To Packetinput[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[14]
-To Packetinput[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[15]
-To Packetinput[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[16]
-To Packetinput[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetsync[17]
-To Packetinput[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[0]
-To Packetinput[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[1]
-To Packetinput[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[2]
-To Packetinput[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[3]
-To Packetinput[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[4]
-To Packetinput[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[5]
-To Packetinput[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[6]
-To Packetinput[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[7]
-To Packetinput[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[8]
-To Packetinput[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[9]
-To Packetinput[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[10]
-To Packetinput[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[11]
-To Packetinput[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[12]
-To Packetinput[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[13]
-To Packetinput[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[14]
-To Packetinput[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[15]
-To Packetinput[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[16]
-To Packetinput[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[17]
-To Packetinput[17]
-Weight 24.0
-Delay 1
-End End
-
-
-Neuron Packetdisable[0]
+Neuron noun_filterib[0]
 Type 2
 InhTime 3
 IB 2
@@ -1426,7 +335,919 @@ End End
 
 
 
-Neuron Packeten[0]
+Neuron noun_filterwatch[0]
+Type 2
+InhTime 40
+IB 0
+End End
+
+
+
+Neuron noun_filteroutput[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_filteroutput[20]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron verb_filteroutput[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_filteroutput[20]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron verb_filterib[0]
+Type 2
+InhTime 3
+IB 2
+End End
+
+
+
+Neuron verb_filterwatch[0]
+Type 2
+InhTime 40
+IB 0
+End End
+
+
+
+Neuron vo_filteroutput[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_filteroutput[20]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron noun_bufferinput[0]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[1]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[2]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[3]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[4]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[5]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[6]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[7]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[8]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[9]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[10]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[11]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[12]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[13]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[14]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[15]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[16]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[17]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[18]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[19]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron noun_bufferinput[20]
+Type 2
+InhTime 40
+IB 0
+End End
+
+
+
+Neuron vo_filterib[0]
+Type 2
+InhTime 3
+IB 2
+End End
+
+
+
+Neuron vo_filterwatch[0]
+Type 2
+InhTime 40
+IB 0
+End End
+
+
+
+Neuron noun_bufferprimary_inh[0]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[1]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[2]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[3]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[4]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[5]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[6]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[7]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[8]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[9]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[10]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[11]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[12]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[13]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[14]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[15]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[16]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[17]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[18]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[19]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron noun_bufferprimary_inh[20]
+Type 2
+InhTime 3
+IB 2
+End End
+
+
+
+Neuron noun_buffermain_exc[0]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[1]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[2]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[3]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[4]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[5]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[6]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[7]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[8]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[9]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[10]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[11]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[12]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[13]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[14]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[15]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[16]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[17]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[18]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[19]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron noun_buffermain_exc[20]
+Type 1
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron noun_buffermain_ib[0]
+Type 17
+InhTime 0
+IB 25
+End End
+
+
+
+Neuron noun_buffersync[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_buffersync[20]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron noun_bufferoutput[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron noun_bufferoutput[20]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron noun_bufferen[0]
 Type 2
 InhTime 100
 IB 0
@@ -1434,92 +1255,1011 @@ End End
 
 
 
-Neuron Packetoutput[0]
+Neuron noun_bufferdisable[0]
+Type 2
+InhTime 3
+IB 2
+End End
+
+
+
+Neuron verb_bufferinput[0]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[1]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[2]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[3]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[4]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[5]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[6]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[7]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[8]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[9]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[10]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[11]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[12]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[13]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[14]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[15]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[16]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[17]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[18]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[19]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron verb_bufferinput[20]
+Type 2
+InhTime 40
+IB 0
+End End
+
+
+
+Neuron verb_bufferprimary_inh[0]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[1]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[2]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[3]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[4]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[5]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[6]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[7]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[8]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[9]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[10]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[11]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[12]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[13]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[14]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[15]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[16]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[17]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[18]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[19]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron verb_bufferprimary_inh[20]
+Type 2
+InhTime 3
+IB 2
+End End
+
+
+
+Neuron verb_buffermain_exc[0]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[1]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[2]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[3]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[4]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[5]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[6]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[7]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[8]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[9]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[10]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[11]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[12]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[13]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[14]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[15]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[16]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[17]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[18]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[19]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron verb_buffermain_exc[20]
+Type 1
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron verb_buffermain_ib[0]
+Type 17
+InhTime 0
+IB 25
+End End
+
+
+
+Neuron verb_buffersync[0]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[1]
+Neuron verb_buffersync[1]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[2]
+Neuron verb_buffersync[2]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[3]
+Neuron verb_buffersync[3]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[4]
+Neuron verb_buffersync[4]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[5]
+Neuron verb_buffersync[5]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[6]
+Neuron verb_buffersync[6]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[7]
+Neuron verb_buffersync[7]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[8]
+Neuron verb_buffersync[8]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[9]
+Neuron verb_buffersync[9]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[10]
+Neuron verb_buffersync[10]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[11]
+Neuron verb_buffersync[11]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[12]
+Neuron verb_buffersync[12]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[13]
+Neuron verb_buffersync[13]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[14]
+Neuron verb_buffersync[14]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[15]
+Neuron verb_buffersync[15]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[16]
+Neuron verb_buffersync[16]
 Type 17
 InhTime 0
 IB 0
 End End
-Neuron Packetoutput[17]
+Neuron verb_buffersync[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_buffersync[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_buffersync[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_buffersync[20]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron verb_bufferoutput[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron verb_bufferoutput[20]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron verb_bufferen[0]
+Type 2
+InhTime 100
+IB 0
+End End
+
+
+
+Neuron verb_bufferdisable[0]
+Type 2
+InhTime 3
+IB 2
+End End
+
+
+
+Neuron vo_bufferinput[0]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[1]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[2]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[3]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[4]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[5]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[6]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[7]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[8]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[9]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[10]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[11]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[12]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[13]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[14]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[15]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[16]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[17]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[18]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[19]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron vo_bufferinput[20]
+Type 2
+InhTime 40
+IB 0
+End End
+
+
+
+Neuron vo_bufferprimary_inh[0]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[1]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[2]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[3]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[4]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[5]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[6]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[7]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[8]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[9]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[10]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[11]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[12]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[13]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[14]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[15]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[16]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[17]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[18]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[19]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron vo_bufferprimary_inh[20]
+Type 2
+InhTime 3
+IB 2
+End End
+
+
+
+Neuron vo_buffermain_exc[0]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[1]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[2]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[3]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[4]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[5]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[6]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[7]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[8]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[9]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[10]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[11]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[12]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[13]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[14]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[15]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[16]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[17]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[18]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[19]
+Type 1
+InhTime 0
+IB 0
+End End
+Neuron vo_buffermain_exc[20]
+Type 1
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron vo_buffermain_ib[0]
+Type 17
+InhTime 0
+IB 25
+End End
+
+
+
+Neuron vo_buffersync[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_buffersync[20]
 Type 17
 InhTime 0
 IB 0
@@ -1527,393 +2267,5060 @@ End End
 
 
 Connection
-From Packetsync[0]
-To Packetoutput[0]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[1]
-To Packetoutput[1]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[2]
-To Packetoutput[2]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[3]
-To Packetoutput[3]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[4]
-To Packetoutput[4]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[5]
-To Packetoutput[5]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[6]
-To Packetoutput[6]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[7]
-To Packetoutput[7]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[8]
-To Packetoutput[8]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[9]
-To Packetoutput[9]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[10]
-To Packetoutput[10]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[11]
-To Packetoutput[11]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[12]
-To Packetoutput[12]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[13]
-To Packetoutput[13]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[14]
-To Packetoutput[14]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[15]
-To Packetoutput[15]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[16]
-To Packetoutput[16]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packetsync[17]
-To Packetoutput[17]
-Weight 24.0
-Delay 40
-End End
-
-Connection
-From Packeten[0]
-To Packetdisable[0]
+From verb_filterib[0]
+To verb_filteroutput[0]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[0]
+From verb_filterib[0]
+To verb_filteroutput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterib[0]
+To verb_filteroutput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filterwatch[0]
+To vo_filterib[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filterwatch[0]
+To verb_filterib[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[13]
+To verb_filterwatch[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterwatch[0]
+To noun_filterib[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[0]
+To noun_bufferoutput[0]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[1]
+To noun_bufferoutput[1]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[2]
+To noun_bufferoutput[2]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[3]
+To noun_bufferoutput[3]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[4]
+To noun_bufferoutput[4]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[5]
+To noun_bufferoutput[5]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[6]
+To noun_bufferoutput[6]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[7]
+To noun_bufferoutput[7]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[8]
+To noun_bufferoutput[8]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[9]
+To noun_bufferoutput[9]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[10]
+To noun_bufferoutput[10]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[11]
+To noun_bufferoutput[11]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[12]
+To noun_bufferoutput[12]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[13]
+To noun_bufferoutput[13]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[14]
+To noun_bufferoutput[14]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[15]
+To noun_bufferoutput[15]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[16]
+To noun_bufferoutput[16]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[17]
+To noun_bufferoutput[17]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[18]
+To noun_bufferoutput[18]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[19]
+To noun_bufferoutput[19]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_buffersync[20]
+To noun_bufferoutput[20]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From noun_bufferen[0]
+To noun_bufferdisable[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferen[0]
+To noun_buffersync[0]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[1]
+From noun_bufferen[0]
+To noun_buffersync[1]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[2]
+From noun_bufferen[0]
+To noun_buffersync[2]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[3]
+From noun_bufferen[0]
+To noun_buffersync[3]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[4]
+From noun_bufferen[0]
+To noun_buffersync[4]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[5]
+From noun_bufferen[0]
+To noun_buffersync[5]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[6]
+From noun_bufferen[0]
+To noun_buffersync[6]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[7]
+From noun_bufferen[0]
+To noun_buffersync[7]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[8]
+From noun_bufferen[0]
+To noun_buffersync[8]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[9]
+From noun_bufferen[0]
+To noun_buffersync[9]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[10]
+From noun_bufferen[0]
+To noun_buffersync[10]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[11]
+From noun_bufferen[0]
+To noun_buffersync[11]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[12]
+From noun_bufferen[0]
+To noun_buffersync[12]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[13]
+From noun_bufferen[0]
+To noun_buffersync[13]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[14]
+From noun_bufferen[0]
+To noun_buffersync[14]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[15]
+From noun_bufferen[0]
+To noun_buffersync[15]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[16]
+From noun_bufferen[0]
+To noun_buffersync[16]
 Weight 24.0
 Delay 5
 End End
 
 Connection
-From Packeten[0]
-To Packetsync[17]
+From noun_bufferen[0]
+To noun_buffersync[17]
 Weight 24.0
 Delay 5
+End End
+
+Connection
+From noun_bufferen[0]
+To noun_buffersync[18]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From noun_bufferen[0]
+To noun_buffersync[19]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From noun_bufferen[0]
+To noun_buffersync[20]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From input[16]
+To noun_bufferen[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[0]
+To verb_bufferinput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[1]
+To verb_bufferinput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[2]
+To verb_bufferinput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[3]
+To verb_bufferinput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[4]
+To verb_bufferinput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[5]
+To verb_bufferinput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[6]
+To verb_bufferinput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[7]
+To verb_bufferinput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[8]
+To verb_bufferinput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[9]
+To verb_bufferinput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[10]
+To verb_bufferinput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[11]
+To verb_bufferinput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[12]
+To verb_bufferinput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[13]
+To verb_bufferinput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[14]
+To verb_bufferinput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[15]
+To verb_bufferinput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[16]
+To verb_bufferinput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[17]
+To verb_bufferinput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[18]
+To verb_bufferinput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[19]
+To verb_bufferinput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_filteroutput[20]
+To verb_bufferinput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filterib[0]
+To noun_filteroutput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[0]
+To verb_bufferprimary_inh[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[1]
+To verb_bufferprimary_inh[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[2]
+To verb_bufferprimary_inh[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[3]
+To verb_bufferprimary_inh[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[4]
+To verb_bufferprimary_inh[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[5]
+To verb_bufferprimary_inh[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[6]
+To verb_bufferprimary_inh[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[7]
+To verb_bufferprimary_inh[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[8]
+To verb_bufferprimary_inh[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[9]
+To verb_bufferprimary_inh[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[10]
+To verb_bufferprimary_inh[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[11]
+To verb_bufferprimary_inh[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[12]
+To verb_bufferprimary_inh[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[13]
+To verb_bufferprimary_inh[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[14]
+To verb_bufferprimary_inh[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[15]
+To verb_bufferprimary_inh[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[16]
+To verb_bufferprimary_inh[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[17]
+To verb_bufferprimary_inh[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[18]
+To verb_bufferprimary_inh[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[19]
+To verb_bufferprimary_inh[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferinput[20]
+To verb_bufferprimary_inh[20]
+Weight 24.0
+Delay 1
 End End
 
 Connection
 From input[0]
-To Packeten[0]
+To vo_filteroutput[0]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[1]
+To vo_filteroutput[1]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[2]
+To vo_filteroutput[2]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[3]
+To vo_filteroutput[3]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[4]
+To vo_filteroutput[4]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[5]
+To vo_filteroutput[5]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[6]
+To vo_filteroutput[6]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[7]
+To vo_filteroutput[7]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[8]
+To vo_filteroutput[8]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[9]
+To vo_filteroutput[9]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[10]
+To vo_filteroutput[10]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[11]
+To vo_filteroutput[11]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[12]
+To vo_filteroutput[12]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[13]
+To vo_filteroutput[13]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[14]
+To vo_filteroutput[14]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[15]
+To vo_filteroutput[15]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[16]
+To vo_filteroutput[16]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[17]
+To vo_filteroutput[17]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[18]
+To vo_filteroutput[18]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[19]
+To vo_filteroutput[19]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[20]
+To vo_filteroutput[20]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From vo_filterib[0]
+To vo_filteroutput[0]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[0]
+From vo_filterib[0]
+To vo_filteroutput[1]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[1]
+From vo_filterib[0]
+To vo_filteroutput[2]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[2]
+From vo_filterib[0]
+To vo_filteroutput[3]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[3]
+From vo_filterib[0]
+To vo_filteroutput[4]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[4]
+From vo_filterib[0]
+To vo_filteroutput[5]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[5]
+From vo_filterib[0]
+To vo_filteroutput[6]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[6]
+From vo_filterib[0]
+To vo_filteroutput[7]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[7]
+From vo_filterib[0]
+To vo_filteroutput[8]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[8]
+From vo_filterib[0]
+To vo_filteroutput[9]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[9]
+From vo_filterib[0]
+To vo_filteroutput[10]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[10]
+From vo_filterib[0]
+To vo_filteroutput[11]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[11]
+From vo_filterib[0]
+To vo_filteroutput[12]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[12]
+From vo_filterib[0]
+To vo_filteroutput[13]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[13]
+From vo_filterib[0]
+To vo_filteroutput[14]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[14]
+From vo_filterib[0]
+To vo_filteroutput[15]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[15]
+From vo_filterib[0]
+To vo_filteroutput[16]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[16]
+From vo_filterib[0]
+To vo_filteroutput[17]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetdisable[0]
-To Packetoutput[17]
+From vo_filterib[0]
+To vo_filteroutput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filterib[0]
+To vo_filteroutput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filterib[0]
+To vo_filteroutput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[0]
+To noun_buffermain_exc[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[1]
+To noun_buffermain_exc[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[2]
+To noun_buffermain_exc[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[3]
+To noun_buffermain_exc[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[4]
+To noun_buffermain_exc[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[5]
+To noun_buffermain_exc[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[6]
+To noun_buffermain_exc[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[7]
+To noun_buffermain_exc[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[8]
+To noun_buffermain_exc[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[9]
+To noun_buffermain_exc[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[10]
+To noun_buffermain_exc[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[11]
+To noun_buffermain_exc[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[12]
+To noun_buffermain_exc[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[13]
+To noun_buffermain_exc[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[14]
+To noun_buffermain_exc[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[15]
+To noun_buffermain_exc[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[16]
+To noun_buffermain_exc[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[17]
+To noun_buffermain_exc[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[18]
+To noun_buffermain_exc[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[19]
+To noun_buffermain_exc[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferprimary_inh[20]
+To noun_buffermain_exc[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_ib[0]
+To verb_buffermain_exc[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[0]
+To verb_bufferinput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[1]
+To verb_bufferinput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[2]
+To verb_bufferinput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[3]
+To verb_bufferinput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[4]
+To verb_bufferinput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[5]
+To verb_bufferinput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[6]
+To verb_bufferinput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[7]
+To verb_bufferinput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[8]
+To verb_bufferinput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[9]
+To verb_bufferinput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[10]
+To verb_bufferinput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[11]
+To verb_bufferinput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[12]
+To verb_bufferinput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[13]
+To verb_bufferinput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[14]
+To verb_bufferinput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[15]
+To verb_bufferinput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[16]
+To verb_bufferinput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[17]
+To verb_bufferinput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[18]
+To verb_bufferinput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[19]
+To verb_bufferinput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[20]
+To verb_bufferinput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[0]
+To noun_bufferinput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[1]
+To noun_bufferinput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[2]
+To noun_bufferinput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[3]
+To noun_bufferinput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[4]
+To noun_bufferinput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[5]
+To noun_bufferinput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[6]
+To noun_bufferinput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[7]
+To noun_bufferinput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[8]
+To noun_bufferinput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[9]
+To noun_bufferinput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[10]
+To noun_bufferinput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[11]
+To noun_bufferinput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[12]
+To noun_bufferinput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[13]
+To noun_bufferinput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[14]
+To noun_bufferinput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[15]
+To noun_bufferinput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[16]
+To noun_bufferinput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[17]
+To noun_bufferinput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[18]
+To noun_bufferinput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[19]
+To noun_bufferinput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_filteroutput[20]
+To noun_bufferinput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[0]
+To noun_bufferprimary_inh[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[1]
+To noun_bufferprimary_inh[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[2]
+To noun_bufferprimary_inh[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[3]
+To noun_bufferprimary_inh[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[4]
+To noun_bufferprimary_inh[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[5]
+To noun_bufferprimary_inh[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[6]
+To noun_bufferprimary_inh[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[7]
+To noun_bufferprimary_inh[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[8]
+To noun_bufferprimary_inh[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[9]
+To noun_bufferprimary_inh[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[10]
+To noun_bufferprimary_inh[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[11]
+To noun_bufferprimary_inh[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[12]
+To noun_bufferprimary_inh[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[13]
+To noun_bufferprimary_inh[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[14]
+To noun_bufferprimary_inh[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[15]
+To noun_bufferprimary_inh[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[16]
+To noun_bufferprimary_inh[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[17]
+To noun_bufferprimary_inh[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[18]
+To noun_bufferprimary_inh[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[19]
+To noun_bufferprimary_inh[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferinput[20]
+To noun_bufferprimary_inh[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[0]
+To noun_bufferinput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[1]
+To noun_bufferinput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[2]
+To noun_bufferinput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[3]
+To noun_bufferinput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[4]
+To noun_bufferinput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[5]
+To noun_bufferinput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[6]
+To noun_bufferinput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[7]
+To noun_bufferinput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[8]
+To noun_bufferinput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[9]
+To noun_bufferinput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[10]
+To noun_bufferinput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[11]
+To noun_bufferinput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[12]
+To noun_bufferinput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[13]
+To noun_bufferinput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[14]
+To noun_bufferinput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[15]
+To noun_bufferinput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[16]
+To noun_bufferinput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[17]
+To noun_bufferinput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[18]
+To noun_bufferinput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[19]
+To noun_bufferinput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffersync[20]
+To noun_bufferinput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffersync[0]
+To verb_bufferoutput[0]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[1]
+To verb_bufferoutput[1]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[2]
+To verb_bufferoutput[2]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[3]
+To verb_bufferoutput[3]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[4]
+To verb_bufferoutput[4]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[5]
+To verb_bufferoutput[5]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[6]
+To verb_bufferoutput[6]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[7]
+To verb_bufferoutput[7]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[8]
+To verb_bufferoutput[8]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[9]
+To verb_bufferoutput[9]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[10]
+To verb_bufferoutput[10]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[11]
+To verb_bufferoutput[11]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[12]
+To verb_bufferoutput[12]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[13]
+To verb_bufferoutput[13]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[14]
+To verb_bufferoutput[14]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[15]
+To verb_bufferoutput[15]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[16]
+To verb_bufferoutput[16]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[17]
+To verb_bufferoutput[17]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[18]
+To verb_bufferoutput[18]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[19]
+To verb_bufferoutput[19]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_buffersync[20]
+To verb_bufferoutput[20]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_bufferdisable[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[0]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[1]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[2]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[3]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[4]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[5]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[6]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[7]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[8]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[9]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[10]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[11]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[12]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[13]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[14]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[15]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[16]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[17]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[18]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[19]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From verb_bufferen[0]
+To verb_buffersync[20]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From input[17]
+To verb_bufferen[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferdisable[0]
+To verb_bufferoutput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferdisable[0]
+To noun_bufferoutput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[0]
+To vo_bufferinput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[1]
+To vo_bufferinput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[2]
+To vo_bufferinput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[3]
+To vo_bufferinput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[4]
+To vo_bufferinput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[5]
+To vo_bufferinput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[6]
+To vo_bufferinput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[7]
+To vo_bufferinput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[8]
+To vo_bufferinput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[9]
+To vo_bufferinput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[10]
+To vo_bufferinput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[11]
+To vo_bufferinput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[12]
+To vo_bufferinput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[13]
+To vo_bufferinput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[14]
+To vo_bufferinput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[15]
+To vo_bufferinput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[16]
+To vo_bufferinput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[17]
+To vo_bufferinput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[18]
+To vo_bufferinput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[19]
+To vo_bufferinput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_filteroutput[20]
+To vo_bufferinput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[15]
+To vo_filterwatch[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[0]
+To noun_filteroutput[0]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[1]
+To noun_filteroutput[1]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[2]
+To noun_filteroutput[2]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[3]
+To noun_filteroutput[3]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[4]
+To noun_filteroutput[4]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[5]
+To noun_filteroutput[5]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[6]
+To noun_filteroutput[6]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[7]
+To noun_filteroutput[7]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[8]
+To noun_filteroutput[8]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[9]
+To noun_filteroutput[9]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[10]
+To noun_filteroutput[10]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[11]
+To noun_filteroutput[11]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[12]
+To noun_filteroutput[12]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[13]
+To noun_filteroutput[13]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[14]
+To noun_filteroutput[14]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[15]
+To noun_filteroutput[15]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[16]
+To noun_filteroutput[16]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[17]
+To noun_filteroutput[17]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[18]
+To noun_filteroutput[18]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[19]
+To noun_filteroutput[19]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[20]
+To noun_filteroutput[20]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From vo_bufferinput[0]
+To vo_bufferprimary_inh[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[1]
+To vo_bufferprimary_inh[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[2]
+To vo_bufferprimary_inh[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[3]
+To vo_bufferprimary_inh[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[4]
+To vo_bufferprimary_inh[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[5]
+To vo_bufferprimary_inh[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[6]
+To vo_bufferprimary_inh[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[7]
+To vo_bufferprimary_inh[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[8]
+To vo_bufferprimary_inh[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[9]
+To vo_bufferprimary_inh[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[10]
+To vo_bufferprimary_inh[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[11]
+To vo_bufferprimary_inh[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[12]
+To vo_bufferprimary_inh[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[13]
+To vo_bufferprimary_inh[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[14]
+To vo_bufferprimary_inh[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[15]
+To vo_bufferprimary_inh[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[16]
+To vo_bufferprimary_inh[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[17]
+To vo_bufferprimary_inh[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[18]
+To vo_bufferprimary_inh[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[19]
+To vo_bufferprimary_inh[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferinput[20]
+To vo_bufferprimary_inh[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[0]
+To verb_filteroutput[0]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[1]
+To verb_filteroutput[1]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[2]
+To verb_filteroutput[2]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[3]
+To verb_filteroutput[3]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[4]
+To verb_filteroutput[4]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[5]
+To verb_filteroutput[5]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[6]
+To verb_filteroutput[6]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[7]
+To verb_filteroutput[7]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[8]
+To verb_filteroutput[8]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[9]
+To verb_filteroutput[9]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[10]
+To verb_filteroutput[10]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[11]
+To verb_filteroutput[11]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[12]
+To verb_filteroutput[12]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[13]
+To verb_filteroutput[13]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[14]
+To verb_filteroutput[14]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[15]
+To verb_filteroutput[15]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[16]
+To verb_filteroutput[16]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[17]
+To verb_filteroutput[17]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[18]
+To verb_filteroutput[18]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[19]
+To verb_filteroutput[19]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From input[20]
+To verb_filteroutput[20]
+Weight 24.0
+Delay 30
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_ib[0]
+To noun_buffermain_exc[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[0]
+To vo_buffermain_exc[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[1]
+To vo_buffermain_exc[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[2]
+To vo_buffermain_exc[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[3]
+To vo_buffermain_exc[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[4]
+To vo_buffermain_exc[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[5]
+To vo_buffermain_exc[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[6]
+To vo_buffermain_exc[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[7]
+To vo_buffermain_exc[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[8]
+To vo_buffermain_exc[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[9]
+To vo_buffermain_exc[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[10]
+To vo_buffermain_exc[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[11]
+To vo_buffermain_exc[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[12]
+To vo_buffermain_exc[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[13]
+To vo_buffermain_exc[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[14]
+To vo_buffermain_exc[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[15]
+To vo_buffermain_exc[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[16]
+To vo_buffermain_exc[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[17]
+To vo_buffermain_exc[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[18]
+To vo_buffermain_exc[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[19]
+To vo_buffermain_exc[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferprimary_inh[20]
+To vo_buffermain_exc[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_ib[0]
+To vo_buffermain_exc[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[0]
+To verb_buffermain_exc[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[1]
+To verb_buffermain_exc[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[2]
+To verb_buffermain_exc[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[3]
+To verb_buffermain_exc[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[4]
+To verb_buffermain_exc[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[5]
+To verb_buffermain_exc[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[6]
+To verb_buffermain_exc[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[7]
+To verb_buffermain_exc[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[8]
+To verb_buffermain_exc[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[9]
+To verb_buffermain_exc[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[10]
+To verb_buffermain_exc[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[11]
+To verb_buffermain_exc[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[12]
+To verb_buffermain_exc[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[13]
+To verb_buffermain_exc[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[14]
+To verb_buffermain_exc[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[15]
+To verb_buffermain_exc[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[16]
+To verb_buffermain_exc[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[17]
+To verb_buffermain_exc[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[18]
+To verb_buffermain_exc[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[19]
+To verb_buffermain_exc[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferprimary_inh[20]
+To verb_buffermain_exc[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[0]
+To noun_buffersync[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[1]
+To noun_buffersync[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[2]
+To noun_buffersync[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[3]
+To noun_buffersync[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[4]
+To noun_buffersync[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[5]
+To noun_buffersync[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[6]
+To noun_buffersync[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[7]
+To noun_buffersync[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[8]
+To noun_buffersync[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[9]
+To noun_buffersync[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[10]
+To noun_buffersync[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[11]
+To noun_buffersync[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[12]
+To noun_buffersync[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[13]
+To noun_buffersync[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[14]
+To noun_buffersync[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[15]
+To noun_buffersync[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[16]
+To noun_buffersync[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[17]
+To noun_buffersync[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[18]
+To noun_buffersync[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[19]
+To noun_buffersync[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_buffermain_exc[20]
+To noun_buffersync[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[0]
+To vo_buffersync[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[1]
+To vo_buffersync[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[2]
+To vo_buffersync[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[3]
+To vo_buffersync[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[4]
+To vo_buffersync[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[5]
+To vo_buffersync[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[6]
+To vo_buffersync[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[7]
+To vo_buffersync[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[8]
+To vo_buffersync[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[9]
+To vo_buffersync[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[10]
+To vo_buffersync[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[11]
+To vo_buffersync[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[12]
+To vo_buffersync[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[13]
+To vo_buffersync[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[14]
+To vo_buffersync[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[15]
+To vo_buffersync[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[16]
+To vo_buffersync[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[17]
+To vo_buffersync[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[18]
+To vo_buffersync[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[19]
+To vo_buffersync[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffermain_exc[20]
+To vo_buffersync[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[0]
+To vo_bufferinput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[1]
+To vo_bufferinput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[2]
+To vo_bufferinput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[3]
+To vo_bufferinput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[4]
+To vo_bufferinput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[5]
+To vo_bufferinput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[6]
+To vo_bufferinput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[7]
+To vo_bufferinput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[8]
+To vo_bufferinput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[9]
+To vo_bufferinput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[10]
+To vo_bufferinput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[11]
+To vo_bufferinput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[12]
+To vo_bufferinput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[13]
+To vo_bufferinput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[14]
+To vo_bufferinput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[15]
+To vo_bufferinput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[16]
+To vo_bufferinput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[17]
+To vo_bufferinput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[18]
+To vo_bufferinput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[19]
+To vo_bufferinput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_buffersync[20]
+To vo_bufferinput[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[14]
+To noun_filterwatch[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[0]
+To verb_buffersync[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[1]
+To verb_buffersync[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[2]
+To verb_buffersync[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[3]
+To verb_buffersync[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[4]
+To verb_buffersync[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[5]
+To verb_buffersync[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[6]
+To verb_buffersync[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[7]
+To verb_buffersync[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[8]
+To verb_buffersync[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[9]
+To verb_buffersync[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[10]
+To verb_buffersync[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[11]
+To verb_buffersync[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[12]
+To verb_buffersync[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[13]
+To verb_buffersync[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[14]
+To verb_buffersync[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[15]
+To verb_buffersync[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[16]
+To verb_buffersync[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[17]
+To verb_buffersync[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[18]
+To verb_buffersync[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[19]
+To verb_buffersync[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_buffermain_exc[20]
+To verb_buffersync[20]
+Weight 24.0
+Delay 1
+End End
+
+
+Neuron vo_bufferdisable[0]
+Type 2
+InhTime 3
+IB 2
+End End
+
+
+
+Neuron vo_bufferen[0]
+Type 2
+InhTime 100
+IB 0
+End End
+
+
+
+Neuron vo_bufferoutput[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[17]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[18]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[19]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron vo_bufferoutput[20]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+Connection
+From vo_buffersync[0]
+To vo_bufferoutput[0]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[1]
+To vo_bufferoutput[1]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[2]
+To vo_bufferoutput[2]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[3]
+To vo_bufferoutput[3]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[4]
+To vo_bufferoutput[4]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[5]
+To vo_bufferoutput[5]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[6]
+To vo_bufferoutput[6]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[7]
+To vo_bufferoutput[7]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[8]
+To vo_bufferoutput[8]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[9]
+To vo_bufferoutput[9]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[10]
+To vo_bufferoutput[10]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[11]
+To vo_bufferoutput[11]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[12]
+To vo_bufferoutput[12]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[13]
+To vo_bufferoutput[13]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[14]
+To vo_bufferoutput[14]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[15]
+To vo_bufferoutput[15]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[16]
+To vo_bufferoutput[16]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[17]
+To vo_bufferoutput[17]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[18]
+To vo_bufferoutput[18]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[19]
+To vo_bufferoutput[19]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_buffersync[20]
+To vo_bufferoutput[20]
+Weight 24.0
+Delay 40
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_bufferdisable[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[0]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[1]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[2]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[3]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[4]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[5]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[6]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[7]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[8]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[9]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[10]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[11]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[12]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[13]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[14]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[15]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[16]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[17]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[18]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[19]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From vo_bufferen[0]
+To vo_buffersync[20]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From input[18]
+To vo_bufferen[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferdisable[0]
+To vo_bufferoutput[20]
 Weight 24.0
 Delay 1
 End End
@@ -2045,6 +7452,27 @@ Delay 1
 End End
 
 Connection
+From input[0]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[1]
 To input[0]
 Weight 0
@@ -2171,6 +7599,27 @@ Delay 1
 End End
 
 Connection
+From input[1]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[2]
 To input[0]
 Weight 0
@@ -2297,6 +7746,27 @@ Delay 1
 End End
 
 Connection
+From input[2]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[3]
 To input[0]
 Weight 0
@@ -2423,6 +7893,27 @@ Delay 1
 End End
 
 Connection
+From input[3]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[4]
 To input[0]
 Weight 0
@@ -2549,6 +8040,27 @@ Delay 1
 End End
 
 Connection
+From input[4]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[5]
 To input[0]
 Weight 0
@@ -2675,6 +8187,27 @@ Delay 1
 End End
 
 Connection
+From input[5]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[6]
 To input[0]
 Weight 0
@@ -2801,6 +8334,27 @@ Delay 1
 End End
 
 Connection
+From input[6]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[7]
 To input[0]
 Weight 0
@@ -2927,6 +8481,27 @@ Delay 1
 End End
 
 Connection
+From input[7]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[8]
 To input[0]
 Weight 0
@@ -3053,6 +8628,27 @@ Delay 1
 End End
 
 Connection
+From input[8]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[9]
 To input[0]
 Weight 0
@@ -3179,6 +8775,27 @@ Delay 1
 End End
 
 Connection
+From input[9]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[10]
 To input[0]
 Weight 0
@@ -3305,6 +8922,27 @@ Delay 1
 End End
 
 Connection
+From input[10]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[11]
 To input[0]
 Weight 0
@@ -3431,6 +9069,27 @@ Delay 1
 End End
 
 Connection
+From input[11]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[12]
 To input[0]
 Weight 0
@@ -3557,6 +9216,27 @@ Delay 1
 End End
 
 Connection
+From input[12]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[13]
 To input[0]
 Weight 0
@@ -3683,6 +9363,27 @@ Delay 1
 End End
 
 Connection
+From input[13]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[14]
 To input[0]
 Weight 0
@@ -3809,6 +9510,27 @@ Delay 1
 End End
 
 Connection
+From input[14]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[15]
 To input[0]
 Weight 0
@@ -3935,6 +9657,27 @@ Delay 1
 End End
 
 Connection
+From input[15]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[16]
 To input[0]
 Weight 0
@@ -4061,6 +9804,27 @@ Delay 1
 End End
 
 Connection
+From input[16]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
 From input[17]
 To input[0]
 Weight 0
@@ -4182,6 +9946,468 @@ End End
 Connection
 From input[17]
 To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[18]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[19]
+To input[20]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[18]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[19]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[20]
+To input[20]
 Weight 0
 Delay 1
 End End
@@ -4313,127 +10539,463 @@ Delay 1
 End End
 
 Connection
-From Packetoutput[0]
+From signal[18]
+To input[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[19]
+To input[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[20]
+To input[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferoutput[0]
 To output[0]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[1]
+From verb_bufferoutput[1]
 To output[1]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[2]
+From verb_bufferoutput[2]
 To output[2]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[3]
+From verb_bufferoutput[3]
 To output[3]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[4]
+From verb_bufferoutput[4]
 To output[4]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[5]
+From verb_bufferoutput[5]
 To output[5]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[6]
+From verb_bufferoutput[6]
 To output[6]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[7]
+From verb_bufferoutput[7]
 To output[7]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[8]
+From verb_bufferoutput[8]
 To output[8]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[9]
+From verb_bufferoutput[9]
 To output[9]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[10]
+From verb_bufferoutput[10]
 To output[10]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[11]
+From verb_bufferoutput[11]
 To output[11]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[12]
+From verb_bufferoutput[12]
 To output[12]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[13]
+From verb_bufferoutput[13]
 To output[13]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[14]
+From verb_bufferoutput[14]
 To output[14]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[15]
+From verb_bufferoutput[15]
 To output[15]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[16]
+From verb_bufferoutput[16]
 To output[16]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Packetoutput[17]
+From verb_bufferoutput[17]
 To output[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferoutput[18]
+To output[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferoutput[19]
+To output[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From verb_bufferoutput[20]
+To output[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[0]
+To output[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[1]
+To output[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[2]
+To output[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[3]
+To output[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[4]
+To output[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[5]
+To output[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[6]
+To output[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[7]
+To output[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[8]
+To output[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[9]
+To output[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[10]
+To output[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[11]
+To output[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[12]
+To output[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[13]
+To output[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[14]
+To output[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[15]
+To output[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[16]
+To output[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[17]
+To output[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[18]
+To output[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[19]
+To output[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From noun_bufferoutput[20]
+To output[20]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[0]
+To output[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[1]
+To output[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[2]
+To output[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[3]
+To output[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[4]
+To output[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[5]
+To output[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[6]
+To output[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[7]
+To output[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[8]
+To output[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[9]
+To output[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[10]
+To output[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[11]
+To output[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[12]
+To output[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[13]
+To output[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[14]
+To output[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[15]
+To output[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[16]
+To output[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[17]
+To output[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[18]
+To output[18]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[19]
+To output[19]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From vo_bufferoutput[20]
+To output[20]
 Weight 24.0
 Delay 1
 End End

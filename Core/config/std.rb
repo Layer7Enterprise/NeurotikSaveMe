@@ -78,6 +78,69 @@ def gen_packetizer params=nil
   return output
 end
 
+#Allow things to pass through?
+def gen_filter params=nil
+  #Get Paramaters
+  ###################################################
+  if params.nil?
+    puts "gen_filter, paramaters nil"
+    exit
+  end
+
+  @name = params[:name]
+  @input = params[:input]
+  @watch = params[:watch]
+  @input_delay = params[:input_delay]  #How long of a delay to add to input
+  @open_length = params[:open_length]  #How long will the filter stay open for?
+  @debug = params[:debug]
+  @debug = false if @debug.nil?
+
+  def check var, name
+    if var.nil?
+      puts "gen_filter, #{name} was nil"
+      exit
+    end
+  end
+
+  check @input, "input"
+  check @watch, "watch"
+  check @input_delay, "input_delay"
+  check @open_length, "open_length"
+
+  #Generate a unique identifier
+  def mangle *subs
+    full_sub = ""
+    subs.each do |sub|
+      full_sub += sub.to_s
+    end
+
+    return @name + full_sub.to_s
+  end
+
+  #Output layer
+  ###################################################
+  output = mangle(:output)
+  count = sizeof(@input)
+  debug = @debug
+  main { glu_signal output, :count => count, :debug => debug}
+  connect @input, output, :linear, :delay => @input_delay
+
+  #Watch circuit
+  ###################################################
+  watch = mangle(:watch)
+  ib = mangle(:ib)
+  main {
+    gaba ib, 3, :ib => 2
+    gaba watch, @open_length
+  }
+
+  connect @watch, watch, :one_to_one
+  connect watch, ib, :one_to_one
+  connect ib, output, :one_to_many
+
+  return output
+end
+
 def gen_hold_buffer params=nil
   #Get Paramaters
   ###################################################

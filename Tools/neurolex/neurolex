@@ -35,8 +35,10 @@ portTo = ARGV[3]
 def help
   puts "NeuroLex - Lexicon Swiss Knife"
   puts "[gen]erate a lexicon list from a set of words"
-    puts "\tgen wordA wordB wordC wordD"
+    puts "\tfileIO > gen"
     puts "\t(hint) use > operator to save to a lexicon file"
+  puts "[gen_header] to generate a neurotik symbol file"
+    puts "\tfileIO > gen_header neuron_set_name"
   puts "Convert a word to vector [w2v]"
     puts "\tw2v file word"
   puts "Convert a word to vector [w2vd] interactively"
@@ -52,10 +54,24 @@ def help
   exit
 end
 
+#Generate a useful header file for accessing the symbolic lexicon names
+def gen_header
+  words = STDIN.read.split(" ")
+  name = ARGV[1]
+
+  puts "#Lexicon symbols"
+  words.each_with_index do |word, index|
+    puts "alien _L#{word}, #{name}, [#{index}, #{index}]"
+  end
+
+  puts "#Number of words in the lexicon"
+  puts "\nLEXICON_COUNT = words.count"
+end
+
 #Generate lexicon compatible 'stream' from a list of words
 def gen
-  words = ARGV[1..-1]
-  inverted_lexicon= {}
+  words = STDIN.read.split(" ")
+  inverted_lexicon = {}
 
   words.uniq.each_with_index do |word, index|
     inverted_lexicon[word] = index
@@ -250,6 +266,8 @@ if ARGV[0] == "help"
   help
 elsif ARGV[0] == "gen"
   gen
+elsif ARGV[0] == "gen_header"
+  gen_header
 elsif ARGV[0] == "w2v"
   w2v
 elsif ARGV[0] == "w2vi"
