@@ -1,0 +1,51 @@
+count = 18
+input do 
+  glu "input", :count => count
+  glu_signal "signal", :count => count
+end 
+
+main do
+  alien "_if", "input", [0, 0]
+  gaba "kill", 30
+  connect "_if", "kill", :one_to_one
+end
+
+output do
+  glu "output", :count => count
+end
+
+def gen_border_buffer params
+  name = params[:name]
+  input_name = params[:input_name] #Name of the input to load
+  watch_name = params[:latch_name] #Name of the trigger to open
+  kill_name = params[:kill_name] #Name of the global reset
+
+  #Should track debug
+  isDebug = false
+  if params
+    if params[:debug] == true
+      isDebug = true
+    end
+  end
+
+  main do
+    gaba "#{name}ib", 20
+    #gaba "#{name}ibc", 10
+    #glu_signal "#{name}border", :count => input_count, :debug => isDebug
+    #glu_signal "#{name}border_mirror", :count => input_count
+  end
+
+  #connect "#{name}ib", "#{name}border", :one_to_many
+  #connect "#{name}ibc", "#{name}ib", :one_to_one
+  #connect "#{name}border", "#{name}border_mirror", :linear
+  #connect "#{name}border_mirror", "#{name}border_mirror", :linear, :delay => 20
+
+  #connect inh_name, "#{name}ib", :many_to_one, :delay => 10
+  #connect input_signal_name, "#{name}ibc", :point_to_point, :from_index => input_signal_index, :to_index => 0
+  #connect inputName, "#{name}border", :linear, :delay => 12
+  #connect kill_name, "#{name}border_mirror", :one_to_many
+
+  #return "#{name}border_mirror"
+end
+
+gen_border_buffer :name => "", :input_name => "input", :watch_name => "input", :kill_name => "_kill"

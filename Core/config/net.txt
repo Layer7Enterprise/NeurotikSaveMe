@@ -284,9 +284,9 @@ EndNetworkOut
 
 Neuron Testdiscard_inh[0]
 Type 2
-InhTime 24
+InhTime 25
 IB 0
-End End
+Debug End
 
 
 
@@ -294,92 +294,92 @@ Neuron Testscatter_latch[0]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[1]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[2]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[3]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[4]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[5]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[6]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[7]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[8]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[9]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[10]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[11]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[12]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[13]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[14]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[15]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[16]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Testscatter_latch[17]
 Type 9
 InhTime 0
 IB 0
-Debug End
+End End
 
 
 Connection
@@ -770,7 +770,7 @@ End End
 
 Neuron Testoutput_inh_disable[0]
 Type 2
-InhTime 48
+InhTime 50
 IB 0
 Debug End
 
@@ -778,99 +778,99 @@ Debug End
 
 Neuron Testoutput_inh[0]
 Type 2
-InhTime 21
-IB 20
+InhTime 3
+IB 2
 Debug End
 
 
 
 Neuron Testoutput[0]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[1]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[2]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[3]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[4]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[5]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[6]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[7]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[8]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[9]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[10]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[11]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[12]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[13]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[14]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[15]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[16]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
 Neuron Testoutput[17]
-Type 9
+Type 17
 InhTime 0
 IB 0
 Debug End
@@ -880,252 +880,252 @@ Connection
 From Testscatter_latch[0]
 To Testoutput[0]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[1]
 To Testoutput[1]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[2]
 To Testoutput[2]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[3]
 To Testoutput[3]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[4]
 To Testoutput[4]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[5]
 To Testoutput[5]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[6]
 To Testoutput[6]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[7]
 To Testoutput[7]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[8]
 To Testoutput[8]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[9]
 To Testoutput[9]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[10]
 To Testoutput[10]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[11]
 To Testoutput[11]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[12]
 To Testoutput[12]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[13]
 To Testoutput[13]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[14]
 To Testoutput[14]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[15]
 To Testoutput[15]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[16]
 To Testoutput[16]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testscatter_latch[17]
 To Testoutput[17]
 Weight 24.0
-Delay 27
+Delay 33
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[0]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[1]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[2]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[3]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[4]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[5]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[6]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[7]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[8]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[9]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[10]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[11]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[12]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[13]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[14]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[15]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[16]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection
 From Testoutput_inh[0]
 To Testoutput[17]
 Weight 24.0
-Delay 1
+Delay 5
 End End
 
 Connection

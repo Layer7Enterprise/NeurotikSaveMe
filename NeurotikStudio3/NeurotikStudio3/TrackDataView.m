@@ -16,7 +16,7 @@
     
     self.scrollToLatest = YES;
     
-    NSTimer *drawTimer = [NSTimer timerWithTimeInterval:0.01f target:self selector:@selector(redraw) userInfo:nil repeats:YES];
+    NSTimer *drawTimer = [NSTimer timerWithTimeInterval:0.03f target:self selector:@selector(redraw) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:drawTimer forMode:NSDefaultRunLoopMode];
     
     return self;

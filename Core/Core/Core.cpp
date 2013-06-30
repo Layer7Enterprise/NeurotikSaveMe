@@ -41,7 +41,8 @@ void CoreTick(int idx, Params_t *params) {
 
 #pragma region Periodic
    if (ib > 0 && (globalTime % ib == 0)) {
-     I = NEURON_TH*2;
+     if (inh < 0)
+       lastSpikeTime = globalTime;
    }
 #pragma endregion
 
@@ -71,7 +72,8 @@ void CoreTick(int idx, Params_t *params) {
          
         //Only for GLU class neurons that fired to us
         if (params->nType[dConnection[i]] & GLU) {
-          I += dWeight[i];
+          if (globalTime - lastSpikeTime > 16)
+            I += dWeight[i];
 
           //Neg pot (The dendrites!)
           //##############################
@@ -99,13 +101,7 @@ void CoreTick(int idx, Params_t *params) {
           dLastSpikeTime[i] = globalTime;
           inh = params->nInhibitoryTime[dConnection[i]];  //Take up INH
 
-          //If i'm gaba or glutamagenic
-          if (type & GLU) {
-            v = NEURON_GLU_C;	
-          } else if (type & GABA) {
-            v = NEURON_GABA_C;
-          }
-
+          
           I = 0;
         }
       }
@@ -116,13 +112,23 @@ void CoreTick(int idx, Params_t *params) {
 #pragma endregion
 
 #pragma region Core Update
+  /*if (inh > 0) {*/
+    ////If i'm gaba or glutamagenic
+    //if (type & GLU) {
+      //v = NEURON_GLU_C;	
+      //u += NEURON_GLU_D;
+    //} else if (type & GABA) {
+      //v = NEURON_GABA_C;
+      //u += NEURON_GABA_D;
+    //}
+  /*}*/
   //Reduce the switching dynamics to tighten the neuron up (Logistic equation)
   //22 is related to how the threshold is about 20, we want to make sure we're in
   //the range when we hit ~22
   I *= 1 / (1 + exp(100.0f*(22.0f - I)));
 
   //Ceiling current
-  if (I > NEURON_TH)
+  if (I > NEURON_TH*1.5f)
     I = NEURON_TH*1.5f;
 
   //Update neuron

@@ -11,7 +11,7 @@
 static TrackViewController *theTrackViewController;
 
 void onDrop() {
-    NSLog(@"Dropped packets detected...");
+    //NSLog(@"Dropped packets detected...");
 }
 
 //Running colors, pushed on a negative change in idx
@@ -46,7 +46,6 @@ void onData(struct NeuronDebugNetworkOutput_t output) {
     float rawVoltage = output.V;
     rawVoltage += 70.0f;
     rawVoltage /= 110.0f;
-    rawVoltage = output.plasticity;
     NSNumber *value = [[NSNumber alloc] initWithFloat:rawVoltage];
     [values addObject:value];
     
