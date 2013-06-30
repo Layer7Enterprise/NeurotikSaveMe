@@ -43,6 +43,8 @@ def help
     puts "\tw2vi file out_port delay"
   puts "Convert incomming vectors to stdout"
     puts "\tv2wi file in_port"
+  puts "Convert incomming vectors to speech"
+    puts "\tv2ws file in_port"
   puts "Generate a basic training file for word pairing"
     puts "\tgen_train_pair file pair_file"
     puts "\t(hint) use > operator to save a basic training file"
@@ -139,6 +141,33 @@ def w2vi
   end
 end
 
+def v2ws
+  file_name = ARGV[1]
+  in_port = ARGV[2]
+
+  lexicon, reverse_lexicon = file_to_lexicons file_name
+
+  socket = UDPSocket.new
+  socket.bind "0.0.0.0", in_port.to_i
+  puts "Listening on port #{in_port.to_i}"
+
+  loop do
+    vector, info = socket.recvfrom 1024
+    sentance = ""
+    vector.split("").each_with_index do |letter, index|
+      new_vector = "0"*vector.length
+      if (letter == "1")
+        new_vector[index] = "1"
+        word = lexicon[new_vector]
+        sentance += " #{word}"
+      end
+    end
+
+    `say #{sentance}`
+  end
+end
+
+
 def v2wi
   file_name = ARGV[1]
   in_port = ARGV[2]
@@ -227,6 +256,8 @@ elsif ARGV[0] == "w2vi"
   w2vi
 elsif ARGV[0] == "v2wi"
   v2wi
+elsif ARGV[0] == "v2ws"
+  v2ws
 elsif ARGV[0] == "gen_train_pair"
   gen_train_pair
 else

@@ -186,6 +186,99 @@ End End
 
 
 EndNetworkIn
+
+Neuron Packetinput[0]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[1]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[2]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[3]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[4]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[5]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[6]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[7]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[8]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[9]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[10]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[11]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[12]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[13]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[14]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[15]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[16]
+Type 2
+InhTime 40
+IB 0
+End End
+Neuron Packetinput[17]
+Type 2
+InhTime 40
+IB 0
+End End
+
+
 NetworkOut
 
 Neuron output[0]
@@ -282,594 +375,1151 @@ End End
 
 EndNetworkOut
 
-Neuron Testdiscard_inh[0]
+Neuron Packetprimary_inh[0]
 Type 2
-InhTime 25
-IB 0
-Debug End
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[1]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[2]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[3]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[4]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[5]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[6]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[7]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[8]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[9]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[10]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[11]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[12]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[13]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[14]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[15]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[16]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[17]
+Type 2
+InhTime 3
+IB 2
+End End
 
 
 
-Neuron Testscatter_latch[0]
-Type 9
+Neuron Packetmain_exc[0]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[1]
-Type 9
+Neuron Packetmain_exc[1]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[2]
-Type 9
+Neuron Packetmain_exc[2]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[3]
-Type 9
+Neuron Packetmain_exc[3]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[4]
-Type 9
+Neuron Packetmain_exc[4]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[5]
-Type 9
+Neuron Packetmain_exc[5]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[6]
-Type 9
+Neuron Packetmain_exc[6]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[7]
-Type 9
+Neuron Packetmain_exc[7]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[8]
-Type 9
+Neuron Packetmain_exc[8]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[9]
-Type 9
+Neuron Packetmain_exc[9]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[10]
-Type 9
+Neuron Packetmain_exc[10]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[11]
-Type 9
+Neuron Packetmain_exc[11]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[12]
-Type 9
+Neuron Packetmain_exc[12]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[13]
-Type 9
+Neuron Packetmain_exc[13]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[14]
-Type 9
+Neuron Packetmain_exc[14]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[15]
-Type 9
+Neuron Packetmain_exc[15]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[16]
-Type 9
+Neuron Packetmain_exc[16]
+Type 1
 InhTime 0
 IB 0
 End End
-Neuron Testscatter_latch[17]
-Type 9
+Neuron Packetmain_exc[17]
+Type 1
+InhTime 0
+IB 0
+End End
+
+
+
+Neuron Packetmain_ib[0]
+Type 17
+InhTime 0
+IB 25
+End End
+
+
+
+Neuron Packetsync[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron Packetsync[17]
+Type 17
 InhTime 0
 IB 0
 End End
 
 
 Connection
-From Testscatter_latch[0]
-To Testscatter_latch[0]
+From Packetprimary_inh[0]
+To Packetmain_exc[0]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[1]
-To Testscatter_latch[1]
+From Packetprimary_inh[1]
+To Packetmain_exc[1]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[2]
-To Testscatter_latch[2]
+From Packetprimary_inh[2]
+To Packetmain_exc[2]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[3]
-To Testscatter_latch[3]
+From Packetprimary_inh[3]
+To Packetmain_exc[3]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[4]
-To Testscatter_latch[4]
+From Packetprimary_inh[4]
+To Packetmain_exc[4]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[5]
-To Testscatter_latch[5]
+From Packetprimary_inh[5]
+To Packetmain_exc[5]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[6]
-To Testscatter_latch[6]
+From Packetprimary_inh[6]
+To Packetmain_exc[6]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[7]
-To Testscatter_latch[7]
+From Packetprimary_inh[7]
+To Packetmain_exc[7]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[8]
-To Testscatter_latch[8]
+From Packetprimary_inh[8]
+To Packetmain_exc[8]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[9]
-To Testscatter_latch[9]
+From Packetprimary_inh[9]
+To Packetmain_exc[9]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[10]
-To Testscatter_latch[10]
+From Packetprimary_inh[10]
+To Packetmain_exc[10]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[11]
-To Testscatter_latch[11]
+From Packetprimary_inh[11]
+To Packetmain_exc[11]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[12]
-To Testscatter_latch[12]
+From Packetprimary_inh[12]
+To Packetmain_exc[12]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[13]
-To Testscatter_latch[13]
+From Packetprimary_inh[13]
+To Packetmain_exc[13]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[14]
-To Testscatter_latch[14]
+From Packetprimary_inh[14]
+To Packetmain_exc[14]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[15]
-To Testscatter_latch[15]
+From Packetprimary_inh[15]
+To Packetmain_exc[15]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[16]
-To Testscatter_latch[16]
+From Packetprimary_inh[16]
+To Packetmain_exc[16]
 Weight 24.0
-Delay 20
+Delay 1
 End End
 
 Connection
-From Testscatter_latch[17]
-To Testscatter_latch[17]
+From Packetprimary_inh[17]
+To Packetmain_exc[17]
 Weight 24.0
-Delay 20
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_ib[0]
+To Packetmain_exc[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[0]
+To Packetprimary_inh[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[1]
+To Packetprimary_inh[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[2]
+To Packetprimary_inh[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[3]
+To Packetprimary_inh[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[4]
+To Packetprimary_inh[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[5]
+To Packetprimary_inh[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[6]
+To Packetprimary_inh[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[7]
+To Packetprimary_inh[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[8]
+To Packetprimary_inh[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[9]
+To Packetprimary_inh[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[10]
+To Packetprimary_inh[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[11]
+To Packetprimary_inh[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[12]
+To Packetprimary_inh[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[13]
+To Packetprimary_inh[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[14]
+To Packetprimary_inh[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[15]
+To Packetprimary_inh[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[16]
+To Packetprimary_inh[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[17]
+To Packetprimary_inh[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[0]
+To Packetsync[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[1]
+To Packetsync[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[2]
+To Packetsync[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[3]
+To Packetsync[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[4]
+To Packetsync[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[5]
+To Packetsync[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[6]
+To Packetsync[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[7]
+To Packetsync[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[8]
+To Packetsync[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[9]
+To Packetsync[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[10]
+To Packetsync[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[11]
+To Packetsync[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[12]
+To Packetsync[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[13]
+To Packetsync[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[14]
+To Packetsync[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[15]
+To Packetsync[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[16]
+To Packetsync[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetmain_exc[17]
+To Packetsync[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[0]
+To Packetinput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[1]
+To Packetinput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[2]
+To Packetinput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[3]
+To Packetinput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[4]
+To Packetinput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[5]
+To Packetinput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[6]
+To Packetinput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[7]
+To Packetinput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[8]
+To Packetinput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[9]
+To Packetinput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[10]
+To Packetinput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[11]
+To Packetinput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[12]
+To Packetinput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[13]
+To Packetinput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[14]
+To Packetinput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[15]
+To Packetinput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[16]
+To Packetinput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetsync[17]
+To Packetinput[17]
+Weight 24.0
+Delay 1
 End End
 
 Connection
 From input[0]
-To Testscatter_latch[0]
+To Packetinput[0]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[1]
-To Testscatter_latch[1]
+To Packetinput[1]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[2]
-To Testscatter_latch[2]
+To Packetinput[2]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[3]
-To Testscatter_latch[3]
+To Packetinput[3]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[4]
-To Testscatter_latch[4]
+To Packetinput[4]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[5]
-To Testscatter_latch[5]
+To Packetinput[5]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[6]
-To Testscatter_latch[6]
+To Packetinput[6]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[7]
-To Testscatter_latch[7]
+To Packetinput[7]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[8]
-To Testscatter_latch[8]
+To Packetinput[8]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[9]
-To Testscatter_latch[9]
+To Packetinput[9]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[10]
-To Testscatter_latch[10]
+To Packetinput[10]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[11]
-To Testscatter_latch[11]
+To Packetinput[11]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[12]
-To Testscatter_latch[12]
+To Packetinput[12]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[13]
-To Testscatter_latch[13]
+To Packetinput[13]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[14]
-To Testscatter_latch[14]
+To Packetinput[14]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[15]
-To Testscatter_latch[15]
+To Packetinput[15]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[16]
-To Testscatter_latch[16]
+To Packetinput[16]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[17]
-To Testscatter_latch[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Testdiscard_inh[0]
-To Testscatter_latch[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[0]
-To Testdiscard_inh[0]
+To Packetinput[17]
 Weight 24.0
 Delay 1
 End End
 
 
-Neuron Testoutput_inh_disable[0]
-Type 2
-InhTime 50
-IB 0
-Debug End
-
-
-
-Neuron Testoutput_inh[0]
+Neuron Packetdisable[0]
 Type 2
 InhTime 3
 IB 2
-Debug End
+End End
 
 
 
-Neuron Testoutput[0]
+Neuron Packeten[0]
+Type 2
+InhTime 100
+IB 0
+End End
+
+
+
+Neuron Packetoutput[0]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[1]
+Neuron Packetoutput[1]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[2]
+Neuron Packetoutput[2]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[3]
+Neuron Packetoutput[3]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[4]
+Neuron Packetoutput[4]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[5]
+Neuron Packetoutput[5]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[6]
+Neuron Packetoutput[6]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[7]
+Neuron Packetoutput[7]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[8]
+Neuron Packetoutput[8]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[9]
+Neuron Packetoutput[9]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[10]
+Neuron Packetoutput[10]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[11]
+Neuron Packetoutput[11]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[12]
+Neuron Packetoutput[12]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[13]
+Neuron Packetoutput[13]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[14]
+Neuron Packetoutput[14]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[15]
+Neuron Packetoutput[15]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[16]
+Neuron Packetoutput[16]
 Type 17
 InhTime 0
 IB 0
 Debug End
-Neuron Testoutput[17]
+Neuron Packetoutput[17]
 Type 17
 InhTime 0
 IB 0
@@ -877,392 +1527,518 @@ Debug End
 
 
 Connection
-From Testscatter_latch[0]
-To Testoutput[0]
+From Packetsync[0]
+To Packetoutput[0]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[1]
-To Testoutput[1]
+From Packetsync[1]
+To Packetoutput[1]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[2]
-To Testoutput[2]
+From Packetsync[2]
+To Packetoutput[2]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[3]
-To Testoutput[3]
+From Packetsync[3]
+To Packetoutput[3]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[4]
-To Testoutput[4]
+From Packetsync[4]
+To Packetoutput[4]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[5]
-To Testoutput[5]
+From Packetsync[5]
+To Packetoutput[5]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[6]
-To Testoutput[6]
+From Packetsync[6]
+To Packetoutput[6]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[7]
-To Testoutput[7]
+From Packetsync[7]
+To Packetoutput[7]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[8]
-To Testoutput[8]
+From Packetsync[8]
+To Packetoutput[8]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[9]
-To Testoutput[9]
+From Packetsync[9]
+To Packetoutput[9]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[10]
-To Testoutput[10]
+From Packetsync[10]
+To Packetoutput[10]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[11]
-To Testoutput[11]
+From Packetsync[11]
+To Packetoutput[11]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[12]
-To Testoutput[12]
+From Packetsync[12]
+To Packetoutput[12]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[13]
-To Testoutput[13]
+From Packetsync[13]
+To Packetoutput[13]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[14]
-To Testoutput[14]
+From Packetsync[14]
+To Packetoutput[14]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[15]
-To Testoutput[15]
+From Packetsync[15]
+To Packetoutput[15]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[16]
-To Testoutput[16]
+From Packetsync[16]
+To Packetoutput[16]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testscatter_latch[17]
-To Testoutput[17]
+From Packetsync[17]
+To Packetoutput[17]
 Weight 24.0
-Delay 33
+Delay 40
 End End
 
 Connection
-From Testoutput_inh[0]
-To Testoutput[0]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[1]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[2]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[3]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[4]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[5]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[6]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[7]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[8]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[9]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[10]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[11]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[12]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[13]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[14]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[15]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[16]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh[0]
-To Testoutput[17]
-Weight 24.0
-Delay 5
-End End
-
-Connection
-From Testoutput_inh_disable[0]
-To Testoutput_inh[0]
+From Packeten[0]
+To Packetdisable[0]
 Weight 24.0
 Delay 1
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[0]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[1]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[2]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[3]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[4]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[5]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[6]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[7]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[8]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[9]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[10]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[11]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[12]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[13]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[14]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[15]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[16]
+Weight 24.0
+Delay 5
+End End
+
+Connection
+From Packeten[0]
+To Packetsync[17]
+Weight 24.0
+Delay 5
 End End
 
 Connection
 From input[0]
-To Testoutput_inh_disable[0]
+To Packeten[0]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[0]
+From Packetdisable[0]
+To Packetoutput[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetdisable[0]
+To Packetoutput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetoutput[0]
 To output[0]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[1]
+From Packetoutput[1]
 To output[1]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[2]
+From Packetoutput[2]
 To output[2]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[3]
+From Packetoutput[3]
 To output[3]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[4]
+From Packetoutput[4]
 To output[4]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[5]
+From Packetoutput[5]
 To output[5]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[6]
+From Packetoutput[6]
 To output[6]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[7]
+From Packetoutput[7]
 To output[7]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[8]
+From Packetoutput[8]
 To output[8]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[9]
+From Packetoutput[9]
 To output[9]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[10]
+From Packetoutput[10]
 To output[10]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[11]
+From Packetoutput[11]
 To output[11]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[12]
+From Packetoutput[12]
 To output[12]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[13]
+From Packetoutput[13]
 To output[13]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[14]
+From Packetoutput[14]
 To output[14]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[15]
+From Packetoutput[15]
 To output[15]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[16]
+From Packetoutput[16]
 To output[16]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From Testoutput[17]
+From Packetoutput[17]
 To output[17]
 Weight 24.0
 Delay 1
