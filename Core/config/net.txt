@@ -1,191 +1,3 @@
-NetworkIn
-
-Neuron input[0]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[1]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[2]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[3]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[4]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[5]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[6]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[7]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[8]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[9]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[10]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[11]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[12]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[13]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[14]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[15]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[16]
-Type 1
-InhTime 0
-IB 0
-End End
-Neuron input[17]
-Type 1
-InhTime 0
-IB 0
-End End
-
-
-
-Neuron signal[0]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[1]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[2]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[3]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[4]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[5]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[6]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[7]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[8]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[9]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[10]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[11]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[12]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[13]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[14]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[15]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[16]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron signal[17]
-Type 17
-InhTime 0
-IB 0
-End End
-
-
-EndNetworkIn
 
 Neuron Packetinput[0]
 Type 2
@@ -276,6 +88,99 @@ Neuron Packetinput[17]
 Type 2
 InhTime 40
 IB 0
+End End
+
+
+
+Neuron Packetprimary_inh[0]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[1]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[2]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[3]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[4]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[5]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[6]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[7]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[8]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[9]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[10]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[11]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[12]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[13]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[14]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[15]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[16]
+Type 2
+InhTime 3
+IB 2
+End End
+Neuron Packetprimary_inh[17]
+Type 2
+InhTime 3
+IB 2
 End End
 
 
@@ -375,98 +280,201 @@ End End
 
 EndNetworkOut
 
-Neuron Packetprimary_inh[0]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[1]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[2]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[3]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[4]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[5]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[6]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[7]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[8]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[9]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[10]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[11]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[12]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[13]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[14]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[15]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[16]
-Type 2
-InhTime 3
-IB 2
-End End
-Neuron Packetprimary_inh[17]
-Type 2
-InhTime 3
-IB 2
+Neuron Packetmain_ib[0]
+Type 17
+InhTime 0
+IB 25
 End End
 
 
+NetworkIn
+
+Neuron input[0]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[1]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[2]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[3]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[4]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[5]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[6]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[7]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[8]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[9]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[10]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[11]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[12]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[13]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[14]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[15]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[16]
+Type 1
+InhTime 0
+IB 0
+Debug End
+Neuron input[17]
+Type 1
+InhTime 0
+IB 0
+Debug End
+
+
+
+Neuron signal[0]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[1]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[2]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[3]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[4]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[5]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[6]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[7]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[8]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[9]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[10]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[11]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[12]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[13]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[14]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[15]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[16]
+Type 17
+InhTime 0
+IB 0
+End End
+Neuron signal[17]
+Type 17
+InhTime 0
+IB 0
+End End
+
+
+EndNetworkIn
 
 Neuron Packetmain_exc[0]
 Type 1
@@ -557,14 +565,6 @@ Neuron Packetmain_exc[17]
 Type 1
 InhTime 0
 IB 0
-End End
-
-
-
-Neuron Packetmain_ib[0]
-Type 17
-InhTime 0
-IB 25
 End End
 
 
@@ -660,6 +660,132 @@ InhTime 0
 IB 0
 End End
 
+
+Connection
+From Packetinput[0]
+To Packetprimary_inh[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[1]
+To Packetprimary_inh[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[2]
+To Packetprimary_inh[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[3]
+To Packetprimary_inh[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[4]
+To Packetprimary_inh[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[5]
+To Packetprimary_inh[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[6]
+To Packetprimary_inh[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[7]
+To Packetprimary_inh[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[8]
+To Packetprimary_inh[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[9]
+To Packetprimary_inh[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[10]
+To Packetprimary_inh[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[11]
+To Packetprimary_inh[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[12]
+To Packetprimary_inh[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[13]
+To Packetprimary_inh[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[14]
+To Packetprimary_inh[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[15]
+To Packetprimary_inh[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[16]
+To Packetprimary_inh[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Packetinput[17]
+To Packetprimary_inh[17]
+Weight 24.0
+Delay 1
+End End
 
 Connection
 From Packetprimary_inh[0]
@@ -909,132 +1035,6 @@ End End
 Connection
 From Packetmain_ib[0]
 To Packetmain_exc[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[0]
-To Packetprimary_inh[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[1]
-To Packetprimary_inh[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[2]
-To Packetprimary_inh[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[3]
-To Packetprimary_inh[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[4]
-To Packetprimary_inh[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[5]
-To Packetprimary_inh[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[6]
-To Packetprimary_inh[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[7]
-To Packetprimary_inh[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[8]
-To Packetprimary_inh[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[9]
-To Packetprimary_inh[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[10]
-To Packetprimary_inh[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[11]
-To Packetprimary_inh[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[12]
-To Packetprimary_inh[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[13]
-To Packetprimary_inh[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[14]
-To Packetprimary_inh[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[15]
-To Packetprimary_inh[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[16]
-To Packetprimary_inh[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From Packetinput[17]
-To Packetprimary_inh[17]
 Weight 24.0
 Delay 1
 End End
@@ -1438,92 +1438,92 @@ Neuron Packetoutput[0]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[1]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[2]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[3]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[4]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[5]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[6]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[7]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[8]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[9]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[10]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[11]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[12]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[13]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[14]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[15]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[16]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 Neuron Packetoutput[17]
 Type 17
 InhTime 0
 IB 0
-Debug End
+End End
 
 
 Connection
@@ -1914,6 +1914,2400 @@ End End
 Connection
 From Packetdisable[0]
 To Packetoutput[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[0]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[1]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[2]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[3]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[4]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[5]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[6]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[7]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[8]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[9]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[10]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[11]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[12]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[13]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[14]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[15]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[16]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[0]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[1]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[2]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[3]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[4]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[5]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[6]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[7]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[8]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[9]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[10]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[11]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[12]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[13]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[14]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[15]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[16]
+Weight 0
+Delay 1
+End End
+
+Connection
+From input[17]
+To input[17]
+Weight 0
+Delay 1
+End End
+
+Connection
+From signal[0]
+To input[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[1]
+To input[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[2]
+To input[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[3]
+To input[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[4]
+To input[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[5]
+To input[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[6]
+To input[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[7]
+To input[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[8]
+To input[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[9]
+To input[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[10]
+To input[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[11]
+To input[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[12]
+To input[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[13]
+To input[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[14]
+To input[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[15]
+To input[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[16]
+To input[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From signal[17]
+To input[17]
 Weight 24.0
 Delay 1
 End End
