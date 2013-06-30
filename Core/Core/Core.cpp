@@ -97,7 +97,7 @@ void CoreTick(int idx, Params_t *params) {
         //Only for prior neurons that are GABA
         if (params->nType[dConnection[i]] & GABA) {
           dLastSpikeTime[i] = globalTime;
-          inh = params->nInhibitoryTime[dConnection[i]];
+          inh = params->nInhibitoryTime[dConnection[i]];  //Take up INH
 
           //If i'm gaba or glutamagenic
           if (type & GLU) {
@@ -122,13 +122,12 @@ void CoreTick(int idx, Params_t *params) {
   I *= 1 / (1 + exp(100.0f*(22.0f - I)));
 
   //Ceiling current
-  if (I > NEURON_TH*1.5f)
+  if (I > NEURON_TH)
     I = NEURON_TH*1.5f;
 
   //Update neuron
   v += 0.5f*(0.04f*v*v + 5.0f*v + 140.0f - u + I);
   v += 0.5f*(0.04f*v*v + 5.0f*v + 140.0f - u + I);
-
 
   if (type & GLU) {
     u += NEURON_GLU_A*(NEURON_GLU_B*v - u);

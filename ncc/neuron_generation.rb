@@ -35,6 +35,10 @@ class Neuron
     @@neurons << self
   end
 
+  def get_count
+    return @count
+  end
+
   def set_inhibitory_time inhTime
     @inhTime = inhTime
   end
@@ -85,6 +89,7 @@ end
     #:ib - What modulus does this neuron pulse out
     #:debug - Should this show up in studio?
 def neuron name, type, params=nil
+  name = name.to_s
   count = 1
   count = params[:count] if !params.nil? and !params[:count].nil?
   new_neuron = Neuron.new name, type, count
@@ -99,6 +104,13 @@ def neuron name, type, params=nil
   end
 
   write new_neuron.to_code
+end
+
+def debug name
+  begin_frame 0 do
+    neuron = Neuron.name_to_neuron(name)
+    neuron.enable_debug
+  end
 end
 
 def glu name, params=nil

@@ -4,8 +4,6 @@ Dir.chdir 'config'
   system('ncc')
 Dir.chdir '../'
 
-sleep 1
-
 def start name
   @lastName = name
 end

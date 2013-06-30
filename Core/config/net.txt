@@ -186,103 +186,95 @@ End End
 
 
 EndNetworkIn
-
-Neuron kill[0]
-Type 2
-InhTime 30
-IB 0
-End End
-
-
 NetworkOut
 
 Neuron output[0]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[1]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[2]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[3]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[4]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[5]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[6]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[7]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[8]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[9]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[10]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[11]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[12]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[13]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[14]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[15]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[16]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
 Neuron output[17]
-Type 1
+Type 9
 InhTime 0
 IB 0
 End End
@@ -290,5326 +282,988 @@ End End
 
 EndNetworkOut
 
-Neuron proib[0]
+Neuron Testdiscard_inh[0]
 Type 2
-InhTime 20
+InhTime 24
 IB 0
 End End
 
 
 
-Neuron proibc[0]
+Neuron Testscatter_latch[0]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[1]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[2]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[3]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[4]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[5]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[6]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[7]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[8]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[9]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[10]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[11]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[12]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[13]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[14]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[15]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[16]
+Type 9
+InhTime 0
+IB 0
+Debug End
+Neuron Testscatter_latch[17]
+Type 9
+InhTime 0
+IB 0
+Debug End
+
+
+Connection
+From Testscatter_latch[0]
+To Testscatter_latch[0]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[1]
+To Testscatter_latch[1]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[2]
+To Testscatter_latch[2]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[3]
+To Testscatter_latch[3]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[4]
+To Testscatter_latch[4]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[5]
+To Testscatter_latch[5]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[6]
+To Testscatter_latch[6]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[7]
+To Testscatter_latch[7]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[8]
+To Testscatter_latch[8]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[9]
+To Testscatter_latch[9]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[10]
+To Testscatter_latch[10]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[11]
+To Testscatter_latch[11]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[12]
+To Testscatter_latch[12]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[13]
+To Testscatter_latch[13]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[14]
+To Testscatter_latch[14]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[15]
+To Testscatter_latch[15]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[16]
+To Testscatter_latch[16]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From Testscatter_latch[17]
+To Testscatter_latch[17]
+Weight 24.0
+Delay 20
+End End
+
+Connection
+From input[0]
+To Testscatter_latch[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[1]
+To Testscatter_latch[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[2]
+To Testscatter_latch[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[3]
+To Testscatter_latch[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[4]
+To Testscatter_latch[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[5]
+To Testscatter_latch[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[6]
+To Testscatter_latch[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[7]
+To Testscatter_latch[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[8]
+To Testscatter_latch[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[9]
+To Testscatter_latch[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[10]
+To Testscatter_latch[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[11]
+To Testscatter_latch[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[12]
+To Testscatter_latch[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[13]
+To Testscatter_latch[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[14]
+To Testscatter_latch[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[15]
+To Testscatter_latch[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[16]
+To Testscatter_latch[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[17]
+To Testscatter_latch[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[0]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[1]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[2]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[3]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[4]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[5]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[6]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[7]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[8]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[9]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[10]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[11]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[12]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[13]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[14]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[15]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[16]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From Testdiscard_inh[0]
+To Testscatter_latch[17]
+Weight 24.0
+Delay 1
+End End
+
+Connection
+From input[0]
+To Testdiscard_inh[0]
+Weight 24.0
+Delay 1
+End End
+
+
+Neuron Testoutput_inh_disable[0]
 Type 2
-InhTime 10
+InhTime 48
 IB 0
-End End
+Debug End
 
 
 
-Neuron proborder[0]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[1]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[2]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[3]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[4]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[5]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[6]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[7]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[8]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[9]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[10]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[11]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[12]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[13]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[14]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[15]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[16]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder[17]
-Type 17
-InhTime 0
-IB 0
-End End
-
-
-
-Neuron proborder_mirror[0]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[1]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[2]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[3]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[4]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[5]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[6]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[7]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[8]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[9]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[10]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[11]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[12]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[13]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[14]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[15]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[16]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron proborder_mirror[17]
-Type 17
-InhTime 0
-IB 0
-End End
-
-
-
-Neuron pos[0]
-Type 17
-InhTime 0
-IB 0
-End End
-
-
-
-Neuron tobeib[0]
+Neuron Testoutput_inh[0]
 Type 2
-InhTime 20
-IB 0
-End End
+InhTime 21
+IB 20
+Debug End
 
 
 
-Neuron tobeibc[0]
-Type 2
-InhTime 10
-IB 0
-End End
-
-
-
-Neuron tobeborder[0]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[1]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[2]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[3]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[4]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[5]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[6]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[7]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[8]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[9]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[10]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[11]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[12]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[13]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[14]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[15]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[16]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder[17]
-Type 17
-InhTime 0
-IB 0
-End End
-
-
-
-Neuron tobeborder_mirror[0]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[1]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[2]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[3]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[4]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[5]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[6]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[7]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[8]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[9]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[10]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[11]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[12]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[13]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[14]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[15]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[16]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron tobeborder_mirror[17]
-Type 17
-InhTime 0
-IB 0
-End End
-
-
-
-Neuron nounib[0]
-Type 2
-InhTime 20
-IB 0
-End End
-
-
-
-Neuron nounibc[0]
-Type 2
-InhTime 10
-IB 0
-End End
-
-
-
-Neuron nounborder[0]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[1]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[2]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[3]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[4]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[5]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[6]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[7]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[8]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[9]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[10]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[11]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[12]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[13]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[14]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[15]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[16]
-Type 17
-InhTime 0
-IB 0
-End End
-Neuron nounborder[17]
-Type 17
-InhTime 0
-IB 0
-End End
-
-
-
-Neuron nounborder_mirror[0]
-Type 17
+Neuron Testoutput[0]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[1]
-Type 17
+Debug End
+Neuron Testoutput[1]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[2]
-Type 17
+Debug End
+Neuron Testoutput[2]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[3]
-Type 17
+Debug End
+Neuron Testoutput[3]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[4]
-Type 17
+Debug End
+Neuron Testoutput[4]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[5]
-Type 17
+Debug End
+Neuron Testoutput[5]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[6]
-Type 17
+Debug End
+Neuron Testoutput[6]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[7]
-Type 17
+Debug End
+Neuron Testoutput[7]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[8]
-Type 17
+Debug End
+Neuron Testoutput[8]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[9]
-Type 17
+Debug End
+Neuron Testoutput[9]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[10]
-Type 17
+Debug End
+Neuron Testoutput[10]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[11]
-Type 17
+Debug End
+Neuron Testoutput[11]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[12]
-Type 17
+Debug End
+Neuron Testoutput[12]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[13]
-Type 17
+Debug End
+Neuron Testoutput[13]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[14]
-Type 17
+Debug End
+Neuron Testoutput[14]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[15]
-Type 17
+Debug End
+Neuron Testoutput[15]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[16]
-Type 17
+Debug End
+Neuron Testoutput[16]
+Type 9
 InhTime 0
 IB 0
-End End
-Neuron nounborder_mirror[17]
-Type 17
+Debug End
+Neuron Testoutput[17]
+Type 9
 InhTime 0
 IB 0
-End End
+Debug End
 
 
 Connection
-From nounborder_mirror[0]
-To nounborder_mirror[0]
+From Testscatter_latch[0]
+To Testoutput[0]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[1]
-To nounborder_mirror[1]
+From Testscatter_latch[1]
+To Testoutput[1]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[2]
-To nounborder_mirror[2]
+From Testscatter_latch[2]
+To Testoutput[2]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[3]
-To nounborder_mirror[3]
+From Testscatter_latch[3]
+To Testoutput[3]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[4]
-To nounborder_mirror[4]
+From Testscatter_latch[4]
+To Testoutput[4]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[5]
-To nounborder_mirror[5]
+From Testscatter_latch[5]
+To Testoutput[5]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[6]
-To nounborder_mirror[6]
+From Testscatter_latch[6]
+To Testoutput[6]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[7]
-To nounborder_mirror[7]
+From Testscatter_latch[7]
+To Testoutput[7]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[8]
-To nounborder_mirror[8]
+From Testscatter_latch[8]
+To Testoutput[8]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[9]
-To nounborder_mirror[9]
+From Testscatter_latch[9]
+To Testoutput[9]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[10]
-To nounborder_mirror[10]
+From Testscatter_latch[10]
+To Testoutput[10]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[11]
-To nounborder_mirror[11]
+From Testscatter_latch[11]
+To Testoutput[11]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[12]
-To nounborder_mirror[12]
+From Testscatter_latch[12]
+To Testoutput[12]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[13]
-To nounborder_mirror[13]
+From Testscatter_latch[13]
+To Testoutput[13]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[14]
-To nounborder_mirror[14]
+From Testscatter_latch[14]
+To Testoutput[14]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[15]
-To nounborder_mirror[15]
+From Testscatter_latch[15]
+To Testoutput[15]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[16]
-To nounborder_mirror[16]
+From Testscatter_latch[16]
+To Testoutput[16]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From nounborder_mirror[17]
-To nounborder_mirror[17]
+From Testscatter_latch[17]
+To Testoutput[17]
 Weight 24.0
-Delay 20
+Delay 27
 End End
 
 Connection
-From input[0]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[0]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[1]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[1]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[2]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[2]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[3]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[3]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[4]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[4]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[5]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[5]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[6]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[6]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[7]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[7]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[8]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[8]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[9]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[9]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[10]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[10]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[11]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[11]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[12]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[12]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[13]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[13]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[14]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[14]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[15]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[15]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[16]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[16]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[17]
-To proib[0]
+From Testoutput_inh[0]
+To Testoutput[17]
 Weight 24.0
-Delay 10
+Delay 1
 End End
 
 Connection
-From input[9]
-To proibc[0]
+From Testoutput_inh_disable[0]
+To Testoutput_inh[0]
 Weight 24.0
 Delay 1
 End End
 
 Connection
 From input[0]
-To proborder[0]
+To Testoutput_inh_disable[0]
 Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[1]
-To proborder[1]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[2]
-To proborder[2]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[3]
-To proborder[3]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[4]
-To proborder[4]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[5]
-To proborder[5]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[6]
-To proborder[6]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[7]
-To proborder[7]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[8]
-To proborder[8]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[9]
-To proborder[9]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[10]
-To proborder[10]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[11]
-To proborder[11]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[12]
-To proborder[12]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[13]
-To proborder[13]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[14]
-To proborder[14]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[15]
-To proborder[15]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[16]
-To proborder[16]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[17]
-To proborder[17]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To proborder_mirror[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[0]
-To proborder_mirror[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[1]
-To proborder_mirror[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[2]
-To proborder_mirror[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[3]
-To proborder_mirror[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[4]
-To proborder_mirror[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[5]
-To proborder_mirror[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[6]
-To proborder_mirror[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[7]
-To proborder_mirror[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[8]
-To proborder_mirror[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[9]
-To proborder_mirror[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[10]
-To proborder_mirror[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[11]
-To proborder_mirror[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[12]
-To proborder_mirror[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[13]
-To proborder_mirror[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[14]
-To proborder_mirror[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[15]
-To proborder_mirror[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[16]
-To proborder_mirror[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder[17]
-To proborder_mirror[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounib[0]
-To nounborder[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounib[0]
-To nounborder[1]
-Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[2]
+From Testoutput[0]
+To output[0]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[3]
+From Testoutput[1]
+To output[1]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[4]
+From Testoutput[2]
+To output[2]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[5]
+From Testoutput[3]
+To output[3]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[6]
+From Testoutput[4]
+To output[4]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[7]
+From Testoutput[5]
+To output[5]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[8]
+From Testoutput[6]
+To output[6]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[9]
+From Testoutput[7]
+To output[7]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[10]
+From Testoutput[8]
+To output[8]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[11]
+From Testoutput[9]
+To output[9]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[12]
+From Testoutput[10]
+To output[10]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[13]
+From Testoutput[11]
+To output[11]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[14]
+From Testoutput[12]
+To output[12]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[15]
+From Testoutput[13]
+To output[13]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[16]
+From Testoutput[14]
+To output[14]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounib[0]
-To nounborder[17]
+From Testoutput[15]
+To output[15]
 Weight 24.0
 Delay 1
 End End
 
 Connection
-From nounibc[0]
-To nounib[0]
+From Testoutput[16]
+To output[16]
 Weight 24.0
 Delay 1
-End End
-
-Connection
-From nounborder[0]
-To nounborder_mirror[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[1]
-To nounborder_mirror[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[2]
-To nounborder_mirror[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[3]
-To nounborder_mirror[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[4]
-To nounborder_mirror[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[5]
-To nounborder_mirror[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[6]
-To nounborder_mirror[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[7]
-To nounborder_mirror[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[8]
-To nounborder_mirror[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[9]
-To nounborder_mirror[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[10]
-To nounborder_mirror[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[11]
-To nounborder_mirror[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[12]
-To nounborder_mirror[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[13]
-To nounborder_mirror[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[14]
-To nounborder_mirror[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[15]
-To nounborder_mirror[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[16]
-To nounborder_mirror[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From nounborder[17]
-To nounborder_mirror[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proborder_mirror[0]
-To proborder_mirror[0]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[1]
-To proborder_mirror[1]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[2]
-To proborder_mirror[2]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[3]
-To proborder_mirror[3]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[4]
-To proborder_mirror[4]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[5]
-To proborder_mirror[5]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[6]
-To proborder_mirror[6]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[7]
-To proborder_mirror[7]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[8]
-To proborder_mirror[8]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[9]
-To proborder_mirror[9]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[10]
-To proborder_mirror[10]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[11]
-To proborder_mirror[11]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[12]
-To proborder_mirror[12]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[13]
-To proborder_mirror[13]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[14]
-To proborder_mirror[14]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[15]
-To proborder_mirror[15]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[16]
-To proborder_mirror[16]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From proborder_mirror[17]
-To proborder_mirror[17]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From input[0]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[1]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[2]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[3]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[4]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[5]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[6]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[7]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[8]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[9]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[10]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[11]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[12]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[13]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[14]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[15]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[16]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[17]
-To nounib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[14]
-To nounibc[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[0]
-To nounborder[0]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[1]
-To nounborder[1]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[2]
-To nounborder[2]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[3]
-To nounborder[3]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[4]
-To nounborder[4]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[5]
-To nounborder[5]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[6]
-To nounborder[6]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[7]
-To nounborder[7]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[8]
-To nounborder[8]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[9]
-To nounborder[9]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[10]
-To nounborder[10]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[11]
-To nounborder[11]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[12]
-To nounborder[12]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[13]
-To nounborder[13]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[14]
-To nounborder[14]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[15]
-To nounborder[15]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[16]
-To nounborder[16]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[17]
-To nounborder[17]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To nounborder_mirror[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proibc[0]
-To proib[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeib[0]
-To tobeborder[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeibc[0]
-To tobeib[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[0]
-To tobeborder_mirror[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[1]
-To tobeborder_mirror[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[2]
-To tobeborder_mirror[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[3]
-To tobeborder_mirror[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[4]
-To tobeborder_mirror[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[5]
-To tobeborder_mirror[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[6]
-To tobeborder_mirror[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[7]
-To tobeborder_mirror[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[8]
-To tobeborder_mirror[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[9]
-To tobeborder_mirror[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[10]
-To tobeborder_mirror[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[11]
-To tobeborder_mirror[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[12]
-To tobeborder_mirror[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[13]
-To tobeborder_mirror[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[14]
-To tobeborder_mirror[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[15]
-To tobeborder_mirror[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[16]
-To tobeborder_mirror[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder[17]
-To tobeborder_mirror[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From tobeborder_mirror[0]
-To tobeborder_mirror[0]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[1]
-To tobeborder_mirror[1]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[2]
-To tobeborder_mirror[2]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[3]
-To tobeborder_mirror[3]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[4]
-To tobeborder_mirror[4]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[5]
-To tobeborder_mirror[5]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[6]
-To tobeborder_mirror[6]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[7]
-To tobeborder_mirror[7]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[8]
-To tobeborder_mirror[8]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[9]
-To tobeborder_mirror[9]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[10]
-To tobeborder_mirror[10]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[11]
-To tobeborder_mirror[11]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[12]
-To tobeborder_mirror[12]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[13]
-To tobeborder_mirror[13]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[14]
-To tobeborder_mirror[14]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[15]
-To tobeborder_mirror[15]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[16]
-To tobeborder_mirror[16]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From tobeborder_mirror[17]
-To tobeborder_mirror[17]
-Weight 24.0
-Delay 20
-End End
-
-Connection
-From input[0]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[1]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[2]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[3]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[4]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[5]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[6]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[7]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[8]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[9]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[10]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[11]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[12]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[13]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[14]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[15]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[16]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[17]
-To tobeib[0]
-Weight 24.0
-Delay 10
-End End
-
-Connection
-From input[10]
-To tobeibc[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[0]
-To tobeborder[0]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[1]
-To tobeborder[1]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[2]
-To tobeborder[2]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[3]
-To tobeborder[3]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[4]
-To tobeborder[4]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[5]
-To tobeborder[5]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[6]
-To tobeborder[6]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[7]
-To tobeborder[7]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[8]
-To tobeborder[8]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[9]
-To tobeborder[9]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[10]
-To tobeborder[10]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[11]
-To tobeborder[11]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[12]
-To tobeborder[12]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[13]
-To tobeborder[13]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[14]
-To tobeborder[14]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[15]
-To tobeborder[15]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[16]
-To tobeborder[16]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From input[17]
-To tobeborder[17]
-Weight 24.0
-Delay 12
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From kill[0]
-To tobeborder_mirror[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[0]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[1]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[2]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[3]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[4]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[5]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[6]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[7]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[8]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[9]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[10]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[11]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[12]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[13]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[14]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[15]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[16]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From proib[0]
-To proborder[17]
-Weight 24.0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[0]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[1]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[2]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[3]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[4]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[5]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[6]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[7]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[8]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[9]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[10]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[11]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[12]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[13]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[14]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[15]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[16]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[0]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[1]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[2]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[3]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[4]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[5]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[6]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[7]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[8]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[9]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[10]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[11]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[12]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[13]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[14]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[15]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[16]
-Weight 0
-Delay 1
-End End
-
-Connection
-From input[17]
-To input[17]
-Weight 0
-Delay 1
-End End
-
-Connection
-From signal[0]
-To input[0]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[1]
-To input[1]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[2]
-To input[2]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[3]
-To input[3]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[4]
-To input[4]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[5]
-To input[5]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[6]
-To input[6]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[7]
-To input[7]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[8]
-To input[8]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[9]
-To input[9]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[10]
-To input[10]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[11]
-To input[11]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[12]
-To input[12]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[13]
-To input[13]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[14]
-To input[14]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[15]
-To input[15]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[16]
-To input[16]
-Weight 24.0
-Delay 4
-End End
-
-Connection
-From signal[17]
-To input[17]
-Weight 24.0
-Delay 4
 End End
 
 Connection
-From input[0]
-To kill[0]
+From Testoutput[17]
+To output[17]
 Weight 24.0
 Delay 1
 End End

@@ -48,14 +48,13 @@ class Connection
 end
 
 def sizeof name
-  begin_frame 0 do
-    return Neuron.name_to_neuron(name).count
-  end
+  compile
+  Neuron.name_to_neuron(name).get_count
 end
 
 @aliases = {}
 
-def alias to_name, from_name, range
+def alien to_name, from_name, range
   if to_name[0] != "_"
     puts "Alias name (#{to_name}) must start with an underscore"
     exit
@@ -76,6 +75,8 @@ def struct name, arr
 end
 
 def connect from, to, method, params=nil
+  from = from.to_s
+  to = to.to_s
   begin_frame 1 do
     from_set = []
     to_set = []
@@ -87,9 +88,20 @@ def connect from, to, method, params=nil
     elsif from[0] == "*"
       set_names = @structs[from]
       set_names.each do |set_name|
+        if Neuron.name_to_neuron(set_name) == nil
+          puts "Neuron not found #{set_name}"
+          exit
+        end
+
+
         from_set += Neuron.name_to_neuron(set_name).name_array
       end
     else
+      if Neuron.name_to_neuron(from) == nil
+        puts "Neuron not found #{to}"
+        exit
+      end
+
       from_set = Neuron.name_to_neuron(from).name_array
     end
 
@@ -100,9 +112,18 @@ def connect from, to, method, params=nil
     elsif to[0] == "*"
       set_names = @structs[to]
       set_names.each do |set_name|
+        if Neuron.name_to_neuron(set_name) == nil
+          puts "Neuron not found #{set_name}"
+          exit
+        end
+
         to_set += Neuron.name_to_neuron(set_name).name_array
       end
     else
+      if Neuron.name_to_neuron(to) == nil
+        puts "Neuron not found #{to}"
+        exit
+      end
       to_set = Neuron.name_to_neuron(to).name_array
     end
 

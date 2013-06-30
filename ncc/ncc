@@ -25,6 +25,8 @@ def compile
       x[:proc].call
     end
   end
+
+  @to_compile.uniq!
 end
 
 def input
@@ -55,7 +57,7 @@ else
   load 'main.rb'
 end
 
-puts @to_compile
+#puts @to_compile
 compile
 
 File.open "schema.txt", "w" do |file|
