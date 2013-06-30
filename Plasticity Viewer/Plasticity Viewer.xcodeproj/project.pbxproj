@@ -18,6 +18,7 @@
 		AA12B6EE177F05C80057CABC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA12B6CD177F05C70057CABC /* Cocoa.framework */; };
 		AA12B6F6177F05C80057CABC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA12B6F4177F05C80057CABC /* InfoPlist.strings */; };
 		AA12B6F8177F05C80057CABC /* Plasticity_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA12B6F7177F05C80057CABC /* Plasticity_ViewerTests.m */; };
+		AA12B705177F07110057CABC /* DebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA12B704177F06280057CABC /* DebugManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,9 @@
 		AA12B6F3177F05C80057CABC /* Plasticity ViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Plasticity ViewerTests-Info.plist"; sourceTree = "<group>"; };
 		AA12B6F5177F05C80057CABC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA12B6F7177F05C80057CABC /* Plasticity_ViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plasticity_ViewerTests.m; sourceTree = "<group>"; };
+		AA12B702177F05EA0057CABC /* Params.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Params.h; path = ../../Core/Params.h; sourceTree = "<group>"; };
+		AA12B703177F06280057CABC /* DebugManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugManager.h; sourceTree = "<group>"; };
+		AA12B704177F06280057CABC /* DebugManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +119,14 @@
 		AA12B6D3177F05C70057CABC /* Plasticity Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				AA12B701177F05D90057CABC /* Neurotik */,
 				AA12B6DF177F05C70057CABC /* AppDelegate.h */,
 				AA12B6E0177F05C70057CABC /* AppDelegate.m */,
 				AA12B6E2177F05C80057CABC /* MainMenu.xib */,
 				AA12B6E5177F05C80057CABC /* Images.xcassets */,
 				AA12B6D4177F05C70057CABC /* Supporting Files */,
+				AA12B703177F06280057CABC /* DebugManager.h */,
+				AA12B704177F06280057CABC /* DebugManager.m */,
 			);
 			path = "Plasticity Viewer";
 			sourceTree = "<group>";
@@ -152,6 +159,14 @@
 				AA12B6F4177F05C80057CABC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA12B701177F05D90057CABC /* Neurotik */ = {
+			isa = PBXGroup;
+			children = (
+				AA12B702177F05EA0057CABC /* Params.h */,
+			);
+			name = Neurotik;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA12B705177F07110057CABC /* DebugManager.m in Sources */,
 				AA12B6E1177F05C70057CABC /* AppDelegate.m in Sources */,
 				AA12B6DA177F05C70057CABC /* main.m in Sources */,
 			);

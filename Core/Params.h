@@ -28,6 +28,9 @@ enum NeuronType_t {
 
 #define NEURON_T0 20.0f  //exp(t/t0)
 #define NEURON_TH 24.0f  //Threshold calculations are made off this
+#define NEURON_PT -0.2f   //Threshold of negative plasticity (When neuron solidifies in 2nd phase transition)
+#define NEURON_PDELTA (1 + NEURON_PT) / 10000.0   //How quick neuron plasticity climbs to solidification (10 seconds)
+#define NEURON_I_ALPHA 0.50 //How quiclky does I leak?  I = 1 means no leakage, (Perfect capacitor)
 
 #define NET_INPUT_LEN(X) ((X)->networkInEndPos - (X)->networkInStartPos)
 #define NET_OUTPUT_LEN(X) ((X)->networkOutEndPos - (X)->networkOutStartPos)

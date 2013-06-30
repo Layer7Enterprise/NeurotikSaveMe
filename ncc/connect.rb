@@ -6,7 +6,14 @@ class Connection
 
   #Get the most number of dendrites ever used
   def self.count_max_dendrites
-    @@dendrite_count.max_by {|k, v| v}[1]
+    out = @@dendrite_count.max_by {|k, v| v}
+
+    if out.nil?
+      puts "Error.  No connections!"
+      exit
+    end
+
+    return out[1]
   end
 
   def initialize from, to
@@ -40,10 +47,64 @@ class Connection
   end
 end
 
+def sizeof name
+  begin_frame 0 do
+    return Neuron.name_to_neuron(name).count
+  end
+end
+
+@aliases = {}
+
+def alias to_name, from_name, range
+  if to_name[0] != "_"
+    puts "Alias name (#{to_name}) must start with an underscore"
+    exit
+  end
+
+  @aliases[to_name] = {:name => from_name, :range => range}
+end
+
+@structs = {}
+
+def struct name, arr
+  if name[0] != "*"
+    puts "Structure name must start with a *"
+    exit
+  end
+
+  @structs[name] = arr
+end
+
 def connect from, to, method, params=nil
   begin_frame 1 do
-    from_set = Neuron.name_to_neuron(from).name_array
-    to_set = Neuron.name_to_neuron(to).name_array
+    from_set = []
+    to_set = []
+
+    if from[0] == "_"
+      from_set = Neuron.name_to_neuron(@aliases[from][:name]).name_array
+      range = @aliases[from][:range]
+      from_set = from_set[range[0]..range[1]]
+    elsif from[0] == "*"
+      set_names = @structs[from]
+      set_names.each do |set_name|
+        from_set += Neuron.name_to_neuron(set_name).name_array
+      end
+    else
+      from_set = Neuron.name_to_neuron(from).name_array
+    end
+
+    if to[0] == "_"
+      to_set = Neuron.name_to_neuron(@aliases[to][:name]).name_array
+      range = @aliases[to][:range]
+      to_set = to_set[range[0]..range[1]]
+    elsif to[0] == "*"
+      set_names = @structs[to]
+      set_names.each do |set_name|
+        to_set += Neuron.name_to_neuron(set_name).name_array
+      end
+    else
+      to_set = Neuron.name_to_neuron(to).name_array
+    end
 
     connection_array = send method, from_set, to_set, params
 
@@ -191,6 +252,48 @@ def linear from, to, params=nil
     connection.set_delay(delay)
     connections << connection
   end
+
+  return connections
+end
+
+def point_to_point from, to, params=nil
+  weight = DEFAULT_WEIGHT
+  delay = DEFAULT_DELAY
+
+  from_index = params[:from_index]
+  to_index = params[:to_index]
+
+  if from_index.nil?
+    puts "No from index"
+    exit
+  end
+
+  if to_index.nil?
+    puts "No to index"
+    exit
+  end
+
+  if from_index-1 > from.count
+    puts "From was not large enough to meet that index"
+    exit
+  end
+
+
+  if to_index-1 > to.count
+    puts "To was not large enough to meet that index"
+    exit
+  end
+
+  unless params.nil?
+    weight = params[:weight] unless params[:weight].nil?
+    delay = params[:delay] unless params[:delay].nil?
+  end
+
+  connections = []
+  connection = Connection.new from[from_index], to[to_index]
+  connection.set_weight(weight)
+  connection.set_delay(delay)
+  connections << connection
 
   return connections
 end

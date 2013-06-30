@@ -41,7 +41,7 @@ void CoreTick(int idx, Params_t *params) {
 
 #pragma region Periodic
    if (ib > 0 && (globalTime % ib == 0)) {
-     I = 25.0f;
+     I = NEURON_TH*2;
    }
 #pragma endregion
 
@@ -85,8 +85,8 @@ void CoreTick(int idx, Params_t *params) {
             float delta = 0.05*exp(-deltaTime / NEURON_T0);
 
             if (deltaTime < NEURON_T0) {
-              delta *= plasticity;
-              dWeight[i] -= delta;
+              if (plasticity > 0 || plasticity < NEURON_PT)
+                dWeight[i] -= delta;
             }
 
             if (dWeight[i] < 0.0f)
@@ -139,6 +139,10 @@ void CoreTick(int idx, Params_t *params) {
 
 #pragma region NeuronFire
   if (v > 30.0f) {
+    //Reset plasticity if were not solidifed
+    if (plasticity > 0 || plasticity < NEURON_PT)
+      plasticity = -1.0f;
+
     //Reset V and U
     if (type & GLU) {
       v = NEURON_GLU_C;
@@ -151,7 +155,7 @@ void CoreTick(int idx, Params_t *params) {
     if (inh <= 0) {
       //Pos Pot
       if (!(type & GABA) && !(type & NO_LRN)) {
-        for (int i = 0; i < ND; ++i) {
+       for (int i = 0; i < ND; ++i) {
           if (dConnection[i] < 0)
             break;
 
@@ -169,7 +173,8 @@ void CoreTick(int idx, Params_t *params) {
           }
 
           delta *= plasticity;
-          dWeight[i] += delta;
+          if (plasticity > 0 || plasticity < NEURON_PT)
+            dWeight[i] += delta;
 
           if (dWeight[i] > NEURON_TH)
             dWeight[i] = NEURON_TH;
@@ -185,6 +190,7 @@ void CoreTick(int idx, Params_t *params) {
 if (globalTime == lastSpikeTime && (type & GLU)) {
    float sigma = 0;
    float count = 0;
+   int leaderTime = -1;
 
   for (int i = 0; i < ND; ++i) {
     if (dConnection[i] < 0)
@@ -202,6 +208,10 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
 
     //Are we (not) in this hit region?
     if (lastSpikeTime > dLastSpikeTime[i] && lastSpikeTime - dLastSpikeTime[i] < NEURON_T0) {
+      //Get the neuron that was closest to the actual spike, set this as a reference point
+      if (leaderTime < dLastSpikeTime[i] || leaderTime == -1)
+        leaderTime = dLastSpikeTime[i];
+
       sigma += dWeight[i];
       ++count;
     }
@@ -226,13 +236,13 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
     if (lastSpikeTime > dLastSpikeTime[i] && (lastSpikeTime - dLastSpikeTime[i] < NEURON_T0)) {
       //sigma += 0.00001f;
       sigma += 0.0001f;
-      float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
-      dwdt = dwdt * plasticity;
-      plasticity = plasticity - plasticity*dwdt*0.005f;
-      if (plasticity < 0.0f)
-        plasticity = 0.0f;
 
-      dWeight[i] = dwdt*0.05 + dWeight[i];
+      int deltaTime = (leaderTime - dLastSpikeTime[i]);
+      float mod = pow(NEURON_I_ALPHA, deltaTime);
+      float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
+
+      if (plasticity > 0 || plasticity < NEURON_PT)
+        dWeight[i] = dwdt*0.05 + dWeight[i];
     }
   }
 }
@@ -242,6 +252,11 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
 #pragma region Updates
   //Update params
   --inh;
-  I *= 0.5;
+  I *= NEURON_I_ALPHA;
+
+  //Plasticity is in "has fired zone" but "not solidified"
+  if (plasticity < NEURON_PT) {
+    plasticity += NEURON_PDELTA;
+  }
   #pragma endregion
 }

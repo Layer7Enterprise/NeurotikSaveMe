@@ -11,6 +11,7 @@ NEURON_TYPES = {
 class Neuron
   @@global_count = 0
   @@name_to_neuron = {}
+  @@alias_to_neuron = {}
   @@neurons = []
 
   def self.name_to_neuron name
@@ -107,7 +108,6 @@ end
 def glu_signal name, params=nil
   neuron name, :glu_signal, params
 end
-
 
 def gaba name, inhTime, params=nil
   params = {} if params.nil?

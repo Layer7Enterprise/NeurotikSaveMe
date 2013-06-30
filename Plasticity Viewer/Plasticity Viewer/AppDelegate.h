@@ -7,9 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DebugManager.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, DebugManagerDelegate, NSMenuDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property DebugManager *debugManager;
+
+@property (assign) IBOutlet NSTextField *plasticity;
+@property (assign) IBOutlet NSPopUpButton *selectNeuron;
 
 @end
