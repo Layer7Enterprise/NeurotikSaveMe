@@ -60,12 +60,12 @@ def gen_header
   name = ARGV[1]
 
   puts "#Lexicon symbols"
-  words.each_with_index do |word, index|
-    puts "alien _L#{word}, #{name}, [#{index}, #{index}]"
+  words.uniq.each_with_index do |word, index|
+    puts "main {alien '_L#{word}', '#{name}', [#{index}, #{index}]}"
   end
 
   puts "#Number of words in the lexicon"
-  puts "\nLEXICON_COUNT = words.count"
+  puts "\nLEXICON_COUNT = #{words.count}"
 end
 
 #Generate lexicon compatible 'stream' from a list of words
@@ -231,7 +231,7 @@ def gen_train_pair
   def get_vector word
     vector = @inverted_lexicon[word] 
     if vector == nil
-      puts "Did not find word #{word}"
+      $stderr.puts "Did not find word #{word}"
       exit
     end
 
