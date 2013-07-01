@@ -64,8 +64,12 @@ def gen_header
     puts "main {alien '_L#{word}', '#{name}', [#{index}, #{index}]}"
   end
 
+  puts "#Leixcon symbol names in a useful array"
+  symbol_names = words.uniq.map { |x| "_L#{x}" }
+  puts "@lexicon_symbols = #{symbol_names.inspect}"
+
   puts "#Number of words in the lexicon"
-  puts "\nLEXICON_COUNT = #{words.count}"
+  puts "\nLEXICON_COUNT = #{words.uniq.count}"
 end
 
 #Generate lexicon compatible 'stream' from a list of words
@@ -175,7 +179,7 @@ def v2ws
       if (letter == "1")
         new_vector[index] = "1"
         word = lexicon[new_vector]
-        sentance += " #{word}"
+        sentance += " #{word.downcase}"
       end
     end
 
@@ -262,6 +266,51 @@ def gen_train_pair
   end
 end
 
+#Same as above, no timing
+def gen_train_pair_flat
+  lex_file = ARGV[1]
+  pair_file = ARGV[2]
+
+  lexicon, @inverted_lexicon = file_to_lexicons lex_file
+
+  def get_vector word
+    vector = @inverted_lexicon[word] 
+    if vector == nil
+      $stderr.puts "Did not find word #{word}"
+      exit
+    end
+
+    return vector
+  end
+
+  File.open pair_file, "r" do |file|
+    examples = file.read.split("\n")
+    examples = examples.map {|x| x.split(" | ")}
+    examples = examples.map {|x| {:input =>x[0].split(" "), :output => x[1].split(" ")}}
+
+    examples.each do |example|
+      #Merge vectors into one
+      input = example[:input]
+      input = input.map {|x| get_vector(x)}
+      input_real = nil
+      input.each do |x|
+        input_real = join_vectors x, input_real
+      end
+
+      #Merge vectors into one
+      output = example[:output]
+      output = output.map {|x| get_vector(x)}
+      output_real = nil
+      output.each do |x|
+        output_real = join_vectors x, output_real
+      end
+      puts "#{input_real} #{output_real}"
+      puts "---"
+    end
+  end
+end
+
+
 if ARGV[0] == "help"
   help
 elsif ARGV[0] == "gen"
@@ -278,6 +327,8 @@ elsif ARGV[0] == "v2ws"
   v2ws
 elsif ARGV[0] == "gen_train_pair"
   gen_train_pair
+elsif ARGV[0] == "gen_train_pair_flat"
+  gen_train_pair_flat
 else
   help
 end

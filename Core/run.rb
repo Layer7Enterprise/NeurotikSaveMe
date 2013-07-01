@@ -1,8 +1,10 @@
 require 'colorize'
 
-Dir.chdir 'config'
-  system('ncc')
-Dir.chdir '../'
+if ARGV[0] != "run"
+  Dir.chdir 'config'
+    system('ncc')
+  Dir.chdir '../'
+end
 
 def start name
   @lastName = name

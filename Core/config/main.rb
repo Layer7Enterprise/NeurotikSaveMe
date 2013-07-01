@@ -10,15 +10,29 @@ output do
   no_learn :output, :count => LEXICON_COUNT
 end
 
-noun_filter = gen_filter :name => "noun_filter", :input => "input", :watch => "_LNOUN", :input_delay => 30, :open_length => 40
-verb_filter = gen_filter :name => "verb_filter", :input => "input", :watch => "_LVERB", :input_delay => 30, :open_length => 40
+filters = {}
+buffers = {}
+count = 0
+@lexicon_symbols = @lexicon_symbols.find_all {|x| /[[:upper:]]/.match(x[2]) != nil}
 
-noun_buffer = gen_packetizer :name => "noun_buffer", :input_name => noun_filter, :watch => "_LNOUN"
-verb_buffer = gen_packetizer :name => "verb_buffer", :input_name => verb_filter, :watch => "_LVERB"
+@lexicon_symbols.each_with_index do |symbol, index|
+  puts "#{index+1} / #{@lexicon_symbols.count} #{symbol}"
+
+  filters[symbol] = (gen_filter :name => "S#{symbol}_filter", :input => "input", :watch => symbol, :input_delay => 30, :open_length => 30)
+
+  #Build question
+  question_check = "S#{symbol}QQ"
+  main { glu_signal question_check }
+  connect "#{symbol}", question_check, :one_to_one, :weight => 12.0
+  connect "_L?", question_check, :one_to_one, :weight => 12.0
+
+  buffers[symbol] = gen_packetizer :name => "S#{symbol}_buffer", :input_name => filters[symbol], :watch => question_check
+
+  connect buffers[symbol], :output, :linear
+end
 
 #Basic input layer
 connect :input, :input, :many_to_many, :weight => 0
-connect :signal, :input, :linear
+connect :signal, :input, :linear, :delay => 3
 
-connect verb_buffer, :output, :linear
-connect noun_buffer, :output, :linear
+connect :input, :output, :linear

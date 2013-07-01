@@ -62,7 +62,7 @@ def gen_packetizer params=nil
   ###################################################
   output = mangle(:output)
   count = sizeof(@input_name)
-  main {glu_signal output, :count => count}
+  main {no_learn output, :count => count}
   connect sync, output, :linear, :delay => 40
 
   #Set up final stage isolation enabler
