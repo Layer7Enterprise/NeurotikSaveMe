@@ -88,17 +88,12 @@ end
     #:inh - How long this neuron inhibits for (Max 64)
     #:ib - What modulus does this neuron pulse out
     #:debug - Should this show up in studio?
-@count2 = nil
 def neuron name, type, params=nil
   name = name.to_s
   count = 1
   count = params[:count] if !params.nil? and !params[:count].nil?
-  @count2 = count if @count2 == nil
-  @count2 += count
-  print "#{name} @count2 "
 
   new_neuron = Neuron.new name, type, count
-  puts count
   unless params.nil?
     ib = params[:ib]
     inhTime = params[:inh]

@@ -33,13 +33,10 @@ cojnt = 0
   connect serialized, :output, :linear
 end
 
-main {
-  gaba :input_die, 23
-}
+#goal = gen_lex_graph :name => "GOAL", :input => :input, :signal => "signal"
+#muscle_group = gen_lex_graph :name => "MUSCLE_GROUP", :input => :input, :signal => "signal"
+#therefore = gen_lex_graph :name => "THEREFORE", :input => :input, :signal => "signal"
 
-connect :input_die, :input, :one_to_many
-connect :input, :input_die, :many_to_one, :delay => 30
-
-connect :input, :input, :many_to_many, :weight => 0, :delay => 20
-connect :signal, :input, :linear, :delay => 22
-connect :input, :output, :linear
+#Level 0 POS detector
+goal_detector = gen_filter :name => "goal_detector", :input => :input, :watch => :input, :input_delay => 10, :open_length => 15
+#muscle_group_detector = gen_filter :name => "muscle_group_detector", :input => "input", :watch => "_TMUSCLE_GROUP", :input_delay => 10, :open_length => 15

@@ -87,13 +87,13 @@ def gen_filter params=nil
     exit
   end
 
-  @name = params[:name]
-  @input = params[:input]
-  @watch = params[:watch]
-  @input_delay = params[:input_delay]  #How long of a delay to add to input
-  @open_length = params[:open_length]  #How long will the filter stay open for?
-  @debug = params[:debug]
-  @debug = false if @debug.nil?
+  _name = params[:name]
+  _input = params[:input]
+  _watch = params[:watch]
+  _input_delay = params[:input_delay]  #How long of a delay to add to input
+  _open_length = params[:open_length]  #How long will the filter stay open for?
+  _debug = params[:debug]
+  _debug = false if _debug.nil?
 
   def check var, name
     if var.nil?
@@ -102,39 +102,39 @@ def gen_filter params=nil
     end
   end
 
-  check @input, "input"
-  check @watch, "watch"
-  check @input_delay, "input_delay"
-  check @open_length, "open_length"
+  check _input, "input"
+  check _watch, "watch"
+  check _input_delay, "input_delay"
+  check _open_length, "open_length"
 
   #Generate a unique identifier
-  def mangle *subs
+  def mangle _name, *subs
     full_sub = ""
     subs.each do |sub|
       full_sub += sub.to_s
     end
 
-    return @name + full_sub.to_s
+    return _name + full_sub.to_s
   end
 
   #Output layer
   ###################################################
-  output = mangle(:output)
-  count = sizeof(@input)
-  debug = @debug
+  output = mangle(_name, :output)
+  count = sizeof(_input)
+  debug = _debug
   main { glu_signal output, :count => count, :debug => debug}
-  connect @input, output, :linear, :delay => @input_delay
+  connect _input, output, :linear, :delay => _input_delay
 
   #Watch circuit
   ###################################################
-  watch = mangle(:watch)
-  ib = mangle(:ib)
+  watch = mangle(_name, :watch)
+  ib = mangle(_name, :ib)
   main {
     gaba ib, 3, :ib => 2
-    gaba watch, @open_length
+    gaba watch, _open_length
   }
 
-  connect @watch, watch, :one_to_one
+  connect _watch, watch, :one_to_one
   connect watch, ib, :one_to_one
   connect ib, output, :one_to_many
 
@@ -212,7 +212,7 @@ end
 
 #Convert a static buffer into a transmittable entity
 def gen_serialize params=nil
-#Get Paramaters
+  #Get Paramaters
   ###################################################
   if params.nil?
     puts "gen_serialize, paramaters nil"
@@ -279,6 +279,51 @@ def gen_serialize params=nil
   connect output, line_inh, :linear
   connect output, global_inh, :many_to_one
   connect global_inh, output, :one_to_many
+
+  return output
+end
+
+#A graph that is capable of only one association ithe future
+def gen_lex_graph params=nil
+  #Get Paramaters
+  ###################################################
+  if params.nil?
+    puts "gen_lex_graph, paramaters nil"
+    exit
+  end
+
+  @name = params[:name]
+  @input = params[:input]
+  @signal = params[:signal]
+
+  def check var, name
+    if var.nil?
+      puts "gen_lex_graph, #{name} was nil"
+      exit
+    end
+  end
+
+  check @name, "name"
+  check @input, "input"
+  check @signal, "signal"
+
+  #Generate a unique identifier
+  def mangle *subs
+    full_sub = ""
+    subs.each do |sub|
+      full_sub += sub.to_s
+    end
+
+    return @name + full_sub.to_s
+  end
+
+  output = mangle(:output)
+  main do
+    glu output, :count => LEXICON_COUNT
+  end
+
+  connect @input, output, :linear, :weight => 0
+  connect @signal, output, :linear, :delay => 2
 
   return output
 end
