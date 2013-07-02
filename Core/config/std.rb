@@ -210,3 +210,64 @@ def gen_hold_buffer params=nil
   return output
 end
 
+#Convert a static buffer into a transmittable entity
+def gen_serialize params=nil
+#Get Paramaters
+  ###################################################
+  if params.nil?
+    puts "gen_serialize, paramaters nil"
+    exit
+  end
+
+  @name = params[:name]
+  @input = params[:input]
+
+  def check var, name
+    if var.nil?
+      puts "gen_serialize, #{name} was nil"
+      exit
+    end
+  end
+
+  check @name, "name"
+  check @input, "input"
+
+  #Generate a unique identifier
+  def mangle *subs
+    full_sub = ""
+    subs.each do |sub|
+      full_sub += sub.to_s
+    end
+
+    return @name + full_sub.to_s
+  end
+
+  #Latched memory input
+  input = mangle(:input)
+  count = sizeof(@input)
+  main {glu_signal input, :count => count, :debug => true}
+  connect @input, input, :linear, :delay_array => [10, 20, 30]
+  connect input, input, :linear, :delay_array => [20, 25, 30]
+
+  #Line inhibitor
+  line_inh = mangle(:line_inh)
+  count = sizeof(@input)
+  main {gaba line_inh, 26, :count => count}
+  connect line_inh, input, :linear
+
+  ##Global inhibitor
+  global_inh = mangle(:global_inh)
+  count = sizeof(@input)
+  main {gaba global_inh, 26}
+
+  ##Output
+  output = mangle(:output)
+  count = sizeof(@input)
+  main {glu output, :count => count}
+  connect input, output, :linear
+  connect output, line_inh, :linear
+  connect output, global_inh, :many_to_one
+  connect global_inh, output, :one_to_many
+
+  return output
+end

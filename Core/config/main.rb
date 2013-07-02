@@ -1,38 +1,37 @@
 require './std.rb'
-#require './train/product/lexicon.rb'
-#
+require './train/product/lexicon.rb'
 
 input do
-  no_learn "neuronA", :debug => true
-  no_learn "neuronB", :debug => true
-  no_learn "neuronC", :debug => true
-  glu_signal "signal", :count => 1, :debug => true
+  glu "input", :count => LEXICON_COUNT
+  glu_signal "signal", :count => LEXICON_COUNT
 end
 
 output do
-  glu :output, :count => 1, :debug => true
+  no_learn :output, :count => LEXICON_COUNT
 end
 
-#filters = {}
-#buffers = {}
-#count = 0
-#@lexicon_symbols = @lexicon_symbols.find_all {|x| /[[:upper:]]/.match(x[2]) != nil}
+filters = {}
+buffers = {}
+cojnt = 0
+@lexicon_symbols = @lexicon_symbols.find_all {|x| /[[:upper:]]/.match(x[2]) != nil}
+@lexicon_symbols = ["_LPROPOSITION", "_LSOLUTION"]
 
-#@lexicon_symbols.each_with_index do |symbol, index|
-  #puts "#{index+1} / #{@lexicon_symbols.count} #{symbol}"
+@lexicon_symbols.each_with_index do |symbol, index|
+  puts "#{index+1} / #{@lexicon_symbols.count} #{symbol}"
 
-  #filters[symbol] = (gen_filter :name => "S#{symbol}_filter", :input => "input", :watch => symbol, :input_delay => 30, :open_length => 30)
+  filters[symbol] = (gen_filter :name => "S#{symbol}_filter", :input => "input", :watch => symbol, :input_delay => 10, :open_length => 15)
 
-  ##Build question
-  #question_check = "S#{symbol}QQ"
-  #main { glu_signal question_check }
-  #connect "#{symbol}", question_check, :one_to_one, :weight => 12.0
-  #connect "_L?", question_check, :one_to_one, :weight => 12.0
+  #Build question
+  question_check = "S#{symbol}QQ"
+  main { glu_signal question_check }
+  connect "#{symbol}", question_check, :one_to_one, :weight => 12.0
+  connect "_LQQ", question_check, :one_to_one, :weight => 12.0
 
-  #buffers[symbol] = gen_packetizer :name => "S#{symbol}_buffer", :input_name => filters[symbol], :watch => question_check
+  buffers[symbol] = gen_packetizer :name => "S#{symbol}_buffer", :input_name => filters[symbol], :watch => question_check
 
-  ##connect buffers[symbol], :output, :linear
-#end
+  serialized = gen_serialize :name=> "S#{symbol}_serialize", :input => buffers[symbol]
+  connect serialized, :output, :linear
+end
 
 #Basic input layer
 #connect :input, :input, :many_to_many, :weight => 0, :delay => 20
@@ -48,20 +47,12 @@ end
 #connect :stop_loopback, :input, :one_to_many
 
 main {
-  glu :outputA, :debug => true
-  glu :outputB, :debug => true
-  glu :outputC, :debug => true
+  gaba :input_die, 23
 }
 
-connect "neuronA", :outputA, :one_to_one, :weight => 0
-connect :neuronB, :outputA, :one_to_one, :weight => 0
+connect :input_die, :input, :one_to_many
+connect :input, :input_die, :many_to_one, :delay => 30
 
-connect :neuronB, :outputB, :one_to_one, :weight => 0
-connect :neuronC, :outputB, :one_to_one, :weight => 0
-
-connect :neuronC, :outputC, :one_to_one, :weight => 0
-connect :neuronA, :outputC, :one_to_one, :weight => 0
-
-connect :signal, :outputA, :linear, :nelay => 4
-connect :signal, :outputB, :linear, :nelay => 4
-connect :signal, :outputC, :linear, :nelay => 4
+connect :input, :input, :many_to_many, :weight => 0, :delay => 20
+connect :signal, :input, :linear, :delay => 24
+connect :input, :output, :linear

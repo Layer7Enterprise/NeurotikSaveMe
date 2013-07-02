@@ -84,7 +84,7 @@ void CoreTick(int idx, Params_t *params) {
           int isSignal = params->nType[dConnection[i]] & GLU_SIGNAL;
           if (!(type & GABA) && !(type & NO_LRN) && !isSignal) {
             int deltaTime = globalTime - lastSpikeTime; //Previous Neuron's spike
-            float delta = 0.005*exp(-deltaTime / NEURON_T0);
+            float delta = 0.01*exp(-deltaTime / NEURON_T0);
 
             if (deltaTime < NEURON_T0) {
               if (plasticity > 0 || plasticity < NEURON_PT)
@@ -174,7 +174,7 @@ void CoreTick(int idx, Params_t *params) {
           float delta = 0.0f;
           if (deltaTime > 0) {
             if (deltaTime < NEURON_T0)
-              delta = 0.005*exp(-deltaTime / NEURON_T0);
+              delta = 0.01*exp(-deltaTime / NEURON_T0);
           }
 
           delta *= plasticity;
@@ -195,7 +195,6 @@ void CoreTick(int idx, Params_t *params) {
 if (globalTime == lastSpikeTime && (type & GLU)) {
    float sigma = 0;
    float count = 0;
-   int leaderTime = -1;
 
   for (int i = 0; i < ND; ++i) {
     if (dConnection[i] < 0)
@@ -212,10 +211,8 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
        continue;
 
     //Are we (not) in this hit region?
-    if (lastSpikeTime > dLastSpikeTime[i] && lastSpikeTime - dLastSpikeTime[i] < NEURON_T0) {
+    if ((lastSpikeTime > dLastSpikeTime[i]) && ((lastSpikeTime - dLastSpikeTime[i]) < NEURON_T0)) {
       //Get the neuron that was closest to the actual spike, set this as a reference point
-      if (leaderTime < dLastSpikeTime[i] || leaderTime == -1)
-        leaderTime = dLastSpikeTime[i];
 
       sigma += dWeight[i];
       ++count;
@@ -238,14 +235,14 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
        continue;
 
     //All that fired (Look at the previous when we set -1000 to show that they didn't fire)
-    if (lastSpikeTime > dLastSpikeTime[i] && (lastSpikeTime - dLastSpikeTime[i] < NEURON_T0)) {
+    if ((lastSpikeTime > dLastSpikeTime[i]) && ((lastSpikeTime - dLastSpikeTime[i]) < NEURON_T0)) {
       //sigma += 0.00001f;
       sigma += 0.0001f;
 
-      float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
+      float dwdt = dWeight[i] * (NEURON_TH / sigma - 1);
 
       if (plasticity > 0 || plasticity < NEURON_PT)
-        dWeight[i] = dwdt*0.005 + dWeight[i];
+        dWeight[i] = dwdt*0.05 + dWeight[i];
     }
   }
 }

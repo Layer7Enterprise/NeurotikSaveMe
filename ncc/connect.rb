@@ -260,17 +260,24 @@ def linear from, to, params=nil
 
   weight = DEFAULT_WEIGHT
   delay = DEFAULT_DELAY
+  delay_array = nil
 
   unless params.nil?
     weight = params[:weight] unless params[:weight].nil?
     delay = params[:delay] unless params[:delay].nil?
+    delay_array = params[:delay_array] unless params[:delay_array].nil?
   end
 
   connections = []
   from.count.times do |index|
     connection = Connection.new from[index], to[index]
     connection.set_weight(weight)
-    connection.set_delay(delay)
+    if delay_array
+      connection.set_delay(delay_array.sample)
+    else
+      connection.set_delay(delay)
+    end
+
     connections << connection
   end
 

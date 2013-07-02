@@ -145,6 +145,7 @@ def w2vi
 
   loop do
     words = $stdin.gets.strip.split(" ")
+    real_vector = nil
     words.each do |word|
       vector = reverse_lexicon[word]
       if vector.nil?
@@ -152,12 +153,14 @@ def w2vi
         next
       end
 
-      blank_half = "0"*vector.length
-      vector = vector + blank_half
-
-      socket.send vector, 0, "127.0.0.1", out_port
-      sleep delay.to_f / 1000.0
+      real_vector = join_vectors vector, real_vector
     end
+
+    blank_half = "0"*real_vector.length
+    real_vector = real_vector + blank_half
+
+    socket.send real_vector, 0, "127.0.0.1", out_port
+    sleep delay.to_f / 1000.0
   end
 end
 
