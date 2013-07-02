@@ -47,7 +47,7 @@ class Connection
   end
 end
 
-def sizeof name
+def len name
   return Neuron.name_to_neuron(name).get_count
 end
 

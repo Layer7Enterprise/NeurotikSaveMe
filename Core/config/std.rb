@@ -1,8 +1,4 @@
-def gen_packetizer params=nil
-  @name = params[:name]
-  @input_name = params[:input_name]
-  @watch = params[:watch]
-
+module Generator
   def check var, name
     if var.nil?
       puts "gen_packetizer, #{name} was nil"
@@ -10,69 +6,77 @@ def gen_packetizer params=nil
     end
   end
 
-  check @input_name, "input_name"
-  check @watch, "watch"
-
   #Generate unique identifier
-  def mangle *subs
+  def mangle _name, *subs
     full_sub = ""
     subs.each do |sub|
       full_sub += sub.to_s
     end
 
-    return @name + full_sub.to_s
+    return _name + full_sub.to_s
   end
+end
+
+def gen_packetizer params=nil
+  _name = params[:name]
+  _input = params[:input_name]
+  _watch = params[:watch]
+
+  include Generator
+
+  check _input, "input"
+  check _watch, "watch"
 
   #Set up input
   ###################################################
-  input = mangle(:input)
-  count = sizeof(@input_name)
-  gaba input, 40, :count => count
-  connect @input_name, input, :linear
+  input = mangle(_name, :input)
+  count = len(_input)
+  gaba _input, 40, :count => count
+  connect _input, _input, :linear
 
   #Set up level primary inhibitors
   ###################################################
-  primary_inh = mangle(:primary_inh)
-  count = sizeof(@input_name)
+  primary_inh = mangle(_name, :primary_inh)
+  count = len _input
   gaba primary_inh, 3, :count => count, :ib => 2
   connect input, primary_inh, :linear
 
   #Set up main excitory (main_exc)
   ###################################################
-  main_exc = mangle(:main_exc)
-  count = sizeof(@input_name)
+  main_exc = mangle(_name, :main_exc)
+  count = len(_input)
   glu main_exc, :count => count
   connect primary_inh, main_exc, :linear
 
   #Set up main intrinsic burster (main_ib)
   ###################################################
-  main_ib = mangle(:main_ib)
+  main_ib = mangle(_name, :main_ib)
   glu_signal main_ib, :ib => 25
   connect main_ib, main_exc, :one_to_many
 
   #Set up sync output
   ###################################################
-  sync = mangle(:sync)
-  count = sizeof(@input_name)
+  sync = mangle(_name, :sync)
+  count = len _input
   glu_signal sync, :count => count
   connect main_exc, sync, :linear
   connect sync, input, :linear
 
   #Set up final stage isolation
   ###################################################
-  output = mangle(:output)
-  count = sizeof(@input_name)
+  output = mangle(_name, :output)
+  count = len _input
   no_learn output, :count => count
   connect sync, output, :linear, :delay => 40
 
   #Set up final stage isolation enabler
   en = mangle(:en)
-  disable = mangle(:disable)
+  disable = mangle(_name, :disable)
   gaba en, 100
-  gaba disable, 3, :ib => 2
+  main {gaba disable, 3, :ib => 2}
   connect en, disable, :one_to_one
   connect en, sync, :one_to_many, :delay => 5
-  connect @watch, en, :one_to_one
+  connect _watch, en, :one_to_one
   connect disable, output, :one_to_many
 
   return output
@@ -95,34 +99,18 @@ def gen_filter params=nil
   _debug = params[:debug]
   _debug = false if _debug.nil?
 
-  def check var, name
-    if var.nil?
-      puts "gen_filter, #{name} was nil"
-      exit
-    end
-  end
-
+  include Generator
   check _input, "input"
   check _watch, "watch"
   check _input_delay, "input_delay"
   check _open_length, "open_length"
 
-  #Generate a unique identifier
-  def mangle _name, *subs
-    full_sub = ""
-    subs.each do |sub|
-      full_sub += sub.to_s
-    end
-
-    return _name + full_sub.to_s
-  end
-
   #Output layer
   ###################################################
   output = mangle(_name, :output)
-  count = sizeof(_input)
+  count = len(_input)
   debug = _debug
-   glu_signal output, :count => count, :debug => debug
+  glu_signal output, :count => count, :debug => debug
   connect _input, output, :linear, :delay => _input_delay
 
   #Watch circuit
@@ -132,8 +120,8 @@ def gen_filter params=nil
   gaba ib, 3, :ib => 2
   gaba watch, _open_length
 
-  connect _watch, watch, :one_to_one
-  connect watch, ib, :one_to_one
+  connect _watch, _watch, :one_to_one
+  connect _watch, ib, :one_to_one
   connect ib, output, :one_to_many
 
   return output
