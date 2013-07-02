@@ -242,12 +242,23 @@ def gen_serialize params=nil
     return @name + full_sub.to_s
   end
 
+  #Multi-layer delay modifiers
+  last_name = @input
+  3.times do |index|
+    name = mangle(:delay, index)
+    count = sizeof(@input)
+    main {glu_signal name, :count => count}
+
+    connect last_name, name, :linear, :delay_array => [*1..20]
+    last_name = name
+  end
+
   #Latched memory input
   input = mangle(:input)
   count = sizeof(@input)
-  main {glu_signal input, :count => count, :debug => true}
-  connect @input, input, :linear, :delay_array => [10, 20, 30]
-  connect input, input, :linear, :delay_array => [20, 25, 30]
+  main {glu_signal input, :count => count}
+  connect last_name, input, :linear
+  connect input, input, :linear, :delay => 20
 
   #Line inhibitor
   line_inh = mangle(:line_inh)

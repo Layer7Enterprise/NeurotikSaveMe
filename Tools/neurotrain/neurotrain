@@ -74,9 +74,9 @@ elsif mode == "timed"
   s = UDPSocket.new
   loop do
     randomExample = examples.sample
-    puts "Testing #{randomExample}"
+    #puts "Testing #{randomExample}"
 
-    randomExample.each do |word|
+    randomExample.each_with_index do |word, index|
       s.send(word[:input] + word[:output], 0, "0.0.0.0", port)
       sleep delayBetweenWords / 1000.0
     end
