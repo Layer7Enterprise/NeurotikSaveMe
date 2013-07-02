@@ -84,7 +84,7 @@ void CoreTick(int idx, Params_t *params) {
           int isSignal = params->nType[dConnection[i]] & GLU_SIGNAL;
           if (!(type & GABA) && !(type & NO_LRN) && !isSignal) {
             int deltaTime = globalTime - lastSpikeTime; //Previous Neuron's spike
-            float delta = 0.05*exp(-deltaTime / NEURON_T0);
+            float delta = 0.005*exp(-deltaTime / NEURON_T0);
 
             if (deltaTime < NEURON_T0) {
               if (plasticity > 0 || plasticity < NEURON_PT)
@@ -174,7 +174,7 @@ void CoreTick(int idx, Params_t *params) {
           float delta = 0.0f;
           if (deltaTime > 0) {
             if (deltaTime < NEURON_T0)
-              delta = 0.05*exp(-deltaTime / NEURON_T0);
+              delta = 0.005*exp(-deltaTime / NEURON_T0);
           }
 
           delta *= plasticity;
@@ -242,12 +242,10 @@ if (globalTime == lastSpikeTime && (type & GLU)) {
       //sigma += 0.00001f;
       sigma += 0.0001f;
 
-      int deltaTime = (leaderTime - dLastSpikeTime[i]);
-      float mod = pow(NEURON_I_ALPHA, deltaTime);
       float dwdt = dWeight[i] * (1.00f*NEURON_TH / sigma - 1);
 
       if (plasticity > 0 || plasticity < NEURON_PT)
-        dWeight[i] = dwdt*0.05 + dWeight[i];
+        dWeight[i] = dwdt*0.005 + dWeight[i];
     }
   }
 }

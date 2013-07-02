@@ -27,11 +27,15 @@ if mode == "basic"
   examples = {}
   File.open(trainingFile, "r") do |file|
     while !file.eof
-      example = file.readline.split(" ")
+      example = file.readline.strip
+      next if example == "---"
+      example = example.split(" ")
       examples[example[0]] = example[1]
       puts "#{example[0]} => #{example[1]}"
     end
   end
+
+  puts examples
 
   s = UDPSocket.new
   s.bind "0.0.0.0", inputPort
