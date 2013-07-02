@@ -23,7 +23,7 @@ cojnt = 0
 
   #Build question
   question_check = "S#{symbol}QQ"
-  main { glu_signal question_check }
+  glu_signal question_check
   connect "#{symbol}", question_check, :one_to_one, :weight => 12.0
   connect "_LQQ", question_check, :one_to_one, :weight => 12.0
 

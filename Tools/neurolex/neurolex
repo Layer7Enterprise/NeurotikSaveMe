@@ -61,7 +61,7 @@ def gen_header
 
   puts "#Lexicon symbols"
   words.uniq.each_with_index do |word, index|
-    puts "main {alien '_L#{word}', '#{name}', [#{index}, #{index}]}"
+    puts "alien '_L#{word}', '#{name}', [#{index}, #{index}]"
   end
 
   puts "#Leixcon symbol names in a useful array"

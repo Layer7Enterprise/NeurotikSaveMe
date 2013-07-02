@@ -4,51 +4,16 @@ require '/usr/bin/frame.rb'
 require '/usr/bin/neuron_generation.rb'
 require '/usr/bin/connect.rb'
 
-@to_compile = [
-]
-
-#Add raw text
-def add_compile_string priority, string
-  @to_compile << {:priority => priority, :type => :string, :string => string}
-end
-
-#Add code
-def add_compile_block priority, proc
-  @to_compile << {:priority => priority, :type => :code, :proc => proc}
-end
-
-def compile
-  #Sort
-  @to_compile = @to_compile.sort {|x, y| x[:priority] <=> y[:priority]}
-  @to_compile.each do |x|
-    if x[:type] == :code
-      x[:proc].call
-    end
-  end
-
-  @to_compile.uniq!
-end
-
 def input
-  begin_frame 0 do 
-    write "NetworkIn"
-      yield
-    write "EndNetworkIn"
-  end
+  write_neuron "NetworkIn"
+    yield
+  write_neuron "EndNetworkIn"
 end
 
 def output
-  begin_frame 0 do
-    write "NetworkOut"
-      yield
-    write "EndNetworkOut"
-  end
-end
-
-def main
-  begin_frame 0 do
+  write_neuron "NetworkOut"
     yield
-  end
+  write_neuron "EndNetworkOut"
 end
 
 unless ARGV[0].nil?
@@ -56,9 +21,6 @@ unless ARGV[0].nil?
 else
   load 'main.rb'
 end
-
-#puts @to_compile
-compile
 
 File.open "schema.txt", "w" do |file|
   file.write "Name: Prodigy\n"
@@ -68,9 +30,7 @@ File.open "schema.txt", "w" do |file|
 end
 
 File.open "net.txt", "w" do |file|
-  for x in @to_compile
-    if x[:type] == :string
-      file.write x[:string]
-    end
-  end
+  file.write @neuron_data
+  file.write "\n"
+  file.write @connection_data
 end

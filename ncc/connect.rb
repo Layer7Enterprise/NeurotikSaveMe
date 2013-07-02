@@ -48,8 +48,7 @@ class Connection
 end
 
 def sizeof name
-  compile
-  Neuron.name_to_neuron(name).get_count
+  return Neuron.name_to_neuron(name).get_count
 end
 
 @aliases = {}
@@ -77,7 +76,6 @@ end
 def connect from, to, method, params=nil
   from = from.to_s
   to = to.to_s
-  begin_frame 1 do
     from_set = []
     to_set = []
 
@@ -130,9 +128,8 @@ def connect from, to, method, params=nil
     connection_array = send method, from_set, to_set, params
 
     connection_array.each do |connection|
-      write connection.to_code
+      write_connection connection.to_code
     end
-  end
 end
 
 def one_to_one from, to, params=nil

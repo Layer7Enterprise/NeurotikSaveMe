@@ -27,34 +27,34 @@ def gen_packetizer params=nil
   ###################################################
   input = mangle(:input)
   count = sizeof(@input_name)
-  main {gaba input, 40, :count => count}
+  gaba input, 40, :count => count
   connect @input_name, input, :linear
 
   #Set up level primary inhibitors
   ###################################################
   primary_inh = mangle(:primary_inh)
   count = sizeof(@input_name)
-  main {gaba primary_inh, 3, :count => count, :ib => 2}
+  gaba primary_inh, 3, :count => count, :ib => 2
   connect input, primary_inh, :linear
 
   #Set up main excitory (main_exc)
   ###################################################
   main_exc = mangle(:main_exc)
   count = sizeof(@input_name)
-  main {glu main_exc, :count => count}
+  glu main_exc, :count => count
   connect primary_inh, main_exc, :linear
 
   #Set up main intrinsic burster (main_ib)
   ###################################################
   main_ib = mangle(:main_ib)
-  main {glu_signal main_ib, :ib => 25}
+  glu_signal main_ib, :ib => 25
   connect main_ib, main_exc, :one_to_many
 
   #Set up sync output
   ###################################################
   sync = mangle(:sync)
   count = sizeof(@input_name)
-  main {glu_signal sync, :count => count}
+  glu_signal sync, :count => count
   connect main_exc, sync, :linear
   connect sync, input, :linear
 
@@ -62,14 +62,14 @@ def gen_packetizer params=nil
   ###################################################
   output = mangle(:output)
   count = sizeof(@input_name)
-  main {no_learn output, :count => count}
+  no_learn output, :count => count
   connect sync, output, :linear, :delay => 40
 
   #Set up final stage isolation enabler
   en = mangle(:en)
   disable = mangle(:disable)
-  main {gaba en, 100}
-  main {gaba disable, 3, :ib => 2}
+  gaba en, 100
+  gaba disable, 3, :ib => 2
   connect en, disable, :one_to_one
   connect en, sync, :one_to_many, :delay => 5
   connect @watch, en, :one_to_one
@@ -122,17 +122,15 @@ def gen_filter params=nil
   output = mangle(_name, :output)
   count = sizeof(_input)
   debug = _debug
-  main { glu_signal output, :count => count, :debug => debug}
+   glu_signal output, :count => count, :debug => debug
   connect _input, output, :linear, :delay => _input_delay
 
   #Watch circuit
   ###################################################
   watch = mangle(_name, :watch)
   ib = mangle(_name, :ib)
-  main {
-    gaba ib, 3, :ib => 2
-    gaba watch, _open_length
-  }
+  gaba ib, 3, :ib => 2
+  gaba watch, _open_length
 
   connect _watch, watch, :one_to_one
   connect watch, ib, :one_to_one
@@ -178,14 +176,14 @@ def gen_hold_buffer params=nil
   latch = mangle(:scatter_latch)
 
   count = sizeof(@input_name)
-  main {no_learn latch, :count => count}
+  no_learn latch, :count => count
   connect @input_name, latch, :linear
   connect latch, latch, :linear, :delay => 20
 
   #Set up disgarding old data
   ###################################################
   free_inh = mangle(:discard_inh)
-  main {gaba free_inh, 25}
+  gaba free_inh, 25
   connect free_inh, latch, :one_to_many
   connect @watch_name, free_inh, :one_to_one, :delay => 1
 
@@ -193,17 +191,17 @@ def gen_hold_buffer params=nil
   ###################################################
   output = mangle(:output)
   count = sizeof(@input_name)
-  main {glu_signal output, :count => count}
+  glu_signal output, :count => count
   connect latch, output, :linear, :delay => 33
 
   #Inhibit the output
   output_inh = mangle(:output_inh)
-  main {gaba output_inh, 3, :ib => 2}
+  gaba output_inh, 3, :ib => 2
   connect output_inh, output, :one_to_many, :delay => 5
 
   #Inhibit the inhibitor
   output_inh_disable = mangle :output_inh_disable
-  main {gaba output_inh_disable, 50}
+  gaba output_inh_disable, 50
   connect output_inh_disable, output_inh, :one_to_one
   connect @watch_name, output_inh_disable, :one_to_one
 
@@ -247,7 +245,7 @@ def gen_serialize params=nil
   3.times do |index|
     name = mangle(:delay, index)
     count = sizeof(@input)
-    main {glu_signal name, :count => count}
+    glu_signal name, :count => count
 
     connect last_name, name, :linear, :delay_array => [*1..20]
     last_name = name
@@ -256,25 +254,25 @@ def gen_serialize params=nil
   #Latched memory input
   input = mangle(:input)
   count = sizeof(@input)
-  main {glu_signal input, :count => count}
+  glu_signal input, :count => count
   connect last_name, input, :linear
   connect input, input, :linear, :delay => 20
 
   #Line inhibitor
   line_inh = mangle(:line_inh)
   count = sizeof(@input)
-  main {gaba line_inh, 26, :count => count}
+  gaba line_inh, 26, :count => count
   connect line_inh, input, :linear
 
   ##Global inhibitor
   global_inh = mangle(:global_inh)
   count = sizeof(@input)
-  main {gaba global_inh, 26}
+  gaba global_inh, 26
 
   ##Output
   output = mangle(:output)
   count = sizeof(@input)
-  main {glu output, :count => count}
+  glu output, :count => count
   connect input, output, :linear
   connect output, line_inh, :linear
   connect output, global_inh, :many_to_one
@@ -318,9 +316,7 @@ def gen_lex_graph params=nil
   end
 
   output = mangle(:output)
-  main do
-    glu output, :count => LEXICON_COUNT
-  end
+  glu output, :count => LEXICON_COUNT
 
   connect @input, output, :linear, :weight => 0
   connect @signal, output, :linear, :delay => 2

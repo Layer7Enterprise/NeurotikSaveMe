@@ -104,14 +104,7 @@ def neuron name, type, params=nil
     new_neuron.enable_debug unless isDebug.nil? or isDebug == false
   end
 
-  write new_neuron.to_code
-end
-
-def debug name
-  begin_frame 0 do
-    neuron = Neuron.name_to_neuron(name)
-    neuron.enable_debug
-  end
+  write_neuron new_neuron.to_code
 end
 
 def glu name, params=nil
