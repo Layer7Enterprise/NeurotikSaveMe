@@ -157,9 +157,11 @@ void CoreOnImpulse(const unsigned char *impulse, int len) {
 #endif
 
   //Confirm that the size of the impulse vector is right
+  static int count = 0;
   if (len != NET_INPUT_LEN(params)) {
-    fprintf(stderr, "Impulse size was not the same as the params length %d != %d\n", NET_INPUT_LEN(params), len);
-    return;
+    ++count;
+    if (count % 1000 == 0)
+      fprintf(stderr, "WARN: Impulse size was not the same as the params length %d != %d\n", NET_INPUT_LEN(params), len);
   }
 
   //OR the running segment
@@ -173,6 +175,12 @@ void CoreOnImpulse(const unsigned char *impulse, int len) {
       fprintf(stderr, "Impulse input was not an 1 or 0.  it was %d\n", impulse[i]);
       exit(EXIT_FAILURE);
     }
+  }
+
+  //Zero out rest of vector
+  if (len != NET_INPUT_LEN(params)) {
+    for (int i = len; i < NET_INPUT_LEN(params); ++i)
+      runningSegment[i] = 0;
   }
   pthread_mutex_unlock(&runningSegmentLock);
 #ifdef CCUP

@@ -2,6 +2,28 @@
 
 require 'socket'
 require 'timeout'
+require 'colorize'
+
+def compare_and_color answer_key, your_answers
+  #Convert to arraysx
+  answer_key = answer_key.split ""
+  your_answers = your_answers.split ""
+
+  corrections = []
+  your_answers.each_with_index do |x, i|
+    if x != answer_key[i]
+      if x == "1"
+        corrections << x.red
+      elsif x == "0"
+        corrections << x.green
+      end
+    else
+      corrections << x
+    end
+  end
+
+  return corrections.join ""
+end
 
 if ARGV.count < 1
   puts "[mode(basic) ....]"
@@ -46,13 +68,14 @@ if mode == "basic"
 
     randomKey = examples.keys.sample
     randomValue = examples[randomKey]
-    puts "Testing #{randomKey} => #{randomValue}"
+    #puts "Testing #{randomKey} => #{randomValue}"
 
     s.send(randomKey + "0"*randomValue.length, 0, "0.0.0.0", outputPort)
     begin
       timeout(1) do
         msg, info = s.recvfrom 1024
         if msg != randomValue
+          randomKey = compare_and_color randomValue, msg
           puts "failed"
           failed[randomKey] = 0 if failed[randomKey].nil?
           failed[randomKey] += 1
@@ -67,7 +90,25 @@ if mode == "basic"
     sleep delayBetweenExamples / 1000.0
   end
 
-  puts failed
+  count = 0
+  failed.each do |k, v|
+    count += v
+  end
+  #tab_fail = failed.inject(0) {|total, e| total + e}
+  #
+  sortable_container = []
+  failed.each do |k, v|
+    sortable_container << {:key => k, :value => v}
+  end
+
+  sortable_container.sort!{|x, y| x[:key].to_f <=> y[:key].to_f}
+
+  puts "########################"
+  sortable_container.each do |error|
+    puts "#{error[:key]} : #{(error[:value] / attempts.to_f*100).to_s[0..8]}%"
+  end
+  puts "########################"
+  puts "\nFailed: #{count / attempts.to_f * 100}%"
 else
   puts "Not a mode"
   exit

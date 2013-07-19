@@ -76,7 +76,7 @@ void *_NetRcvThread(void *) {
   while (true) {
     socklen_t addrlen = sizeof(sockaddr_in);
 
-    const int MAXLEN = 100;
+    const int MAXLEN = 500;
     static char _buffer[MAXLEN];
     char *buffer = _buffer;
     memset(_buffer, 0, sizeof(buffer));

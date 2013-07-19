@@ -39,18 +39,30 @@ def help
     puts "\t(hint) use > operator to save to a lexicon file"
   puts "[gen_header] to generate a neurotik symbol file"
     puts "\tfileIO > gen_header neuron_set_name"
+  puts "[generate_lexicon_from_basic_literal_training_file] generate a lexicon file from a basic pairing file"
+    puts "\tgenerate_lexicon_from_basic_literal_training_file train.ltrain"
+
   puts "Convert a word to vector [w2v]"
     puts "\tw2v file word"
-  puts "Convert a word to vector [w2vd] interactively"
-    puts "\tw2vi file out_port delay"
-  puts "Convert incomming vectors to stdout"
-    puts "\tv2wi file in_port"
+
   puts "Convert incomming vectors to speech"
-    puts "\tv2ws file in_port"
+    puts "\tv2ws words.txt in_port\n"
+
+
+  ##############IMPORTANT
+  puts "\nImportant##############################\n"
+  puts "Output words on the command line to vector file [w2vc]"
+    puts "\tw2vc words.txt out_port[3000] words,comma,seperated\n"
+
+  puts "Convert a word to vector [w2vi] by typing on the command line"
+    puts "\tw2vi words.txt out_port[3000] delay\n"
+
+  puts "Print incomming vectors to stdout"
+    puts "\tv2wi words.txt in_port[4000] [Number of times till EOF]\n"
+  
   puts "Generate a basic training file for word pairing"
-    puts "\tgen_train_pair file pair_file"
-    puts "\t(hint) use > operator to save a basic training file"
-    puts "\tPair file is seperated pair of words e.g. 'a b\\nc d'"
+    puts "\tgenerate_basic_training_file words.txt trainA.ltrain (ltrain means literal training)"
+    puts "\tPair file is seperated pair of words e.g. 'a b\\nc d'\n"
   exit
 end
 
@@ -99,6 +111,7 @@ def file_to_lexicons file_name
     end
   end
 
+
   return [lexicon, reverse_lexicon]
 end
 
@@ -133,6 +146,33 @@ def join_vectors vectorA, vectorB=nil
   return new_vector
 end
 
+#Comma interactive
+def w2vc
+  file_name = ARGV[1]
+  out_port = ARGV[2]
+
+  lexicon, reverse_lexicon = file_to_lexicons file_name
+
+  socket = UDPSocket.new
+
+  words = ARGV[3].strip.split(",")
+  real_vector = nil
+  words.each do |word|
+    vector = reverse_lexicon[word]
+    if vector.nil?
+      puts "Not found..."
+      next
+    end
+
+    real_vector = join_vectors vector, real_vector
+  end
+
+  blank_half = "0"*real_vector.length
+  real_vector = real_vector + blank_half
+
+  socket.send real_vector, 0, "127.0.0.1", out_port
+end
+
 #Interactive mode
 def w2vi
   file_name = ARGV[1]
@@ -143,24 +183,43 @@ def w2vi
 
   socket = UDPSocket.new
 
-  loop do
-    words = $stdin.gets.strip.split(" ")
-    real_vector = nil
-    words.each do |word|
-      vector = reverse_lexicon[word]
-      if vector.nil?
-        puts "Not found..."
-        next
+  if delay == 0
+    loop do
+      words = $stdin.gets.strip.split(" ")
+      real_vector = nil
+      words.each do |word|
+        vector = reverse_lexicon[word]
+        if vector.nil?
+          puts "Not found..."
+          next
+        end
+
+        real_vector = join_vectors vector, real_vector
       end
 
-      real_vector = join_vectors vector, real_vector
+      blank_half = "0"*real_vector.length
+      real_vector = real_vector + blank_half
+
+      socket.send real_vector, 0, "127.0.0.1", out_port
+      sleep delay.to_f / 1000.0
     end
+  #Not delay 0
+  else
+    loop do
+      words = $stdin.gets.strip.split(" ")
+      words.each do |word|
+        vector = reverse_lexicon[word]
+        if vector.nil?
+          puts "Not found..."
+          next
+        end
 
-    blank_half = "0"*real_vector.length
-    real_vector = real_vector + blank_half
-
-    socket.send real_vector, 0, "127.0.0.1", out_port
-    sleep delay.to_f / 1000.0
+        blank_half = "0"*vector.length
+        full_vector = vector + blank_half
+        socket.send full_vector, 0, "127.0.0.1", out_port
+        sleep delay.to_f / 1000.0
+      end
+    end
   end
 end
 
@@ -194,14 +253,22 @@ end
 def v2wi
   file_name = ARGV[1]
   in_port = ARGV[2]
+  eof_count = ARGV[3]
+  eof_count = eof_count.to_i unless eof_count.nil?
 
   lexicon, reverse_lexicon = file_to_lexicons file_name
 
   socket = UDPSocket.new
   socket.bind "0.0.0.0", in_port.to_i
-  puts "Listening on port #{in_port.to_i}"
 
   loop do
+    if !eof_count.nil?
+      if eof_count == 0
+        return
+      else
+        eof_count -= 1
+      end
+    end
     vector, info = socket.recvfrom 1024
     vector.split("").each_with_index do |letter, index|
       new_vector = "0"*vector.length
@@ -229,51 +296,14 @@ def join_impulse impulses
   return output
 end
 
-def gen_train_pair
+def generate_basic_training_file
+  #Get the lexicon
   lex_file = ARGV[1]
+
+  #Get the training file
   pair_file = ARGV[2]
 
-  lexicon, @inverted_lexicon = file_to_lexicons lex_file
-
-  def get_vector word
-    vector = @inverted_lexicon[word] 
-    if vector == nil
-      $stderr.puts "Did not find word #{word}"
-      exit
-    end
-
-    return vector
-  end
-
-  File.open pair_file, "r" do |file|
-    examples = file.read.split("\n")
-    examples = examples.map {|x| x.split(" | ")}
-    examples = examples.map {|x| {:input =>x[0].split(" "), :output => x[1]}}
-
-    examples.each do |example|
-      input = example[:input]
-      input = input.map {|x| get_vector(x)}
-      output = get_vector(example[:output])
-
-      input.each_with_index do |frag, index|
-        #Last
-        if index == (input.count - 1)
-          puts "#{frag} #{output}"
-        else
-          puts "#{frag} #{"0"*frag.length}"
-        end
-      end
-      puts "---"
-    end
-
-  end
-end
-
-#Same as above, no timing
-def gen_train_pair_flat
-  lex_file = ARGV[1]
-  pair_file = ARGV[2]
-
+  #Load the training file into an inverted, and non inverted version
   lexicon, @inverted_lexicon = file_to_lexicons lex_file
 
   def get_vector word
@@ -292,27 +322,42 @@ def gen_train_pair_flat
     examples = examples.map {|x| {:input =>x[0].split(" "), :output => x[1].split(" ")}}
 
     examples.each do |example|
-      #Merge vectors into one
       input = example[:input]
-      input = input.map {|x| get_vector(x)}
-      input_real = nil
-      input.each do |x|
-        input_real = join_vectors x, input_real
-      end
-
-      #Merge vectors into one
       output = example[:output]
-      output = output.map {|x| get_vector(x)}
-      output_real = nil
-      output.each do |x|
-        output_real = join_vectors x, output_real
-      end
-      puts "#{input_real} #{output_real}"
-      puts "---"
+
+      #Convert words to vectors
+      input_vector = input.inject(nil){|result, element| join_vectors @inverted_lexicon[element], result}
+      output_vector = output.inject(nil){|result, element| join_vectors @inverted_lexicon[element], result}
+
+      puts "#{input_vector} #{output_vector}"
     end
+
   end
 end
 
+def generate_lexicon_from_basic_literal_training_file
+  words = []
+  ARGV.each_with_index do |file_name, index|
+    next if index == 0
+    if (!file_name)
+      puts "Need a train.ltrain file to load"
+      exit
+    end
+
+    File.open file_name, "r" do |file|
+      while !file.eof?
+        pair = file.readline.split(" | ")
+        words_left = pair[0].split(" ")
+        words_right = pair[1].split(" ")
+
+        words += words_left
+        words += words_right
+      end
+    end
+
+  end
+  puts words.uniq.join(" ")
+end
 
 if ARGV[0] == "help"
   help
@@ -324,14 +369,16 @@ elsif ARGV[0] == "w2v"
   w2v
 elsif ARGV[0] == "w2vi"
   w2vi
+elsif ARGV[0] == "w2vc"
+  w2vc
 elsif ARGV[0] == "v2wi"
   v2wi
 elsif ARGV[0] == "v2ws"
   v2ws
-elsif ARGV[0] == "gen_train_pair"
-  gen_train_pair
-elsif ARGV[0] == "gen_train_pair_flat"
-  gen_train_pair_flat
+elsif ARGV[0] == "generate_basic_training_file"
+  generate_basic_training_file
+elsif ARGV[0] == "generate_lexicon_from_basic_literal_training_file"
+  generate_lexicon_from_basic_literal_training_file
 else
   help
 end

@@ -1,7 +1,7 @@
 module Generator
   def check var, name
     if var.nil?
-      puts "gen_packetizer, #{name} was nil"
+      puts "One of the generators check, #{name} was nil"
       exit
     end
   end
@@ -13,13 +13,13 @@ module Generator
       full_sub += sub.to_s
     end
 
-    return _name + full_sub.to_s
+    return _name.to_s + full_sub.to_s
   end
 end
 
 def gen_packetizer params=nil
   _name = params[:name]
-  _input = params[:input_name]
+  _input = params[:input]
   _watch = params[:watch]
 
   include Generator
@@ -31,13 +31,13 @@ def gen_packetizer params=nil
   ###################################################
   input = mangle(_name, :input)
   count = len(_input)
-  gaba _input, 40, :count => count
-  connect _input, _input, :linear
+  gaba input, 40, :count => count
+  connect _input, input, :linear
 
   #Set up level primary inhibitors
   ###################################################
   primary_inh = mangle(_name, :primary_inh)
-  count = len _input
+  count = len input
   gaba primary_inh, 3, :count => count, :ib => 2
   connect input, primary_inh, :linear
 
@@ -45,7 +45,7 @@ def gen_packetizer params=nil
   ###################################################
   main_exc = mangle(_name, :main_exc)
   count = len(_input)
-  glu main_exc, :count => count
+  no_learn main_exc, :count => count
   connect primary_inh, main_exc, :linear
 
   #Set up main intrinsic burster (main_ib)
@@ -57,7 +57,7 @@ def gen_packetizer params=nil
   #Set up sync output
   ###################################################
   sync = mangle(_name, :sync)
-  count = len _input
+  count = len input
   glu_signal sync, :count => count
   connect main_exc, sync, :linear
   connect sync, input, :linear
@@ -65,15 +65,15 @@ def gen_packetizer params=nil
   #Set up final stage isolation
   ###################################################
   output = mangle(_name, :output)
-  count = len _input
+  count = len input
   no_learn output, :count => count
   connect sync, output, :linear, :delay => 40
 
   #Set up final stage isolation enabler
-  en = mangle(:en)
+  en = mangle(_name, :en)
   disable = mangle(_name, :disable)
   gaba en, 100
-  main {gaba disable, 3, :ib => 2}
+  gaba disable, 3, :ib => 2
   connect en, disable, :one_to_one
   connect en, sync, :one_to_many, :delay => 5
   connect _watch, en, :one_to_one
@@ -109,19 +109,18 @@ def gen_filter params=nil
   ###################################################
   output = mangle(_name, :output)
   count = len(_input)
-  debug = _debug
-  glu_signal output, :count => count, :debug => debug
+  glu_signal output, :count => count
   connect _input, output, :linear, :delay => _input_delay
 
   #Watch circuit
   ###################################################
   watch = mangle(_name, :watch)
   ib = mangle(_name, :ib)
-  gaba ib, 3, :ib => 2
-  gaba watch, _open_length
+  gaba ib, 3, :ib => 2, :debug => _debug
+  gaba watch, _open_length, :debug => _debug
 
-  connect _watch, _watch, :one_to_one
-  connect _watch, ib, :one_to_one
+  connect _watch, watch, :one_to_one
+  connect watch, ib, :one_to_one
   connect ib, output, :one_to_many
 
   return output
@@ -135,63 +134,48 @@ def gen_hold_buffer params=nil
     exit
   end
 
-  @name = params[:name]
-  @input_name = params[:input_name]
-  @watch_name = params[:watch_name]
+  _name = params[:name]
+  _input = params[:input]
+  _watch = params[:watch]
 
-  def check var, name
-    if var.nil?
-      puts "gen_hold_buffer, #{name} was nil"
-      exit
-    end
-  end
+  include Generator
 
-  check @input_name, "input_name"
-  check @watch_name, "watch_name"
-
-  #Generate a unique identifier
-  def mangle *subs
-    full_sub = ""
-    subs.each do |sub|
-      full_sub += sub.to_s
-    end
-
-    return @name + full_sub.to_s
-  end
+  check _input, "input_name"
+  check _watch, "watch_name"
 
   #Set up scatter latch network
   ###################################################
-  latch = mangle(:scatter_latch)
+  latch = mangle(_name, :scatter_latch)
 
-  count = sizeof(@input_name)
+  count = len _input
   no_learn latch, :count => count
-  connect @input_name, latch, :linear
+  connect _input, latch, :linear
   connect latch, latch, :linear, :delay => 20
 
   #Set up disgarding old data
   ###################################################
-  free_inh = mangle(:discard_inh)
+  free_inh = mangle(_name, :discard_inh)
   gaba free_inh, 25
   connect free_inh, latch, :one_to_many
-  connect @watch_name, free_inh, :one_to_one, :delay => 1
+  connect _watch, free_inh, :one_to_one, :delay => 1
 
   #Set up output
   ###################################################
-  output = mangle(:output)
-  count = sizeof(@input_name)
+  output = mangle(_name, :output)
+  count = len _input
   glu_signal output, :count => count
   connect latch, output, :linear, :delay => 33
 
   #Inhibit the output
-  output_inh = mangle(:output_inh)
+  output_inh = mangle(_name, :output_inh)
   gaba output_inh, 3, :ib => 2
   connect output_inh, output, :one_to_many, :delay => 5
 
   #Inhibit the inhibitor
-  output_inh_disable = mangle :output_inh_disable
+  output_inh_disable = mangle _name, :output_inh_disable
   gaba output_inh_disable, 50
   connect output_inh_disable, output_inh, :one_to_one
-  connect @watch_name, output_inh_disable, :one_to_one
+  connect _watch, output_inh_disable, :one_to_one
 
   return output
 end
@@ -260,7 +244,7 @@ def gen_serialize params=nil
   ##Output
   output = mangle(:output)
   count = sizeof(@input)
-  glu output, :count => count
+  no_learn output, :count => count
   connect input, output, :linear
   connect output, line_inh, :linear
   connect output, global_inh, :many_to_one
@@ -278,36 +262,24 @@ def gen_lex_graph params=nil
     exit
   end
 
-  @name = params[:name]
-  @input = params[:input]
-  @signal = params[:signal]
+  _name = params[:name]
+  _input = params[:input]
+  _signal = params[:signal]
 
-  def check var, name
-    if var.nil?
-      puts "gen_lex_graph, #{name} was nil"
-      exit
-    end
-  end
+  _debug = params[:debug]
+  _debug = false if params[:debug].nil?
 
-  check @name, "name"
-  check @input, "input"
-  check @signal, "signal"
+  include Generator
 
-  #Generate a unique identifier
-  def mangle *subs
-    full_sub = ""
-    subs.each do |sub|
-      full_sub += sub.to_s
-    end
+  check _name, "name"
+  check _input, "input"
+  check _signal, "signal"
 
-    return @name + full_sub.to_s
-  end
+  output = mangle(_name, :output)
+  glu output, :count => LEXICON_COUNT, :debug => _debug
 
-  output = mangle(:output)
-  glu output, :count => LEXICON_COUNT
-
-  connect @input, output, :linear, :weight => 0
-  connect @signal, output, :linear, :delay => 2
+  connect _input, output, :linear, :weight => 0
+  connect _signal, output, :linear, :delay => 2
 
   return output
 end

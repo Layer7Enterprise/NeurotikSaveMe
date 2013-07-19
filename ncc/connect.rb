@@ -96,7 +96,7 @@ def connect from, to, method, params=nil
       end
     else
       if Neuron.name_to_neuron(from) == nil
-        puts "Neuron not found #{to}"
+        puts "Neuron not found #{from}"
         exit
       end
 

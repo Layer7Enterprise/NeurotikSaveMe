@@ -2,12 +2,23 @@ require './std.rb'
 require './train/product/lexicon.rb'
 
 input do
-  no_learn "input", :count => LEXICON_COUNT
-  glu_signal "signal", :count => LEXICON_COUNT
+  no_learn "inputA", :count => LEXICON_COUNT
+  glu_signal "signalA", :count => LEXICON_COUNT
+
+  #no_learn "inputB", :count => LEXICON_COUNT
+  #glu_signal "signalB", :count => LEXICON_COUNT
+
+  #no_learn "inputC", :count => LEXICON_COUNT
+  #glu_signal "signalC", :count => LEXICON_COUNT
+
 end
 
+glu :outputA, :count => LEXICON_COUNT
+glu :outputB, :count => LEXICON_COUNT
+glu :outputC, :count => LEXICON_COUNT
+
 output do
-  glu :output, :count => LEXICON_COUNT, :debug => true
+  no_learn :output, :count => LEXICON_COUNT
 end
 
 #filters = {}
@@ -34,8 +45,23 @@ end
   #connect serialized, :output, :linear
 #end
 
-connect :signal, :output, :linear, :delay => 2
-connect :input, :output, :many_to_many, :weight => 0
+connect :signalA, :outputA, :linear, :delay => 2
+connect :inputA, :outputA, :many_to_many, :weight => 0
+#connect :inputB, :inputA, :linear
+#connect :inputC, :inputA, :linear
+
+#connect :signalB, :outputB, :linear, :delay => 10
+#connect :outputA, :outputB, :many_to_many, :weight => 0
+
+#connect :outputB, :outputC, :many_to_many, :weight => 0
+#connect :outputA, :outputC, :many_to_many, :weight => 0, :delay => 3
+#connect :signalC, :outputC, :linear, :delay => 10
+
+connect :outputA, :output, :linear
+#connect :outputB, :output, :linear
+#connect :outputC, :output, :linear
+
+#connect :output1, :output, :linear
 
 ##Setup the primary lex grap3
 #connect :signal, :input, :linear, :delay => 23
@@ -43,7 +69,7 @@ connect :input, :output, :many_to_many, :weight => 0
 
 ##Prevent loopback
 #gaba :no_loopback, 25
-#connect :input, :no_loopback, :many_to_one, :delay => 25
+#connect :input, :no_loopback, :many_to_one, :delay => 2n
 #connect :no_loopback, :input, :one_to_many
 
 ##Level 0 POS detector

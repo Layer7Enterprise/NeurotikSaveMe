@@ -4,22 +4,32 @@ require 'socket'
 
 if ARGV.count < 1
   puts "[mode(basic) ....] - Based on a simple pairing"
-  puts "[mode(timed) ....] - Based on the more complex timing"
   exit
 end
 
 mode = ARGV[0] 
 
 if mode == "basic"
-  if ARGV.count != 4
+  if ARGV.count != 6 and ARGV.count != 5
     #DelayBetweenExample = How to long to wait between each example
-    puts "basic [port trainingFile delayBetweenExamples]"
+    puts "basic [port trainingFile.train 100(Wait between samples) 120(secondsToRun) offset(optional)]"
     exit
   end
 
+  #Get arguments
   port = ARGV[1].to_i
   trainingFile = ARGV[2]
   delayBetweenExamples = ARGV[3].to_i
+  time_alive = ARGV[4].to_i
+  offset = ARGV[5].to_i
+  if offset.nil?
+    offset = 0
+  end
+
+  Thread.new do
+    sleep time_alive
+    exit
+  end
 
   puts "Loading nbtrain basic file #{trainingFile}, the delay between examples at #{delayBetweenExamples}ms, and sending this data to 0.0.0.0:#{port}"
   examples = {}
@@ -31,59 +41,17 @@ if mode == "basic"
     end
   end
 
+  s = UDPSocket.new
   loop do
     randomKey = examples.keys.sample
     randomValue = examples[randomKey]
-    puts "Testing #{randomKey} => #{randomValue}"
+    offsetPad = "0"*randomKey.length*2*offset
+    #puts "Testing #{randomKey} => #{randomValue}"
 
-    s = UDPSocket.new
-    s.send(randomKey + randomValue, 0, "0.0.0.0", port)
-
-    sleep delayBetweenExamples / 1000.0
-  end
-elsif mode == "timed"
-  if ARGV.count != 5
-    #DelayBetweenExample = How to long to wait between each example
-    #DelayBetweenWords = How long to wait to produce the next 'word'
-    puts "timed [port trainingFile delayBetweenWords delayBetweenExamples]"
-    exit
-  end
-
-  port = ARGV[1].to_i
-  trainingFile = ARGV[2]
-  delayBetweenWords = ARGV[3].to_i
-  delayBetweenExamples = ARGV[4].to_i
-
-  puts "Loading nbtrain timed file #{trainingFile}, the delay between examples at #{delayBetweenExamples}ms, the delay between words is #{delayBetweenWords} and sending this data to 0.0.0.0:#{port}"
-  examples = []
-  File.open(trainingFile, "r") do |file|
-    example = []
-    while !file.eof
-      line = file.readline.strip
-      if line == "---"
-        examples << example
-        example = []
-        next
-      end
-
-      split_apart = line.split(" ")
-      example << {:input => split_apart[0], :output => split_apart[1]}
-    end
-  end
-
-  s = UDPSocket.new
-  loop do
-    randomExample = examples.sample
-    #puts "Testing #{randomExample}"
-
-    randomExample.each_with_index do |word, index|
-      s.send(word[:input] + word[:output], 0, "0.0.0.0", port)
-      sleep delayBetweenWords / 1000.0
-    end
+    s.send(offsetPad + randomKey + randomValue, 0, "0.0.0.0", port)
 
     sleep delayBetweenExamples / 1000.0
   end
-
 else
   puts "Not a mode"
   exit

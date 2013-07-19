@@ -2,8 +2,14 @@ require 'colorize'
 
 if ARGV[0] != "run"
   Dir.chdir 'config'
-    system('ncc')
+    out = `ncc`
   Dir.chdir '../'
+end
+
+#Catch errors
+if out != ""
+  puts out.red
+  exit
 end
 
 def start name
