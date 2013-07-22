@@ -7,7 +7,7 @@ input do
 end
 
 output do
-  glu :output, :count => LEXICON_COUNT, :debug => true
+  glu :output, :count => LEXICON_COUNT
 end
 
 connect :signal, :output, :linear, :delay => 2

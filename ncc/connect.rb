@@ -239,6 +239,7 @@ def many_to_many from, to, params=nil
   connections = []
   from.count.times do |index|
     to.count.times do |index2|
+      next if index == index2
       connection = Connection.new from[index], to[index2]
       connection.set_weight(weight)
       connection.set_delay(delay)

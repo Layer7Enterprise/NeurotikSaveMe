@@ -35,7 +35,7 @@ mode = ARGV[0]
 if mode == "basic"
   if ARGV.count != 6
     #DelayBetweenExample = How to long to wait between each example
-    puts "basic [inputPort outputPort trainingFile delayBetweenExamples attempts]"
+    puts "basic [inputPort outputPort trainingFile(product/testA.train) delayBetweenExamples attempts]"
     exit
   end
 
@@ -72,7 +72,7 @@ if mode == "basic"
 
     s.send(randomKey + "0"*randomValue.length, 0, "0.0.0.0", outputPort)
     begin
-      timeout(1) do
+      timeout(0.3) do
         msg, info = s.recvfrom 1024
         if msg != randomValue
           randomKey = compare_and_color randomValue, msg

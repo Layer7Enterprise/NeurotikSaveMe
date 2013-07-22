@@ -58,7 +58,7 @@ def help
     puts "\tw2vi words.txt out_port[3000] delay\n"
 
   puts "Print incomming vectors to stdout"
-    puts "\tv2wi words.txt in_port[4000] [Number of times till EOF]\n"
+    puts "\tv2wi words.txt in_port[4000] [seconds till timeout]\n"
   
   puts "Generate a basic training file for word pairing"
     puts "\tgenerate_basic_training_file words.txt trainA.ltrain (ltrain means literal training)"
@@ -253,8 +253,13 @@ end
 def v2wi
   file_name = ARGV[1]
   in_port = ARGV[2]
-  eof_count = ARGV[3]
-  eof_count = eof_count.to_i unless eof_count.nil?
+  timeout = ARGV[3]
+  timeout = timeout.to_i unless timeout.nil?
+
+  Thread.new do
+    sleep timeout
+    exit
+  end
 
   lexicon, reverse_lexicon = file_to_lexicons file_name
 
@@ -262,13 +267,6 @@ def v2wi
   socket.bind "0.0.0.0", in_port.to_i
 
   loop do
-    if !eof_count.nil?
-      if eof_count == 0
-        return
-      else
-        eof_count -= 1
-      end
-    end
     vector, info = socket.recvfrom 1024
     vector.split("").each_with_index do |letter, index|
       new_vector = "0"*vector.length

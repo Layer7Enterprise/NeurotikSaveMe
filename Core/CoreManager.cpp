@@ -160,7 +160,7 @@ void CoreOnImpulse(const unsigned char *impulse, int len) {
   static int count = 0;
   if (len != NET_INPUT_LEN(params)) {
     ++count;
-    if (count % 1000 == 0)
+    if (count % 20 == 0)
       fprintf(stderr, "WARN: Impulse size was not the same as the params length %d != %d\n", NET_INPUT_LEN(params), len);
   }
 

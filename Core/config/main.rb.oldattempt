@@ -1,0 +1,31 @@
+require './std.rb'
+require './train/product/lexicon.rb'
+
+input do
+  no_learn :input, :count => LEXICON_COUNT
+  glu_signal :signal, :count => LEXICON_COUNT
+end
+
+output do
+  no_learn :main_output, :count => LEXICON_COUNT
+end
+
+glu :output, :count => LEXICON_COUNT, :debug => true
+
+connect :signal, :output, :linear, :delay => 2
+connect :signal, :output, :linear, :delay => 22
+
+#Block internal
+gaba :inh, 25
+connect :output, :inh, :many_to_one, :delay => 1
+connect :inh, :output, :one_to_many, :delay => 25
+
+connect :input, :output, :many_to_many, :weight => 0
+connect :output, :output, :many_to_many, :delay => 20, :weight => 0 
+
+#Block external
+gaba :inh_wait, 20
+connect :input, :inh_wait, :many_to_one, :delay => 1
+connect :inh_wait, :main_output, :one_to_many, :delay => 1
+
+connect :output, :main_output, :linear
