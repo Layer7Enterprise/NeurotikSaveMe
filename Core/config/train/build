@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+files = Dir['*.ltrain'].join(" ")
+system("neurolex generate_lexicon_from_basic_literal_training_file #{files} > words.txt")
+
+system("rm product/*")
+system("cat words.txt | neurolex gen > product/wordsV.txt")
+system("cat words.txt | neurolex gen_header input > product/lexicon.rb")
+
+Dir['*.ltrain'].each do |file|
+  file_name = file.split(".")
+  system("neurolex generate_basic_training_file product/wordsV.txt #{file} > product/#{file_name[0]}.train")
+end
+
+puts "Done"

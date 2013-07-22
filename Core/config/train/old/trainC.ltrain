@@ -1,0 +1,19 @@
+i hurt my leg | kACTION_SET_CURRENT_INJURY say_im_soo_sorry_ill_avoid_straining_that_in_workouts
+my leg hurts | kACTION_SET_CURRENT_INJURY say_im_soo_sorry_ill_avoid_straining_that_in_workouts
+it hurts when I do a squat | RESOLVE_INJURY_LOCATION
+my name is x | kSET_USER_VARIABLE
+how do you do a squat | kGET_EXERCISE_DESCRIPTION 
+what is a squat | kGET_EXERCISE_DESCRIPTION
+im low on time | kCUT_WORKOUT_TIME say_be_more_prepared say_ok_ill_cut_some_exercises_from_your_workout
+im running late can we make this quick | kCUT_WORKOUT_TIME say_be_more_prepared say_ok_ill_cut_some_exercises_from_your_workout
+what is my name | kGET_USER_VARIABLE
+i dont have much time | kCUT_WORKOUT_TIME
+whats a good crunch | kGET_SPECIFIC_EXERCISE_DESCRIPTION
+how do i start doing pullups | kGET_EXERCISE_DESCRIPTION
+should i rest my knee if it hurts | kGET_INJURY_DESCRIPTION
+BITCH | say_lol
+i dont want to workout today | say_hmm_to_bad
+dont want to go the gym | say_seriously_just_go
+do i have to workout Q | say_haha_yea
+QUESTION | say_hmm
+STATEMENT | Say_ok
