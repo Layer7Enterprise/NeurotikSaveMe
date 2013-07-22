@@ -7,9 +7,7 @@
 #include <time.h>
 #include <vector>
 #include <sys/time.h>
-#include <mach/mach.h>
-#include <mach/mach_time.h>
-#include <dispatch/dispatch.h>
+#include <event.h>
 #include "Net.h"
 #include "Schema.h"
 #include "Params.h"
@@ -23,8 +21,11 @@
 #define NET_PORT 3000  //Input = 3000, Output = 3001
 
 //#include "test/Units.h"
+//
 
 int main() {
+  SetupTimer();
+
   Schema_t schema;
   Params_t params;
 
@@ -47,6 +48,7 @@ int main() {
   CoreBegin(&params);
   puts(">Core online!");
 
-  dispatch_main();
+  HandleEvents();  
+
   return 0;
 }
